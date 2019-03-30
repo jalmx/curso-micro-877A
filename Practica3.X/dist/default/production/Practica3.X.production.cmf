@@ -11,12 +11,13 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\VAIO\AppData\Local\Temp\s5qc.o
+$C:\Users\VAIO\AppData\Local\Temp\s3k0.o
 end_init CODE 0 0 0 3 2
 config CONFIG 0 2007 2007 1 2
 $dist/default/production\Practica3.X.production.o
 cinit CODE 0 7FC 7FC 4 2
-maintext CODE 0 7F1 7F1 B 2
+maintext CODE 0 7EC 7EC 10 2
+cstackCOMMON COMMON 1 70 70 6 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -31,23 +32,23 @@ BANK0 20-6F 1
 BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
-CONST 3-7F0 2
+CONST 3-7EB 2
 CONST 800-1FFF 2
-ENTRY 3-7F0 2
+ENTRY 3-7EB 2
 ENTRY 800-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
-CODE 3-7F0 2
+CODE 3-7EB 2
 CODE 800-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
 SFR3 180-18F 1
-COMMON 70-7D 1
+COMMON 76-7D 1
 EEDATA 2100-21FF 2
-STRCODE 3-7F0 2
+STRCODE 3-7EB 2
 STRCODE 800-1FFF 2
-STRING 3-7F0 2
+STRING 3-7EB 2
 STRING 800-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -63,16 +64,18 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Practica3.X.production.o
-7FC cinit CODE >354:C:\Users\VAIO\AppData\Local\Temp\s5qc.
-7FC cinit CODE >357:C:\Users\VAIO\AppData\Local\Temp\s5qc.
-7FC cinit CODE >363:C:\Users\VAIO\AppData\Local\Temp\s5qc.
-7FC cinit CODE >365:C:\Users\VAIO\AppData\Local\Temp\s5qc.
-7FD cinit CODE >366:C:\Users\VAIO\AppData\Local\Temp\s5qc.
-7F1 maintext CODE >20:C:\Users\VAIO\Documents\micro\Practica3.X\main.c
-7F1 maintext CODE >21:C:\Users\VAIO\Documents\micro\Practica3.X\main.c
-7F4 maintext CODE >22:C:\Users\VAIO\Documents\micro\Practica3.X\main.c
-7F7 maintext CODE >28:C:\Users\VAIO\Documents\micro\Practica3.X\main.c
-7F9 maintext CODE >29:C:\Users\VAIO\Documents\micro\Practica3.X\main.c
+7FC cinit CODE >358:C:\Users\VAIO\AppData\Local\Temp\s3k0.
+7FC cinit CODE >361:C:\Users\VAIO\AppData\Local\Temp\s3k0.
+7FC cinit CODE >367:C:\Users\VAIO\AppData\Local\Temp\s3k0.
+7FC cinit CODE >369:C:\Users\VAIO\AppData\Local\Temp\s3k0.
+7FD cinit CODE >370:C:\Users\VAIO\AppData\Local\Temp\s3k0.
+7EC maintext CODE >20:C:\Users\VAIO\Documents\micro\Practica3.X\main.c
+7EC maintext CODE >21:C:\Users\VAIO\Documents\micro\Practica3.X\main.c
+7EF maintext CODE >22:C:\Users\VAIO\Documents\micro\Practica3.X\main.c
+7F0 maintext CODE >23:C:\Users\VAIO\Documents\micro\Practica3.X\main.c
+7F3 maintext CODE >27:C:\Users\VAIO\Documents\micro\Practica3.X\main.c
+7F7 maintext CODE >30:C:\Users\VAIO\Documents\micro\Practica3.X\main.c
+7F9 maintext CODE >31:C:\Users\VAIO\Documents\micro\Practica3.X\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -87,31 +90,32 @@ $dist/default/production\Practica3.X.production.o
 %SYMTAB
 ___latbits 2 0 ABS 0 - dist/default/production\Practica3.X.production.o
 __Hspace_0 2008 0 ABS 0 - -
-__Hspace_1 0 0 ABS 0 - -
+__Hspace_1 76 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
+main@z 74 0 COMMON 1 cstackCOMMON dist/default/production\Practica3.X.production.o
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\VAIO\AppData\Local\Temp\s5qc.o
-_main FE2 0 CODE 0 maintext dist/default/production\Practica3.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\VAIO\AppData\Local\Temp\s3k0.o
+_main FD8 0 CODE 0 maintext dist/default/production\Practica3.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Practica3.X.production.o
-start 0 0 CODE 0 init C:\Users\VAIO\AppData\Local\Temp\s5qc.o
+start 0 0 CODE 0 init C:\Users\VAIO\AppData\Local\Temp\s3k0.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Practica3.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\VAIO\AppData\Local\Temp\s5qc.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\VAIO\AppData\Local\Temp\s5qc.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\VAIO\AppData\Local\Temp\s5qc.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\VAIO\AppData\Local\Temp\s5qc.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\VAIO\AppData\Local\Temp\s5qc.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\VAIO\AppData\Local\Temp\s5qc.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\VAIO\AppData\Local\Temp\s3k0.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\VAIO\AppData\Local\Temp\s3k0.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\VAIO\AppData\Local\Temp\s3k0.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\VAIO\AppData\Local\Temp\s3k0.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\VAIO\AppData\Local\Temp\s3k0.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\VAIO\AppData\Local\Temp\s3k0.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Practica3.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\VAIO\AppData\Local\Temp\s5qc.o
-___stacklo 0 0 ABS 0 - C:\Users\VAIO\AppData\Local\Temp\s5qc.o
+___stackhi 0 0 ABS 0 - C:\Users\VAIO\AppData\Local\Temp\s3k0.o
+___stacklo 0 0 ABS 0 - C:\Users\VAIO\AppData\Local\Temp\s3k0.o
 start_initialization FF8 0 CODE 0 cinit dist/default/production\Practica3.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\VAIO\AppData\Local\Temp\s5qc.o
+___int_sp 0 0 STACK 2 stack C:\Users\VAIO\AppData\Local\Temp\s3k0.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -147,13 +151,13 @@ __Lsfr3 0 0 ABS 0 sfr3 -
 __Ltext 0 0 ABS 0 text -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __S0 2008 0 ABS 0 - -
-__S1 0 0 ABS 0 - -
+__S1 76 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 __CFG_BOREN$ON 0 0 ABS 0 - dist/default/production\Practica3.X.production.o
 __Lintentry 0 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\VAIO\AppData\Local\Temp\s5qc.o
-__pmaintext FE2 0 CODE 0 maintext dist/default/production\Practica3.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\VAIO\AppData\Local\Temp\s3k0.o
+__pmaintext FD8 0 CODE 0 maintext dist/default/production\Practica3.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 400E 0 CONFIG 0 config -
 __CFG_CP$OFF 0 0 ABS 0 - dist/default/production\Practica3.X.production.o
@@ -176,11 +180,13 @@ __CFG_WDTE$ON 0 0 ABS 0 - dist/default/production\Practica3.X.production.o
 __end_of__initialization FF8 0 CODE 0 cinit dist/default/production\Practica3.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
-__pcstackCOMMON 0 0 COMMON 1 cstackCOMMON dist/default/production\Practica3.X.production.o
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\Practica3.X.production.o
 __Hend_init 6 0 CODE 0 end_init -
 __end_of_main FF8 0 CODE 0 maintext dist/default/production\Practica3.X.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\Practica3.X.production.o
+_PORTD 8 0 ABS 0 - dist/default/production\Practica3.X.production.o
 _TRISB 86 0 ABS 0 - dist/default/production\Practica3.X.production.o
+_TRISD 88 0 ABS 0 - dist/default/production\Practica3.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 __CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\Practica3.X.production.o
@@ -213,6 +219,7 @@ __CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\Practica3.X.production.o
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cinit 0 7FC FF8 4 2
-maintext 0 7F1 FE2 B 2
+maintext 0 7EC FD8 10 2
+cstackCOMMON 1 70 70 6 1
 reset_vec 0 0 0 3 2
 config 0 2007 400E 1 2

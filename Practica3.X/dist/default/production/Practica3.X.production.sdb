@@ -15,10 +15,16 @@
 [v _main main `(v  1 e 1 0 ]
 "216 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"340
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
 "1375
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1499
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
 "20 C:\Users\VAIO\Documents\micro\Practica3.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"29
+"27
+[v main@z z `i  1 a 2 4 ]
+"33
 } 0

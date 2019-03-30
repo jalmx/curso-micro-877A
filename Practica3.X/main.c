@@ -18,12 +18,14 @@
 #include <xc.h>
 
 void main() {
-    TRISB=0;
+    TRISB = 0;
     PORTB = 0;
-    
+
     int x = 1;
     int y = 2;
-    int z = x+y;
-    
-    PORTB = z;
+    int z = x + y;
+
+    while (1)
+        PORTB = z;
+
 }

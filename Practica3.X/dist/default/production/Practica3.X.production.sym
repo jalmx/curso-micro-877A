@@ -1,22 +1,25 @@
 __CFG_WRT$OFF 0 0 ABS 0
 __S0 2008 0 ABS 0
-__S1 0 0 ABS 0
+__S1 76 0 ABS 0
 __S2 0 0 ABS 0
 __S3 0 0 ABS 0
 __Hintentry 0 0 CODE 0
 __Lintentry 0 0 CODE 0
 __CFG_BOREN$ON 0 0 ABS 0
-_main 7F1 0 CODE 0
+_main 7EC 0 CODE 0
 ___sp 0 0 STACK 2
 btemp 7E 0 ABS 0
 start 0 0 CODE 0
 _TRISB 86 0 ABS 0
 reset_vec 0 0 CODE 0
+_TRISD 88 0 ABS 0
 _PORTB 6 0 ABS 0
+_PORTD 8 0 ABS 0
 wtemp0 7E 0 ABS 0
 __Hconfig 2008 0 CONFIG 0
 __Lconfig 2007 0 CONFIG 0
 __Hram 0 0 ABS 0
+main@z 74 0 COMMON 1
 __Lram 0 0 ABS 0
 __Hfunctab 0 0 ENTRY 0
 __Lfunctab 0 0 ENTRY 0
@@ -70,7 +73,7 @@ __Hstack 0 0 STACK 2
 __Lstack 0 0 STACK 2
 __Hspace_0 2008 0 ABS 0
 __Lspace_0 0 0 ABS 0
-__Hspace_1 0 0 ABS 0
+__Hspace_1 76 0 ABS 0
 __Lspace_1 0 0 ABS 0
 __Hspace_2 0 0 ABS 0
 __Lspace_2 0 0 ABS 0
@@ -92,30 +95,33 @@ intlevel4 0 0 ENTRY 0
 intlevel5 0 0 ENTRY 0
 __HcstackCOMMON 0 0 ABS 0
 __LcstackCOMMON 0 0 ABS 0
-__pcstackCOMMON 0 0 COMMON 1
+__pcstackCOMMON 70 0 COMMON 1
 __CFG_CPD$OFF 0 0 ABS 0
 start_initialization 7FC 0 CODE 0
 __Hmaintext 0 0 ABS 0
 __Lmaintext 0 0 ABS 0
-__pmaintext 7F1 0 CODE 0
+__pmaintext 7EC 0 CODE 0
 __initialization 7FC 0 CODE 0
 __CFG_CP$OFF 0 0 ABS 0
 %segments
 reset_vec 0 5 CODE 0 0
 cinit FF8 FFF CODE FF8 0
 config 400E 400F CONFIG 400E 0
-maintext FE2 FF7 CODE FE2 0
+cstackCOMMON 70 75 COMMON 70 1
+maintext FD8 FF7 CODE FD8 0
 %locals
 dist/default/production\Practica3.X.production.o
-C:\Users\VAIO\AppData\Local\Temp\s5qc.
-354 7FC 0 CODE 0
-357 7FC 0 CODE 0
-363 7FC 0 CODE 0
-365 7FC 0 CODE 0
-366 7FD 0 CODE 0
+C:\Users\VAIO\AppData\Local\Temp\s3k0.
+358 7FC 0 CODE 0
+361 7FC 0 CODE 0
+367 7FC 0 CODE 0
+369 7FC 0 CODE 0
+370 7FD 0 CODE 0
 main.c
-20 7F1 0 CODE 0
-21 7F1 0 CODE 0
-22 7F4 0 CODE 0
-28 7F7 0 CODE 0
-29 7F9 0 CODE 0
+20 7EC 0 CODE 0
+21 7EC 0 CODE 0
+22 7EF 0 CODE 0
+23 7F0 0 CODE 0
+27 7F3 0 CODE 0
+30 7F7 0 CODE 0
+31 7F9 0 CODE 0

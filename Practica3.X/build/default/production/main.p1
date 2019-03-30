@@ -3,9 +3,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1375 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1375: extern volatile unsigned char TRISB __attribute__((address(0x086)));
 [v _TRISB `Vuc ~T0 @X0 0 e@134 ]
+"1499
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1499: extern volatile unsigned char TRISD __attribute__((address(0x088)));
+[v _TRISD `Vuc ~T0 @X0 0 e@136 ]
 "216
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 216: extern volatile unsigned char PORTB __attribute__((address(0x006)));
 [v _PORTB `Vuc ~T0 @X0 0 e@6 ]
+"340
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 340: extern volatile unsigned char PORTD __attribute__((address(0x008)));
+[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
 "6 main.c
 [p x FOSC = XT ]
 "7
@@ -210,27 +216,43 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _main ]
 [f ]
 "21
-[; ;main.c: 21:     TRISB=0;
+[; ;main.c: 21:     TRISB = 0;
 [e = _TRISB -> -> 0 `i `uc ]
 "22
-[; ;main.c: 22:     PORTB = 0;
+[; ;main.c: 22:     TRISD = 0;
+[e = _TRISD -> -> 0 `i `uc ]
+"23
+[; ;main.c: 23:     PORTB = 0;
 [e = _PORTB -> -> 0 `i `uc ]
-"24
-[; ;main.c: 24:     int x = 1;
+"25
+[; ;main.c: 25:     int x = 1;
 [v _x `i ~T0 @X0 1 a ]
 [e = _x -> 1 `i ]
-"25
-[; ;main.c: 25:     int y = 2;
+"26
+[; ;main.c: 26:     int y = 2;
 [v _y `i ~T0 @X0 1 a ]
 [e = _y -> 2 `i ]
-"26
-[; ;main.c: 26:     int z = x+y;
+"27
+[; ;main.c: 27:     int z = x + y;
 [v _z `i ~T0 @X0 1 a ]
 [e = _z + _x _y ]
-"28
-[; ;main.c: 28:     PORTB = z;
-[e = _PORTB -> _z `uc ]
 "29
-[; ;main.c: 29: }
+[; ;main.c: 29:     while (1) {
+[e :U 97 ]
+{
+"30
+[; ;main.c: 30:         PORTB = z;
+[e = _PORTB -> _z `uc ]
+"31
+[; ;main.c: 31:         PORTD = 255;
+[e = _PORTD -> -> 255 `i `uc ]
+"32
+[; ;main.c: 32:     }
+}
+[e :U 96 ]
+[e $U 97  ]
+[e :U 98 ]
+"33
+[; ;main.c: 33: }
 [e :UE 95 ]
 }

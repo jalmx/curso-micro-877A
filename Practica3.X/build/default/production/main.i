@@ -1742,12 +1742,16 @@ extern __bank0 __bit __timeout;
 
 
 void main() {
-    TRISB=0;
+    TRISB = 0;
+    TRISD = 0;
     PORTB = 0;
 
     int x = 1;
     int y = 2;
-    int z = x+y;
+    int z = x + y;
 
-    PORTB = z;
+    while (1) {
+        PORTB = z;
+        PORTD = 255;
+    }
 }
