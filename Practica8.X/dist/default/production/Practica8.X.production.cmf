@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\VAIO\AppData\Local\Temp\s4e8.o
+$C:\Users\VAIO\AppData\Local\Temp\s4vk.o
 end_init CODE 0 0 0 3 2
 $dist/default/production\Practica8.X.production.o
 cinit CODE 0 7FC 7FC 4 2
@@ -64,11 +64,11 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Practica8.X.production.o
-7FC cinit CODE >346:C:\Users\VAIO\AppData\Local\Temp\s4e8.
-7FC cinit CODE >349:C:\Users\VAIO\AppData\Local\Temp\s4e8.
-7FC cinit CODE >355:C:\Users\VAIO\AppData\Local\Temp\s4e8.
-7FC cinit CODE >357:C:\Users\VAIO\AppData\Local\Temp\s4e8.
-7FD cinit CODE >358:C:\Users\VAIO\AppData\Local\Temp\s4e8.
+7FC cinit CODE >346:C:\Users\VAIO\AppData\Local\Temp\s4vk.
+7FC cinit CODE >349:C:\Users\VAIO\AppData\Local\Temp\s4vk.
+7FC cinit CODE >355:C:\Users\VAIO\AppData\Local\Temp\s4vk.
+7FC cinit CODE >357:C:\Users\VAIO\AppData\Local\Temp\s4vk.
+7FD cinit CODE >358:C:\Users\VAIO\AppData\Local\Temp\s4vk.
 7DA maintext CODE >4:C:\Users\VAIO\Documents\micro\Practica8.X\main.c
 7DA maintext CODE >5:C:\Users\VAIO\Documents\micro\Practica8.X\main.c
 7DE maintext CODE >6:C:\Users\VAIO\Documents\micro\Practica8.X\main.c
@@ -103,26 +103,26 @@ __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\VAIO\AppData\Local\Temp\s4e8.o
+___sp 0 0 STACK 2 stack C:\Users\VAIO\AppData\Local\Temp\s4vk.o
 _main FB4 0 CODE 0 maintext dist/default/production\Practica8.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Practica8.X.production.o
-start 0 0 CODE 0 init C:\Users\VAIO\AppData\Local\Temp\s4e8.o
+start 0 0 CODE 0 init C:\Users\VAIO\AppData\Local\Temp\s4vk.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Practica8.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\VAIO\AppData\Local\Temp\s4e8.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\VAIO\AppData\Local\Temp\s4e8.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\VAIO\AppData\Local\Temp\s4e8.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\VAIO\AppData\Local\Temp\s4e8.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\VAIO\AppData\Local\Temp\s4e8.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\VAIO\AppData\Local\Temp\s4e8.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\VAIO\AppData\Local\Temp\s4vk.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\VAIO\AppData\Local\Temp\s4vk.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\VAIO\AppData\Local\Temp\s4vk.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\VAIO\AppData\Local\Temp\s4vk.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\VAIO\AppData\Local\Temp\s4vk.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\VAIO\AppData\Local\Temp\s4vk.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Practica8.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\VAIO\AppData\Local\Temp\s4e8.o
-___stacklo 0 0 ABS 0 - C:\Users\VAIO\AppData\Local\Temp\s4e8.o
+___stackhi 0 0 ABS 0 - C:\Users\VAIO\AppData\Local\Temp\s4vk.o
+___stacklo 0 0 ABS 0 - C:\Users\VAIO\AppData\Local\Temp\s4vk.o
 start_initialization FF8 0 CODE 0 cinit dist/default/production\Practica8.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\VAIO\AppData\Local\Temp\s4e8.o
+___int_sp 0 0 STACK 2 stack C:\Users\VAIO\AppData\Local\Temp\s4vk.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -164,7 +164,7 @@ __S1 71 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 __Lintentry 0 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\VAIO\AppData\Local\Temp\s4e8.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\VAIO\AppData\Local\Temp\s4vk.o
 __pmaintext FB4 0 CODE 0 maintext dist/default/production\Practica8.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 0 config -

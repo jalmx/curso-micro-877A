@@ -281,13 +281,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 24:         }
 }
 [e :U 99 ]
-"26
-[; ;main.c: 26:     }
+"25
+[; ;main.c: 25:     }
 }
 [e :U 96 ]
 [e $U 97  ]
 [e :U 98 ]
-"27
-[; ;main.c: 27: }
+"26
+[; ;main.c: 26: }
 [e :UE 95 ]
 }
