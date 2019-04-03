@@ -13,7 +13,7 @@ void main() {
             PORTC = !PORTC;
             __delay_ms(100);
         }//fin del if
-
+        
         if (RB1 == 1) {
             PORTC = ~PORTC;
             __delay_ms(100);
