@@ -3,9 +3,9 @@
 [d edition pro ]
 [d chip 16LF877A ]
 [d frameptr 6 ]
-"28 C:\Users\VAIO\Documents\micro\Teclado4x4.X/keypad.h
+"28 C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X/keypad.h
 [v _kbdInit kbdInit `(v  1 e 1 0 ]
-"33
+"34
 [v _kbdGetC kbdGetC `(i  1 e 2 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
@@ -15,10 +15,10 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"17 C:\Users\VAIO\Documents\micro\Teclado4x4.X\main.c
+"17 C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"14 C:\Users\VAIO\Documents\micro\Teclado4x4.X/keypad.h
-[v _keyPadMatrix keyPadMatrix `DC[13]uc  1 e 13 0 ]
+"14 C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X/keypad.h
+[v _keyPadMatrix keyPadMatrix `DC[16]uc  1 e 16 0 ]
 "22
 [v _old_key old_key `uc  1 e 1 0 ]
 "216 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16lf877a.h
@@ -45,25 +45,25 @@
 [v _RB6 RB6 `VEb  1 e 0 @54 ]
 "2695
 [v _RB7 RB7 `VEb  1 e 0 @55 ]
-"17 C:\Users\VAIO\Documents\micro\Teclado4x4.X\main.c
+"17 C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"26
+"30
 [v main@key key `uc  1 a 1 8 ]
-"24
+"27
 [v main@keypress keypress `uc  1 a 1 9 ]
-"41
+"53
 } 0
-"28 C:\Users\VAIO\Documents\micro\Teclado4x4.X/keypad.h
+"28 C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X/keypad.h
 [v _kbdInit kbdInit `(v  1 e 1 0 ]
 {
-"31
+"32
 } 0
-"33
+"34
 [v _kbdGetC kbdGetC `(i  1 e 2 0 ]
 {
-"35
+"36
 [v kbdGetC@row row `uc  1 a 1 5 ]
 [v kbdGetC@key key `uc  1 a 1 4 ]
-"64
+"65
 } 0

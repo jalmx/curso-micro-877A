@@ -1725,9 +1725,9 @@ extern __bank0 __bit __timeout;
 # 1 "./keypad.h" 1
 # 14 "./keypad.h"
 char const keyPadMatrix[] = {
-    '1', '2', '3',
-    '4', '5', '6',
-    '7', '8', '9',
+    '7', '8', '9','0',
+    '4', '5', '6','0',
+    '1', '2', '3','0',
     '*', '0', '#',
     0xFF
 };
@@ -1741,6 +1741,7 @@ int kbdGetC();
 void kbdInit() {
     TRISB = 0xF0;
     PORTB = 0x00;
+    _delay((unsigned long)((5)*(4000000/4000.0)));
 }
 
 int kbdGetC() {
@@ -1773,7 +1774,7 @@ int kbdGetC() {
         old_key = key;
         return keyPadMatrix[ key ];
     } else
-        return keyPadMatrix[ 0x0C ];
+        return keyPadMatrix[ 0x0F ];
 }
 # 15 "main.c" 2
 
@@ -1781,15 +1782,21 @@ int kbdGetC() {
 void main() {
     TRISC = 0;
     PORTC = 0;
-
     kbdInit();
 
+    PORTC = 0x3F;
+    _delay((unsigned long)((5)*(4000000/4000.0)));
+
     while (1) {
+
         char keypress = kbdGetC();
         if (keypress != 0xFF) {
-            char key = keypress;
 
+            char key = keypress;
             switch (key) {
+                case '0':
+                    PORTC = 0x3F;
+                    break;
                 case '1':
                     PORTC = 0x03;
                     break;
@@ -1798,6 +1805,12 @@ void main() {
                     break;
                 case '3':
                     PORTC = 0x67;
+                    break;
+                case '4':
+                    PORTC = 0x53;
+                    break;
+                case '5':
+                    PORTC = 0x76;
                     break;
             }
         }
