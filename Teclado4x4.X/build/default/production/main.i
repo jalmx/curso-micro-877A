@@ -1725,10 +1725,10 @@ extern __bank0 __bit __timeout;
 # 1 "./keypad.h" 1
 # 14 "./keypad.h"
 char const keyPadMatrix[] = {
-    '7', '8', '9','0',
-    '4', '5', '6','0',
-    '1', '2', '3','0',
-    '*', '0', '#',
+    '7', '8', '9', 'A',
+    '4', '5', '6', 'B',
+    '1', '2', '3', 'C',
+    'F', '0', 'E', 'D',
     0xFF
 };
 
@@ -1774,7 +1774,7 @@ int kbdGetC() {
         old_key = key;
         return keyPadMatrix[ key ];
     } else
-        return keyPadMatrix[ 0x0F ];
+        return keyPadMatrix[ 17 ];
 }
 # 15 "main.c" 2
 
@@ -1811,6 +1811,36 @@ void main() {
                     break;
                 case '5':
                     PORTC = 0x76;
+                    break;
+                case '6':
+                    PORTC = 0xFE;
+                    break;
+                case '7':
+                    PORTC = 0x23;
+                    break;
+                case '8':
+                    PORTC = 0xFF;
+                    break;
+                case '9':
+                    PORTC = 0xF3;
+                    break;
+                case 'A':
+                    PORTC = 0xFB;
+                    break;
+                case 'B':
+                    PORTC = 0x5E;
+                    break;
+                case 'C':
+                    PORTC = 0x3C;
+                    break;
+                case 'D':
+                    PORTC = 0x4F;
+                    break;
+                case 'E':
+                    PORTC = 0xFC;
+                    break;
+                case 'F':
+                    PORTC = 0xF8;
                     break;
             }
         }

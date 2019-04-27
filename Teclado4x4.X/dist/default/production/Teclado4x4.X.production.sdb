@@ -18,7 +18,7 @@
 "17 C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
 [v _main main `(v  1 e 1 0 ]
 "14 C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X/keypad.h
-[v _keyPadMatrix keyPadMatrix `DC[16]uc  1 e 16 0 ]
+[v _keyPadMatrix keyPadMatrix `DC[17]uc  1 e 17 0 ]
 "22
 [v _old_key old_key `uc  1 e 1 0 ]
 "216 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16lf877a.h
@@ -52,7 +52,7 @@
 [v main@key key `uc  1 a 1 8 ]
 "27
 [v main@keypress keypress `uc  1 a 1 9 ]
-"53
+"83
 } 0
 "28 C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X/keypad.h
 [v _kbdInit kbdInit `(v  1 e 1 0 ]

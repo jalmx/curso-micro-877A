@@ -1,0 +1,620 @@
+
+
+Microchip MPLAB XC8 Assembler V2.05 build -831301201 
+                                                                                               Fri Apr 26 09:16:32 2019
+
+Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1 
+     1                           	processor	16F877A
+     2                           	opt	pw 120
+     3                           	opt	flic
+     4                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     5                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+     6                           	psect	maintext,global,class=CODE,split=1,delta=2
+     7                           	psect	text1,local,class=CODE,merge=1,delta=2
+     8                           	psect	text2,local,class=CODE,merge=1,delta=2
+     9                           	dabs	1,0x7E,2
+    10  0000                     
+    11                           ; Version 2.05
+    12                           ; Generated 20/12/2018 GMT
+    13                           ; 
+    14                           ; Copyright © 2018, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    15                           ; All rights reserved.
+    16                           ; 
+    17                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    18                           ; 
+    19                           ; Redistribution and use in source and binary forms, with or without modification, are
+    20                           ; permitted provided that the following conditions are met:
+    21                           ; 
+    22                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    23                           ;        conditions and the following disclaimer.
+    24                           ; 
+    25                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    26                           ;        of conditions and the following disclaimer in the documentation and/or other
+    27                           ;        materials provided with the distribution.
+    28                           ; 
+    29                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    30                           ;        software without specific prior written permission.
+    31                           ; 
+    32                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    33                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    34                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    35                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    36                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    37                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    38                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    39                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    40                           ; 
+    41                           ; 
+    42                           ; Code-generator required, PIC16F877A Definitions
+    43                           ; 
+    44                           ; SFR Addresses
+    45  0000                     	;# 
+    46  0001                     	;# 
+    47  0002                     	;# 
+    48  0003                     	;# 
+    49  0004                     	;# 
+    50  0005                     	;# 
+    51  0006                     	;# 
+    52  0007                     	;# 
+    53  0008                     	;# 
+    54  0009                     	;# 
+    55  000A                     	;# 
+    56  000B                     	;# 
+    57  000C                     	;# 
+    58  000D                     	;# 
+    59  000E                     	;# 
+    60  000E                     	;# 
+    61  000F                     	;# 
+    62  0010                     	;# 
+    63  0011                     	;# 
+    64  0012                     	;# 
+    65  0013                     	;# 
+    66  0014                     	;# 
+    67  0015                     	;# 
+    68  0015                     	;# 
+    69  0016                     	;# 
+    70  0017                     	;# 
+    71  0018                     	;# 
+    72  0019                     	;# 
+    73  001A                     	;# 
+    74  001B                     	;# 
+    75  001B                     	;# 
+    76  001C                     	;# 
+    77  001D                     	;# 
+    78  001E                     	;# 
+    79  001F                     	;# 
+    80  0081                     	;# 
+    81  0085                     	;# 
+    82  0086                     	;# 
+    83  0087                     	;# 
+    84  0088                     	;# 
+    85  0089                     	;# 
+    86  008C                     	;# 
+    87  008D                     	;# 
+    88  008E                     	;# 
+    89  0091                     	;# 
+    90  0092                     	;# 
+    91  0093                     	;# 
+    92  0094                     	;# 
+    93  0098                     	;# 
+    94  0099                     	;# 
+    95  009C                     	;# 
+    96  009D                     	;# 
+    97  009E                     	;# 
+    98  009F                     	;# 
+    99  010C                     	;# 
+   100  010D                     	;# 
+   101  010E                     	;# 
+   102  010F                     	;# 
+   103  018C                     	;# 
+   104  018D                     	;# 
+   105  0000                     	;# 
+   106  0001                     	;# 
+   107  0002                     	;# 
+   108  0003                     	;# 
+   109  0004                     	;# 
+   110  0005                     	;# 
+   111  0006                     	;# 
+   112  0007                     	;# 
+   113  0008                     	;# 
+   114  0009                     	;# 
+   115  000A                     	;# 
+   116  000B                     	;# 
+   117  000C                     	;# 
+   118  000D                     	;# 
+   119  000E                     	;# 
+   120  000E                     	;# 
+   121  000F                     	;# 
+   122  0010                     	;# 
+   123  0011                     	;# 
+   124  0012                     	;# 
+   125  0013                     	;# 
+   126  0014                     	;# 
+   127  0015                     	;# 
+   128  0015                     	;# 
+   129  0016                     	;# 
+   130  0017                     	;# 
+   131  0018                     	;# 
+   132  0019                     	;# 
+   133  001A                     	;# 
+   134  001B                     	;# 
+   135  001B                     	;# 
+   136  001C                     	;# 
+   137  001D                     	;# 
+   138  001E                     	;# 
+   139  001F                     	;# 
+   140  0081                     	;# 
+   141  0085                     	;# 
+   142  0086                     	;# 
+   143  0087                     	;# 
+   144  0088                     	;# 
+   145  0089                     	;# 
+   146  008C                     	;# 
+   147  008D                     	;# 
+   148  008E                     	;# 
+   149  0091                     	;# 
+   150  0092                     	;# 
+   151  0093                     	;# 
+   152  0094                     	;# 
+   153  0098                     	;# 
+   154  0099                     	;# 
+   155  009C                     	;# 
+   156  009D                     	;# 
+   157  009E                     	;# 
+   158  009F                     	;# 
+   159  010C                     	;# 
+   160  010D                     	;# 
+   161  010E                     	;# 
+   162  010F                     	;# 
+   163  018C                     	;# 
+   164  018D                     	;# 
+   165  0007                     _PORTC	set	7
+   166  0006                     _PORTB	set	6
+   167  001E                     _ADRESH	set	30
+   168  001F                     _ADCON0bits	set	31
+   169  0087                     _TRISC	set	135
+   170  0086                     _TRISB	set	134
+   171  0085                     _TRISA	set	133
+   172  009E                     _ADRESL	set	158
+   173  009F                     _ADCON1bits	set	159
+   174                           
+   175                           	psect	cinit
+   176  07FC                     start_initialization:	
+   177                           ; #config settings
+   178                           
+   179  07FC                     __initialization:	
+   180  07FC                     end_of_initialization:	
+   181                           ;End of C runtime variable initialization code
+   182                           
+   183  07FC                     __end_of__initialization:	
+   184  07FC  0183               	clrf	3
+   185  07FD  120A  118A  2FB8   	ljmp	_main	;jump to C main() function
+   186                           
+   187                           	psect	cstackCOMMON
+   188  0070                     __pcstackCOMMON:	
+   189  0070                     ?_adcInit:	
+   190  0070                     ??_adcInit:	
+   191                           ; 1 bytes @ 0x0
+   192                           
+   193  0070                     ?_main:	
+   194                           ; 1 bytes @ 0x0
+   195                           
+   196  0070                     ?_adcRead:	
+   197                           ; 1 bytes @ 0x0
+   198                           
+   199  0070                     adcRead@adcChannel:	
+   200                           ; 2 bytes @ 0x0
+   201                           
+   202                           
+   203                           ; 2 bytes @ 0x0
+   204  0070                     	ds	2
+   205  0072                     ??_adcRead:	
+   206                           
+   207                           ; 1 bytes @ 0x2
+   208  0072                     	ds	2
+   209  0074                     ??_main:	
+   210                           
+   211                           ; 1 bytes @ 0x4
+   212  0074                     	ds	2
+   213                           
+   214                           	psect	maintext
+   215  07B8                     __pmaintext:	
+   216 ;;
+   217 ;;Main: autosize = 0, tempsize = 2, incstack = 0, save=0
+   218 ;;
+   219 ;; *************** function _main *****************
+   220 ;; Defined at:
+   221 ;;		line 19 in file "main.c"
+   222 ;; Parameters:    Size  Location     Type
+   223 ;;		None
+   224 ;; Auto vars:     Size  Location     Type
+   225 ;;		None
+   226 ;; Return value:  Size  Location     Type
+   227 ;;                  1    wreg      void 
+   228 ;; Registers used:
+   229 ;;		wreg, status,2, status,0, pclath, cstack
+   230 ;; Tracked objects:
+   231 ;;		On entry : B00/0
+   232 ;;		On exit  : 0/0
+   233 ;;		Unchanged: 0/0
+   234 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   235 ;;      Params:         0       0       0       0       0
+   236 ;;      Locals:         0       0       0       0       0
+   237 ;;      Temps:          2       0       0       0       0
+   238 ;;      Totals:         2       0       0       0       0
+   239 ;;Total ram usage:        2 bytes
+   240 ;; Hardware stack levels required when called:    1
+   241 ;; This function calls:
+   242 ;;		_adcInit
+   243 ;;		_adcRead
+   244 ;; This function is called by:
+   245 ;;		Startup code after reset
+   246 ;; This function uses a non-reentrant model
+   247 ;;
+   248                           
+   249                           
+   250                           ;psect for function _main
+   251  07B8                     _main:	
+   252                           
+   253                           ;main.c: 20:     TRISA = 0xFF;
+   254                           
+   255                           ;incstack = 0
+   256                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
+   257  07B8  30FF               	movlw	255
+   258  07B9  1683               	bsf	3,5	;RP0=1, select bank1
+   259  07BA  1303               	bcf	3,6	;RP1=0, select bank1
+   260  07BB  0085               	movwf	5	;volatile
+   261                           
+   262                           ;main.c: 21:     PORTB = 0;
+   263  07BC  1283               	bcf	3,5	;RP0=0, select bank0
+   264  07BD  1303               	bcf	3,6	;RP1=0, select bank0
+   265  07BE  0186               	clrf	6	;volatile
+   266                           
+   267                           ;main.c: 22:     TRISB = 0;
+   268  07BF  1683               	bsf	3,5	;RP0=1, select bank1
+   269  07C0  1303               	bcf	3,6	;RP1=0, select bank1
+   270  07C1  0186               	clrf	6	;volatile
+   271                           
+   272                           ;main.c: 23:     PORTB = 0;
+   273  07C2  1283               	bcf	3,5	;RP0=0, select bank0
+   274  07C3  1303               	bcf	3,6	;RP1=0, select bank0
+   275  07C4  0186               	clrf	6	;volatile
+   276                           
+   277                           ;main.c: 24:     TRISC = 0;
+   278  07C5  1683               	bsf	3,5	;RP0=1, select bank1
+   279  07C6  1303               	bcf	3,6	;RP1=0, select bank1
+   280  07C7  0187               	clrf	7	;volatile
+   281                           
+   282                           ;main.c: 25:     PORTC = 0;
+   283  07C8  1283               	bcf	3,5	;RP0=0, select bank0
+   284  07C9  1303               	bcf	3,6	;RP1=0, select bank0
+   285  07CA  0187               	clrf	7	;volatile
+   286                           
+   287                           ;main.c: 27:     adcInit();
+   288  07CB  120A  118A  2786  120A  118A  	fcall	_adcInit
+   289  07D0                     l696:	
+   290                           
+   291                           ;main.c: 30:         PORTB = adcRead(0);
+   292  07D0  3000               	movlw	0
+   293  07D1  00F0               	movwf	adcRead@adcChannel
+   294  07D2  00F1               	movwf	adcRead@adcChannel+1
+   295  07D3  120A  118A  2796  120A  118A  	fcall	_adcRead
+   296  07D8  0870               	movf	?_adcRead,w
+   297  07D9  1283               	bcf	3,5	;RP0=0, select bank0
+   298  07DA  1303               	bcf	3,6	;RP1=0, select bank0
+   299  07DB  0086               	movwf	6	;volatile
+   300                           
+   301                           ;main.c: 31:         _delay((unsigned long)((10)*(4000000/4000.0)));
+   302  07DC  300D               	movlw	13
+   303  07DD  00F5               	movwf	??_main+1
+   304  07DE  30FB               	movlw	251
+   305  07DF  00F4               	movwf	??_main
+   306  07E0                     u37:	
+   307  07E0  0BF4               	decfsz	??_main,f
+   308  07E1  2FE0               	goto	u37
+   309  07E2  0BF5               	decfsz	??_main+1,f
+   310  07E3  2FE0               	goto	u37
+   311  07E4  2FE5               	nop2
+   312                           
+   313                           ;main.c: 32:         PORTC = adcRead(1);
+   314  07E5  3001               	movlw	1
+   315  07E6  00F0               	movwf	adcRead@adcChannel
+   316  07E7  3000               	movlw	0
+   317  07E8  00F1               	movwf	adcRead@adcChannel+1
+   318  07E9  120A  118A  2796  120A  118A  	fcall	_adcRead
+   319  07EE  0870               	movf	?_adcRead,w
+   320  07EF  1283               	bcf	3,5	;RP0=0, select bank0
+   321  07F0  1303               	bcf	3,6	;RP1=0, select bank0
+   322  07F1  0087               	movwf	7	;volatile
+   323                           
+   324                           ;main.c: 33:         _delay((unsigned long)((10)*(4000000/4000.0)));
+   325  07F2  300D               	movlw	13
+   326  07F3  00F5               	movwf	??_main+1
+   327  07F4  30FB               	movlw	251
+   328  07F5  00F4               	movwf	??_main
+   329  07F6                     u47:	
+   330  07F6  0BF4               	decfsz	??_main,f
+   331  07F7  2FF6               	goto	u47
+   332  07F8  0BF5               	decfsz	??_main+1,f
+   333  07F9  2FF6               	goto	u47
+   334  07FA  2FFB               	nop2
+   335                           
+   336                           ;main.c: 34:     }
+   337  07FB  2FD0               	goto	l696
+   338  07FC                     __end_of_main:	
+   339                           
+   340                           	psect	text1
+   341  0796                     __ptext1:	
+   342 ;; *************** function _adcRead *****************
+   343 ;; Defined at:
+   344 ;;		line 35 in file "./adc.h"
+   345 ;; Parameters:    Size  Location     Type
+   346 ;;  adcChannel      2    0[COMMON] const int 
+   347 ;; Auto vars:     Size  Location     Type
+   348 ;;		None
+   349 ;; Return value:  Size  Location     Type
+   350 ;;                  2    0[COMMON] int 
+   351 ;; Registers used:
+   352 ;;		wreg, status,2, status,0
+   353 ;; Tracked objects:
+   354 ;;		On entry : 0/0
+   355 ;;		On exit  : 0/0
+   356 ;;		Unchanged: 0/0
+   357 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   358 ;;      Params:         2       0       0       0       0
+   359 ;;      Locals:         0       0       0       0       0
+   360 ;;      Temps:          2       0       0       0       0
+   361 ;;      Totals:         4       0       0       0       0
+   362 ;;Total ram usage:        4 bytes
+   363 ;; Hardware stack levels used:    1
+   364 ;; This function calls:
+   365 ;;		Nothing
+   366 ;; This function is called by:
+   367 ;;		_main
+   368 ;; This function uses a non-reentrant model
+   369 ;;
+   370                           
+   371                           
+   372                           ;psect for function _adcRead
+   373  0796                     _adcRead:	
+   374                           
+   375                           ;./adc.h: 36:     ADCON0bits.ADON = 1;
+   376                           
+   377                           ;incstack = 0
+   378                           ; Regs used in _adcRead: [wreg+status,2+status,0]
+   379  0796  1283               	bcf	3,5	;RP0=0, select bank0
+   380  0797  1303               	bcf	3,6	;RP1=0, select bank0
+   381  0798  141F               	bsf	31,0	;volatile
+   382                           
+   383                           ;./adc.h: 37:     ADCON0bits.CHS = adcChannel;
+   384  0799  0870               	movf	adcRead@adcChannel,w
+   385  079A  00F2               	movwf	??_adcRead
+   386  079B  0DF2               	rlf	??_adcRead,f
+   387  079C  0DF2               	rlf	??_adcRead,f
+   388  079D  0DF2               	rlf	??_adcRead,f
+   389  079E  081F               	movf	31,w	;volatile
+   390  079F  0672               	xorwf	??_adcRead,w
+   391  07A0  39C7               	andlw	-57
+   392  07A1  0672               	xorwf	??_adcRead,w
+   393  07A2  009F               	movwf	31	;volatile
+   394                           
+   395                           ;./adc.h: 38:     _delay((unsigned long)((10)*(4000000/4000.0)));
+   396  07A3  300D               	movlw	13
+   397  07A4  00F3               	movwf	??_adcRead+1
+   398  07A5  30FB               	movlw	251
+   399  07A6  00F2               	movwf	??_adcRead
+   400  07A7                     u57:	
+   401  07A7  0BF2               	decfsz	??_adcRead,f
+   402  07A8  2FA7               	goto	u57
+   403  07A9  0BF3               	decfsz	??_adcRead+1,f
+   404  07AA  2FA7               	goto	u57
+   405  07AB  2FAC               	nop2
+   406                           
+   407                           ;./adc.h: 39:     ADCON0bits.GO = 1;
+   408  07AC  1283               	bcf	3,5	;RP0=0, select bank0
+   409  07AD  1303               	bcf	3,6	;RP1=0, select bank0
+   410  07AE  151F               	bsf	31,2	;volatile
+   411  07AF                     l26:	
+   412                           ;./adc.h: 40:     while (ADCON0bits.GO_DONE);
+   413                           
+   414  07AF  191F               	btfsc	31,2	;volatile
+   415  07B0  2FAF               	goto	l26
+   416                           
+   417                           ;./adc.h: 42:     return (ADRESH << 8) + (ADRESL);
+   418  07B1  081E               	movf	30,w	;volatile
+   419  07B2  00F1               	movwf	?_adcRead+1
+   420  07B3  1683               	bsf	3,5	;RP0=1, select bank1
+   421  07B4  1303               	bcf	3,6	;RP1=0, select bank1
+   422  07B5  081E               	movf	30,w	;volatile
+   423  07B6  00F0               	movwf	?_adcRead
+   424  07B7  0008               	return
+   425  07B8                     __end_of_adcRead:	
+   426                           
+   427                           	psect	text2
+   428  0786                     __ptext2:	
+   429 ;; *************** function _adcInit *****************
+   430 ;; Defined at:
+   431 ;;		line 1 in file "./adc.h"
+   432 ;; Parameters:    Size  Location     Type
+   433 ;;		None
+   434 ;; Auto vars:     Size  Location     Type
+   435 ;;		None
+   436 ;; Return value:  Size  Location     Type
+   437 ;;                  1    wreg      void 
+   438 ;; Registers used:
+   439 ;;		wreg, status,2, status,0
+   440 ;; Tracked objects:
+   441 ;;		On entry : 0/0
+   442 ;;		On exit  : 0/0
+   443 ;;		Unchanged: 0/0
+   444 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   445 ;;      Params:         0       0       0       0       0
+   446 ;;      Locals:         0       0       0       0       0
+   447 ;;      Temps:          0       0       0       0       0
+   448 ;;      Totals:         0       0       0       0       0
+   449 ;;Total ram usage:        0 bytes
+   450 ;; Hardware stack levels used:    1
+   451 ;; This function calls:
+   452 ;;		Nothing
+   453 ;; This function is called by:
+   454 ;;		_main
+   455 ;; This function uses a non-reentrant model
+   456 ;;
+   457                           
+   458                           
+   459                           ;psect for function _adcInit
+   460  0786                     _adcInit:	
+   461                           
+   462                           ;./adc.h: 11:     ADCON0bits.ADCS = 0b01;
+   463                           
+   464                           ;incstack = 0
+   465                           ; Regs used in _adcInit: [wreg+status,2+status,0]
+   466  0786  1283               	bcf	3,5	;RP0=0, select bank0
+   467  0787  1303               	bcf	3,6	;RP1=0, select bank0
+   468  0788  081F               	movf	31,w	;volatile
+   469  0789  393F               	andlw	-193
+   470  078A  3840               	iorlw	64
+   471  078B  009F               	movwf	31	;volatile
+   472                           
+   473                           ;./adc.h: 12:     ADCON0bits.CHS = 0b000;
+   474  078C  30C7               	movlw	-57
+   475  078D  059F               	andwf	31,f	;volatile
+   476                           
+   477                           ;./adc.h: 13:     ADCON0bits.ADON = 0;
+   478  078E  101F               	bcf	31,0	;volatile
+   479                           
+   480                           ;./adc.h: 24:     ADCON1bits.ADFM = 1;
+   481  078F  1683               	bsf	3,5	;RP0=1, select bank1
+   482  0790  1303               	bcf	3,6	;RP1=0, select bank1
+   483  0791  179F               	bsf	31,7	;volatile
+   484                           
+   485                           ;./adc.h: 25:     ADCON1bits.ADCS2 = 1;
+   486  0792  171F               	bsf	31,6	;volatile
+   487                           
+   488                           ;./adc.h: 26:     ADCON1bits.PCFG = 0b0000;
+   489  0793  30F0               	movlw	-16
+   490  0794  059F               	andwf	31,f	;volatile
+   491  0795  0008               	return
+   492  0796                     __end_of_adcInit:	
+   493  007E                     btemp	set	126	;btemp
+   494  007E                     wtemp0	set	126
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14      6       6
+    BANK0            80      0       0
+    BANK1            80      0       0
+    BANK3            96      0       0
+    BANK2            96      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    _main->_adcRead
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 2     2      0     174
+                                              4 COMMON     2     2      0
+                            _adcInit
+                            _adcRead
+ ---------------------------------------------------------------------------------
+ (1) _adcRead                                              4     2      2     174
+                                              0 COMMON     4     2      2
+ ---------------------------------------------------------------------------------
+ (1) _adcInit                                              0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _adcInit
+   _adcRead
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMMON            E      0       0       0        0.0%
+EEDATA             100      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+COMMON               E      6       6       1       42.9%
+BITSFR0              0      0       0       1        0.0%
+SFR0                 0      0       0       1        0.0%
+BITSFR1              0      0       0       2        0.0%
+SFR1                 0      0       0       2        0.0%
+STACK                0      0       0       2        0.0%
+ABS                  0      0       0       3        0.0%
+BITBANK0            50      0       0       4        0.0%
+BITSFR3              0      0       0       4        0.0%
+SFR3                 0      0       0       4        0.0%
+BANK0               50      0       0       5        0.0%
+BITSFR2              0      0       0       5        0.0%
+SFR2                 0      0       0       5        0.0%
+BITBANK1            50      0       0       6        0.0%
+BANK1               50      0       0       7        0.0%
+BITBANK3            60      0       0       8        0.0%
+BANK3               60      0       0       9        0.0%
+BITBANK2            60      0       0      10        0.0%
+BANK2               60      0       0      11        0.0%
+DATA                 0      0       0      12        0.0%
+
+
+Microchip Technology PIC Macro Assembler V2.05 build -831301201 
+Symbol Table                                                                                   Fri Apr 26 09:16:32 2019
+
+                     l26 07AF                       u37 07E0                       u47 07F6  
+                     u57 07A7                      l696 07D0                     _main 07B8  
+                   btemp 007E                     start 0000                    ?_main 0070  
+        __end_of_adcInit 0796          __end_of_adcRead 07B8                    _PORTB 0006  
+                  _PORTC 0007                    _TRISA 0085                    _TRISB 0086  
+                  _TRISC 0087                    status 0003                    wtemp0 007E  
+        __initialization 07FC             __end_of_main 07FC                   ??_main 0074  
+                 _ADRESH 001E                   _ADRESL 009E                ??_adcInit 0070  
+              ??_adcRead 0072  __end_of__initialization 07FC           __pcstackCOMMON 0070  
+             __pmaintext 07B8                  _adcInit 0786                  _adcRead 0796  
+                __ptext1 0796                  __ptext2 0786     end_of_initialization 07FC  
+    start_initialization 07FC                ___latbits 0002                 ?_adcInit 0070  
+               ?_adcRead 0070        adcRead@adcChannel 0070               _ADCON0bits 001F  
+             _ADCON1bits 009F         __size_of_adcInit 0010         __size_of_adcRead 0022  
+          __size_of_main 0044  

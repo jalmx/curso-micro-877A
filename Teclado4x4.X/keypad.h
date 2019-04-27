@@ -12,10 +12,10 @@
 //#define COL4 RB7
 ////////////////////////////////////////////////////////////////////
 char const keyPadMatrix[] = {
-    '7', '8', '9','0',
-    '4', '5', '6','0',
-    '1', '2', '3','0',
-    '*', '0', '#','0'
+    '7', '8', '9', 'A',
+    '4', '5', '6', 'B',
+    '1', '2', '3', 'C',
+    'F', '0', 'E', 'D',
     0xFF
 };
 
@@ -61,5 +61,5 @@ int kbdGetC() {
         old_key = key;
         return keyPadMatrix[ key ];
     } else
-        return keyPadMatrix[ 0x1F ];
+        return keyPadMatrix[ 17 ];
 }

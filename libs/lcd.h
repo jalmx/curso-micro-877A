@@ -1,7 +1,13 @@
-////Configuraci�n de pines. **Copiar y modificar**
-//#define LCD_TRIS TRISD
-//#define LCD_PORT PORTD
-//
+////Configuración de pines. **Copiar y modificar**
+
+//+++++++++++++++antes debe estar definido el XTAL
+
+//#include <stdio.h> // se debe importar cuando se necesita enviar una variable a la LCD
+
+///////configuración de pines para LCD
+//#define LCD_TRIS TRISD //configura el puerto que será el puerto para la LCD
+//#define LCD_PORT PORTD // configuro el puerto para los pines de la LCD
+
 //#define RW RD1
 //#define RS RD2
 //#define EN RD3
@@ -9,6 +15,8 @@
 //#define D5 RD5
 //#define D6 RD6
 //#define D7 RD7
+//#include "lcd.h"/////se incluye la lib de la LCD
+/////////////////////////////
 
 void lcdPort(char a) {
     if (a & 1)
@@ -40,29 +48,29 @@ void lcdCmd(char a) {
     EN = 0; // => E = 0
 }
 
-lcdClear() {
+static void lcdClear(void) {
     lcdCmd(0);
     lcdCmd(1);
 }
 
-void lcdSetCursor(char a, char b) {
-    char temp, z, y;
-    if (a == 1) {
-        temp = 0x80 + b - 1;
-        z = temp >> 4;
-        y = temp & 0x0F;
-        lcdCmd(z);
-        lcdCmd(y);
-    } else if (a == 2) {
-        temp = 0xC0 + b - 1;
-        z = temp >> 4;
-        y = temp & 0x0F;
-        lcdCmd(z);
-        lcdCmd(y);
-    }
+void lcdSetCursor(char y, char x) {
+    char temp, z, yy, row = 0x80;
+    
+    if (y == 2) 
+        row += 64;
+    else if (y == 3) 
+        row +=16;
+    else if (y == 4)
+        row += 64+16;
+                
+    temp = row + x - 1;
+    z = temp >> 4;
+    yy = temp & 0x0F;
+    lcdCmd(z);
+    lcdCmd(yy);
 }
 
-void lcdInit() {
+void lcdInit(void) {
     LCD_TRIS = 0;
     LCD_PORT = 0;
     lcdPort(0x00);
@@ -82,7 +90,7 @@ void lcdInit() {
     lcdCmd(0x06);
 }
 
-void lcdWriteChar(char a) {
+void lcdWriteChar(char const a) {
     char temp, y;
     temp = a & 0x0F;
     y = a & 0xF0;
@@ -97,8 +105,7 @@ void lcdWriteChar(char a) {
     EN = 0;
 }
 
-void lcdPrint(unsigned char *a) {
-    int i;
-    for (i = 0; a[i] != '\0'; i++)
+void lcdPrint(unsigned char const *a) {
+    for (int i = 0; a[i] != '\0'; i++)
         lcdWriteChar(a[i]);
 }

@@ -47,6 +47,36 @@ void main() {
                 case '5':
                     PORTC = 0x76; // 5         
                     break;
+                case '6':
+                    PORTC = 0xFE; // 5         
+                    break;
+                case '7':
+                    PORTC = 0x23; // 5         
+                    break;
+                case '8':
+                    PORTC = 0xFF; // 5         
+                    break;
+                case '9':
+                    PORTC = 0xF3; // 5         
+                    break;
+                case 'A':
+                    PORTC = 0xFB; // 5         
+                    break;
+                case 'B':
+                    PORTC = 0x5E; // 5         
+                    break;
+                case 'C':
+                    PORTC = 0x3C; // 5         
+                    break;
+                case 'D':
+                    PORTC = 0x4F; // 5         
+                    break;
+                case 'E':
+                    PORTC = 0xFC; // 5         
+                    break;
+                case 'F':
+                    PORTC = 0xF8; // 5         
+                    break;
             }
         }
     }

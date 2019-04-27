@@ -1,7 +1,13 @@
 ////Configuración de pines. **Copiar y modificar**
-//#define LCD_TRIS TRISD
-//#define LCD_PORT PORTD
-//
+
+//+++++++++++++++antes debe estar definido el XTAL
+
+//#include <stdio.h> // se debe importar cuando se necesita enviar una variable a la LCD
+
+///////configuración de pines para LCD
+//#define LCD_TRIS TRISD //configura el puerto que será el puerto para la LCD
+//#define LCD_PORT PORTD // configuro el puerto para los pines de la LCD
+
 //#define RW RD1
 //#define RS RD2
 //#define EN RD3
@@ -9,6 +15,8 @@
 //#define D5 RD5
 //#define D6 RD6
 //#define D7 RD7
+//#include "lcd.h"/////se incluye la lib de la LCD
+/////////////////////////////
 
 void lcdPort(char a) {
     if (a & 1)
@@ -40,7 +48,7 @@ void lcdCmd(char a) {
     EN = 0; // => E = 0
 }
 
-lcdClear() {
+void lcdClear(void) {
     lcdCmd(0);
     lcdCmd(1);
 }
@@ -62,7 +70,7 @@ void lcdSetCursor(char a, char b) {
     }
 }
 
-void lcdInit() {
+void lcdInit(void) {
     LCD_TRIS = 0;
     LCD_PORT = 0;
     lcdPort(0x00);
