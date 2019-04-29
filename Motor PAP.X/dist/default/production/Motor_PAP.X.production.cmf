@@ -13,10 +13,10 @@
 %PSECTS
 $dist/default/production\Motor_PAP.X.production.o
 cinit CODE 0 7FC 7FC 4 2
-maintext CODE 0 7CF 7CF 2D 2
-cstackCOMMON COMMON 1 70 70 4 1
-strings STRING 0 3 3 A 2
-$C:\Users\Xizuth\AppData\Local\Temp\s6ps.o
+maintext CODE 0 73C 73C C0 2
+cstackCOMMON COMMON 1 70 70 A 1
+strings STRING 0 3 3 20 2
+$C:\Users\Xizuth\AppData\Local\Temp\s168.o
 end_init CODE 0 0 0 3 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -32,24 +32,24 @@ BANK0 20-6F 1
 BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
-CONST D-7CE 2
+CONST 23-73B 2
 CONST 800-1FFF 2
-ENTRY D-7CE 2
+ENTRY 23-73B 2
 ENTRY 800-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
-CODE D-7CE 2
+CODE 23-73B 2
 CODE 800-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
 SFR3 180-18F 1
-COMMON 74-7D 1
+COMMON 7A-7D 1
 CONFIG 2007-2007 2
 EEDATA 2100-21FF 2
-STRCODE D-7CE 2
+STRCODE 23-73B 2
 STRCODE 800-1FFF 2
-STRING D-7CE 2
+STRING 23-73B 2
 STRING 800-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -65,20 +65,49 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Motor_PAP.X.production.o
-7FC cinit CODE >368:C:\Users\Xizuth\AppData\Local\Temp\s6ps.
-7FC cinit CODE >371:C:\Users\Xizuth\AppData\Local\Temp\s6ps.
-7FC cinit CODE >377:C:\Users\Xizuth\AppData\Local\Temp\s6ps.
-7FC cinit CODE >379:C:\Users\Xizuth\AppData\Local\Temp\s6ps.
-7FD cinit CODE >380:C:\Users\Xizuth\AppData\Local\Temp\s6ps.
-7CF maintext CODE >5:C:\Users\Xizuth\AppData\Local\Temp\s6ps.
-7CF maintext CODE >5:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
-7CF maintext CODE >8:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
-7D2 maintext CODE >9:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
-7D5 maintext CODE >11:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
-7D5 maintext CODE >13:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
-7D7 maintext CODE >14:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
-7E2 maintext CODE >15:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
-7EA maintext CODE >17:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+7FC cinit CODE >431:C:\Users\Xizuth\AppData\Local\Temp\s168.
+7FC cinit CODE >434:C:\Users\Xizuth\AppData\Local\Temp\s168.
+7FC cinit CODE >440:C:\Users\Xizuth\AppData\Local\Temp\s168.
+7FC cinit CODE >442:C:\Users\Xizuth\AppData\Local\Temp\s168.
+7FD cinit CODE >443:C:\Users\Xizuth\AppData\Local\Temp\s168.
+73C maintext CODE >5:C:\Users\Xizuth\AppData\Local\Temp\s168.
+73C maintext CODE >5:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+73C maintext CODE >11:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+73F maintext CODE >12:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+741 maintext CODE >13:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+742 maintext CODE >14:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+745 maintext CODE >15:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+746 maintext CODE >16:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+747 maintext CODE >20:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+748 maintext CODE >21:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+74A maintext CODE >22:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+755 maintext CODE >23:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+766 maintext CODE >24:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+768 maintext CODE >25:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+771 maintext CODE >22:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+772 maintext CODE >29:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+774 maintext CODE >30:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+77F maintext CODE >31:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+790 maintext CODE >32:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+792 maintext CODE >33:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+79B maintext CODE >30:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+79C maintext CODE >37:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+79E maintext CODE >38:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+7A9 maintext CODE >39:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+7BA maintext CODE >40:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+7BC maintext CODE >41:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+7C5 maintext CODE >38:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+7C6 maintext CODE >45:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+7C8 maintext CODE >46:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+7D3 maintext CODE >47:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+7E4 maintext CODE >48:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+7E6 maintext CODE >49:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+7EF maintext CODE >46:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+7F0 maintext CODE >20:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+7F4 maintext CODE >28:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+7F6 maintext CODE >36:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+7F8 maintext CODE >44:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+7FA maintext CODE >53:C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -93,32 +122,34 @@ $dist/default/production\Motor_PAP.X.production.o
 %SYMTAB
 ___latbits 2 0 ABS 0 - dist/default/production\Motor_PAP.X.production.o
 __Hspace_0 800 0 ABS 0 - -
-__Hspace_1 74 0 ABS 0 - -
+__Hspace_1 7A 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
+__end_ofmain@backward 42 0 STRING 0 strings dist/default/production\Motor_PAP.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 main@i 72 0 COMMON 1 cstackCOMMON dist/default/production\Motor_PAP.X.production.o
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\Xizuth\AppData\Local\Temp\s6ps.o
-_main F9E 0 CODE 0 maintext dist/default/production\Motor_PAP.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\Xizuth\AppData\Local\Temp\s168.o
+_main E78 0 CODE 0 maintext dist/default/production\Motor_PAP.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Motor_PAP.X.production.o
-start 0 0 CODE 0 init C:\Users\Xizuth\AppData\Local\Temp\s6ps.o
+start 0 0 CODE 0 init C:\Users\Xizuth\AppData\Local\Temp\s168.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Motor_PAP.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s6ps.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s6ps.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s6ps.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s6ps.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s6ps.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s6ps.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s168.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s168.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s168.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s168.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s168.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s168.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Motor_PAP.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
+main@forward 2E 0 STRING 0 strings dist/default/production\Motor_PAP.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\Xizuth\AppData\Local\Temp\s6ps.o
-___stacklo 0 0 ABS 0 - C:\Users\Xizuth\AppData\Local\Temp\s6ps.o
+___stackhi 0 0 ABS 0 - C:\Users\Xizuth\AppData\Local\Temp\s168.o
+___stacklo 0 0 ABS 0 - C:\Users\Xizuth\AppData\Local\Temp\s168.o
 start_initialization FF8 0 CODE 0 cinit dist/default/production\Motor_PAP.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Xizuth\AppData\Local\Temp\s6ps.o
+___int_sp 0 0 STACK 2 stack C:\Users\Xizuth\AppData\Local\Temp\s168.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -137,6 +168,7 @@ __Lbank3 0 0 ABS 0 bank3 -
 __Lcinit FF8 0 CODE 0 cinit -
 __Lidloc 0 0 IDLOC 0 idloc -
 __Lstack 0 0 STACK 2 stack -
+_PORTCbits 7 0 ABS 0 - dist/default/production\Motor_PAP.X.production.o
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
 __Hinit 0 0 CODE 0 init -
@@ -155,17 +187,24 @@ __Lsfr3 0 0 ABS 0 sfr3 -
 __Ltext 0 0 ABS 0 text -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __S0 800 0 ABS 0 - -
-__S1 74 0 ABS 0 - -
+__S1 7A 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 __Lintentry 0 0 CODE 0 intentry -
 __stringtab 6 0 STRING 0 strings dist/default/production\Motor_PAP.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Xizuth\AppData\Local\Temp\s6ps.o
-__end_ofmain@giros 1A 0 STRING 0 strings dist/default/production\Motor_PAP.X.production.o
-__pmaintext F9E 0 CODE 0 maintext dist/default/production\Motor_PAP.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Xizuth\AppData\Local\Temp\s168.o
+__end_ofmain@forward 38 0 STRING 0 strings dist/default/production\Motor_PAP.X.production.o
+__pmaintext E78 0 CODE 0 maintext dist/default/production\Motor_PAP.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 0 config -
-main@giros 12 0 STRING 0 strings dist/default/production\Motor_PAP.X.production.o
+main@full 24 0 STRING 0 strings dist/default/production\Motor_PAP.X.production.o
+main@half 12 0 STRING 0 strings dist/default/production\Motor_PAP.X.production.o
+main@i_74 74 0 COMMON 1 cstackCOMMON dist/default/production\Motor_PAP.X.production.o
+main@i_75 76 0 COMMON 1 cstackCOMMON dist/default/production\Motor_PAP.X.production.o
+main@i_76 78 0 COMMON 1 cstackCOMMON dist/default/production\Motor_PAP.X.production.o
+__end_ofmain@TIME 46 0 STRING 0 strings dist/default/production\Motor_PAP.X.production.o
+__end_ofmain@full 2E 0 STRING 0 strings dist/default/production\Motor_PAP.X.production.o
+__end_ofmain@half 24 0 STRING 0 strings dist/default/production\Motor_PAP.X.production.o
 __end_of__stringtab 12 0 STRING 0 strings dist/default/production\Motor_PAP.X.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
@@ -183,11 +222,16 @@ __Lreset_vec 0 0 CODE 0 reset_vec -
 __end_of__initialization FF8 0 CODE 0 cinit dist/default/production\Motor_PAP.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
+main@backward 38 0 STRING 0 strings dist/default/production\Motor_PAP.X.production.o
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\Motor_PAP.X.production.o
 __Hend_init 6 0 CODE 0 end_init -
 __end_of_main FF8 0 CODE 0 maintext dist/default/production\Motor_PAP.X.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\Motor_PAP.X.production.o
+_PORTC 7 0 ABS 0 - dist/default/production\Motor_PAP.X.production.o
+_PORTD 8 0 ABS 0 - dist/default/production\Motor_PAP.X.production.o
 _TRISB 86 0 ABS 0 - dist/default/production\Motor_PAP.X.production.o
+_TRISC 87 0 ABS 0 - dist/default/production\Motor_PAP.X.production.o
+_TRISD 88 0 ABS 0 - dist/default/production\Motor_PAP.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 __initialization FF8 0 CODE 0 cinit dist/default/production\Motor_PAP.X.production.o
@@ -218,7 +262,7 @@ __pstrings 6 0 STRING 0 strings dist/default/production\Motor_PAP.X.production.o
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cinit 0 7FC FF8 4 2
-maintext 0 7CF F9E 2D 2
-cstackCOMMON 1 70 70 4 1
+maintext 0 73C E78 C0 2
+cstackCOMMON 1 70 70 A 1
 reset_vec 0 0 0 3 2
-strings 0 3 6 A 2
+strings 0 3 6 20 2

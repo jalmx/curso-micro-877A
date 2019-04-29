@@ -15,14 +15,46 @@
 [v _main main `(v  1 e 1 0 ]
 "216 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"278
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+[s S28 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"295
+[u S37 . 1 `S28 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES37  1 e 1 @7 ]
+"340
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
 "1375
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1437
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1499
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
 "5 C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"13
+"45
+[v main@i_76 i `i  1 a 2 8 ]
+"37
+[v main@i_75 i `i  1 a 2 6 ]
+"29
+[v main@i_74 i `i  1 a 2 4 ]
+"21
 [v main@i i `i  1 a 2 2 ]
 "6
-[v main@giros giros `DC[4]uc  1 s 4 giros ]
-"20
+[v main@backward backward `DC[5]uc  1 s 5 backward ]
+"7
+[v main@forward forward `DC[5]uc  1 s 5 forward ]
+"8
+[v main@full full `DC[5]uc  1 s 5 full ]
+"9
+[v main@half half `DC[9]uc  1 s 9 half ]
+"56
 } 0

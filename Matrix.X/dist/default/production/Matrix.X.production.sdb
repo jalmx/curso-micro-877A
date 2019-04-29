@@ -1,0 +1,42 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 6 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"4 C:\Users\Xizuth\Documents\curso-micro-877A\Matrix.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"216 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"278
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+"1375
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1437
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"4 C:\Users\Xizuth\Documents\curso-micro-877A\Matrix.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"23
+[v main@i_43 i `uc  1 a 1 5 ]
+"15
+[v main@i i `uc  1 a 1 4 ]
+"22
+[v main@a_42 a `uc  1 a 1 3 ]
+"14
+[v main@a a `uc  1 a 1 2 ]
+"5
+[v main@col col `DC[8]uc  1 s 8 col ]
+"6
+[v main@smile smile `DC[8]uc  1 s 8 smile ]
+"7
+[v main@heart heart `DC[8]uc  1 s 8 heart ]
+"30
+} 0
