@@ -67,7 +67,7 @@
    <POPUP w="14" x="146" flags="00000008" y="207" h="8" pid="7" iid="2">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="8" x="166" flags="80000002" y="227" h="8" pid="8" iid="2">
+   <POPUP w="8" x="166" flags="00000002" y="227" h="8" pid="8" iid="2">
     <PROPERTIES>
      <ITEM name="DataType">2</ITEM>
      <ITEM name="DispChars">Yes</ITEM>

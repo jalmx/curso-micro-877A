@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\sources\\c90\\pic\\__eeprom.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,27 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-# 1 "./config.h" 1
-
-
-
-
-
-
-#pragma config FOSC = XT
-#pragma config WDTE = OFF
-#pragma config PWRTE = OFF
-#pragma config BOREN = OFF
-#pragma config LVP = OFF
-#pragma config CPD = OFF
-#pragma config WRT = OFF
-#pragma config CP = OFF
-
-
-
-
-
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\sources\\c90\\pic\\__eeprom.c" 2
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -1740,122 +1720,176 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 2 3
-# 19 "./config.h" 2
-# 1 "main.c" 2
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\sources\\c90\\pic\\__eeprom.c" 2
 
-# 1 "./adc.h" 1
-void adcInit() {
-# 11 "./adc.h"
-    ADCON0bits.ADCS = 0b01;
-    ADCON0bits.CHS = 0b000;
-    ADCON0bits.ADON = 0;
-# 24 "./adc.h"
-    ADCON1bits.ADFM = 1;
-    ADCON1bits.ADCS2 = 1;
-    ADCON1bits.PCFG = 0b0000;
+
+
+
+void
+__eecpymem(volatile unsigned char *to, __eeprom unsigned char * from, unsigned char size)
+{
+ volatile unsigned char *cp = to;
+
+ while (EECON1bits.WR) continue;
+ EEADR = (unsigned char)from;
+ while(size--) {
+  while (EECON1bits.WR) continue;
+
+  EECON1 &= 0x7F;
+
+  EECON1bits.RD = 1;
+  *cp++ = EEDATA;
+  ++EEADR;
+ }
+# 36 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\sources\\c90\\pic\\__eeprom.c"
 }
 
+void
+__memcpyee(__eeprom unsigned char * to, const unsigned char *from, unsigned char size)
+{
+ const unsigned char *ptr =from;
 
+ while (EECON1bits.WR) continue;
+ EEADR = (unsigned char)to - 1U;
 
+ EECON1 &= 0x7F;
 
-
-
-
-int adcRead(int const adcChannel) {
-    ADCON0bits.ADON = 1;
-    ADCON0bits.CHS = adcChannel;
-    _delay((unsigned long)((10)*(20000000/4000.0)));
-    ADCON0bits.GO = 1;
-    while (ADCON0bits.GO_DONE);
-
-    return (ADRESH << 8) + (ADRESL);
-}
-# 2 "main.c" 2
-
-# 1 "./pwm.h" 1
-
-
-int FREQ1;
-int FREQ2;
-
-void setTMR2(char const pwm);
-void setPR2(unsigned int const freq);
-
-void pwmInit1(unsigned int const freq) {
-    FREQ1 = freq;
-    setPR2(freq);
-    setTMR2(1);
-}
-
-void pwmInit2(unsigned int freq) {
-    FREQ2 = freq;
-    setPR2(freq);
-    setTMR2(2);
+ while(size--) {
+  while (EECON1bits.WR) {
+   continue;
+  }
+  EEDATA = *ptr++;
+  ++EEADR;
+  STATUSbits.CARRY = 0;
+  if (INTCONbits.GIE) {
+   STATUSbits.CARRY = 1;
+  }
+  INTCONbits.GIE = 0;
+  EECON1bits.WREN = 1;
+  EECON2 = 0x55;
+  EECON2 = 0xAA;
+  EECON1bits.WR = 1;
+  EECON1bits.WREN = 0;
+  if (STATUSbits.CARRY) {
+   INTCONbits.GIE = 1;
+  }
+ }
+# 101 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\sources\\c90\\pic\\__eeprom.c"
 }
 
-void pwmSetDutyCycle1(unsigned int duty) {
-    if(duty >= 1023) return;
-    duty = ((float) duty / 1023)*(20000000 / (FREQ1 * 16));
-    CCP1X = duty & 0x01;
-    CCP1Y = duty & 0x02;
-    CCPR1L = duty >> 2;
+unsigned char
+__eetoc(__eeprom void *addr)
+{
+ unsigned char data;
+ __eecpymem((unsigned char *) &data,addr,1);
+ return data;
 }
 
-void pwmSetDutyCycle2(unsigned int duty) {
-    if(duty >= 1023) return;
-
-    duty = ((float) duty / 1023)*(20000000 / (FREQ2 * 16));
-    CCP2X = duty & 0x01;
-    CCP2Y = duty & 0x02;
-    CCPR2L = duty >> 2;
+unsigned int
+__eetoi(__eeprom void *addr)
+{
+ unsigned int data;
+ __eecpymem((unsigned char *) &data,addr,2);
+ return data;
 }
 
-void setTMR2(char const pwm) {
-    if (pwm == 2) {
-        CCP2M3 = 1;
-        CCP2M2 = 1;
-    } else {
-        CCP1M3 = 1;
-        CCP1M2 = 1;
-    }
-    if (16 == 1) {
-        T2CKPS0 = 0;
-        T2CKPS1 = 0;
-    } else if (16 == 4) {
-        T2CKPS0 = 1;
-        T2CKPS1 = 0;
-    } else {
-        T2CKPS0 = 1;
-        T2CKPS1 = 1;
-    }
-    TMR2ON = 1;
-    if (pwm == 2)
-        TRISC2 = 0;
-    else
-        TRISC1 = 0;
+#pragma warning push
+#pragma warning disable 2040
+__uint24
+__eetom(__eeprom void *addr)
+{
+ __uint24 data;
+ __eecpymem((unsigned char *) &data,addr,3);
+ return data;
+}
+#pragma warning pop
+
+unsigned long
+__eetol(__eeprom void *addr)
+{
+ unsigned long data;
+ __eecpymem((unsigned char *) &data,addr,4);
+ return data;
 }
 
-void setPR2(unsigned int const freq) {
-    PR2 = (20000000 / (freq * 4 * 16)) - 1;
+#pragma warning push
+#pragma warning disable 1516
+unsigned long long
+__eetoo(__eeprom void *addr)
+{
+ unsigned long long data;
+ __eecpymem((unsigned char *) &data,addr,8);
+ return data;
 }
-# 3 "main.c" 2
+#pragma warning pop
 
+unsigned char
+__ctoee(__eeprom void *addr, unsigned char data)
+{
+ __memcpyee(addr,(unsigned char *) &data,1);
+ return data;
+}
 
-void main(void) {
-    TRISB = 255;
-    PORTB = 0;
+unsigned int
+__itoee(__eeprom void *addr, unsigned int data)
+{
+ __memcpyee(addr,(unsigned char *) &data,2);
+ return data;
+}
 
-    adcInit();
-    pwmInit1(1200);
-    pwmInit2(1200);
+#pragma warning push
+#pragma warning disable 2040
+__uint24
+__mtoee(__eeprom void *addr, __uint24 data)
+{
+ __memcpyee(addr,(unsigned char *) &data,3);
+ return data;
+}
+#pragma warning pop
 
-    for(;;){
-        int adc = adcRead(0);
+unsigned long
+__ltoee(__eeprom void *addr, unsigned long data)
+{
+ __memcpyee(addr,(unsigned char *) &data,4);
+ return data;
+}
 
+#pragma warning push
+#pragma warning disable 1516
+unsigned long long
+__otoee(__eeprom void *addr, unsigned long long data)
+{
+ __memcpyee(addr,(unsigned char *) &data,8);
+ return data;
+}
+#pragma warning pop
 
-        pwmSetDutyCycle1(adc);
-        _delay((unsigned long)((10)*(20000000/4000.0)));
-        pwmSetDutyCycle2(adc);
-        _delay((unsigned long)((10)*(20000000/4000.0)));
-    }
+float
+__eetoft(__eeprom void *addr)
+{
+ float data;
+ __eecpymem((unsigned char *) &data,addr,3);
+ return data;
+}
+
+double
+__eetofl(__eeprom void *addr)
+{
+ double data;
+ __eecpymem((unsigned char *) &data,addr,4);
+ return data;
+}
+
+float
+__fttoee(__eeprom void *addr, float data)
+{
+ __memcpyee(addr,(unsigned char *) &data,3);
+ return data;
+}
+
+double
+__fltoee(__eeprom void *addr, double data)
+{
+ __memcpyee(addr,(unsigned char *) &data,4);
+ return data;
 }

@@ -1,5 +1,4 @@
-#include <xc.h>
-#define _XTAL_FREQ 4000000
+#include "config.h"
 #include <stdio.h> // se debe importar cuando se necesita enviar una variable a la LCD
 /////configuración de pines para LCD
 #define LCD_TRIS TRISD //configura el puerto que será el puerto para la LCD
@@ -16,32 +15,43 @@
 ///////////////////////////
 void main() {
 
-    lcdInit();
+    lcdInit(); //inicializo la LCD
     
     while (1) {
+//        lcdClear(); //clean display
+//        lcdSetCursor(1, 1);
+//        lcdPrint("Welcome to");
+//        lcdSetCursor(2, 1);
+//        lcdPrint("Micro ;)");
+//        __delay_ms(2000);
+//        lcdClear();
+//        lcdSetCursor(1, 5);
+//        lcdPrint("CBTIS 85");
+//        lcdSetCursor(2, 5);
+//        lcdPrint("RULES");
+//        lcdSetCursor(1,15);
+//        lcdPrint(":D");
+//        lcdSetCursor(2,15);
+//        lcdPrint("<3");
+//        __delay_ms(2000);
+        
         lcdClear();
+        float f = 3.1416;
+        char flotante[16];//array
+        sprintf(flotante, "Float = %.4f", f);
         lcdSetCursor(1, 1);
-        lcdPrint("Bienvenido a");
+        lcdPrint(flotante);
+        
+        char entero[16];
+        int a = 56;
+        sprintf(entero, "Integer = %d", a);
         lcdSetCursor(2, 1);
-        lcdPrint("Micro ;)");
-        __delay_ms(2000);
-        lcdClear();
-        lcdSetCursor(1, 1);
-        lcdPrint("    CBTIS 85    ");
-        lcdSetCursor(2, 1);
-        lcdPrint("     RULES     ");
+        lcdPrint(entero);
         __delay_ms(2000);
         
         lcdClear();
-        float f = 1.414;
-        int a = 56;
-        char s[16];
-        sprintf(s, "Float = %1.2f", f);
-        lcdSetCursor(1, 1);
-        lcdPrint(s);
-        sprintf(s, "Integer = %d", a);
-        lcdSetCursor(2, 1);
-        lcdPrint(s);
+        lcdSetCursor(1,1);
+        lcdPrint("35");
         __delay_ms(2000);
     }
 }

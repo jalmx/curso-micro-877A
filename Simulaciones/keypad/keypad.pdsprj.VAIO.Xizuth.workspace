@@ -6,7 +6,7 @@
  </FRAME>
  <MODULE name="VSMDEBUG">
   <PWI>
-   <POPUP w="800" x="1432" flags="00000002" y="127" h="200" pid="0" iid="-1">
+   <POPUP w="800" x="566" flags="00000002" y="127" h="200" pid="0" iid="-1">
     <PROPERTIES>
      <ITEM name="Message Column Width">665</ITEM>
      <ITEM name="ShowGrid">No</ITEM>
@@ -14,7 +14,7 @@
      <ITEM name="Version">100</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="350" x="1452" flags="00000032" y="147" h="200" pid="1" iid="-1">
+   <POPUP w="350" x="1016" flags="00000032" y="147" h="200" pid="1" iid="-1">
     <PROPERTIES>
      <ITEM name="Address Column Width">83</ITEM>
      <ITEM name="AutoResize">No</ITEM>
@@ -31,10 +31,10 @@
      <ITEM name="nItems">0</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="52" x="1472" flags="00000048" y="167" h="13" pid="3" iid="1">
+   <POPUP w="52" x="1314" flags="00000048" y="167" h="13" pid="3" iid="1">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="8" x="1492" flags="0000000a" y="187" h="32" pid="4" iid="1">
+   <POPUP w="8" x="1358" flags="0000000a" y="187" h="32" pid="4" iid="1">
     <PROPERTIES>
      <ITEM name="DataType">2</ITEM>
      <ITEM name="DispChars">Yes</ITEM>
@@ -44,7 +44,7 @@
      <ITEM name="TopLineAddress">00000000</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="8" x="1512" flags="0000000a" y="207" h="32" pid="5" iid="1">
+   <POPUP w="8" x="1358" flags="0000000a" y="207" h="32" pid="5" iid="1">
     <PROPERTIES>
      <ITEM name="DataType">2</ITEM>
      <ITEM name="DispChars">Yes</ITEM>
@@ -54,7 +54,7 @@
      <ITEM name="TopLineAddress">00000000</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="16" x="1532" flags="0000000a" y="227" h="32" pid="6" iid="1">
+   <POPUP w="16" x="1350" flags="0000000a" y="227" h="32" pid="6" iid="1">
     <PROPERTIES>
      <ITEM name="DataType">2</ITEM>
      <ITEM name="DispChars">Yes</ITEM>
@@ -64,10 +64,10 @@
      <ITEM name="TopLineAddress">00000000</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="14" x="1552" flags="00000008" y="247" h="8" pid="7" iid="1">
+   <POPUP w="14" x="1352" flags="00000008" y="247" h="8" pid="7" iid="1">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="8" x="1572" flags="00000002" y="267" h="8" pid="8" iid="1">
+   <POPUP w="8" x="1358" flags="00000002" y="267" h="8" pid="8" iid="1">
     <PROPERTIES>
      <ITEM name="DataType">2</ITEM>
      <ITEM name="DispChars">Yes</ITEM>

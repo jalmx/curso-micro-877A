@@ -5,8 +5,20 @@
 [d frameptr 6 ]
 "1 C:\Users\Xizuth\Documents\curso-micro-877A\Servo.X/adc.h
 [v _adcInit adcInit `(v  1 e 1 0 ]
-"6 C:\Users\Xizuth\Documents\curso-micro-877A\Servo.X/pwm.h
+"35
+[v _adcRead adcRead `(i  1 e 2 0 ]
+"9 C:\Users\Xizuth\Documents\curso-micro-877A\Servo.X/pwm.h
 [v _pwmInit1 pwmInit1 `(v  1 e 1 0 ]
+"15
+[v _pwmInit2 pwmInit2 `(v  1 e 1 0 ]
+"21
+[v _pwmSetDutyCycle1 pwmSetDutyCycle1 `(v  1 e 1 0 ]
+"29
+[v _pwmSetDutyCycle2 pwmSetDutyCycle2 `(v  1 e 1 0 ]
+"38
+[v _setTMR2 setTMR2 `(v  1 e 1 0 ]
+"63
+[v _setPR2 setPR2 `(v  1 e 1 0 ]
 "5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
 [v ___aldiv __aldiv `(l  1 e 4 0 ]
 "43 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fltol.c
@@ -110,13 +122,131 @@
 "5 C:\Users\Xizuth\Documents\curso-micro-877A\Servo.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"15
+"14
+[v main@adc adc `i  1 a 2 6 ]
+"22
 } 0
-"6 C:\Users\Xizuth\Documents\curso-micro-877A\Servo.X/pwm.h
+"29 C:\Users\Xizuth\Documents\curso-micro-877A\Servo.X/pwm.h
+[v _pwmSetDutyCycle2 pwmSetDutyCycle2 `(v  1 e 1 0 ]
+{
+[v pwmSetDutyCycle2@duty duty `ui  1 p 2 0 ]
+"36
+} 0
+"21
+[v _pwmSetDutyCycle1 pwmSetDutyCycle1 `(v  1 e 1 0 ]
+{
+[v pwmSetDutyCycle1@duty duty `ui  1 p 2 0 ]
+"27
+} 0
+"10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 12 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 11 ]
+"10
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 6 ]
+"15
+[v ___xxtofl@sign sign `uc  1 a 1 10 ]
+"44
+} 0
+"43 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 78 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 77 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 68 ]
+"70
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+{
+[s S469 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+"13
+[s S474 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S477 . 4 `l 1 i 4 0 `d 1 f 4 0 `S469 1 fAsBytes 4 0 `S474 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S477  1 a 4 62 ]
+"12
+[v ___flmul@grs grs `ul  1 a 4 56 ]
+[s S546 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+"14
+[u S549 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S546 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S549  1 a 2 66 ]
+"10
+[v ___flmul@bexp bexp `uc  1 a 1 61 ]
+"11
+[v ___flmul@aexp aexp `uc  1 a 1 60 ]
+"9
+[v ___flmul@sign sign `uc  1 a 1 55 ]
+"8
+[v ___flmul@b b `d  1 p 4 42 ]
+[v ___flmul@a a `d  1 p 4 46 ]
+"205
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+{
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v __Umul8_16@word_mpld word_mpld `ui  1 a 2 6 ]
+"5
+[v __Umul8_16@product product `ui  1 a 2 4 ]
+"4
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
+[v __Umul8_16@multiplicand multiplicand `uc  1 p 1 0 ]
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 8 ]
+"60
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+{
+"21
+[v ___fldiv@grs grs `ul  1 a 4 36 ]
+"22
+[v ___fldiv@rem rem `ul  1 a 4 29 ]
+"20
+[v ___fldiv@new_exp new_exp `i  1 a 2 34 ]
+"19
+[v ___fldiv@aexp aexp `uc  1 a 1 41 ]
+"18
+[v ___fldiv@bexp bexp `uc  1 a 1 40 ]
+"16
+[v ___fldiv@sign sign `uc  1 a 1 33 ]
+"8
+[v ___fldiv@a a `d  1 p 4 16 ]
+[v ___fldiv@b b `d  1 p 4 20 ]
+"185
+} 0
+"15 C:\Users\Xizuth\Documents\curso-micro-877A\Servo.X/pwm.h
+[v _pwmInit2 pwmInit2 `(v  1 e 1 0 ]
+{
+[v pwmInit2@freq freq `ui  1 p 2 8 ]
+"19
+} 0
+"9
 [v _pwmInit1 pwmInit1 `(v  1 e 1 0 ]
 {
-[v pwmInit1@freq freq `DCui  1 p 2 6 ]
-"15
+[v pwmInit1@freq freq `DCui  1 p 2 8 ]
+"13
+} 0
+"38
+[v _setTMR2 setTMR2 `(v  1 e 1 0 ]
+{
+[v setTMR2@pwm pwm `DCuc  1 a 1 wreg ]
+[v setTMR2@pwm pwm `DCuc  1 a 1 wreg ]
+[v setTMR2@pwm pwm `DCuc  1 a 1 0 ]
+"61
+} 0
+"63
+[v _setPR2 setPR2 `(v  1 e 1 0 ]
+{
+[v setPR2@freq freq `DCui  1 p 2 6 ]
+"65
 } 0
 "5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
 [v ___aldiv __aldiv `(l  1 e 4 0 ]
@@ -131,7 +261,13 @@
 [v ___aldiv@dividend dividend `l  1 p 4 4 ]
 "41
 } 0
-"1 C:\Users\Xizuth\Documents\curso-micro-877A\Servo.X/adc.h
+"35 C:\Users\Xizuth\Documents\curso-micro-877A\Servo.X/adc.h
+[v _adcRead adcRead `(i  1 e 2 0 ]
+{
+[v adcRead@adcChannel adcChannel `DCi  1 p 2 0 ]
+"43
+} 0
+"1
 [v _adcInit adcInit `(v  1 e 1 0 ]
 {
 "27

@@ -47,9 +47,36 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2222
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2222: extern volatile unsigned char ADRESL __attribute__((address(0x09E)));
 [v _ADRESL `Vuc ~T0 @X0 0 e@158 ]
-"1816
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1816: extern volatile unsigned char PR2 __attribute__((address(0x092)));
-[v _PR2 `Vuc ~T0 @X0 0 e@146 ]
+"7 ./pwm.h
+[; ;./pwm.h: 7: void setPR2(unsigned int const freq);
+[v _setPR2 `(v ~T0 @X0 0 ef1`Cui ]
+"6
+[; ;./pwm.h: 6: void setTMR2(char const pwm);
+[v _setTMR2 `(v ~T0 @X0 0 ef1`Cuc ]
+"2452 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2452: extern volatile __bit CCP1X __attribute__((address(0xBD)));
+[v _CCP1X `Vb ~T0 @X0 0 e@189 ]
+"2455
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2455: extern volatile __bit CCP1Y __attribute__((address(0xBC)));
+[v _CCP1Y `Vb ~T0 @X0 0 e@188 ]
+"892
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 892: extern volatile unsigned char CCPR1L __attribute__((address(0x015)));
+[v _CCPR1L `Vuc ~T0 @X0 0 e@21 ]
+"2476
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2476: extern volatile __bit CCP2X __attribute__((address(0xED)));
+[v _CCP2X `Vb ~T0 @X0 0 e@237 ]
+"2479
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2479: extern volatile __bit CCP2Y __attribute__((address(0xEC)));
+[v _CCP2Y `Vb ~T0 @X0 0 e@236 ]
+"1080
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1080: extern volatile unsigned char CCPR2L __attribute__((address(0x01B)));
+[v _CCPR2L `Vuc ~T0 @X0 0 e@27 ]
+"2473
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2473: extern volatile __bit CCP2M3 __attribute__((address(0xEB)));
+[v _CCP2M3 `Vb ~T0 @X0 0 e@235 ]
+"2470
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2470: extern volatile __bit CCP2M2 __attribute__((address(0xEA)));
+[v _CCP2M2 `Vb ~T0 @X0 0 e@234 ]
 "2449
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2449: extern volatile __bit CCP1M3 __attribute__((address(0xBB)));
 [v _CCP1M3 `Vb ~T0 @X0 0 e@187 ]
@@ -68,33 +95,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2965
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2965: extern volatile __bit TRISC2 __attribute__((address(0x43A)));
 [v _TRISC2 `Vb ~T0 @X0 0 e@1082 ]
-"2473
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2473: extern volatile __bit CCP2M3 __attribute__((address(0xEB)));
-[v _CCP2M3 `Vb ~T0 @X0 0 e@235 ]
-"2470
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2470: extern volatile __bit CCP2M2 __attribute__((address(0xEA)));
-[v _CCP2M2 `Vb ~T0 @X0 0 e@234 ]
 "2962
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2962: extern volatile __bit TRISC1 __attribute__((address(0x439)));
 [v _TRISC1 `Vb ~T0 @X0 0 e@1081 ]
-"2452
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2452: extern volatile __bit CCP1X __attribute__((address(0xBD)));
-[v _CCP1X `Vb ~T0 @X0 0 e@189 ]
-"2455
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2455: extern volatile __bit CCP1Y __attribute__((address(0xBC)));
-[v _CCP1Y `Vb ~T0 @X0 0 e@188 ]
-"892
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 892: extern volatile unsigned char CCPR1L __attribute__((address(0x015)));
-[v _CCPR1L `Vuc ~T0 @X0 0 e@21 ]
-"2476
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2476: extern volatile __bit CCP2X __attribute__((address(0xED)));
-[v _CCP2X `Vb ~T0 @X0 0 e@237 ]
-"2479
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2479: extern volatile __bit CCP2Y __attribute__((address(0xEC)));
-[v _CCP2Y `Vb ~T0 @X0 0 e@236 ]
-"1080
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1080: extern volatile unsigned char CCPR2L __attribute__((address(0x01B)));
-[v _CCPR2L `Vuc ~T0 @X0 0 e@27 ]
+"1816
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1816: extern volatile unsigned char PR2 __attribute__((address(0x092)));
+[v _PR2 `Vuc ~T0 @X0 0 e@146 ]
 [p mainexit ]
 "1375
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1375: extern volatile unsigned char TRISB __attribute__((address(0x086)));
@@ -340,8 +346,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./adc.h: 37:     ADCON0bits.CHS = adcChannel;
 [e = . . _ADCON0bits 0 3 -> _adcChannel `uc ]
 "38
-[; ;./adc.h: 38:     _delay((unsigned long)((10)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;./adc.h: 38:     _delay((unsigned long)((10)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
 "39
 [; ;./adc.h: 39:     ADCON0bits.GO = 1;
 [e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
@@ -366,121 +372,209 @@ Version 4.0 HI-TECH Software Intermediate Code
 "4
 [; ;./pwm.h: 4: int FREQ2;
 [v _FREQ2 `i ~T0 @X0 1 e ]
-"6
-[; ;./pwm.h: 6: void pwmInit1(unsigned int const freq) {
+"9
+[; ;./pwm.h: 9: void pwmInit1(unsigned int const freq) {
 [v _pwmInit1 `(v ~T0 @X0 1 ef1`Cui ]
 {
 [e :U _pwmInit1 ]
 [v _freq `Cui ~T0 @X0 1 r1 ]
 [f ]
-"7
-[; ;./pwm.h: 7:     FREQ1 = freq;
-[e = _FREQ1 -> _freq `i ]
-"8
-[; ;./pwm.h: 8:     PR2 = (4000000 / (FREQ1 * 4 * 4)) - 1;
-[e = _PR2 -> - / -> 4000000 `l -> * * _FREQ1 -> 4 `i -> 4 `i `l -> -> 1 `i `l `uc ]
-"9
-[; ;./pwm.h: 9:     CCP1M3 = 1;
-[e = _CCP1M3 -> -> 1 `i `b ]
 "10
-[; ;./pwm.h: 10:     CCP1M2 = 1;
-[e = _CCP1M2 -> -> 1 `i `b ]
+[; ;./pwm.h: 10:     FREQ1 = freq;
+[e = _FREQ1 -> _freq `i ]
 "11
-[; ;./pwm.h: 11:     T2CKPS0 = 1;
-[e = _T2CKPS0 -> -> 1 `i `b ]
+[; ;./pwm.h: 11:     setPR2(freq);
+[e ( _setPR2 (1 _freq ]
 "12
-[; ;./pwm.h: 12:     T2CKPS1 = 0;
-[e = _T2CKPS1 -> -> 0 `i `b ]
+[; ;./pwm.h: 12:     setTMR2(1);
+[e ( _setTMR2 (1 -> -> 1 `i `uc ]
 "13
-[; ;./pwm.h: 13:     TMR2ON = 1;
-[e = _TMR2ON -> -> 1 `i `b ]
-"14
-[; ;./pwm.h: 14:     TRISC2 = 0;
-[e = _TRISC2 -> -> 0 `i `b ]
-"15
-[; ;./pwm.h: 15: }
+[; ;./pwm.h: 13: }
 [e :UE 100 ]
 }
-"16
-[; ;./pwm.h: 16: void pwmInit2(unsigned int const freq) {
-[v _pwmInit2 `(v ~T0 @X0 1 ef1`Cui ]
+"15
+[; ;./pwm.h: 15: void pwmInit2(unsigned int freq) {
+[v _pwmInit2 `(v ~T0 @X0 1 ef1`ui ]
 {
 [e :U _pwmInit2 ]
-[v _freq `Cui ~T0 @X0 1 r1 ]
+[v _freq `ui ~T0 @X0 1 r1 ]
 [f ]
-"17
-[; ;./pwm.h: 17:     FREQ2 = freq;
+"16
+[; ;./pwm.h: 16:     FREQ2 = freq;
 [e = _FREQ2 -> _freq `i ]
+"17
+[; ;./pwm.h: 17:     setPR2(freq);
+[e ( _setPR2 (1 _freq ]
 "18
-[; ;./pwm.h: 18:     PR2 = (4000000 / (FREQ2 * 4 * 4)) - 1;
-[e = _PR2 -> - / -> 4000000 `l -> * * _FREQ2 -> 4 `i -> 4 `i `l -> -> 1 `i `l `uc ]
+[; ;./pwm.h: 18:     setTMR2(2);
+[e ( _setTMR2 (1 -> -> 2 `i `uc ]
 "19
-[; ;./pwm.h: 19:     CCP2M3 = 1;
-[e = _CCP2M3 -> -> 1 `i `b ]
-"20
-[; ;./pwm.h: 20:     CCP2M2 = 1;
-[e = _CCP2M2 -> -> 1 `i `b ]
-"21
-[; ;./pwm.h: 21:     T2CKPS0 = 1;
-[e = _T2CKPS0 -> -> 1 `i `b ]
-"22
-[; ;./pwm.h: 22:     T2CKPS1 = 0;
-[e = _T2CKPS1 -> -> 0 `i `b ]
-"23
-[; ;./pwm.h: 23:     TMR2ON = 1;
-[e = _TMR2ON -> -> 1 `i `b ]
-"24
-[; ;./pwm.h: 24:     TRISC1 = 0;
-[e = _TRISC1 -> -> 0 `i `b ]
-"25
-[; ;./pwm.h: 25: }
+[; ;./pwm.h: 19: }
 [e :UE 101 ]
 }
-"27
-[; ;./pwm.h: 27: void pwmSetDutyCycle1(unsigned int duty) {
+"21
+[; ;./pwm.h: 21: void pwmSetDutyCycle1(unsigned int duty) {
 [v _pwmSetDutyCycle1 `(v ~T0 @X0 1 ef1`ui ]
 {
 [e :U _pwmSetDutyCycle1 ]
 [v _duty `ui ~T0 @X0 1 r1 ]
 [f ]
-"29
-[; ;./pwm.h: 29:     duty = ((float) duty / 1023)*(4000000 / (FREQ1 * 4));
-[e = _duty -> * / -> _duty `f -> -> 1023 `i `f -> / -> 4000000 `l -> * _FREQ1 -> 4 `i `l `f `ui ]
-"30
-[; ;./pwm.h: 30:     CCP1X = duty & 0x01;
+"22
+[; ;./pwm.h: 22:     if(duty >= 1023) return;
+[e $ ! >= _duty -> -> 1023 `i `ui 103  ]
+[e $UE 102  ]
+[e :U 103 ]
+"23
+[; ;./pwm.h: 23:     duty = ((float) duty / 1023)*(20000000 / (FREQ1 * 16));
+[e = _duty -> * / -> _duty `f -> -> 1023 `i `f -> / -> 20000000 `l -> * _FREQ1 -> 16 `i `l `f `ui ]
+"24
+[; ;./pwm.h: 24:     CCP1X = duty & 0x01;
 [e = _CCP1X -> & _duty -> -> 1 `i `ui `b ]
-"31
-[; ;./pwm.h: 31:     CCP1Y = duty & 0x02;
+"25
+[; ;./pwm.h: 25:     CCP1Y = duty & 0x02;
 [e = _CCP1Y -> & _duty -> -> 2 `i `ui `b ]
-"32
-[; ;./pwm.h: 32:     CCPR1L = duty >> 2;
+"26
+[; ;./pwm.h: 26:     CCPR1L = duty >> 2;
 [e = _CCPR1L -> >> _duty -> 2 `i `uc ]
-"33
-[; ;./pwm.h: 33: }
+"27
+[; ;./pwm.h: 27: }
 [e :UE 102 ]
 }
-"35
-[; ;./pwm.h: 35: void pwmSetDutyCycle2(unsigned int duty) {
+"29
+[; ;./pwm.h: 29: void pwmSetDutyCycle2(unsigned int duty) {
 [v _pwmSetDutyCycle2 `(v ~T0 @X0 1 ef1`ui ]
 {
 [e :U _pwmSetDutyCycle2 ]
 [v _duty `ui ~T0 @X0 1 r1 ]
 [f ]
-"37
-[; ;./pwm.h: 37:     duty = ((float) duty / 1023)*(4000000 / (FREQ2 * 4));
-[e = _duty -> * / -> _duty `f -> -> 1023 `i `f -> / -> 4000000 `l -> * _FREQ2 -> 4 `i `l `f `ui ]
-"38
-[; ;./pwm.h: 38:     CCP2X = duty & 0x01;
+"30
+[; ;./pwm.h: 30:     if(duty >= 1023) return;
+[e $ ! >= _duty -> -> 1023 `i `ui 105  ]
+[e $UE 104  ]
+[e :U 105 ]
+"32
+[; ;./pwm.h: 32:     duty = ((float) duty / 1023)*(20000000 / (FREQ2 * 16));
+[e = _duty -> * / -> _duty `f -> -> 1023 `i `f -> / -> 20000000 `l -> * _FREQ2 -> 16 `i `l `f `ui ]
+"33
+[; ;./pwm.h: 33:     CCP2X = duty & 0x01;
 [e = _CCP2X -> & _duty -> -> 1 `i `ui `b ]
-"39
-[; ;./pwm.h: 39:     CCP2Y = duty & 0x02;
+"34
+[; ;./pwm.h: 34:     CCP2Y = duty & 0x02;
 [e = _CCP2Y -> & _duty -> -> 2 `i `ui `b ]
-"40
-[; ;./pwm.h: 40:     CCPR2L = duty >> 2;
+"35
+[; ;./pwm.h: 35:     CCPR2L = duty >> 2;
 [e = _CCPR2L -> >> _duty -> 2 `i `uc ]
+"36
+[; ;./pwm.h: 36: }
+[e :UE 104 ]
+}
+"38
+[; ;./pwm.h: 38: void setTMR2(char const pwm) {
+[v _setTMR2 `(v ~T0 @X0 1 ef1`Cuc ]
+{
+[e :U _setTMR2 ]
+[v _pwm `Cuc ~T0 @X0 1 r1 ]
+[f ]
+"39
+[; ;./pwm.h: 39:     if (pwm == 2) {
+[e $ ! == -> _pwm `i -> 2 `i 107  ]
+{
+"40
+[; ;./pwm.h: 40:         CCP2M3 = 1;
+[e = _CCP2M3 -> -> 1 `i `b ]
 "41
-[; ;./pwm.h: 41: }
-[e :UE 103 ]
+[; ;./pwm.h: 41:         CCP2M2 = 1;
+[e = _CCP2M2 -> -> 1 `i `b ]
+"42
+[; ;./pwm.h: 42:     } else {
+}
+[e $U 108  ]
+[e :U 107 ]
+{
+"43
+[; ;./pwm.h: 43:         CCP1M3 = 1;
+[e = _CCP1M3 -> -> 1 `i `b ]
+"44
+[; ;./pwm.h: 44:         CCP1M2 = 1;
+[e = _CCP1M2 -> -> 1 `i `b ]
+"45
+[; ;./pwm.h: 45:     }
+}
+[e :U 108 ]
+"46
+[; ;./pwm.h: 46:     if (16 == 1) {
+[e $ ! == -> 16 `i -> 1 `i 109  ]
+{
+"47
+[; ;./pwm.h: 47:         T2CKPS0 = 0;
+[e = _T2CKPS0 -> -> 0 `i `b ]
+"48
+[; ;./pwm.h: 48:         T2CKPS1 = 0;
+[e = _T2CKPS1 -> -> 0 `i `b ]
+"49
+[; ;./pwm.h: 49:     } else if (16 == 4) {
+}
+[e $U 110  ]
+[e :U 109 ]
+[e $ ! == -> 16 `i -> 4 `i 111  ]
+{
+"50
+[; ;./pwm.h: 50:         T2CKPS0 = 1;
+[e = _T2CKPS0 -> -> 1 `i `b ]
+"51
+[; ;./pwm.h: 51:         T2CKPS1 = 0;
+[e = _T2CKPS1 -> -> 0 `i `b ]
+"52
+[; ;./pwm.h: 52:     } else {
+}
+[e $U 112  ]
+[e :U 111 ]
+{
+"53
+[; ;./pwm.h: 53:         T2CKPS0 = 1;
+[e = _T2CKPS0 -> -> 1 `i `b ]
+"54
+[; ;./pwm.h: 54:         T2CKPS1 = 1;
+[e = _T2CKPS1 -> -> 1 `i `b ]
+"55
+[; ;./pwm.h: 55:     }
+}
+[e :U 112 ]
+[e :U 110 ]
+"56
+[; ;./pwm.h: 56:     TMR2ON = 1;
+[e = _TMR2ON -> -> 1 `i `b ]
+"57
+[; ;./pwm.h: 57:     if (pwm == 2)
+[e $ ! == -> _pwm `i -> 2 `i 113  ]
+"58
+[; ;./pwm.h: 58:         TRISC2 = 0;
+[e = _TRISC2 -> -> 0 `i `b ]
+[e $U 114  ]
+"59
+[; ;./pwm.h: 59:     else
+[e :U 113 ]
+"60
+[; ;./pwm.h: 60:         TRISC1 = 0;
+[e = _TRISC1 -> -> 0 `i `b ]
+[e :U 114 ]
+"61
+[; ;./pwm.h: 61: }
+[e :UE 106 ]
+}
+"63
+[; ;./pwm.h: 63: void setPR2(unsigned int const freq) {
+[v _setPR2 `(v ~T0 @X0 1 ef1`Cui ]
+{
+[e :U _setPR2 ]
+[v _freq `Cui ~T0 @X0 1 r1 ]
+[f ]
+"64
+[; ;./pwm.h: 64:     PR2 = (20000000 / (freq * 4 * 16)) - 1;
+[e = _PR2 -> - / -> 20000000 `l -> * * _freq -> -> 4 `i `ui -> -> 16 `i `ui `l -> -> 1 `i `l `uc ]
+"65
+[; ;./pwm.h: 65: }
+[e :UE 115 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
 "5 main.c
@@ -499,20 +593,39 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 9:     adcInit();
 [e ( _adcInit ..  ]
 "10
-[; ;main.c: 10:     pwmInit1(2000);
-[e ( _pwmInit1 (1 -> -> 2000 `i `ui ]
-"12
-[; ;main.c: 12:     for(;;){
+[; ;main.c: 10:     pwmInit1(1200);
+[e ( _pwmInit1 (1 -> -> 1200 `i `ui ]
+"11
+[; ;main.c: 11:     pwmInit2(1200);
+[e ( _pwmInit2 (1 -> -> 1200 `i `ui ]
+"13
+[; ;main.c: 13:     for(;;){
 {
-[e :U 105 ]
+[e :U 117 ]
 {
 "14
-[; ;main.c: 14:     }
+[; ;main.c: 14:         int adc = adcRead(0);
+[v _adc `i ~T0 @X0 1 a ]
+[e = _adc ( _adcRead (1 -> 0 `i ]
+"17
+[; ;main.c: 17:         pwmSetDutyCycle1(adc);
+[e ( _pwmSetDutyCycle1 (1 -> _adc `ui ]
+"18
+[; ;main.c: 18:         _delay((unsigned long)((10)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"19
+[; ;main.c: 19:         pwmSetDutyCycle2(adc);
+[e ( _pwmSetDutyCycle2 (1 -> _adc `ui ]
+"20
+[; ;main.c: 20:         _delay((unsigned long)((10)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"21
+[; ;main.c: 21:     }
 }
-[e $U 105  ]
-[e :U 106 ]
+[e $U 117  ]
+[e :U 118 ]
 }
-"15
-[; ;main.c: 15: }
-[e :UE 104 ]
+"22
+[; ;main.c: 22: }
+[e :UE 116 ]
 }
