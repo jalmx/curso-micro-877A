@@ -48,11 +48,9 @@
 "17 C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"30
-[v main@key key `uc  1 a 1 8 ]
 "27
-[v main@keypress keypress `uc  1 a 1 9 ]
-"83
+[v main@keypress keypress `uc  1 a 1 8 ]
+"82
 } 0
 "28 C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X/keypad.h
 [v _kbdInit kbdInit `(v  1 e 1 0 ]

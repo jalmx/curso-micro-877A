@@ -375,8 +375,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 105  ]
 [e :U 104 ]
 "64
-[; ;./keypad.h: 64:         return keyPadMatrix[ 17 ];
-[e ) -> *U + &U _keyPadMatrix * -> -> -> 17 `i `ui `ux -> -> # *U &U _keyPadMatrix `ui `ux `i ]
+[; ;./keypad.h: 64:         return keyPadMatrix[ 16 ];
+[e ) -> *U + &U _keyPadMatrix * -> -> -> 16 `i `ui `ux -> -> # *U &U _keyPadMatrix `ui `ux `i ]
 [e $UE 96  ]
 [e :U 105 ]
 "65
@@ -414,167 +414,163 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _keypress `uc ~T0 @X0 1 a ]
 [e = _keypress -> ( _kbdGetC ..  `uc ]
 "28
-[; ;main.c: 28:         if (keypress != 0xFF) {
+[; ;main.c: 28:         if (keypress != 255) {
 [e $ ! != -> _keypress `i -> 255 `i 110  ]
 {
 "30
-[; ;main.c: 30:             char key = keypress;
-[v _key `uc ~T0 @X0 1 a ]
-[e = _key _keypress ]
-"31
-[; ;main.c: 31:             switch (key) {
+[; ;main.c: 30:             switch (keypress) {
 [e $U 112  ]
 {
-"32
-[; ;main.c: 32:                 case '0':
+"31
+[; ;main.c: 31:                 case '0':
 [e :U 113 ]
-"33
-[; ;main.c: 33:                     PORTC = 0x3F;
+"32
+[; ;main.c: 32:                     PORTC = 0x3F;
 [e = _PORTC -> -> 63 `i `uc ]
+"33
+[; ;main.c: 33:                     break;
+[e $U 111  ]
 "34
-[; ;main.c: 34:                     break;
-[e $U 111  ]
-"35
-[; ;main.c: 35:                 case '1':
+[; ;main.c: 34:                 case '1':
 [e :U 114 ]
-"36
-[; ;main.c: 36:                     PORTC = 0x03;
+"35
+[; ;main.c: 35:                     PORTC = 0x03;
 [e = _PORTC -> -> 3 `i `uc ]
+"36
+[; ;main.c: 36:                     break;
+[e $U 111  ]
 "37
-[; ;main.c: 37:                     break;
-[e $U 111  ]
-"38
-[; ;main.c: 38:                 case '2':
+[; ;main.c: 37:                 case '2':
 [e :U 115 ]
-"39
-[; ;main.c: 39:                     PORTC = 0x6D;
+"38
+[; ;main.c: 38:                     PORTC = 0x6D;
 [e = _PORTC -> -> 109 `i `uc ]
+"39
+[; ;main.c: 39:                     break;
+[e $U 111  ]
 "40
-[; ;main.c: 40:                     break;
-[e $U 111  ]
-"41
-[; ;main.c: 41:                 case '3':
+[; ;main.c: 40:                 case '3':
 [e :U 116 ]
-"42
-[; ;main.c: 42:                     PORTC = 0x67;
+"41
+[; ;main.c: 41:                     PORTC = 0x67;
 [e = _PORTC -> -> 103 `i `uc ]
+"42
+[; ;main.c: 42:                     break;
+[e $U 111  ]
 "43
-[; ;main.c: 43:                     break;
-[e $U 111  ]
-"44
-[; ;main.c: 44:                 case '4':
+[; ;main.c: 43:                 case '4':
 [e :U 117 ]
-"45
-[; ;main.c: 45:                     PORTC = 0x53;
+"44
+[; ;main.c: 44:                     PORTC = 0x53;
 [e = _PORTC -> -> 83 `i `uc ]
+"45
+[; ;main.c: 45:                     break;
+[e $U 111  ]
 "46
-[; ;main.c: 46:                     break;
-[e $U 111  ]
-"47
-[; ;main.c: 47:                 case '5':
+[; ;main.c: 46:                 case '5':
 [e :U 118 ]
-"48
-[; ;main.c: 48:                     PORTC = 0x76;
+"47
+[; ;main.c: 47:                     PORTC = 0x76;
 [e = _PORTC -> -> 118 `i `uc ]
+"48
+[; ;main.c: 48:                     break;
+[e $U 111  ]
 "49
-[; ;main.c: 49:                     break;
-[e $U 111  ]
-"50
-[; ;main.c: 50:                 case '6':
+[; ;main.c: 49:                 case '6':
 [e :U 119 ]
-"51
-[; ;main.c: 51:                     PORTC = 0xFE;
+"50
+[; ;main.c: 50:                     PORTC = 0xFE;
 [e = _PORTC -> -> 254 `i `uc ]
+"51
+[; ;main.c: 51:                     break;
+[e $U 111  ]
 "52
-[; ;main.c: 52:                     break;
-[e $U 111  ]
-"53
-[; ;main.c: 53:                 case '7':
+[; ;main.c: 52:                 case '7':
 [e :U 120 ]
-"54
-[; ;main.c: 54:                     PORTC = 0x23;
+"53
+[; ;main.c: 53:                     PORTC = 0x23;
 [e = _PORTC -> -> 35 `i `uc ]
+"54
+[; ;main.c: 54:                     break;
+[e $U 111  ]
 "55
-[; ;main.c: 55:                     break;
-[e $U 111  ]
-"56
-[; ;main.c: 56:                 case '8':
+[; ;main.c: 55:                 case '8':
 [e :U 121 ]
-"57
-[; ;main.c: 57:                     PORTC = 0xFF;
+"56
+[; ;main.c: 56:                     PORTC = 0xFF;
 [e = _PORTC -> -> 255 `i `uc ]
+"57
+[; ;main.c: 57:                     break;
+[e $U 111  ]
 "58
-[; ;main.c: 58:                     break;
-[e $U 111  ]
-"59
-[; ;main.c: 59:                 case '9':
+[; ;main.c: 58:                 case '9':
 [e :U 122 ]
-"60
-[; ;main.c: 60:                     PORTC = 0xF3;
+"59
+[; ;main.c: 59:                     PORTC = 0xF3;
 [e = _PORTC -> -> 243 `i `uc ]
+"60
+[; ;main.c: 60:                     break;
+[e $U 111  ]
 "61
-[; ;main.c: 61:                     break;
-[e $U 111  ]
-"62
-[; ;main.c: 62:                 case 'A':
+[; ;main.c: 61:                 case 'A':
 [e :U 123 ]
-"63
-[; ;main.c: 63:                     PORTC = 0xFB;
+"62
+[; ;main.c: 62:                     PORTC = 0xFB;
 [e = _PORTC -> -> 251 `i `uc ]
+"63
+[; ;main.c: 63:                     break;
+[e $U 111  ]
 "64
-[; ;main.c: 64:                     break;
-[e $U 111  ]
-"65
-[; ;main.c: 65:                 case 'B':
+[; ;main.c: 64:                 case 'B':
 [e :U 124 ]
-"66
-[; ;main.c: 66:                     PORTC = 0x5E;
+"65
+[; ;main.c: 65:                     PORTC = 0x5E;
 [e = _PORTC -> -> 94 `i `uc ]
+"66
+[; ;main.c: 66:                     break;
+[e $U 111  ]
 "67
-[; ;main.c: 67:                     break;
-[e $U 111  ]
-"68
-[; ;main.c: 68:                 case 'C':
+[; ;main.c: 67:                 case 'C':
 [e :U 125 ]
-"69
-[; ;main.c: 69:                     PORTC = 0x3C;
+"68
+[; ;main.c: 68:                     PORTC = 0x3C;
 [e = _PORTC -> -> 60 `i `uc ]
+"69
+[; ;main.c: 69:                     break;
+[e $U 111  ]
 "70
-[; ;main.c: 70:                     break;
-[e $U 111  ]
-"71
-[; ;main.c: 71:                 case 'D':
+[; ;main.c: 70:                 case 'D':
 [e :U 126 ]
-"72
-[; ;main.c: 72:                     PORTC = 0x4F;
+"71
+[; ;main.c: 71:                     PORTC = 0x4F;
 [e = _PORTC -> -> 79 `i `uc ]
+"72
+[; ;main.c: 72:                     break;
+[e $U 111  ]
 "73
-[; ;main.c: 73:                     break;
-[e $U 111  ]
-"74
-[; ;main.c: 74:                 case 'E':
+[; ;main.c: 73:                 case 'E':
 [e :U 127 ]
-"75
-[; ;main.c: 75:                     PORTC = 0xFC;
+"74
+[; ;main.c: 74:                     PORTC = 0xFC;
 [e = _PORTC -> -> 252 `i `uc ]
+"75
+[; ;main.c: 75:                     break;
+[e $U 111  ]
 "76
-[; ;main.c: 76:                     break;
-[e $U 111  ]
-"77
-[; ;main.c: 77:                 case 'F':
+[; ;main.c: 76:                 case 'F':
 [e :U 128 ]
-"78
-[; ;main.c: 78:                     PORTC = 0xF8;
+"77
+[; ;main.c: 77:                     PORTC = 0xF8;
 [e = _PORTC -> -> 248 `i `uc ]
-"79
-[; ;main.c: 79:                     break;
+"78
+[; ;main.c: 78:                     break;
 [e $U 111  ]
-"80
-[; ;main.c: 80:             }
+"79
+[; ;main.c: 79:             }
 }
 [e $U 111  ]
 [e :U 112 ]
-[e [\ -> _key `i , $ -> -> 48 `ui `i 113
+[e [\ -> _keypress `i , $ -> -> 48 `ui `i 113
  , $ -> -> 49 `ui `i 114
  , $ -> -> 50 `ui `i 115
  , $ -> -> 51 `ui `i 116
@@ -592,17 +588,17 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> -> 70 `ui `i 128
  111 ]
 [e :U 111 ]
-"81
-[; ;main.c: 81:         }
+"80
+[; ;main.c: 80:         }
 }
 [e :U 110 ]
-"82
-[; ;main.c: 82:     }
+"81
+[; ;main.c: 81:     }
 }
 [e :U 107 ]
 [e $U 108  ]
 [e :U 109 ]
-"83
-[; ;main.c: 83: }
+"82
+[; ;main.c: 82: }
 [e :UE 106 ]
 }

@@ -1,4 +1,5 @@
 #include <xc.h>
+#define _XTAL_FREQ 4000000
 
 #define KEYPAD_PORT PORTB
 #define KEYPAD_TRIS TRISB
@@ -11,7 +12,6 @@
 #define COL3 RB6
 #define COL4 RB7
 
-#define _XTAL_FREQ 4000000
 #include "keypad.h"
 
 void main() {
@@ -23,12 +23,11 @@ void main() {
     __delay_ms(5); //waiting a time before begin to read keypad
 
     while (1) {
-
+        
         char keypress = kbdGetC();
-        if (keypress != 0xFF) {
+        if (keypress != 255) {
 
-            char key = keypress;
-            switch (key) {
+            switch (keypress) {
                 case '0':
                     PORTC = 0x3F; // 0         
                     break;
@@ -48,34 +47,34 @@ void main() {
                     PORTC = 0x76; // 5         
                     break;
                 case '6':
-                    PORTC = 0xFE; // 5         
+                    PORTC = 0xFE; // 6         
                     break;
                 case '7':
-                    PORTC = 0x23; // 5         
+                    PORTC = 0x23; // 7         
                     break;
                 case '8':
-                    PORTC = 0xFF; // 5         
+                    PORTC = 0xFF; // 8         
                     break;
                 case '9':
-                    PORTC = 0xF3; // 5         
+                    PORTC = 0xF3; // 9         
                     break;
                 case 'A':
-                    PORTC = 0xFB; // 5         
+                    PORTC = 0xFB; // A         
                     break;
                 case 'B':
-                    PORTC = 0x5E; // 5         
+                    PORTC = 0x5E; // B         
                     break;
                 case 'C':
-                    PORTC = 0x3C; // 5         
+                    PORTC = 0x3C; // C         
                     break;
                 case 'D':
-                    PORTC = 0x4F; // 5         
+                    PORTC = 0x4F; // D         
                     break;
                 case 'E':
-                    PORTC = 0xFC; // 5         
+                    PORTC = 0xFC; // E         
                     break;
                 case 'F':
-                    PORTC = 0xF8; // 5         
+                    PORTC = 0xF8; // F         
                     break;
             }
         }

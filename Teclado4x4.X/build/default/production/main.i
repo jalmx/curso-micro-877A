@@ -1774,7 +1774,7 @@ int kbdGetC() {
         old_key = key;
         return keyPadMatrix[ key ];
     } else
-        return keyPadMatrix[ 17 ];
+        return keyPadMatrix[ 16 ];
 }
 # 15 "main.c" 2
 
@@ -1790,10 +1790,9 @@ void main() {
     while (1) {
 
         char keypress = kbdGetC();
-        if (keypress != 0xFF) {
+        if (keypress != 255) {
 
-            char key = keypress;
-            switch (key) {
+            switch (keypress) {
                 case '0':
                     PORTC = 0x3F;
                     break;

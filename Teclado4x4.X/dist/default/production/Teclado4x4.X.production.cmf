@@ -13,13 +13,13 @@
 %PSECTS
 $dist/default/production\Teclado4x4.X.production.o
 cinit CODE 0 7FA 7FA 6 2
-text1 CODE 0 6D8 6D8 10 2
+text1 CODE 0 6DB 6DB 10 2
 text2 CODE 0 76F 76F 8B 2
-maintext CODE 0 6E8 6E8 87 2
-cstackCOMMON COMMON 1 70 70 A 1
+maintext CODE 0 6EB 6EB 84 2
+cstackCOMMON COMMON 1 70 70 9 1
 strings STRING 0 3 3 17 2
-bssCOMMON COMMON 1 7A 7A 2 1
-$C:\Users\Xizuth\AppData\Local\Temp\s4rs.o
+bssCOMMON COMMON 1 79 79 2 1
+$C:\Users\Xizuth\AppData\Local\Temp\s4l8.o
 end_init CODE 0 0 0 3 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -35,24 +35,24 @@ BANK0 20-6F 1
 BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
-CONST 1A-6D7 2
+CONST 1A-6DA 2
 CONST 800-1FFF 2
-ENTRY 1A-6D7 2
+ENTRY 1A-6DA 2
 ENTRY 800-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
-CODE 1A-6D7 2
+CODE 1A-6DA 2
 CODE 800-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
 SFR3 180-18F 1
-COMMON 7C-7D 1
+COMMON 7B-7D 1
 CONFIG 2007-2007 2
 EEDATA 2100-21FF 2
-STRCODE 1A-6D7 2
+STRCODE 1A-6DA 2
 STRCODE 800-1FFF 2
-STRING 1A-6D7 2
+STRING 1A-6DA 2
 STRING 800-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -68,13 +68,13 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Teclado4x4.X.production.o
-7FA cinit CODE >404:C:\Users\Xizuth\AppData\Local\Temp\s4rs.
-7FA cinit CODE >407:C:\Users\Xizuth\AppData\Local\Temp\s4rs.
-7FA cinit CODE >421:C:\Users\Xizuth\AppData\Local\Temp\s4rs.
-7FB cinit CODE >422:C:\Users\Xizuth\AppData\Local\Temp\s4rs.
-7FC cinit CODE >428:C:\Users\Xizuth\AppData\Local\Temp\s4rs.
-7FC cinit CODE >430:C:\Users\Xizuth\AppData\Local\Temp\s4rs.
-7FD cinit CODE >431:C:\Users\Xizuth\AppData\Local\Temp\s4rs.
+7FA cinit CODE >404:C:\Users\Xizuth\AppData\Local\Temp\s4l8.
+7FA cinit CODE >407:C:\Users\Xizuth\AppData\Local\Temp\s4l8.
+7FA cinit CODE >421:C:\Users\Xizuth\AppData\Local\Temp\s4l8.
+7FB cinit CODE >422:C:\Users\Xizuth\AppData\Local\Temp\s4l8.
+7FC cinit CODE >428:C:\Users\Xizuth\AppData\Local\Temp\s4l8.
+7FC cinit CODE >430:C:\Users\Xizuth\AppData\Local\Temp\s4l8.
+7FD cinit CODE >431:C:\Users\Xizuth\AppData\Local\Temp\s4l8.
 76F text2 CODE >34:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X/keypad.h
 76F text2 CODE >36:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X/keypad.h
 770 text2 CODE >38:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X/keypad.h
@@ -101,38 +101,37 @@ $dist/default/production\Teclado4x4.X.production.o
 7E1 text2 CODE >62:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X/keypad.h
 7EE text2 CODE >64:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X/keypad.h
 7F9 text2 CODE >65:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X/keypad.h
-6D8 text1 CODE >28:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X/keypad.h
-6D8 text1 CODE >29:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X/keypad.h
-6DC text1 CODE >30:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X/keypad.h
-6DF text1 CODE >31:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X/keypad.h
-6E7 text1 CODE >32:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X/keypad.h
-6E8 maintext CODE >17:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
-6E8 maintext CODE >18:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
-6EB maintext CODE >19:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
-6EE maintext CODE >20:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
-6F3 maintext CODE >22:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
-6F7 maintext CODE >23:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
-6FF maintext CODE >31:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
-700 maintext CODE >33:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
-702 maintext CODE >36:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
-704 maintext CODE >39:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
-706 maintext CODE >42:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
-708 maintext CODE >45:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
-70A maintext CODE >48:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
-70C maintext CODE >51:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
-70E maintext CODE >54:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
-710 maintext CODE >57:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
-712 maintext CODE >60:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
-714 maintext CODE >63:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
-716 maintext CODE >66:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
-718 maintext CODE >69:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
-71A maintext CODE >72:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
-71C maintext CODE >75:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
-71E maintext CODE >78:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
-722 maintext CODE >27:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
-72B maintext CODE >28:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
-72E maintext CODE >30:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
-732 maintext CODE >80:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
+6DB text1 CODE >28:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X/keypad.h
+6DB text1 CODE >29:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X/keypad.h
+6DF text1 CODE >30:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X/keypad.h
+6E2 text1 CODE >31:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X/keypad.h
+6EA text1 CODE >32:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X/keypad.h
+6EB maintext CODE >17:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
+6EB maintext CODE >18:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
+6EE maintext CODE >19:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
+6F1 maintext CODE >20:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
+6F6 maintext CODE >22:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
+6FA maintext CODE >23:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
+702 maintext CODE >27:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
+70B maintext CODE >28:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
+70F maintext CODE >32:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
+711 maintext CODE >35:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
+713 maintext CODE >38:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
+715 maintext CODE >41:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
+717 maintext CODE >44:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
+719 maintext CODE >47:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
+71B maintext CODE >50:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
+71D maintext CODE >53:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
+71F maintext CODE >56:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
+721 maintext CODE >59:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
+723 maintext CODE >62:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
+725 maintext CODE >65:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
+727 maintext CODE >68:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
+729 maintext CODE >71:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
+72B maintext CODE >74:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
+72D maintext CODE >77:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
+731 maintext CODE >78:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
+732 maintext CODE >79:C:\Users\Xizuth\Documents\curso-micro-877A\Teclado4x4.X\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -147,37 +146,36 @@ $dist/default/production\Teclado4x4.X.production.o
 %SYMTAB
 ___latbits 2 0 ABS 0 - dist/default/production\Teclado4x4.X.production.o
 __Hspace_0 800 0 ABS 0 - -
-__Hspace_1 7C 0 ABS 0 - -
+__Hspace_1 7B 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\Xizuth\AppData\Local\Temp\s4rs.o
-_main DD0 0 CODE 0 maintext dist/default/production\Teclado4x4.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\Xizuth\AppData\Local\Temp\s4l8.o
+_main DD6 0 CODE 0 maintext dist/default/production\Teclado4x4.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Teclado4x4.X.production.o
-start 0 0 CODE 0 init C:\Users\Xizuth\AppData\Local\Temp\s4rs.o
+start 0 0 CODE 0 init C:\Users\Xizuth\AppData\Local\Temp\s4l8.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Teclado4x4.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s4rs.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s4rs.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s4rs.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s4rs.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s4rs.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s4rs.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s4l8.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s4l8.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s4l8.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s4l8.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s4l8.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s4l8.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 wtemp0 7E 0 ABS 0 - dist/default/production\Teclado4x4.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
-main@key 78 0 COMMON 1 cstackCOMMON dist/default/production\Teclado4x4.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 _kbdGetC EDE 0 CODE 0 text2 dist/default/production\Teclado4x4.X.production.o
-_kbdInit DB0 0 CODE 0 text1 dist/default/production\Teclado4x4.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\Xizuth\AppData\Local\Temp\s4rs.o
-___stacklo 0 0 ABS 0 - C:\Users\Xizuth\AppData\Local\Temp\s4rs.o
+_kbdInit DB6 0 CODE 0 text1 dist/default/production\Teclado4x4.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\Xizuth\AppData\Local\Temp\s4l8.o
+___stacklo 0 0 ABS 0 - C:\Users\Xizuth\AppData\Local\Temp\s4l8.o
 start_initialization FF4 0 CODE 0 cinit dist/default/production\Teclado4x4.X.production.o
 ?_kbdGetC 70 0 COMMON 1 cstackCOMMON dist/default/production\Teclado4x4.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Xizuth\AppData\Local\Temp\s4rs.o
+___int_sp 0 0 STACK 2 stack C:\Users\Xizuth\AppData\Local\Temp\s4l8.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -222,16 +220,16 @@ _RB5 35 0 ABS 0 - dist/default/production\Teclado4x4.X.production.o
 _RB6 36 0 ABS 0 - dist/default/production\Teclado4x4.X.production.o
 _RB7 37 0 ABS 0 - dist/default/production\Teclado4x4.X.production.o
 __S0 800 0 ABS 0 - -
-__S1 7C 0 ABS 0 - -
+__S1 7B 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_old_key 7A 0 COMMON 1 bssCOMMON dist/default/production\Teclado4x4.X.production.o
+_old_key 79 0 COMMON 1 bssCOMMON dist/default/production\Teclado4x4.X.production.o
 __Lintentry 0 0 CODE 0 intentry -
 __stringtab 6 0 STRING 0 strings dist/default/production\Teclado4x4.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Xizuth\AppData\Local\Temp\s4rs.o
-main@keypress 79 0 COMMON 1 cstackCOMMON dist/default/production\Teclado4x4.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Xizuth\AppData\Local\Temp\s4l8.o
+main@keypress 78 0 COMMON 1 cstackCOMMON dist/default/production\Teclado4x4.X.production.o
 _keyPadMatrix 12 0 STRING 0 strings dist/default/production\Teclado4x4.X.production.o
-__pmaintext DD0 0 CODE 0 maintext dist/default/production\Teclado4x4.X.production.o
+__pmaintext DD6 0 CODE 0 maintext dist/default/production\Teclado4x4.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 0 config -
 kbdGetC@key 74 0 COMMON 1 cstackCOMMON dist/default/production\Teclado4x4.X.production.o
@@ -243,7 +241,7 @@ __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
-__pbssCOMMON 7A 0 COMMON 1 bssCOMMON dist/default/production\Teclado4x4.X.production.o
+__pbssCOMMON 79 0 COMMON 1 bssCOMMON dist/default/production\Teclado4x4.X.production.o
 __Lend_init 0 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 end_of_initialization FF8 0 CODE 0 cinit dist/default/production\Teclado4x4.X.production.o
@@ -251,7 +249,7 @@ __Hintentry 0 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
 __end_of_keyPadMatrix 34 0 STRING 0 strings dist/default/production\Teclado4x4.X.production.o
 __Hreset_vec 0 0 CODE 0 reset_vec -
-__ptext1 DB0 0 CODE 0 text1 dist/default/production\Teclado4x4.X.production.o
+__ptext1 DB6 0 CODE 0 text1 dist/default/production\Teclado4x4.X.production.o
 __ptext2 EDE 0 CODE 0 text2 dist/default/production\Teclado4x4.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
@@ -261,7 +259,7 @@ __Lfunctab 0 0 ENTRY 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\Teclado4x4.X.production.o
 __end_of_kbdGetC FF4 0 CODE 0 text2 dist/default/production\Teclado4x4.X.production.o
-__end_of_kbdInit DD0 0 CODE 0 text1 dist/default/production\Teclado4x4.X.production.o
+__end_of_kbdInit DD6 0 CODE 0 text1 dist/default/production\Teclado4x4.X.production.o
 __Hend_init 6 0 CODE 0 end_init -
 __end_of_main EDE 0 CODE 0 maintext dist/default/production\Teclado4x4.X.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\Teclado4x4.X.production.o
@@ -298,9 +296,9 @@ __pstrings 6 0 STRING 0 strings dist/default/production\Teclado4x4.X.production.
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cinit 0 7FA FF4 6 2
-text1 0 6D8 DB0 10 2
+text1 0 6DB DB6 10 2
 text2 0 76F EDE 8B 2
-maintext 0 6E8 DD0 87 2
-cstackCOMMON 1 70 70 C 1
+maintext 0 6EB DD6 84 2
+cstackCOMMON 1 70 70 B 1
 reset_vec 0 0 0 3 2
 strings 0 3 6 17 2
