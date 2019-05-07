@@ -61,5 +61,5 @@ int kbdGetC() {
         old_key = key;
         return keyPadMatrix[ key ];
     } else
-        return keyPadMatrix[ 17 ];
+        return keyPadMatrix[ 16 ];
 }

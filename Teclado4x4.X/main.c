@@ -17,7 +17,7 @@
 void main() {
     TRISC = 0;
     PORTC = 0;
-    kbdInit();
+    kbdInit(); //inicio el teclado
 
     PORTC = 0x3F; // cargo el 0 en el display
     __delay_ms(5); //waiting a time before begin to read keypad
@@ -25,7 +25,7 @@ void main() {
     while (1) {
         
         char keypress = kbdGetC();
-        if (keypress != 255) {
+        if (keypress != 0xFF) {
 
             switch (keypress) {
                 case '0':
