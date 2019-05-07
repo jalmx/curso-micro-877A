@@ -16,18 +16,18 @@
 #include "adc.h"
 
 void main(void) {
-    TRISA = 255;
-    PORTA = 0;
-    lcdInit();
-    __delay_ms(10);
-    lcdClear();
+    TRISA = 255;//entradas ADC
+    PORTA = 0;//limpio el puerto A
+    lcdInit(); //inicio la LCD
+    __delay_ms(10); //espero un tiempo de arranque
+    lcdClear(); //limpio la pantalla
 
-    adcInit();
-    lcdSetCursor(1, 1);
+    adcInit(); //inicio el ADC
+    lcdSetCursor(1, 1); //me coloco en la posición 1,1
     lcdPrint("Voltimetro");
     lcdSetCursor(2, 1);
     lcdPrint("Cargando...");
-    __delay_ms(300);
+    __delay_ms(500);
 
     lcdClear();
     lcdSetCursor(1, 1);

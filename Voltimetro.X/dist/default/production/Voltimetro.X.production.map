@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.05\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\Voltimetro.X.production.sym \
   --cmf=dist/default/production\Voltimetro.X.production.cmf -z -Q16F877A \
-  -oC:\Users\Xizuth\AppData\Local\Temp\s5p0.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\Xizuth\AppData\Local\Temp\s3ug.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/Voltimetro.X.production.map -E1 -ver=XC8 \
   --acfsm=1493 -ASTACK=0110h-016Fh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
@@ -18,7 +18,7 @@ Linker command line:
   -pfunctab=ENTRY -ACONFIG=02007h-02007h -pconfig=CONFIG -DCONFIG=2 \
   -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
-  -DENTRY=2 -k C:\Users\Xizuth\AppData\Local\Temp\s5p0.o \
+  -DENTRY=2 -k C:\Users\Xizuth\AppData\Local\Temp\s3ug.o \
   dist/default/production\Voltimetro.X.production.o 
 
 Object code version is 3.11
@@ -28,7 +28,7 @@ Machine type is 16F877A
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Xizuth\AppData\Local\Temp\s5p0.o
+C:\Users\Xizuth\AppData\Local\Temp\s3ug.o
                 end_init                              0        0        3        0       0
                 config                             2007     2007        1     400E       0
 dist/default/production\Voltimetro.X.production.o
@@ -37,7 +37,7 @@ dist/default/production\Voltimetro.X.production.o
                 text31                             10D4     10D4       10     21A8       0
                 text30                             1D42     1D42       22     3A84       0
                 text29                             1D07     1D07       1A     3A0E       0
-                text28                              805      805       1A     100A       0
+                text28                              806      806       1A     100C       0
                 text27                             1CEE     1CEE        B     39DC       0
                 text26                             1142     1142       61     2284       0
                 text25                             1DDB     1DDB       37     3BB6       0
@@ -48,7 +48,7 @@ dist/default/production\Voltimetro.X.production.o
                 text20                             1CE5     1CE5        9     39CA       0
                 text19                             15D1     15D1      22F     2BA2       0
                 text18                             1D64     1D64       22     3AC8       0
-                text17                              81F      81F       6D     103E       0
+                text17                              820      820       6D     1040       0
                 text16                             10E4     10E4       5E     21C8       0
                 text15                             1F59     1F59       4C     3EB2       0
                 text14                             1D21     1D21       21     3A42       0
@@ -65,7 +65,7 @@ dist/default/production\Voltimetro.X.production.o
                 text3                              1F0E     1F0E       4B     3E1C       0
                 text2                               CB7      CB7      349     196E       0
                 text1                               205      205      5F7      40A       0
-                maintext                            88C      88C      116     1118       0
+                maintext                            88D      88D      115     111A       0
                 cstackBANK0                          20       20       50       20       1
                 cstackCOMMON                         70       70        E       70       1
                 cstackBANK1                          A0       A0       3A       A0       1
@@ -81,7 +81,7 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text31                             10D4     10D4       10         0
                 text30                             1D42     1D42       22         0
                 text29                             1D07     1D07       1A         0
-                text28                              805      805       1A         0
+                text28                              806      806       1A         0
                 text27                             1CEE     1CEE        B         0
                 text26                             1142     1142       61         0
                 text25                             1DDB     1DDB       37         0
@@ -92,7 +92,7 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text20                             1CE5     1CE5        9         0
                 text19                             15D1     15D1      22F         0
                 text18                             1D64     1D64       22         0
-                text17                              81F      81F       6D         0
+                text17                              820      820       6D         0
                 text16                             10E4     10E4       5E         0
                 text15                             1F59     1F59       4C         0
                 text14                             1D21     1D21       21         0
@@ -109,7 +109,7 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text3                              1F0E     1F0E       4B         0
                 text2                               CB7      CB7      349         0
                 text1                               205      205      5F7         0
-                maintext                            88C      88C      116         0
+                maintext                            88D      88D      115         0
 
         CLASS   STRCODE        
 
@@ -164,9 +164,9 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 cstackBANK1                    0000A0  00003A  0000DA        A0       1  BANK1       1
                 text1                          000205  0005F7  0007FC       40A       0  CODE        2
                 cinit                          0007FC  000004  000800       FF8       0  CODE        2
-                text28                         000805  00001A  00081F      100A       0  CODE        2
-                text17                         00081F  00006D  00088C      103E       0  CODE        2
-                maintext                       00088C  000116  0009A2      1118       0  CODE        2
+                text28                         000806  00001A  000820      100C       0  CODE        2
+                text17                         000820  00006D  00088D      1040       0  CODE        2
+                maintext                       00088D  000115  0009A2      111A       0  CODE        2
                 text9                          0009A2  000315  000CB7      1344       0  CODE        2
                 text2                          000CB7  000349  001000      196E       0  CODE        2
                 strings                        001000  0000D4  0010D4      2000       0  STRING      2
@@ -206,14 +206,14 @@ UNUSED ADDRESS RANGES
         BANK2            0110-016F             60           1
         BANK3            0190-01EF             60           1
         CODE             0003-0003              1           2
-                         0800-0804              5
+                         0800-0805              6
                          1800-1CE4            4E5
         CONST            0003-0003              1           2
-                         0800-0804              5
+                         0800-0805              6
                          1800-1CE4            100
         EEDATA           2100-21FF            100           2
         ENTRY            0003-0003              1           2
-                         0800-0804              5
+                         0800-0805              6
                          1800-1CE4            100
         IDLOC            2000-2003              4           2
         RAM              00DA-00EF             16           1
@@ -225,10 +225,10 @@ UNUSED ADDRESS RANGES
         SFR3             0180-018F             10           1
         STACK            0110-016F             60           1
         STRCODE          0003-0003              1           2
-                         0800-0804              5
+                         0800-0805              6
                          1800-1CE4            4E5
         STRING           0003-0003              1           2
-                         0800-0804              5
+                         0800-0805              6
                          1800-1CE4            100
 
                                   Symbol Table
@@ -400,7 +400,7 @@ ___flneg@f1              cstackCOMMON 0070
 ___flsub                 text18       1D64
 ___flsub@a               cstackBANK0  0068
 ___flsub@b               cstackBANK0  006C
-___fltol                 text17       081F
+___fltol                 text17       0820
 ___fltol@exp1            cstackBANK0  005D
 ___fltol@f1              cstackBANK0  0053
 ___fltol@sign1           cstackBANK0  005C
@@ -452,7 +452,7 @@ __end_of___flge          text21       1236
 __end_of___flmul         text9        0CB7
 __end_of___flneg         text20       1CEE
 __end_of___flsub         text18       1D86
-__end_of___fltol         text17       088C
+__end_of___fltol         text17       088D
 __end_of___lldiv         text16       1142
 __end_of___llmod         text15       1FA5
 __end_of___lwdiv         text8        1E89
@@ -471,7 +471,7 @@ __end_of_dpowers         strings      10A0
 __end_of_fround          text6        0205
 __end_of_isdigit         text5        1D07
 __end_of_lcdClear        text27       1CF9
-__end_of_lcdCmd          text28       081F
+__end_of_lcdCmd          text28       0820
 __end_of_lcdInit         text26       11A3
 __end_of_lcdPort         text29       1D21
 __end_of_lcdPrint        text24       1EC6
@@ -485,7 +485,7 @@ __npowers_               strings      1044
 __pcstackBANK0           cstackBANK0  0020
 __pcstackBANK1           cstackBANK1  00A0
 __pcstackCOMMON          cstackCOMMON 0070
-__pmaintext              maintext     088C
+__pmaintext              maintext     088D
 __powers_                strings      1010
 __pstrings               strings      1000
 __ptext1                 text1        0205
@@ -496,7 +496,7 @@ __ptext13                text13       1236
 __ptext14                text14       1D21
 __ptext15                text15       1F59
 __ptext16                text16       10E4
-__ptext17                text17       081F
+__ptext17                text17       0820
 __ptext18                text18       1D64
 __ptext19                text19       15D1
 __ptext2                 text2        0CB7
@@ -508,7 +508,7 @@ __ptext24                text24       1E89
 __ptext25                text25       1DDB
 __ptext26                text26       1142
 __ptext27                text27       1CEE
-__ptext28                text28       0805
+__ptext28                text28       0806
 __ptext29                text29       1D07
 __ptext3                 text3        1F0E
 __ptext30                text30       1D42
@@ -570,13 +570,13 @@ _fround$874              cstackBANK0  004B
 _isdigit                 text5        1CF9
 _isdigit$684             cstackCOMMON 0070
 _lcdClear                text27       1CEE
-_lcdCmd                  text28       0805
+_lcdCmd                  text28       0806
 _lcdInit                 text26       1142
 _lcdPort                 text29       1D07
 _lcdPrint                text24       1E89
 _lcdSetCursor            text23       1E12
 _lcdWriteChar            text25       1DDB
-_main                    maintext     088C
+_main                    maintext     088D
 _scale                   text2        0CB7
 _scale$875               cstackBANK0  004E
 _sprintf                 text1        0205
@@ -1740,7 +1740,7 @@ C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c estima
 ./lcd.h
 		_lcdSetCursor  		CODE           	1E12	0000	60
 		_lcdClear      		CODE           	1CEE	0000	12
-		_lcdCmd        		CODE           	0805	0000	27
+		_lcdCmd        		CODE           	0806	0000	27
 		_lcdPort       		CODE           	1D07	0000	27
 		_lcdWriteChar  		CODE           	1DDB	0000	56
 		_lcdInit       		CODE           	1142	0000	98
@@ -1759,7 +1759,7 @@ C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c estimated size: 61
 
 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fltol.c
-		___fltol       		CODE           	081F	0000	110
+		___fltol       		CODE           	0820	0000	110
 
 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fltol.c estimated size: 110
 
@@ -1823,9 +1823,9 @@ C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c estimated size: 95
 
 main.c
-		_main          		CODE           	088C	0000	279
+		_main          		CODE           	088D	0000	278
 
-main.c estimated size: 279
+main.c estimated size: 278
 
 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fleq.c
 		___fleq        		CODE           	1EC6	0000	73

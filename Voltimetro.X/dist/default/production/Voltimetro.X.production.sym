@@ -25,7 +25,7 @@ __end_of___fleq 1F0E 0 CODE 0
 ___flneg@f1 70 0 COMMON 1
 ?_adcRead 70 0 COMMON 1
 _lcdWriteChar 1DDB 0 CODE 0
-_main 88C 0 CODE 0
+_main 88D 0 CODE 0
 lcdPrint@i 7A 0 COMMON 1
 ___sp 0 0 STACK 2
 btemp 7E 0 ABS 0
@@ -101,7 +101,7 @@ lcdWriteChar@temp 72 0 COMMON 1
 __Umul8_16@multiplier 78 0 COMMON 1
 __npowers_ 1044 0 STRING 0
 __end_of_lcdSetCursor 1E4D 0 CODE 0
-__end_of___fltol 88C 0 CODE 0
+__end_of___fltol 88D 0 CODE 0
 ___stackhi 0 0 ABS 0
 __end_of___flsub 1D86 0 CODE 0
 __size_of___fldiv 0 0 ABS 0
@@ -110,7 +110,7 @@ __end_of_dpowers 10A0 0 STRING 0
 __end_of_scale 1000 0 CODE 0
 __end_of___flge 1236 0 CODE 0
 __end_of___awmod 1F59 0 CODE 0
-_lcdCmd 805 0 CODE 0
+_lcdCmd 806 0 CODE 0
 __Hcode 0 0 ABS 0
 __Lcode 0 0 ABS 0
 ___flge 11A3 0 CODE 0
@@ -209,7 +209,7 @@ __Lstack 0 0 STACK 2
 ___llmod 1F59 0 CODE 0
 __end_of___lldiv 1142 0 CODE 0
 ___awmod 1F0E 0 CODE 0
-__end_of_lcdCmd 81F 0 CODE 0
+__end_of_lcdCmd 820 0 CODE 0
 ___lwmod 1DA9 0 CODE 0
 __Hspace_0 2008 0 ABS 0
 ___flsub 1D64 0 CODE 0
@@ -220,7 +220,7 @@ __Hspace_1 DA 0 ABS 0
 __Lspace_1 0 0 ABS 0
 _adcInit 10D4 0 CODE 0
 _lcdInit 1142 0 CODE 0
-___fltol 81F 0 CODE 0
+___fltol 820 0 CODE 0
 __Hspace_2 0 0 ABS 0
 __Lspace_2 0 0 ABS 0
 ___flmul 9A2 0 CODE 0
@@ -284,7 +284,7 @@ __ptext16 10E4 0 CODE 0
 __ptext26 1142 0 CODE 0
 __CFG_BOREN$OFF 0 0 ABS 0
 ___llmod@divisor 70 0 COMMON 1
-__ptext17 81F 0 CODE 0
+__ptext17 820 0 CODE 0
 ___awmod@divisor 70 0 COMMON 1
 __end_of___lwmod 1DDB 0 CODE 0
 __ptext27 1CEE 0 CODE 0
@@ -293,7 +293,7 @@ __end_of_lcdWriteChar 1E12 0 CODE 0
 __ptext18 1D64 0 CODE 0
 ___fltol@sign1 5C 0 BANK0 1
 __CFG_PWRTE$OFF 0 0 ABS 0
-__ptext28 805 0 CODE 0
+__ptext28 806 0 CODE 0
 __ptext19 15D1 0 CODE 0
 __ptext29 1D07 0 CODE 0
 __Umul8_16@word_mpld 76 0 COMMON 1
@@ -350,7 +350,7 @@ __end_of___xxtofl 12DB 0 CODE 0
 __Hmaintext 0 0 ABS 0
 __Lmaintext 0 0 ABS 0
 ___fladd@a 58 0 BANK0 1
-__pmaintext 88C 0 CODE 0
+__pmaintext 88D 0 CODE 0
 ___fladd@b 54 0 BANK0 1
 __size_of_sprintf 0 0 ABS 0
 __size_of___awmod 0 0 ABS 0
@@ -400,13 +400,13 @@ text9 1344 196D CODE 1344 0
 text19 2BA2 2FFF CODE 2BA2 0
 text6 8 409 CODE 8 0
 text32 285C 2BA1 CODE 285C 0
-maintext 1118 1343 CODE 1118 0
+maintext 111A 1343 CODE 111A 0
 strings 2000 21A7 STRING 2000 0
 text12 2708 285B CODE 2708 0
 text11 25B6 2707 CODE 25B6 0
 text13 246C 25B5 CODE 246C 0
 text21 2346 246B CODE 2346 0
-text17 103E 1117 CODE 103E 0
+text17 1040 1119 CODE 1040 0
 text26 2284 2345 CODE 2284 0
 text16 21C8 2283 CODE 21C8 0
 text4 3F4A 3FFF CODE 3F4A 0
@@ -422,7 +422,7 @@ text10 3B0C 3B51 CODE 3B0C 0
 text18 3AC8 3B0B CODE 3AC8 0
 text30 3A84 3AC7 CODE 3A84 0
 text14 3A42 3A83 CODE 3A42 0
-text28 100A 103D CODE 100A 0
+text28 100C 103F CODE 100C 0
 text29 3A0E 3A41 CODE 3A0E 0
 text31 21A8 21C7 CODE 21A8 0
 text5 39F2 3A0D CODE 39F2 0
@@ -430,25 +430,25 @@ text27 39DC 39F1 CODE 39DC 0
 text20 39CA 39DB CODE 39CA 0
 %locals
 dist/default/production\Voltimetro.X.production.o
-C:\Users\Xizuth\AppData\Local\Temp\s5p0.
+C:\Users\Xizuth\AppData\Local\Temp\s3ug.
 722 7FC 0 CODE 0
 725 7FC 0 CODE 0
 731 7FC 0 CODE 0
 733 7FC 0 CODE 0
 734 7FD 0 CODE 0
 main.c
-18 88C 0 CODE 0
-19 88C 0 CODE 0
-20 890 0 CODE 0
-21 893 0 CODE 0
-22 898 0 CODE 0
-23 8A2 0 CODE 0
-25 8A7 0 CODE 0
-26 8AC 0 CODE 0
-27 8B4 0 CODE 0
-28 8BD 0 CODE 0
-29 8C5 0 CODE 0
-30 8CE 0 CODE 0
+18 88D 0 CODE 0
+19 88D 0 CODE 0
+20 891 0 CODE 0
+21 894 0 CODE 0
+22 899 0 CODE 0
+23 8A3 0 CODE 0
+25 8A8 0 CODE 0
+26 8AD 0 CODE 0
+27 8B5 0 CODE 0
+28 8BE 0 CODE 0
+29 8C6 0 CODE 0
+30 8CF 0 CODE 0
 32 8DD 0 CODE 0
 33 8E2 0 CODE 0
 34 8EA 0 CODE 0
@@ -893,26 +893,26 @@ C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
 29 1139 0 CODE 0
 30 1141 0 CODE 0
 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fltol.c
-43 81F 0 CODE 0
-47 81F 0 CODE 0
-48 82A 0 CODE 0
-49 833 0 CODE 0
-50 848 0 CODE 0
-51 849 0 CODE 0
-52 851 0 CODE 0
-53 853 0 CODE 0
-54 855 0 CODE 0
-57 85A 0 CODE 0
-58 863 0 CODE 0
-60 86A 0 CODE 0
-65 86E 0 CODE 0
-62 86E 0 CODE 0
-63 871 0 CODE 0
-64 87A 0 CODE 0
-62 87C 0 CODE 0
-67 87D 0 CODE 0
-68 880 0 CODE 0
-70 88B 0 CODE 0
+43 820 0 CODE 0
+47 820 0 CODE 0
+48 82B 0 CODE 0
+49 834 0 CODE 0
+50 849 0 CODE 0
+51 84A 0 CODE 0
+52 852 0 CODE 0
+53 854 0 CODE 0
+54 856 0 CODE 0
+57 85B 0 CODE 0
+58 864 0 CODE 0
+60 86B 0 CODE 0
+65 86F 0 CODE 0
+62 86F 0 CODE 0
+63 872 0 CODE 0
+64 87B 0 CODE 0
+62 87D 0 CODE 0
+67 87E 0 CODE 0
+68 881 0 CODE 0
+70 88C 0 CODE 0
 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcadd.c
 242 1D64 0 CODE 0
 248 1D64 0 CODE 0
@@ -1115,13 +1115,13 @@ C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fleq.c
 52 1CEE 0 CODE 0
 53 1CF4 0 CODE 0
 54 1CF8 0 CODE 0
-43 805 0 CODE 0
-44 806 0 CODE 0
-45 809 0 CODE 0
-46 80F 0 CODE 0
-47 812 0 CODE 0
-48 81B 0 CODE 0
-49 81E 0 CODE 0
+43 806 0 CODE 0
+44 807 0 CODE 0
+45 80A 0 CODE 0
+46 810 0 CODE 0
+47 813 0 CODE 0
+48 81C 0 CODE 0
+49 81F 0 CODE 0
 21 1D07 0 CODE 0
 22 1D08 0 CODE 0
 23 1D0A 0 CODE 0

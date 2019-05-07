@@ -412,16 +412,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 107 ]
 [e $ ! == -> _y `i -> 3 `i 109  ]
 "62
-[; ;./lcd.h: 62:         row +=16;
-[e =+ _row -> -> 16 `i `uc ]
+[; ;./lcd.h: 62:         row +=20;
+[e =+ _row -> -> 20 `i `uc ]
 [e $U 110  ]
 "63
 [; ;./lcd.h: 63:     else if (y == 4)
 [e :U 109 ]
 [e $ ! == -> _y `i -> 4 `i 111  ]
 "64
-[; ;./lcd.h: 64:         row += 64+16;
-[e =+ _row -> + -> 64 `i -> 16 `i `uc ]
+[; ;./lcd.h: 64:         row += 64+20;
+[e =+ _row -> + -> 64 `i -> 20 `i `uc ]
 [e :U 111 ]
 [e :U 110 ]
 [e :U 108 ]
@@ -676,8 +676,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 29:     lcdPrint("Cargando...");
 [e ( _lcdPrint (1 :s 2C ]
 "30
-[; ;main.c: 30:     _delay((unsigned long)((300)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 30:     _delay((unsigned long)((500)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "32
 [; ;main.c: 32:     lcdClear();
 [e ( _lcdClear ..  ]

@@ -1778,9 +1778,9 @@ void lcdSetCursor(char y, char x) {
     if (y == 2)
         row += 64;
     else if (y == 3)
-        row +=16;
+        row +=20;
     else if (y == 4)
-        row += 64+16;
+        row += 64+20;
 
     temp = row + x - 1;
     z = temp >> 4;
@@ -1971,7 +1971,7 @@ void main(void) {
     lcdPrint("Voltimetro");
     lcdSetCursor(2, 1);
     lcdPrint("Cargando...");
-    _delay((unsigned long)((300)*(4000000/4000.0)));
+    _delay((unsigned long)((500)*(4000000/4000.0)));
 
     lcdClear();
     lcdSetCursor(1, 1);
