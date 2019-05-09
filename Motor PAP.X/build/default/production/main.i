@@ -7,7 +7,6 @@
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "main.c" 2
-
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -1721,7 +1720,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 2 3
-# 2 "main.c" 2
+# 1 "main.c" 2
 
 
 
@@ -1730,7 +1729,7 @@ void main(void) {
     char const forward[] = {0x08, 0x04, 0x02, 0x01, '\0'};
     char const full[] = {0x03, 0x06, 0x0C, 0x09, '\0'};
     char const half[] = {0x01, 0x03, 0x02, 0x06, 0x04, 0x0C, 0x08, 0x09, '\0'};
-    int const TIME = 1000;
+    int const TIME = 100;
     TRISB = 0;
     TRISC = 255;
     TRISD = 0;
@@ -1743,33 +1742,33 @@ void main(void) {
         if (PORTCbits.RC0 == 1) {
             int i = 0;
             while (forward[i] != '\0') {
-                PORTB = forward[i++];
-                PORTD = PORTB;
-                _delay((unsigned long)((TIME)*(40000/4000.0)));
+                PORTD = PORTB = forward[i++];
+
+                _delay((unsigned long)((TIME)*(4000000/4000.0)));
             }
             i = 0;
         } else if (PORTCbits.RC1 == 1) {
             int i = 0;
             while (backward[i] != '\0') {
-                PORTB = backward[i++];
-                PORTD = PORTB;
-                _delay((unsigned long)((TIME)*(40000/4000.0)));
+                PORTD = PORTB = backward[i++];
+
+                _delay((unsigned long)((TIME)*(4000000/4000.0)));
             }
             i = 0;
         } else if (PORTCbits.RC2 == 1) {
             int i = 0;
             while (full[i] != '\0') {
-                PORTB = full[i++];
-                PORTD = PORTB;
-                _delay((unsigned long)((TIME)*(40000/4000.0)));
+                PORTD = PORTB = full[i++];
+
+                _delay((unsigned long)((TIME)*(4000000/4000.0)));
             }
             i = 0;
         } else if (PORTCbits.RC3 == 1) {
             int i = 0;
             while (half[i] != '\0') {
-                PORTB = half[i++];
-                PORTD = PORTB;
-                _delay((unsigned long)((TIME)*(40000/4000.0)));
+                PORTB = PORTD = half[i++];
+
+                _delay((unsigned long)((TIME)*(4000000/4000.0)));
             }
             i = 0;
         } else {

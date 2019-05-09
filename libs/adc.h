@@ -32,7 +32,7 @@ void adcInit() {
  * @param VALUE = 0 -> Int ; 1 -> Float
  * @return Value
  */
-int adcRead(int const adcChannel) {
+int adcRead(char const adcChannel) {
     ADCON0bits.ADON = 1; // turn on a/d module
     ADCON0bits.CHS = adcChannel; // turn on adc channel
     __delay_ms(10); // wait for capacitors to charge up

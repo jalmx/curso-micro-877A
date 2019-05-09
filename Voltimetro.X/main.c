@@ -18,11 +18,10 @@
 void main(void) {
     TRISA = 255;//entradas ADC
     PORTA = 0;//limpio el puerto A
-    lcdInit(); //inicio la LCD
-    __delay_ms(10); //espero un tiempo de arranque
-    lcdClear(); //limpio la pantalla
-
     adcInit(); //inicio el ADC
+    
+    lcdInit(); //inicio la LCD
+    lcdClear(); //limpio la pantalla
     lcdSetCursor(1, 1); //me coloco en la posición 1,1
     lcdPrint("Voltimetro");
     lcdSetCursor(2, 1);
@@ -32,11 +31,6 @@ void main(void) {
     lcdClear();
     lcdSetCursor(1, 1);
     lcdPrint("Voltaje");
-    
-    lcdSetCursor(3, 1);
-    lcdPrint("CBTIS 85");
-    lcdSetCursor(4, 1);
-    lcdPrint("MICRO");
 
     for (;;) {
         float volt = (5 * (float) adcRead(0)) / 1023;
@@ -45,6 +39,5 @@ void main(void) {
         lcdSetCursor(2,1);
         lcdPrint(mensaje);
         __delay_ms(10);
-    }
-
-}
+    }//termina for
+}//termina función main

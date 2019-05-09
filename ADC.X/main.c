@@ -1,5 +1,4 @@
-#include <xc.h>
-#define _XTAL_FREQ 4000000
+#include "config.h"
 #include "adc.h"
 
 /**
@@ -16,11 +15,11 @@ void main(void) {
 
     adcInit();//inicio el ADC
 
-    do {
+    while(1) {
         PORTB = adcRead(0); //leyendo AN0
         __delay_ms(10);
         PORTC = adcRead(1); // leyendo AN1
         __delay_ms(10);
-    }while(1);
+    }
 
 }

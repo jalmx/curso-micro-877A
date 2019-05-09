@@ -6,6 +6,8 @@
                    projectFiles="true">
       <itemPath>config.h</itemPath>
       <itemPath>adc.h</itemPath>
+      <itemPath>lcd.h</itemPath>
+      <itemPath>servo.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"

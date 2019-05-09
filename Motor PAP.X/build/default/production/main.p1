@@ -214,14 +214,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2363: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
 [v $root$_main `(v ~T0 @X0 0 e ]
-"5 main.c
-[; ;main.c: 5: void main(void) {
+"4 main.c
+[; ;main.c: 4: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"6
-[; ;main.c: 6:     char const backward[] = {0x01, 0x02, 0x04, 0x08, '\0'};
+"5
+[; ;main.c: 5:     char const backward[] = {0x01, 0x02, 0x04, 0x08, '\0'};
 [v F851 `Cuc ~T0 @X0 -> 5 `i s backward ]
 [i F851
 :U ..
@@ -232,8 +232,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `ui `uc
 ..
 ]
-"7
-[; ;main.c: 7:     char const forward[] = {0x08, 0x04, 0x02, 0x01, '\0'};
+"6
+[; ;main.c: 6:     char const forward[] = {0x08, 0x04, 0x02, 0x01, '\0'};
 [v F852 `Cuc ~T0 @X0 -> 5 `i s forward ]
 [i F852
 :U ..
@@ -244,8 +244,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `ui `uc
 ..
 ]
-"8
-[; ;main.c: 8:     char const full[] = {0x03, 0x06, 0x0C, 0x09, '\0'};
+"7
+[; ;main.c: 7:     char const full[] = {0x03, 0x06, 0x0C, 0x09, '\0'};
 [v F853 `Cuc ~T0 @X0 -> 5 `i s full ]
 [i F853
 :U ..
@@ -256,8 +256,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `ui `uc
 ..
 ]
-"9
-[; ;main.c: 9:     char const half[] = {0x01, 0x03, 0x02, 0x06, 0x04, 0x0C, 0x08, 0x09, '\0'};
+"8
+[; ;main.c: 8:     char const half[] = {0x01, 0x03, 0x02, 0x06, 0x04, 0x0C, 0x08, 0x09, '\0'};
 [v F854 `Cuc ~T0 @X0 -> 9 `i s half ]
 [i F854
 :U ..
@@ -272,199 +272,187 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `ui `uc
 ..
 ]
-"10
-[; ;main.c: 10:     int const TIME = 1000;
+"9
+[; ;main.c: 9:     int const TIME = 100;
 [v F855 `Ci ~T0 @X0 1 s TIME ]
 [i F855
--> 1000 `i
+-> 100 `i
 ]
-"11
-[; ;main.c: 11:     TRISB = 0;
+"10
+[; ;main.c: 10:     TRISB = 0;
 [e = _TRISB -> -> 0 `i `uc ]
-"12
-[; ;main.c: 12:     TRISC = 255;
+"11
+[; ;main.c: 11:     TRISC = 255;
 [e = _TRISC -> -> 255 `i `uc ]
-"13
-[; ;main.c: 13:     TRISD = 0;
+"12
+[; ;main.c: 12:     TRISD = 0;
 [e = _TRISD -> -> 0 `i `uc ]
-"14
-[; ;main.c: 14:     PORTB = 0;
+"13
+[; ;main.c: 13:     PORTB = 0;
 [e = _PORTB -> -> 0 `i `uc ]
-"15
-[; ;main.c: 15:     PORTC = 0;
+"14
+[; ;main.c: 14:     PORTC = 0;
 [e = _PORTC -> -> 0 `i `uc ]
-"16
-[; ;main.c: 16:     PORTD = 0;
+"15
+[; ;main.c: 15:     PORTD = 0;
 [e = _PORTD -> -> 0 `i `uc ]
-"18
-[; ;main.c: 18:     for (;;) {
+"17
+[; ;main.c: 17:     for (;;) {
 {
 [e :U 96 ]
 {
-"20
-[; ;main.c: 20:         if (PORTCbits.RC0 == 1) {
+"19
+[; ;main.c: 19:         if (PORTCbits.RC0 == 1) {
 [e $ ! == -> . . _PORTCbits 0 0 `i -> 1 `i 99  ]
 {
-"21
-[; ;main.c: 21:             int i = 0;
+"20
+[; ;main.c: 20:             int i = 0;
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-"22
-[; ;main.c: 22:             while (forward[i] != '\0') {
+"21
+[; ;main.c: 21:             while (forward[i] != '\0') {
 [e $U 100  ]
 [e :U 101 ]
 {
-"23
-[; ;main.c: 23:                 PORTB = forward[i++];
-[e = _PORTB -> *U + &U F852 * -> -> ++ _i -> 1 `i `ui `ux -> -> # *U &U F852 `ui `ux `uc ]
+"22
+[; ;main.c: 22:                 PORTD = PORTB = forward[i++];
+[e = _PORTD = _PORTB -> *U + &U F852 * -> -> ++ _i -> 1 `i `ui `ux -> -> # *U &U F852 `ui `ux `uc ]
 "24
-[; ;main.c: 24:                 PORTD = PORTB;
-[e = _PORTD _PORTB ]
+[; ;main.c: 24:                 _delay((unsigned long)((TIME)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> F855 `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "25
-[; ;main.c: 25:                 _delay((unsigned long)((TIME)*(40000/4000.0)));
-[e ( __delay (1 -> * -> F855 `d / -> -> 40000 `l `d .4000.0 `ul ]
-"26
-[; ;main.c: 26:             }
+[; ;main.c: 25:             }
 }
 [e :U 100 ]
-"22
-[; ;main.c: 22:             while (forward[i] != '\0') {
+"21
+[; ;main.c: 21:             while (forward[i] != '\0') {
 [e $ != -> *U + &U F852 * -> -> _i `ui `ux -> -> # *U &U F852 `ui `ux `ui -> 0 `ui 101  ]
 [e :U 102 ]
-"27
-[; ;main.c: 27:             i = 0;
+"26
+[; ;main.c: 26:             i = 0;
 [e = _i -> 0 `i ]
-"28
-[; ;main.c: 28:         } else if (PORTCbits.RC1 == 1) {
+"27
+[; ;main.c: 27:         } else if (PORTCbits.RC1 == 1) {
 }
 [e $U 103  ]
 [e :U 99 ]
 [e $ ! == -> . . _PORTCbits 0 1 `i -> 1 `i 104  ]
 {
-"29
-[; ;main.c: 29:             int i = 0;
+"28
+[; ;main.c: 28:             int i = 0;
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-"30
-[; ;main.c: 30:             while (backward[i] != '\0') {
+"29
+[; ;main.c: 29:             while (backward[i] != '\0') {
 [e $U 105  ]
 [e :U 106 ]
 {
-"31
-[; ;main.c: 31:                 PORTB = backward[i++];
-[e = _PORTB -> *U + &U F851 * -> -> ++ _i -> 1 `i `ui `ux -> -> # *U &U F851 `ui `ux `uc ]
+"30
+[; ;main.c: 30:                 PORTD = PORTB = backward[i++];
+[e = _PORTD = _PORTB -> *U + &U F851 * -> -> ++ _i -> 1 `i `ui `ux -> -> # *U &U F851 `ui `ux `uc ]
 "32
-[; ;main.c: 32:                 PORTD = PORTB;
-[e = _PORTD _PORTB ]
+[; ;main.c: 32:                 _delay((unsigned long)((TIME)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> F855 `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "33
-[; ;main.c: 33:                 _delay((unsigned long)((TIME)*(40000/4000.0)));
-[e ( __delay (1 -> * -> F855 `d / -> -> 40000 `l `d .4000.0 `ul ]
-"34
-[; ;main.c: 34:             }
+[; ;main.c: 33:             }
 }
 [e :U 105 ]
-"30
-[; ;main.c: 30:             while (backward[i] != '\0') {
+"29
+[; ;main.c: 29:             while (backward[i] != '\0') {
 [e $ != -> *U + &U F851 * -> -> _i `ui `ux -> -> # *U &U F851 `ui `ux `ui -> 0 `ui 106  ]
 [e :U 107 ]
-"35
-[; ;main.c: 35:             i = 0;
+"34
+[; ;main.c: 34:             i = 0;
 [e = _i -> 0 `i ]
-"36
-[; ;main.c: 36:         } else if (PORTCbits.RC2 == 1) {
+"35
+[; ;main.c: 35:         } else if (PORTCbits.RC2 == 1) {
 }
 [e $U 108  ]
 [e :U 104 ]
 [e $ ! == -> . . _PORTCbits 0 2 `i -> 1 `i 109  ]
 {
-"37
-[; ;main.c: 37:             int i = 0;
+"36
+[; ;main.c: 36:             int i = 0;
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-"38
-[; ;main.c: 38:             while (full[i] != '\0') {
+"37
+[; ;main.c: 37:             while (full[i] != '\0') {
 [e $U 110  ]
 [e :U 111 ]
 {
-"39
-[; ;main.c: 39:                 PORTB = full[i++];
-[e = _PORTB -> *U + &U F853 * -> -> ++ _i -> 1 `i `ui `ux -> -> # *U &U F853 `ui `ux `uc ]
+"38
+[; ;main.c: 38:                 PORTD = PORTB = full[i++];
+[e = _PORTD = _PORTB -> *U + &U F853 * -> -> ++ _i -> 1 `i `ui `ux -> -> # *U &U F853 `ui `ux `uc ]
 "40
-[; ;main.c: 40:                 PORTD = PORTB;
-[e = _PORTD _PORTB ]
+[; ;main.c: 40:                 _delay((unsigned long)((TIME)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> F855 `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "41
-[; ;main.c: 41:                 _delay((unsigned long)((TIME)*(40000/4000.0)));
-[e ( __delay (1 -> * -> F855 `d / -> -> 40000 `l `d .4000.0 `ul ]
-"42
-[; ;main.c: 42:             }
+[; ;main.c: 41:             }
 }
 [e :U 110 ]
-"38
-[; ;main.c: 38:             while (full[i] != '\0') {
+"37
+[; ;main.c: 37:             while (full[i] != '\0') {
 [e $ != -> *U + &U F853 * -> -> _i `ui `ux -> -> # *U &U F853 `ui `ux `ui -> 0 `ui 111  ]
 [e :U 112 ]
-"43
-[; ;main.c: 43:             i = 0;
+"42
+[; ;main.c: 42:             i = 0;
 [e = _i -> 0 `i ]
-"44
-[; ;main.c: 44:         } else if (PORTCbits.RC3 == 1) {
+"43
+[; ;main.c: 43:         } else if (PORTCbits.RC3 == 1) {
 }
 [e $U 113  ]
 [e :U 109 ]
 [e $ ! == -> . . _PORTCbits 0 3 `i -> 1 `i 114  ]
 {
-"45
-[; ;main.c: 45:             int i = 0;
+"44
+[; ;main.c: 44:             int i = 0;
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-"46
-[; ;main.c: 46:             while (half[i] != '\0') {
+"45
+[; ;main.c: 45:             while (half[i] != '\0') {
 [e $U 115  ]
 [e :U 116 ]
 {
-"47
-[; ;main.c: 47:                 PORTB = half[i++];
-[e = _PORTB -> *U + &U F854 * -> -> ++ _i -> 1 `i `ui `ux -> -> # *U &U F854 `ui `ux `uc ]
+"46
+[; ;main.c: 46:                 PORTB = PORTD = half[i++];
+[e = _PORTB = _PORTD -> *U + &U F854 * -> -> ++ _i -> 1 `i `ui `ux -> -> # *U &U F854 `ui `ux `uc ]
 "48
-[; ;main.c: 48:                 PORTD = PORTB;
-[e = _PORTD _PORTB ]
+[; ;main.c: 48:                 _delay((unsigned long)((TIME)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> F855 `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "49
-[; ;main.c: 49:                 _delay((unsigned long)((TIME)*(40000/4000.0)));
-[e ( __delay (1 -> * -> F855 `d / -> -> 40000 `l `d .4000.0 `ul ]
-"50
-[; ;main.c: 50:             }
+[; ;main.c: 49:             }
 }
 [e :U 115 ]
-"46
-[; ;main.c: 46:             while (half[i] != '\0') {
+"45
+[; ;main.c: 45:             while (half[i] != '\0') {
 [e $ != -> *U + &U F854 * -> -> _i `ui `ux -> -> # *U &U F854 `ui `ux `ui -> 0 `ui 116  ]
 [e :U 117 ]
-"51
-[; ;main.c: 51:             i = 0;
+"50
+[; ;main.c: 50:             i = 0;
 [e = _i -> 0 `i ]
-"52
-[; ;main.c: 52:         } else {
+"51
+[; ;main.c: 51:         } else {
 }
 [e $U 118  ]
 [e :U 114 ]
 {
-"53
-[; ;main.c: 53:             PORTB = 0;
+"52
+[; ;main.c: 52:             PORTB = 0;
 [e = _PORTB -> -> 0 `i `uc ]
-"54
-[; ;main.c: 54:         }
+"53
+[; ;main.c: 53:         }
 }
 [e :U 118 ]
 [e :U 113 ]
 [e :U 108 ]
 [e :U 103 ]
-"55
-[; ;main.c: 55:     }
+"54
+[; ;main.c: 54:     }
 }
 [e $U 96  ]
 [e :U 97 ]
 }
-"56
-[; ;main.c: 56: }
+"55
+[; ;main.c: 55: }
 [e :UE 95 ]
 }

@@ -652,91 +652,74 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 20:     PORTA = 0;
 [e = _PORTA -> -> 0 `i `uc ]
 "21
-[; ;main.c: 21:     lcdInit();
-[e ( _lcdInit ..  ]
-"22
-[; ;main.c: 22:     _delay((unsigned long)((10)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 21:     adcInit();
+[e ( _adcInit ..  ]
 "23
-[; ;main.c: 23:     lcdClear();
+[; ;main.c: 23:     lcdInit();
+[e ( _lcdInit ..  ]
+"24
+[; ;main.c: 24:     lcdClear();
 [e ( _lcdClear ..  ]
 "25
-[; ;main.c: 25:     adcInit();
-[e ( _adcInit ..  ]
+[; ;main.c: 25:     lcdSetCursor(1, 1);
+[e ( _lcdSetCursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
 "26
-[; ;main.c: 26:     lcdSetCursor(1, 1);
-[e ( _lcdSetCursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
-"27
-[; ;main.c: 27:     lcdPrint("Voltimetro");
+[; ;main.c: 26:     lcdPrint("Voltimetro");
 [e ( _lcdPrint (1 :s 1C ]
-"28
-[; ;main.c: 28:     lcdSetCursor(2, 1);
+"27
+[; ;main.c: 27:     lcdSetCursor(2, 1);
 [e ( _lcdSetCursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
-"29
-[; ;main.c: 29:     lcdPrint("Cargando...");
+"28
+[; ;main.c: 28:     lcdPrint("Cargando...");
 [e ( _lcdPrint (1 :s 2C ]
-"30
-[; ;main.c: 30:     _delay((unsigned long)((500)*(4000000/4000.0)));
+"29
+[; ;main.c: 29:     _delay((unsigned long)((500)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"32
-[; ;main.c: 32:     lcdClear();
+"31
+[; ;main.c: 31:     lcdClear();
 [e ( _lcdClear ..  ]
-"33
-[; ;main.c: 33:     lcdSetCursor(1, 1);
+"32
+[; ;main.c: 32:     lcdSetCursor(1, 1);
 [e ( _lcdSetCursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
-"34
-[; ;main.c: 34:     lcdPrint("Voltaje");
+"33
+[; ;main.c: 33:     lcdPrint("Voltaje");
 [e ( _lcdPrint (1 :s 3C ]
-"36
-[; ;main.c: 36:     lcdSetCursor(3, 1);
-[e ( _lcdSetCursor (2 , -> -> 3 `i `uc -> -> 1 `i `uc ]
-"37
-[; ;main.c: 37:     lcdPrint("CBTIS 85");
-[e ( _lcdPrint (1 :s 4C ]
-"38
-[; ;main.c: 38:     lcdSetCursor(4, 1);
-[e ( _lcdSetCursor (2 , -> -> 4 `i `uc -> -> 1 `i `uc ]
-"39
-[; ;main.c: 39:     lcdPrint("MICRO");
-[e ( _lcdPrint (1 :s 5C ]
-"41
-[; ;main.c: 41:     for (;;) {
+"35
+[; ;main.c: 35:     for (;;) {
 {
 [e :U 126 ]
 {
-"42
-[; ;main.c: 42:         float volt = (5 * (float) adcRead(0)) / 1023;
+"36
+[; ;main.c: 36:         float volt = (5 * (float) adcRead(0)) / 1023;
 [v _volt `f ~T0 @X0 1 a ]
 [e = _volt / * -> -> 5 `i `f -> ( _adcRead (1 -> 0 `i `f -> -> 1023 `i `f ]
-"43
-[; ;main.c: 43:         char mensaje[16];
+"37
+[; ;main.c: 37:         char mensaje[16];
 [v _mensaje `uc ~T0 @X0 -> 16 `i a ]
-"44
-[; ;main.c: 44:         sprintf(mensaje, "%.6fV", volt);
-[e ( _sprintf (1 , (. , &U _mensaje :s 6C -> _volt `d ]
-"45
-[; ;main.c: 45:         lcdSetCursor(2,1);
+"38
+[; ;main.c: 38:         sprintf(mensaje, "%.6fV", volt);
+[e ( _sprintf (1 , (. , &U _mensaje :s 4C -> _volt `d ]
+"39
+[; ;main.c: 39:         lcdSetCursor(2,1);
 [e ( _lcdSetCursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
-"46
-[; ;main.c: 46:         lcdPrint(mensaje);
+"40
+[; ;main.c: 40:         lcdPrint(mensaje);
 [e ( _lcdPrint (1 -> &U _mensaje `*Cuc ]
-"47
-[; ;main.c: 47:         _delay((unsigned long)((10)*(4000000/4000.0)));
+"41
+[; ;main.c: 41:         _delay((unsigned long)((10)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"48
-[; ;main.c: 48:     }
+"42
+[; ;main.c: 42:     }
 }
 [e $U 126  ]
 [e :U 127 ]
 }
-"50
-[; ;main.c: 50: }
+"43
+[; ;main.c: 43: }
 [e :UE 125 ]
 }
 [p f _sprintf 8462336 ]
 [a 1C 86 111 108 116 105 109 101 116 114 111 0 ]
 [a 3C 86 111 108 116 97 106 101 0 ]
-[a 6C 37 46 54 102 86 0 ]
-[a 5C 77 73 67 82 79 0 ]
-[a 4C 67 66 84 73 83 32 56 53 0 ]
+[a 4C 37 46 54 102 86 0 ]
 [a 2C 67 97 114 103 97 110 100 111 46 46 46 0 ]

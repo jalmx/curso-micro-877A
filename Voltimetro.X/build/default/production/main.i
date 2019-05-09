@@ -1962,11 +1962,10 @@ int adcRead(int const adcChannel) {
 void main(void) {
     TRISA = 255;
     PORTA = 0;
-    lcdInit();
-    _delay((unsigned long)((10)*(4000000/4000.0)));
-    lcdClear();
-
     adcInit();
+
+    lcdInit();
+    lcdClear();
     lcdSetCursor(1, 1);
     lcdPrint("Voltimetro");
     lcdSetCursor(2, 1);
@@ -1977,11 +1976,6 @@ void main(void) {
     lcdSetCursor(1, 1);
     lcdPrint("Voltaje");
 
-    lcdSetCursor(3, 1);
-    lcdPrint("CBTIS 85");
-    lcdSetCursor(4, 1);
-    lcdPrint("MICRO");
-
     for (;;) {
         float volt = (5 * (float) adcRead(0)) / 1023;
         char mensaje[16];
@@ -1990,5 +1984,4 @@ void main(void) {
         lcdPrint(mensaje);
         _delay((unsigned long)((10)*(4000000/4000.0)));
     }
-
 }

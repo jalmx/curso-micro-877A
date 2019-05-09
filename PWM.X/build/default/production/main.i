@@ -1730,41 +1730,65 @@ extern __bank0 __bit __timeout;
 int FREQ1;
 int FREQ2;
 
+void setTMR2(char const pwm);
+void setPR2(unsigned int const freq);
+
 void pwmInit1(unsigned int const freq) {
     FREQ1 = freq;
-    PR2 = (4000000 / (FREQ1 * 4 * 4)) - 1;
-    CCP1M3 = 1;
-    CCP1M2 = 1;
-    T2CKPS0 = 1;
-    T2CKPS1 = 0;
-    TMR2ON = 1;
-    TRISC2 = 0;
+    setPR2(freq);
+    setTMR2(1);
 }
-void pwmInit2(unsigned int const freq) {
+
+void pwmInit2(unsigned int freq) {
     FREQ2 = freq;
-    PR2 = (4000000 / (FREQ2 * 4 * 4)) - 1;
-    CCP2M3 = 1;
-    CCP2M2 = 1;
-    T2CKPS0 = 1;
-    T2CKPS1 = 0;
-    TMR2ON = 1;
-    TRISC1 = 0;
+    setPR2(freq);
+    setTMR2(2);
 }
 
 void pwmSetDutyCycle1(unsigned int duty) {
-
-    duty = ((float) duty / 1023)*(4000000 / (FREQ1 * 4));
+    if(duty >= 1023) return;
+    duty = ((float) duty / 1023)*(4000000 / (FREQ1 * 16));
     CCP1X = duty & 0x01;
     CCP1Y = duty & 0x02;
     CCPR1L = duty >> 2;
 }
 
 void pwmSetDutyCycle2(unsigned int duty) {
+    if(duty >= 1023) return;
 
-    duty = ((float) duty / 1023)*(4000000 / (FREQ2 * 4));
+    duty = ((float) duty / 1023)*(4000000 / (FREQ2 * 16));
     CCP2X = duty & 0x01;
     CCP2Y = duty & 0x02;
     CCPR2L = duty >> 2;
+}
+
+void setTMR2(char const pwm) {
+    if (pwm == 2) {
+        CCP2M3 = 1;
+        CCP2M2 = 1;
+    } else {
+        CCP1M3 = 1;
+        CCP1M2 = 1;
+    }
+    if (16 == 1) {
+        T2CKPS0 = 0;
+        T2CKPS1 = 0;
+    } else if (16 == 4) {
+        T2CKPS0 = 1;
+        T2CKPS1 = 0;
+    } else {
+        T2CKPS0 = 1;
+        T2CKPS1 = 1;
+    }
+    TMR2ON = 1;
+    if (pwm == 2)
+        TRISC2 = 0;
+    else
+        TRISC1 = 0;
+}
+
+void setPR2(unsigned int const freq) {
+    PR2 = (4000000 / (freq * 4 * 16)) - 1;
 }
 # 4 "main.c" 2
 

@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.05\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\Motor_PAP.X.production.sym \
   --cmf=dist/default/production\Motor_PAP.X.production.cmf -z -Q16F877A \
-  -oC:\Users\Xizuth\AppData\Local\Temp\s168.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\Xizuth\AppData\Local\Temp\s3nk.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/Motor_PAP.X.production.map -E1 -ver=XC8 \
   --acfsm=1493 -ASTACK=0110h-016Fh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
@@ -18,7 +18,7 @@ Linker command line:
   -pfunctab=ENTRY -ACONFIG=02007h-02007h -pconfig=CONFIG -DCONFIG=2 \
   -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
-  -DENTRY=2 -k C:\Users\Xizuth\AppData\Local\Temp\s168.o \
+  -DENTRY=2 -k C:\Users\Xizuth\AppData\Local\Temp\s3nk.o \
   dist/default/production\Motor_PAP.X.production.o 
 
 Object code version is 3.11
@@ -28,11 +28,11 @@ Machine type is 16F877A
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Xizuth\AppData\Local\Temp\s168.o
+C:\Users\Xizuth\AppData\Local\Temp\s3nk.o
                 end_init                              0        0        3        0       0
 dist/default/production\Motor_PAP.X.production.o
                 cinit                               7FC      7FC        4      FF8       0
-                maintext                            73C      73C       C0      E78       0
+                maintext                            740      740       BC      E80       0
                 cstackCOMMON                         70       70        A       70       1
                 strings                               3        3       20        6       0
 
@@ -42,7 +42,7 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   CODE           
                 end_init                              0        0        3         0
                 cinit                               7FC      7FC        4         0
-                maintext                            73C      73C       C0         0
+                maintext                            740      740       BC         0
 
         CLASS   STRCODE        
 
@@ -90,7 +90,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 reset_vec                      000000  000003  000003         0       0  CODE        2
                 strings                        000003  000020  000023         6       0  STRING      2
                 cstackCOMMON                   000070  00000A  00007A        70       1  COMMON      1
-                maintext                       00073C  0000C0  0007FC       E78       0  CODE        2
+                maintext                       000740  0000BC  0007FC       E80       0  CODE        2
                 cinit                          0007FC  000004  000800       FF8       0  CODE        2
 
 
@@ -101,14 +101,14 @@ UNUSED ADDRESS RANGES
         BANK1            00A0-00EF             50           1
         BANK2            0110-016F             60           1
         BANK3            0190-01EF             60           1
-        CODE             0023-073B            719           2
+        CODE             0023-073F            71D           2
                          0800-1FFF            800
         COMMON           007A-007D              4           1
         CONFIG           2007-2007              1           2
-        CONST            0023-073B            100           2
+        CONST            0023-073F            100           2
                          0800-1FFF            100
         EEDATA           2100-21FF            100           2
-        ENTRY            0023-073B            100           2
+        ENTRY            0023-073F            100           2
                          0800-1FFF            100
         IDLOC            2000-2003              4           2
         RAM              0020-006F             50           1
@@ -120,9 +120,9 @@ UNUSED ADDRESS RANGES
         SFR2             0100-010F             10           1
         SFR3             0180-018F             10           1
         STACK            0110-016F             60           1
-        STRCODE          0023-073B            719           2
+        STRCODE          0023-073F            71D           2
                          0800-1FFF           1800
-        STRING           0023-073B            100           2
+        STRING           0023-073F            100           2
                          0800-1FFF            100
 
                                   Symbol Table
@@ -217,12 +217,12 @@ __end_ofmain@full        strings      0017
 __end_ofmain@half        strings      0012
 __initialization         cinit        07FC
 __pcstackCOMMON          cstackCOMMON 0070
-__pmaintext              maintext     073C
+__pmaintext              maintext     0740
 __pstrings               strings      0003
 __size_of_main           (abs)        0000
 __stringbase             strings      0008
 __stringtab              strings      0003
-_main                    maintext     073C
+_main                    maintext     0740
 btemp                    (abs)        007E
 end_of_initialization    cinit        07FC
 intlevel0                functab      0000
@@ -249,7 +249,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 5 in file "main.c"
+		line 4 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -295,7 +295,7 @@ shared
 shared estimated size: 36
 
 main.c
-		_main          		CODE           	073C	0000	193
+		_main          		CODE           	0740	0000	189
 
-main.c estimated size: 193
+main.c estimated size: 189
 

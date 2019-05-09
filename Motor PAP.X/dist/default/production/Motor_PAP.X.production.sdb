@@ -11,7 +11,7 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"5 C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+"4 C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
 [v _main main `(v  1 e 1 0 ]
 "216 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
@@ -37,24 +37,24 @@
 [v _TRISC TRISC `VEuc  1 e 1 @135 ]
 "1499
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
-"5 C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
+"4 C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"45
+"44
 [v main@i_76 i `i  1 a 2 8 ]
-"37
+"36
 [v main@i_75 i `i  1 a 2 6 ]
-"29
+"28
 [v main@i_74 i `i  1 a 2 4 ]
-"21
+"20
 [v main@i i `i  1 a 2 2 ]
-"6
+"5
 [v main@backward backward `DC[5]uc  1 s 5 backward ]
-"7
+"6
 [v main@forward forward `DC[5]uc  1 s 5 forward ]
-"8
+"7
 [v main@full full `DC[5]uc  1 s 5 full ]
-"9
+"8
 [v main@half half `DC[9]uc  1 s 9 half ]
-"56
+"55
 } 0
