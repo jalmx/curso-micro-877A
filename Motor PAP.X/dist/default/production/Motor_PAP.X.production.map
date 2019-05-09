@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.05\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\Motor_PAP.X.production.sym \
   --cmf=dist/default/production\Motor_PAP.X.production.cmf -z -Q16F877A \
-  -oC:\Users\Xizuth\AppData\Local\Temp\s3nk.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\Xizuth\AppData\Local\Temp\s4l0.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/Motor_PAP.X.production.map -E1 -ver=XC8 \
   --acfsm=1493 -ASTACK=0110h-016Fh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
@@ -18,7 +18,7 @@ Linker command line:
   -pfunctab=ENTRY -ACONFIG=02007h-02007h -pconfig=CONFIG -DCONFIG=2 \
   -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
-  -DENTRY=2 -k C:\Users\Xizuth\AppData\Local\Temp\s3nk.o \
+  -DENTRY=2 -k C:\Users\Xizuth\AppData\Local\Temp\s4l0.o \
   dist/default/production\Motor_PAP.X.production.o 
 
 Object code version is 3.11
@@ -28,12 +28,12 @@ Machine type is 16F877A
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Xizuth\AppData\Local\Temp\s3nk.o
+C:\Users\Xizuth\AppData\Local\Temp\s4l0.o
                 end_init                              0        0        3        0       0
 dist/default/production\Motor_PAP.X.production.o
                 cinit                               7FC      7FC        4      FF8       0
-                maintext                            740      740       BC      E80       0
-                cstackCOMMON                         70       70        A       70       1
+                maintext                            730      730       CC      E60       0
+                cstackCOMMON                         70       70        B       70       1
                 strings                               3        3       20        6       0
 
 TOTAL           Name                               Link     Load   Length     Space
@@ -42,7 +42,7 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   CODE           
                 end_init                              0        0        3         0
                 cinit                               7FC      7FC        4         0
-                maintext                            740      740       BC         0
+                maintext                            730      730       CC         0
 
         CLASS   STRCODE        
 
@@ -54,7 +54,7 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   ENTRY          
 
         CLASS   COMMON         
-                cstackCOMMON                         70       70        A         1
+                cstackCOMMON                         70       70        B         1
 
         CLASS   BANK0          
 
@@ -89,8 +89,8 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
 
                 reset_vec                      000000  000003  000003         0       0  CODE        2
                 strings                        000003  000020  000023         6       0  STRING      2
-                cstackCOMMON                   000070  00000A  00007A        70       1  COMMON      1
-                maintext                       000740  0000BC  0007FC       E80       0  CODE        2
+                cstackCOMMON                   000070  00000B  00007B        70       1  COMMON      1
+                maintext                       000730  0000CC  0007FC       E60       0  CODE        2
                 cinit                          0007FC  000004  000800       FF8       0  CODE        2
 
 
@@ -101,14 +101,14 @@ UNUSED ADDRESS RANGES
         BANK1            00A0-00EF             50           1
         BANK2            0110-016F             60           1
         BANK3            0190-01EF             60           1
-        CODE             0023-073F            71D           2
+        CODE             0023-072F            70D           2
                          0800-1FFF            800
-        COMMON           007A-007D              4           1
+        COMMON           007B-007D              3           1
         CONFIG           2007-2007              1           2
-        CONST            0023-073F            100           2
+        CONST            0023-072F            100           2
                          0800-1FFF            100
         EEDATA           2100-21FF            100           2
-        ENTRY            0023-073F            100           2
+        ENTRY            0023-072F            100           2
                          0800-1FFF            100
         IDLOC            2000-2003              4           2
         RAM              0020-006F             50           1
@@ -120,9 +120,9 @@ UNUSED ADDRESS RANGES
         SFR2             0100-010F             10           1
         SFR3             0180-018F             10           1
         STACK            0110-016F             60           1
-        STRCODE          0023-073F            71D           2
+        STRCODE          0023-072F            70D           2
                          0800-1FFF           1800
-        STRING           0023-073F            100           2
+        STRING           0023-072F            100           2
                          0800-1FFF            100
 
                                   Symbol Table
@@ -160,7 +160,7 @@ __Hsfr1                  sfr1         0000
 __Hsfr2                  sfr2         0000
 __Hsfr3                  sfr3         0000
 __Hspace_0               (abs)        0800
-__Hspace_1               (abs)        007A
+__Hspace_1               (abs)        007B
 __Hspace_2               (abs)        0000
 __Hspace_3               (abs)        0000
 __Hstack                 stack        0000
@@ -199,7 +199,7 @@ __Lstack                 stack        0000
 __Lstrings               strings      0000
 __Ltext                  text         0000
 __S0                     (abs)        0800
-__S1                     (abs)        007A
+__S1                     (abs)        007B
 __S2                     (abs)        0000
 __S3                     (abs)        0000
 ___int_sp                stack        0000
@@ -217,12 +217,12 @@ __end_ofmain@full        strings      0017
 __end_ofmain@half        strings      0012
 __initialization         cinit        07FC
 __pcstackCOMMON          cstackCOMMON 0070
-__pmaintext              maintext     0740
+__pmaintext              maintext     0730
 __pstrings               strings      0003
 __size_of_main           (abs)        0000
 __stringbase             strings      0008
 __stringtab              strings      0003
-_main                    maintext     0740
+_main                    maintext     0730
 btemp                    (abs)        007E
 end_of_initialization    cinit        07FC
 intlevel0                functab      0000
@@ -235,10 +235,10 @@ main@backward            strings      001C
 main@forward             strings      0017
 main@full                strings      0012
 main@half                strings      0009
-main@i                   cstackCOMMON 0072
-main@i_74                cstackCOMMON 0074
-main@i_75                cstackCOMMON 0076
-main@i_76                cstackCOMMON 0078
+main@i                   cstackCOMMON 0073
+main@i_74                cstackCOMMON 0075
+main@i_75                cstackCOMMON 0077
+main@i_76                cstackCOMMON 0079
 reset_vec                reset_vec    0000
 start                    init         0000
 start_initialization     cinit        07FC
@@ -253,10 +253,10 @@ FUNCTION INFORMATION:
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
-  i               2    8[COMMON] int 
-  i               2    6[COMMON] int 
-  i               2    4[COMMON] int 
-  i               2    2[COMMON] int 
+  i               2    9[COMMON] int 
+  i               2    7[COMMON] int 
+  i               2    5[COMMON] int 
+  i               2    3[COMMON] int 
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
@@ -268,9 +268,9 @@ FUNCTION INFORMATION:
  Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
       Params:         0       0       0       0       0
       Locals:         8       0       0       0       0
-      Temps:          2       0       0       0       0
-      Totals:        10       0       0       0       0
-Total ram usage:       10 bytes
+      Temps:          3       0       0       0       0
+      Totals:        11       0       0       0       0
+Total ram usage:       11 bytes
  Hardware stack levels used:    1
  This function calls:
 		Nothing
@@ -295,7 +295,7 @@ shared
 shared estimated size: 36
 
 main.c
-		_main          		CODE           	0740	0000	189
+		_main          		CODE           	0730	0000	205
 
-main.c estimated size: 189
+main.c estimated size: 205
 

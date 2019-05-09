@@ -24,13 +24,17 @@
 "4 C:\Users\Xizuth\Documents\curso-micro-877A\Matrix.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
+"32
+[v main@i_46 i `uc  1 a 1 7 ]
+"24
+[v main@i_44 i `uc  1 a 1 6 ]
+"16
+[v main@i i `uc  1 a 1 5 ]
+"31
+[v main@a_45 a `uc  1 a 1 4 ]
 "23
-[v main@i_43 i `uc  1 a 1 5 ]
+[v main@a_43 a `uc  1 a 1 3 ]
 "15
-[v main@i i `uc  1 a 1 4 ]
-"22
-[v main@a_42 a `uc  1 a 1 3 ]
-"14
 [v main@a a `uc  1 a 1 2 ]
 "5
 [v main@col col `DC[8]uc  1 s 8 col ]
@@ -38,5 +42,7 @@
 [v main@smile smile `DC[8]uc  1 s 8 smile ]
 "7
 [v main@heart heart `DC[8]uc  1 s 8 heart ]
-"30
+"8
+[v main@f f `DC[8]uc  1 s 8 f ]
+"39
 } 0

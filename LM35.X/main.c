@@ -16,14 +16,13 @@
 #include "adc.h"
 
 void main(void) {
-    TRISA = 255;
-    PORTA = 0;
-    lcdInit();
-    __delay_ms(10);
-    lcdClear();
-
-    adcInit();
-    lcdSetCursor(1, 1);
+    TRISA = 255; //configuración del PORTA como entrada
+    PORTA = 0; //limpio el PORTA
+    adcInit(); //inicio ADC
+    
+    lcdInit(); //inicio la LCD
+    lcdClear(); //limpio la LCD
+    lcdSetCursor(1, 1); //me posiciono en 1,1 de la pantalla
     lcdPrint("Cargando...");
     lcdSetCursor(2, 1);
     lcdPrint("Temperatura");

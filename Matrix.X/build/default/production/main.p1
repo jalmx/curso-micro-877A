@@ -248,20 +248,35 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 28 `i `uc
 ..
 ]
-"9
-[; ;main.c: 9:     TRISB = 0;
-[e = _TRISB -> -> 0 `i `uc ]
+"8
+[; ;main.c: 8:     char const f[] = {0xFF, 0xFF, 0x1B, 0x1B, 0x1B, 0x03, 0x03, 0x03};
+[v F854 `Cuc ~T0 @X0 -> 8 `i s f ]
+[i F854
+:U ..
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+-> -> 27 `i `uc
+-> -> 27 `i `uc
+-> -> 27 `i `uc
+-> -> 3 `i `uc
+-> -> 3 `i `uc
+-> -> 3 `i `uc
+..
+]
 "10
-[; ;main.c: 10:     TRISC = 0;
-[e = _TRISC -> -> 0 `i `uc ]
+[; ;main.c: 10:     TRISB = 0;
+[e = _TRISB -> -> 0 `i `uc ]
 "11
-[; ;main.c: 11:     PORTB = 0;
-[e = _PORTB -> -> 0 `i `uc ]
+[; ;main.c: 11:     TRISC = 0;
+[e = _TRISC -> -> 0 `i `uc ]
 "12
-[; ;main.c: 12:     PORTC = 0;
+[; ;main.c: 12:     PORTB = 0;
+[e = _PORTB -> -> 0 `i `uc ]
+"13
+[; ;main.c: 13:     PORTC = 0;
 [e = _PORTC -> -> 0 `i `uc ]
-"14
-[; ;main.c: 14:     for (char a = 0; a < 20; a++) {
+"15
+[; ;main.c: 15:     for (char a = 0; a < 20; a++) {
 {
 [v _a `uc ~T0 @X0 1 a ]
 [e = _a -> -> 0 `i `uc ]
@@ -269,8 +284,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 97  ]
 [e :U 96 ]
 {
-"15
-[; ;main.c: 15:         for (char i = 0; i <= 7; i++) {
+"16
+[; ;main.c: 16:         for (char i = 0; i <= 7; i++) {
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
@@ -278,40 +293,40 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 100  ]
 [e :U 99 ]
 {
-"16
-[; ;main.c: 16:             PORTC = ~col[i];
-[e = _PORTC -> ~ -> *U + &U F851 * -> _i `ux -> -> # *U &U F851 `ui `ux `i `uc ]
 "17
-[; ;main.c: 17:             PORTB = smile[i];
-[e = _PORTB -> *U + &U F852 * -> _i `ux -> -> # *U &U F852 `ui `ux `uc ]
+[; ;main.c: 17:             PORTC = ~col[i];
+[e = _PORTC -> ~ -> *U + &U F851 * -> _i `ux -> -> # *U &U F851 `ui `ux `i `uc ]
 "18
-[; ;main.c: 18:             _delay((unsigned long)((5)*(4000000/4000.0)));
+[; ;main.c: 18:             PORTB = f[i];
+[e = _PORTB -> *U + &U F854 * -> _i `ux -> -> # *U &U F854 `ui `ux `uc ]
+"19
+[; ;main.c: 19:             _delay((unsigned long)((5)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"20
-[; ;main.c: 20:         }
+"21
+[; ;main.c: 21:         }
 }
 [e ++ _i -> -> 1 `i `uc ]
 [e $ <= -> _i `i -> 7 `i 99  ]
 [e :U 100 ]
 }
-"21
-[; ;main.c: 21:     }
+"22
+[; ;main.c: 22:     }
 }
 [e ++ _a -> -> 1 `i `uc ]
 [e $ < -> _a `i -> 20 `i 96  ]
 [e :U 97 ]
 }
-"22
-[; ;main.c: 22:     for (char a = 0; a < 80; a++) {
+"23
+[; ;main.c: 23:     for (char a = 0; a < 20; a++) {
 {
 [v _a `uc ~T0 @X0 1 a ]
 [e = _a -> -> 0 `i `uc ]
-[e $ < -> _a `i -> 80 `i 102  ]
+[e $ < -> _a `i -> 20 `i 102  ]
 [e $U 103  ]
 [e :U 102 ]
 {
-"23
-[; ;main.c: 23:         for (char i = 0; i <= 7; i++) {
+"24
+[; ;main.c: 24:         for (char i = 0; i <= 7; i++) {
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
@@ -319,30 +334,71 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 106  ]
 [e :U 105 ]
 {
-"24
-[; ;main.c: 24:             PORTC = ~col[i];
-[e = _PORTC -> ~ -> *U + &U F851 * -> _i `ux -> -> # *U &U F851 `ui `ux `i `uc ]
 "25
-[; ;main.c: 25:             PORTB = heart[i];
-[e = _PORTB -> *U + &U F853 * -> _i `ux -> -> # *U &U F853 `ui `ux `uc ]
+[; ;main.c: 25:             PORTC = ~col[i];
+[e = _PORTC -> ~ -> *U + &U F851 * -> _i `ux -> -> # *U &U F851 `ui `ux `i `uc ]
 "26
-[; ;main.c: 26:             _delay((unsigned long)((5)*(4000000/4000.0)));
+[; ;main.c: 26:             PORTB = smile[i];
+[e = _PORTB -> *U + &U F852 * -> _i `ux -> -> # *U &U F852 `ui `ux `uc ]
+"27
+[; ;main.c: 27:             _delay((unsigned long)((5)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"28
-[; ;main.c: 28:         }
+"29
+[; ;main.c: 29:         }
 }
 [e ++ _i -> -> 1 `i `uc ]
 [e $ <= -> _i `i -> 7 `i 105  ]
 [e :U 106 ]
 }
-"29
-[; ;main.c: 29:     }
+"30
+[; ;main.c: 30:     }
 }
 [e ++ _a -> -> 1 `i `uc ]
-[e $ < -> _a `i -> 80 `i 102  ]
+[e $ < -> _a `i -> 20 `i 102  ]
 [e :U 103 ]
 }
-"30
-[; ;main.c: 30: }
+"31
+[; ;main.c: 31:     for (char a = 0; a < 80; a++) {
+{
+[v _a `uc ~T0 @X0 1 a ]
+[e = _a -> -> 0 `i `uc ]
+[e $ < -> _a `i -> 80 `i 108  ]
+[e $U 109  ]
+[e :U 108 ]
+{
+"32
+[; ;main.c: 32:         for (char i = 0; i <= 7; i++) {
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ <= -> _i `i -> 7 `i 111  ]
+[e $U 112  ]
+[e :U 111 ]
+{
+"33
+[; ;main.c: 33:             PORTC = ~col[i];
+[e = _PORTC -> ~ -> *U + &U F851 * -> _i `ux -> -> # *U &U F851 `ui `ux `i `uc ]
+"34
+[; ;main.c: 34:             PORTB = heart[i];
+[e = _PORTB -> *U + &U F853 * -> _i `ux -> -> # *U &U F853 `ui `ux `uc ]
+"35
+[; ;main.c: 35:             _delay((unsigned long)((5)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"37
+[; ;main.c: 37:         }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ <= -> _i `i -> 7 `i 111  ]
+[e :U 112 ]
+}
+"38
+[; ;main.c: 38:     }
+}
+[e ++ _a -> -> 1 `i `uc ]
+[e $ < -> _a `i -> 80 `i 108  ]
+[e :U 109 ]
+}
+"39
+[; ;main.c: 39: }
 [e :UE 95 ]
 }

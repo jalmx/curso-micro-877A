@@ -1729,7 +1729,7 @@ void main(void) {
     char const forward[] = {0x08, 0x04, 0x02, 0x01, '\0'};
     char const full[] = {0x03, 0x06, 0x0C, 0x09, '\0'};
     char const half[] = {0x01, 0x03, 0x02, 0x06, 0x04, 0x0C, 0x08, 0x09, '\0'};
-    int const TIME = 100;
+    int const TIME = 250;
     TRISB = 0;
     TRISC = 255;
     TRISD = 0;

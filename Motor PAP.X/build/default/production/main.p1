@@ -273,10 +273,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "9
-[; ;main.c: 9:     int const TIME = 100;
+[; ;main.c: 9:     int const TIME = 250;
 [v F855 `Ci ~T0 @X0 1 s TIME ]
 [i F855
--> 100 `i
+-> 250 `i
 ]
 "10
 [; ;main.c: 10:     TRISB = 0;
