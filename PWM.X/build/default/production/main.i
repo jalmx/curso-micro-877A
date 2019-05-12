@@ -1724,73 +1724,270 @@ extern __bank0 __bit __timeout;
 
 
 
-# 1 "./pwm.h" 1
+
+# 1 "./pwm2.h" 1
 
 
-int FREQ1;
-int FREQ2;
 
-void setTMR2(char const pwm);
-void setPR2(unsigned int const freq);
 
-void pwmInit1(unsigned int const freq) {
-    FREQ1 = freq;
-    setPR2(freq);
-    setTMR2(1);
+
+
+long pmwMaxDuty() {
+    return (float) 20000000 / (5000 * 16);
 }
 
-void pwmInit2(unsigned int freq) {
-    FREQ2 = freq;
-    setPR2(freq);
-    setTMR2(2);
+void setPR2() {
+    PR2 = (20000000 / (5000 * 4 * 16)) - 1;
 }
 
-void pwmSetDutyCycle1(unsigned int duty) {
-    if(duty >= 1023) return;
-    duty = ((float) duty / 1023)*(4000000 / (FREQ1 * 16));
-    CCP1X = duty & 0x01;
-    CCP1Y = duty & 0x02;
-    CCPR1L = duty >> 2;
-}
 
-void pwmSetDutyCycle2(unsigned int duty) {
-    if(duty >= 1023) return;
 
-    duty = ((float) duty / 1023)*(4000000 / (FREQ2 * 16));
-    CCP2X = duty & 0x01;
-    CCP2Y = duty & 0x02;
-    CCPR2L = duty >> 2;
-}
 
-void setTMR2(char const pwm) {
-    if (pwm == 2) {
-        CCP2M3 = 1;
-        CCP2M2 = 1;
-    } else {
-        CCP1M3 = 1;
-        CCP1M2 = 1;
+
+
+void pwmDuty1(unsigned short int duty) {
+    if (duty < 1024) {
+        duty = ((float) duty / 1023) * pmwMaxDuty();
+        CCP1X = duty & 2;
+        CCP1Y = duty & 1;
+        CCPR1L = duty >> 2;
     }
-    if (16 == 1) {
-        T2CKPS0 = 0;
-        T2CKPS1 = 0;
-    } else if (16 == 4) {
-        T2CKPS0 = 1;
-        T2CKPS1 = 0;
-    } else {
-        T2CKPS0 = 1;
-        T2CKPS1 = 1;
+}
+
+void pwmDuty2(unsigned short int duty) {
+    if (duty < 1024) {
+        duty = ((float) duty / 1023) * pmwMaxDuty();
+        CCP2X = duty & 2;
+        CCP2Y = duty & 1;
+        CCPR2L = duty >> 2;
     }
+}
+
+void pwmInit1() {
+    setPR2();
+    CCP1M3 = 1;
+    CCP1M2 = 1;
+# 52 "./pwm2.h"
     TMR2ON = 1;
-    if (pwm == 2)
-        TRISC2 = 0;
-    else
-        TRISC1 = 0;
+    TRISC2 = 0;
 }
 
-void setPR2(unsigned int const freq) {
-    PR2 = (4000000 / (freq * 4 * 16)) - 1;
+void pwmInit2() {
+    setPR2();
+    CCP2M3 = 1;
+    CCP2M2 = 1;
+
+
+
+
+
+
+
+    T2CKPS0 = 1;
+    T2CKPS1 = 1;
+
+    TMR2ON = 1;
+    TRISC1 = 0;
 }
-# 4 "main.c" 2
+# 5 "main.c" 2
+
+# 1 "./lcd.h" 1
+
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c90\\stdio.h" 1 3
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\__size_t.h" 1 3
+
+
+
+typedef unsigned size_t;
+# 4 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c90\\stdio.h" 2 3
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\__null.h" 1 3
+# 5 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c90\\stdio.h" 2 3
+
+
+
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c90\\stdarg.h" 1 3
+
+
+
+
+
+
+typedef void * va_list[1];
+
+#pragma intrinsic(__va_start)
+extern void * __va_start(void);
+
+#pragma intrinsic(__va_arg)
+extern void * __va_arg(void *, ...);
+# 11 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c90\\stdio.h" 2 3
+# 43 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c90\\stdio.h" 3
+struct __prbuf
+{
+ char * ptr;
+ void (* func)(char);
+};
+# 85 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c90\\stdio.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c90\\conio.h" 1 3
+
+
+
+
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c90\\errno.h" 1 3
+# 29 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c90\\errno.h" 3
+extern int errno;
+# 8 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c90\\conio.h" 2 3
+
+
+
+
+extern void init_uart(void);
+
+extern char getch(void);
+extern char getche(void);
+extern void putch(char);
+extern void ungetch(char);
+
+extern __bit kbhit(void);
+
+
+
+extern char * cgets(char *);
+extern void cputs(const char *);
+# 85 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c90\\stdio.h" 2 3
+
+
+
+extern int cprintf(char *, ...);
+#pragma printf_check(cprintf)
+
+
+
+extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+# 180 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c90\\stdio.h" 3
+#pragma printf_check(vprintf) const
+#pragma printf_check(vsprintf) const
+
+extern char * gets(char *);
+extern int puts(const char *);
+extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
+extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
+extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
+extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
+extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
+
+#pragma printf_check(printf) const
+#pragma printf_check(sprintf) const
+extern int sprintf(char *, const char *, ...);
+extern int printf(const char *, ...);
+# 5 "./lcd.h" 2
+# 21 "./lcd.h"
+void lcdPort(char a) {
+    if (a & 1)
+        RD4 = 1;
+    else
+        RD4 = 0;
+
+    if (a & 2)
+        RD5 = 1;
+    else
+        RD5 = 0;
+
+    if (a & 4)
+        RD6 = 1;
+    else
+        RD6 = 0;
+
+    if (a & 8)
+        RD7 = 1;
+    else
+        RD7 = 0;
+}
+
+void lcdCmd(char a) {
+    RD2 = 0;
+    lcdPort(a);
+    RD3 = 1;
+    _delay((unsigned long)((4)*(20000000/4000.0)));
+    RD3 = 0;
+}
+
+void lcdClear(void) {
+    lcdCmd(0);
+    lcdCmd(1);
+}
+
+void lcdSetCursor(char a, char b) {
+    char temp, z, y;
+    if (a == 1) {
+        temp = 0x80 + b - 1;
+        z = temp >> 4;
+        y = temp & 0x0F;
+        lcdCmd(z);
+        lcdCmd(y);
+    } else if (a == 2) {
+        temp = 0xC0 + b - 1;
+        z = temp >> 4;
+        y = temp & 0x0F;
+        lcdCmd(z);
+        lcdCmd(y);
+    }
+}
+
+void lcdInit(void) {
+    TRISD = 0;
+    PORTD = 0;
+    lcdPort(0x00);
+    _delay((unsigned long)((20)*(20000000/4000.0)));
+    lcdCmd(0x03);
+    _delay((unsigned long)((5)*(20000000/4000.0)));
+    lcdCmd(0x03);
+    _delay((unsigned long)((11)*(20000000/4000.0)));
+    lcdCmd(0x03);
+
+    lcdCmd(0x02);
+    lcdCmd(0x02);
+    lcdCmd(0x08);
+    lcdCmd(0x00);
+    lcdCmd(0x0C);
+    lcdCmd(0x00);
+    lcdCmd(0x06);
+}
+
+void lcdWriteChar(char a) {
+    char temp, y;
+    temp = a & 0x0F;
+    y = a & 0xF0;
+    RD2 = 1;
+    lcdPort(y >> 4);
+    RD3 = 1;
+    _delay((unsigned long)((40)*(20000000/4000000.0)));
+    RD3 = 0;
+    lcdPort(temp);
+    RD3 = 1;
+    _delay((unsigned long)((40)*(20000000/4000000.0)));
+    RD3 = 0;
+}
+
+void lcdPrint(unsigned char *a) {
+    int i;
+    for (i = 0; a[i] != '\0'; i++)
+        lcdWriteChar(a[i]);
+}
+# 6 "main.c" 2
 
 # 1 "./adc.h" 1
 void adcInit() {
@@ -1813,52 +2010,43 @@ void adcInit() {
 int adcRead(int const adcChannel) {
     ADCON0bits.ADON = 1;
     ADCON0bits.CHS = adcChannel;
-    _delay((unsigned long)((10)*(4000000/4000.0)));
+    _delay((unsigned long)((10)*(20000000/4000.0)));
     ADCON0bits.GO = 1;
     while (ADCON0bits.GO_DONE);
 
     return (ADRESH << 8) + (ADRESL);
 }
-# 5 "main.c" 2
+# 7 "main.c" 2
 
 
 void main(void) {
     TRISB = 255;
     PORTB = 0;
-    TRISD = 0;
-    PORTD = 0;
 
     adcInit();
+    lcdInit();
+    lcdClear();
+    lcdSetCursor(1,1);
+    lcdPrint("Iniciando PWM");
+    _delay((unsigned long)((10)*(20000000/4000.0)));
+    pwmInit1();
+    pwmInit2();
+    pwmDuty1(0);
+    lcdClear();
+    lcdSetCursor(1,1);
+    lcdPrint("Modulo iniciado");
 
-    pwmInit1(2000);
-    pwmInit2(2000);
-    pwmSetDutyCycle1(0);
-    pwmSetDutyCycle2(0);
-    unsigned int duty1 = 500;
-    unsigned char const delta = 25;
-    pwmSetDutyCycle1(duty1);
-
+    _delay((unsigned long)((100)*(20000000/4000.0)));
+    lcdClear();
     for (;;) {
+        unsigned int v = adcRead(0);
+        pwmDuty1(v);
+        char entero[16];
+        sprintf(entero, "PWM = %d", v);
+        lcdClear();
+        lcdSetCursor(1, 1);
+        lcdPrint(entero);
 
-        if (PORTBbits.RB0 == 1) {
-            if (duty1 < 1023) {
-                pwmSetDutyCycle1(duty1 += delta);
-                PORTDbits.RD0 = 1;
-                _delay((unsigned long)((100)*(4000000/4000.0)));
-                PORTDbits.RD0 = 0;
-            }
-
-        } else if (PORTBbits.RB1 == 1) {
-            if (duty1 > 0) {
-                pwmSetDutyCycle1(duty1 -= delta);
-                PORTDbits.RD1 = 1;
-                _delay((unsigned long)((100)*(4000000/4000.0)));
-                PORTDbits.RD1 = 0;
-            }
-        }
-
-        pwmSetDutyCycle2(adcRead(0));
-        _delay((unsigned long)((10)*(4000000/4000.0)));
-
+        _delay((unsigned long)((50)*(20000000/4000.0)));
     }
 }

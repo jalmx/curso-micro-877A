@@ -4,10 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>pwm.h</itemPath>
-      <itemPath>adc.h</itemPath>
-      <itemPath>pwm2.h</itemPath>
-      <itemPath>lcd.h</itemPath>
+      <itemPath>config.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"

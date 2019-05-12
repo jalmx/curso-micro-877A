@@ -1,4 +1,5 @@
 build/default/production/main.p1:  \
 main.c  \
-pwm.h  \
+pwm2.h  \
+lcd.h  \
 adc.h 

@@ -1,46 +1,40 @@
 #include <xc.h>
-#define _XTAL_FREQ 4000000
+#define _XTAL_FREQ 20000000
 
-#include "pwm.h"
+#define FREQ_PWM 5000
+#include "pwm2.h"
+#include "lcd.h"
 #include "adc.h" //debe ser incluido despues de la definición del cristal
 
 void main(void) {
     TRISB = 255;
     PORTB = 0;
-    TRISD = 0;
-    PORTD = 0;
-
     adcInit();
-
-    pwmInit1(2000);
-    pwmInit2(2000);
-    pwmSetDutyCycle1(0);
-    pwmSetDutyCycle2(0);
-    unsigned int duty1 = 500; //comenzará el duty en 500, casi 50%
-    unsigned char const delta = 25; //la variación cada vez que se presione el botón
-    pwmSetDutyCycle1(duty1); //cargo el valor del duty a la salida de PWM
-
+    lcdInit();
+    lcdClear();
+    lcdSetCursor(1,1);
+    lcdPrint("Iniciando PWM");
+    __delay_ms(10);
+    
+    pwmInit1();
+    pwmInit2();
+    pwmDuty1(0);
+    
+    lcdClear();
+    lcdSetCursor(1,1);
+    lcdPrint("Modulo iniciado");
+   // pwmDuty2(0);
+    __delay_ms(100);
+    lcdClear();
     for (;;) {
-
-        if (PORTBbits.RB0 == 1) {
-            if (duty1 < 1023) {
-                pwmSetDutyCycle1(duty1 += delta);
-                PORTDbits.RD0 = 1;
-                __delay_ms(100);
-                PORTDbits.RD0 = 0;
-            }
-
-        } else if (PORTBbits.RB1 == 1) {
-            if (duty1 > 0) {
-                pwmSetDutyCycle1(duty1 -= delta);
-                PORTDbits.RD1 = 1;
-                __delay_ms(100);
-                PORTDbits.RD1 = 0;
-            }
-        }
-        
-        pwmSetDutyCycle2(adcRead(0));
-        __delay_ms(10);
-
+        unsigned int v = adcRead(0);
+        pwmDuty1(v);
+        char entero[16];
+        sprintf(entero, "PWM = %d", v);
+        lcdClear();
+        lcdSetCursor(1, 1);
+        lcdPrint(entero);
+     //   pwmDuty2(adcRead(0));
+        __delay_ms(50);
     }
 }

@@ -1,11 +1,8 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"7 ./pwm.h
-[; ;./pwm.h: 7: void setPR2(unsigned int const freq);
-[v _setPR2 `(v ~T0 @X0 0 ef1`Cui ]
-"6
-[; ;./pwm.h: 6: void setTMR2(char const pwm);
-[v _setTMR2 `(v ~T0 @X0 0 ef1`Cuc ]
-"2452 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
+"1816 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1816: extern volatile unsigned char PR2 __attribute__((address(0x092)));
+[v _PR2 `Vuc ~T0 @X0 0 e@146 ]
+"2452
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2452: extern volatile __bit CCP1X __attribute__((address(0xBD)));
 [v _CCP1X `Vb ~T0 @X0 0 e@189 ]
 "2455
@@ -23,36 +20,61 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1080
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1080: extern volatile unsigned char CCPR2L __attribute__((address(0x01B)));
 [v _CCPR2L `Vuc ~T0 @X0 0 e@27 ]
-"2473
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2473: extern volatile __bit CCP2M3 __attribute__((address(0xEB)));
-[v _CCP2M3 `Vb ~T0 @X0 0 e@235 ]
-"2470
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2470: extern volatile __bit CCP2M2 __attribute__((address(0xEA)));
-[v _CCP2M2 `Vb ~T0 @X0 0 e@234 ]
 "2449
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2449: extern volatile __bit CCP1M3 __attribute__((address(0xBB)));
 [v _CCP1M3 `Vb ~T0 @X0 0 e@187 ]
 "2446
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2446: extern volatile __bit CCP1M2 __attribute__((address(0xBA)));
 [v _CCP1M2 `Vb ~T0 @X0 0 e@186 ]
-"2872
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2872: extern volatile __bit T2CKPS0 __attribute__((address(0x90)));
-[v _T2CKPS0 `Vb ~T0 @X0 0 e@144 ]
-"2875
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2875: extern volatile __bit T2CKPS1 __attribute__((address(0x91)));
-[v _T2CKPS1 `Vb ~T0 @X0 0 e@145 ]
 "2902
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2902: extern volatile __bit TMR2ON __attribute__((address(0x92)));
 [v _TMR2ON `Vb ~T0 @X0 0 e@146 ]
 "2965
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2965: extern volatile __bit TRISC2 __attribute__((address(0x43A)));
 [v _TRISC2 `Vb ~T0 @X0 0 e@1082 ]
+"2473
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2473: extern volatile __bit CCP2M3 __attribute__((address(0xEB)));
+[v _CCP2M3 `Vb ~T0 @X0 0 e@235 ]
+"2470
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2470: extern volatile __bit CCP2M2 __attribute__((address(0xEA)));
+[v _CCP2M2 `Vb ~T0 @X0 0 e@234 ]
+"2872
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2872: extern volatile __bit T2CKPS0 __attribute__((address(0x90)));
+[v _T2CKPS0 `Vb ~T0 @X0 0 e@144 ]
+"2875
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2875: extern volatile __bit T2CKPS1 __attribute__((address(0x91)));
+[v _T2CKPS1 `Vb ~T0 @X0 0 e@145 ]
 "2962
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2962: extern volatile __bit TRISC1 __attribute__((address(0x439)));
 [v _TRISC1 `Vb ~T0 @X0 0 e@1081 ]
-"1816
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1816: extern volatile unsigned char PR2 __attribute__((address(0x092)));
-[v _PR2 `Vuc ~T0 @X0 0 e@146 ]
+"2761
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2761: extern volatile __bit RD4 __attribute__((address(0x44)));
+[v _RD4 `Vb ~T0 @X0 0 e@68 ]
+"2764
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2764: extern volatile __bit RD5 __attribute__((address(0x45)));
+[v _RD5 `Vb ~T0 @X0 0 e@69 ]
+"2767
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2767: extern volatile __bit RD6 __attribute__((address(0x46)));
+[v _RD6 `Vb ~T0 @X0 0 e@70 ]
+"2770
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2770: extern volatile __bit RD7 __attribute__((address(0x47)));
+[v _RD7 `Vb ~T0 @X0 0 e@71 ]
+"2755
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2755: extern volatile __bit RD2 __attribute__((address(0x42)));
+[v _RD2 `Vb ~T0 @X0 0 e@66 ]
+"2758
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2758: extern volatile __bit RD3 __attribute__((address(0x43)));
+[v _RD3 `Vb ~T0 @X0 0 e@67 ]
+[v F842 `(v ~T0 @X0 1 tf1`ul ]
+"92 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic.h
+[v __delay `JF842 ~T0 @X0 0 e ]
+[p i __delay ]
+"1499 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1499: extern volatile unsigned char TRISD __attribute__((address(0x088)));
+[v _TRISD `Vuc ~T0 @X0 0 e@136 ]
+"340
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 340: extern volatile unsigned char PORTD __attribute__((address(0x008)));
+[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
 "1165
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1165:     struct {
 [s S46 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :2 `uc 1 ]
@@ -91,11 +113,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2248
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2248: extern volatile ADCON1bits_t ADCON1bits __attribute__((address(0x09F)));
 [v _ADCON1bits `VS90 ~T0 @X0 0 e@159 ]
-[v F842 `(v ~T0 @X0 1 tf1`ul ]
-"92 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic.h
-[v __delay `JF842 ~T0 @X0 0 e ]
-[p i __delay ]
-"1152 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
+"1152
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1152: extern volatile unsigned char ADRESH __attribute__((address(0x01E)));
 [v _ADRESH `Vuc ~T0 @X0 0 e@30 ]
 "2222
@@ -108,34 +126,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "216
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 216: extern volatile unsigned char PORTB __attribute__((address(0x006)));
 [v _PORTB `Vuc ~T0 @X0 0 e@6 ]
-"1499
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1499: extern volatile unsigned char TRISD __attribute__((address(0x088)));
-[v _TRISD `Vuc ~T0 @X0 0 e@136 ]
-"340
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 340: extern volatile unsigned char PORTD __attribute__((address(0x008)));
-[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
-"222
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 222:     struct {
-[s S8 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S8 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
-"221
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 221: typedef union {
-[u S7 `S8 1 ]
-[n S7 . . ]
-"233
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 233: extern volatile PORTBbits_t PORTBbits __attribute__((address(0x006)));
-[v _PORTBbits `VS7 ~T0 @X0 0 e@6 ]
-"346
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 346:     struct {
-[s S12 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S12 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
-"345
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 345: typedef union {
-[u S11 `S12 1 ]
-[n S11 . . ]
-"357
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 357: extern volatile PORTDbits_t PORTDbits __attribute__((address(0x008)));
-[v _PORTDbits `VS11 ~T0 @X0 0 e@8 ]
+"194 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdio.h
+[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -316,215 +308,456 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2363
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2363: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"3 ./pwm.h
-[; ;./pwm.h: 3: int FREQ1;
-[v _FREQ1 `i ~T0 @X0 1 e ]
-"4
-[; ;./pwm.h: 4: int FREQ2;
-[v _FREQ2 `i ~T0 @X0 1 e ]
-"9
-[; ;./pwm.h: 9: void pwmInit1(unsigned int const freq) {
-[v _pwmInit1 `(v ~T0 @X0 1 ef1`Cui ]
+"7 ./pwm2.h
+[; ;./pwm2.h: 7: long pmwMaxDuty() {
+[v _pmwMaxDuty `(l ~T0 @X0 1 ef ]
 {
-[e :U _pwmInit1 ]
-[v _freq `Cui ~T0 @X0 1 r1 ]
+[e :U _pmwMaxDuty ]
 [f ]
-"10
-[; ;./pwm.h: 10:     FREQ1 = freq;
-[e = _FREQ1 -> _freq `i ]
-"11
-[; ;./pwm.h: 11:     setPR2(freq);
-[e ( _setPR2 (1 _freq ]
-"12
-[; ;./pwm.h: 12:     setTMR2(1);
-[e ( _setTMR2 (1 -> -> 1 `i `uc ]
-"13
-[; ;./pwm.h: 13: }
+"8
+[; ;./pwm2.h: 8:     return (float) 20000000 / (5000 * 16);
+[e ) -> / -> -> 20000000 `l `f -> * -> 5000 `i -> 16 `i `f `l ]
+[e $UE 95  ]
+"9
+[; ;./pwm2.h: 9: }
 [e :UE 95 ]
 }
-"15
-[; ;./pwm.h: 15: void pwmInit2(unsigned int freq) {
-[v _pwmInit2 `(v ~T0 @X0 1 ef1`ui ]
+"11
+[; ;./pwm2.h: 11: void setPR2() {
+[v _setPR2 `(v ~T0 @X0 1 ef ]
 {
-[e :U _pwmInit2 ]
-[v _freq `ui ~T0 @X0 1 r1 ]
+[e :U _setPR2 ]
 [f ]
-"16
-[; ;./pwm.h: 16:     FREQ2 = freq;
-[e = _FREQ2 -> _freq `i ]
-"17
-[; ;./pwm.h: 17:     setPR2(freq);
-[e ( _setPR2 (1 _freq ]
-"18
-[; ;./pwm.h: 18:     setTMR2(2);
-[e ( _setTMR2 (1 -> -> 2 `i `uc ]
-"19
-[; ;./pwm.h: 19: }
+"12
+[; ;./pwm2.h: 12:     PR2 = (20000000 / (5000 * 4 * 16)) - 1;
+[e = _PR2 -> - / -> 20000000 `l -> * * -> 5000 `i -> 4 `i -> 16 `i `l -> -> 1 `i `l `uc ]
+"13
+[; ;./pwm2.h: 13: }
 [e :UE 96 ]
 }
-"21
-[; ;./pwm.h: 21: void pwmSetDutyCycle1(unsigned int duty) {
-[v _pwmSetDutyCycle1 `(v ~T0 @X0 1 ef1`ui ]
+"20
+[; ;./pwm2.h: 20: void pwmDuty1(unsigned short int duty) {
+[v _pwmDuty1 `(v ~T0 @X0 1 ef1`us ]
 {
-[e :U _pwmSetDutyCycle1 ]
-[v _duty `ui ~T0 @X0 1 r1 ]
+[e :U _pwmDuty1 ]
+[v _duty `us ~T0 @X0 1 r1 ]
 [f ]
+"21
+[; ;./pwm2.h: 21:     if (duty < 1024) {
+[e $ ! < -> _duty `ui -> -> 1024 `i `ui 98  ]
+{
 "22
-[; ;./pwm.h: 22:     if(duty >= 1023) return;
-[e $ ! >= _duty -> -> 1023 `i `ui 98  ]
-[e $UE 97  ]
-[e :U 98 ]
+[; ;./pwm2.h: 22:         duty = ((float) duty / 1023) * pmwMaxDuty();
+[e = _duty -> * / -> _duty `f -> -> 1023 `i `f -> ( _pmwMaxDuty ..  `f `us ]
 "23
-[; ;./pwm.h: 23:     duty = ((float) duty / 1023)*(4000000 / (FREQ1 * 16));
-[e = _duty -> * / -> _duty `f -> -> 1023 `i `f -> / -> 4000000 `l -> * _FREQ1 -> 16 `i `l `f `ui ]
+[; ;./pwm2.h: 23:         CCP1X = duty & 2;
+[e = _CCP1X -> & -> _duty `ui -> -> 2 `i `ui `b ]
 "24
-[; ;./pwm.h: 24:     CCP1X = duty & 0x01;
-[e = _CCP1X -> & _duty -> -> 1 `i `ui `b ]
+[; ;./pwm2.h: 24:         CCP1Y = duty & 1;
+[e = _CCP1Y -> & -> _duty `ui -> -> 1 `i `ui `b ]
 "25
-[; ;./pwm.h: 25:     CCP1Y = duty & 0x02;
-[e = _CCP1Y -> & _duty -> -> 2 `i `ui `b ]
+[; ;./pwm2.h: 25:         CCPR1L = duty >> 2;
+[e = _CCPR1L -> >> -> _duty `ui -> 2 `i `uc ]
 "26
-[; ;./pwm.h: 26:     CCPR1L = duty >> 2;
-[e = _CCPR1L -> >> _duty -> 2 `i `uc ]
+[; ;./pwm2.h: 26:     }
+}
+[e :U 98 ]
 "27
-[; ;./pwm.h: 27: }
+[; ;./pwm2.h: 27: }
 [e :UE 97 ]
 }
 "29
-[; ;./pwm.h: 29: void pwmSetDutyCycle2(unsigned int duty) {
-[v _pwmSetDutyCycle2 `(v ~T0 @X0 1 ef1`ui ]
+[; ;./pwm2.h: 29: void pwmDuty2(unsigned short int duty) {
+[v _pwmDuty2 `(v ~T0 @X0 1 ef1`us ]
 {
-[e :U _pwmSetDutyCycle2 ]
-[v _duty `ui ~T0 @X0 1 r1 ]
+[e :U _pwmDuty2 ]
+[v _duty `us ~T0 @X0 1 r1 ]
 [f ]
 "30
-[; ;./pwm.h: 30:     if(duty >= 1023) return;
-[e $ ! >= _duty -> -> 1023 `i `ui 100  ]
-[e $UE 99  ]
-[e :U 100 ]
+[; ;./pwm2.h: 30:     if (duty < 1024) {
+[e $ ! < -> _duty `ui -> -> 1024 `i `ui 100  ]
+{
+"31
+[; ;./pwm2.h: 31:         duty = ((float) duty / 1023) * pmwMaxDuty();
+[e = _duty -> * / -> _duty `f -> -> 1023 `i `f -> ( _pmwMaxDuty ..  `f `us ]
 "32
-[; ;./pwm.h: 32:     duty = ((float) duty / 1023)*(4000000 / (FREQ2 * 16));
-[e = _duty -> * / -> _duty `f -> -> 1023 `i `f -> / -> 4000000 `l -> * _FREQ2 -> 16 `i `l `f `ui ]
+[; ;./pwm2.h: 32:         CCP2X = duty & 2;
+[e = _CCP2X -> & -> _duty `ui -> -> 2 `i `ui `b ]
 "33
-[; ;./pwm.h: 33:     CCP2X = duty & 0x01;
-[e = _CCP2X -> & _duty -> -> 1 `i `ui `b ]
+[; ;./pwm2.h: 33:         CCP2Y = duty & 1;
+[e = _CCP2Y -> & -> _duty `ui -> -> 1 `i `ui `b ]
 "34
-[; ;./pwm.h: 34:     CCP2Y = duty & 0x02;
-[e = _CCP2Y -> & _duty -> -> 2 `i `ui `b ]
+[; ;./pwm2.h: 34:         CCPR2L = duty >> 2;
+[e = _CCPR2L -> >> -> _duty `ui -> 2 `i `uc ]
 "35
-[; ;./pwm.h: 35:     CCPR2L = duty >> 2;
-[e = _CCPR2L -> >> _duty -> 2 `i `uc ]
+[; ;./pwm2.h: 35:     }
+}
+[e :U 100 ]
 "36
-[; ;./pwm.h: 36: }
+[; ;./pwm2.h: 36: }
 [e :UE 99 ]
 }
 "38
-[; ;./pwm.h: 38: void setTMR2(char const pwm) {
-[v _setTMR2 `(v ~T0 @X0 1 ef1`Cuc ]
+[; ;./pwm2.h: 38: void pwmInit1() {
+[v _pwmInit1 `(v ~T0 @X0 1 ef ]
 {
-[e :U _setTMR2 ]
-[v _pwm `Cuc ~T0 @X0 1 r1 ]
+[e :U _pwmInit1 ]
 [f ]
 "39
-[; ;./pwm.h: 39:     if (pwm == 2) {
-[e $ ! == -> _pwm `i -> 2 `i 102  ]
-{
+[; ;./pwm2.h: 39:     setPR2();
+[e ( _setPR2 ..  ]
 "40
-[; ;./pwm.h: 40:         CCP2M3 = 1;
-[e = _CCP2M3 -> -> 1 `i `b ]
-"41
-[; ;./pwm.h: 41:         CCP2M2 = 1;
-[e = _CCP2M2 -> -> 1 `i `b ]
-"42
-[; ;./pwm.h: 42:     } else {
-}
-[e $U 103  ]
-[e :U 102 ]
-{
-"43
-[; ;./pwm.h: 43:         CCP1M3 = 1;
+[; ;./pwm2.h: 40:     CCP1M3 = 1;
 [e = _CCP1M3 -> -> 1 `i `b ]
-"44
-[; ;./pwm.h: 44:         CCP1M2 = 1;
+"41
+[; ;./pwm2.h: 41:     CCP1M2 = 1;
 [e = _CCP1M2 -> -> 1 `i `b ]
-"45
-[; ;./pwm.h: 45:     }
-}
-[e :U 103 ]
-"46
-[; ;./pwm.h: 46:     if (16 == 1) {
-[e $ ! == -> 16 `i -> 1 `i 104  ]
-{
-"47
-[; ;./pwm.h: 47:         T2CKPS0 = 0;
-[e = _T2CKPS0 -> -> 0 `i `b ]
-"48
-[; ;./pwm.h: 48:         T2CKPS1 = 0;
-[e = _T2CKPS1 -> -> 0 `i `b ]
-"49
-[; ;./pwm.h: 49:     } else if (16 == 4) {
-}
-[e $U 105  ]
-[e :U 104 ]
-[e $ ! == -> 16 `i -> 4 `i 106  ]
-{
-"50
-[; ;./pwm.h: 50:         T2CKPS0 = 1;
-[e = _T2CKPS0 -> -> 1 `i `b ]
-"51
-[; ;./pwm.h: 51:         T2CKPS1 = 0;
-[e = _T2CKPS1 -> -> 0 `i `b ]
 "52
-[; ;./pwm.h: 52:     } else {
-}
-[e $U 107  ]
-[e :U 106 ]
-{
-"53
-[; ;./pwm.h: 53:         T2CKPS0 = 1;
-[e = _T2CKPS0 -> -> 1 `i `b ]
-"54
-[; ;./pwm.h: 54:         T2CKPS1 = 1;
-[e = _T2CKPS1 -> -> 1 `i `b ]
-"55
-[; ;./pwm.h: 55:     }
-}
-[e :U 107 ]
-[e :U 105 ]
-"56
-[; ;./pwm.h: 56:     TMR2ON = 1;
+[; ;./pwm2.h: 52:     TMR2ON = 1;
 [e = _TMR2ON -> -> 1 `i `b ]
-"57
-[; ;./pwm.h: 57:     if (pwm == 2)
-[e $ ! == -> _pwm `i -> 2 `i 108  ]
-"58
-[; ;./pwm.h: 58:         TRISC2 = 0;
+"53
+[; ;./pwm2.h: 53:     TRISC2 = 0;
 [e = _TRISC2 -> -> 0 `i `b ]
-[e $U 109  ]
-"59
-[; ;./pwm.h: 59:     else
-[e :U 108 ]
-"60
-[; ;./pwm.h: 60:         TRISC1 = 0;
-[e = _TRISC1 -> -> 0 `i `b ]
-[e :U 109 ]
-"61
-[; ;./pwm.h: 61: }
+"54
+[; ;./pwm2.h: 54: }
 [e :UE 101 ]
 }
-"63
-[; ;./pwm.h: 63: void setPR2(unsigned int const freq) {
-[v _setPR2 `(v ~T0 @X0 1 ef1`Cui ]
+"56
+[; ;./pwm2.h: 56: void pwmInit2() {
+[v _pwmInit2 `(v ~T0 @X0 1 ef ]
 {
-[e :U _setPR2 ]
-[v _freq `Cui ~T0 @X0 1 r1 ]
+[e :U _pwmInit2 ]
 [f ]
+"57
+[; ;./pwm2.h: 57:     setPR2();
+[e ( _setPR2 ..  ]
+"58
+[; ;./pwm2.h: 58:     CCP2M3 = 1;
+[e = _CCP2M3 -> -> 1 `i `b ]
+"59
+[; ;./pwm2.h: 59:     CCP2M2 = 1;
+[e = _CCP2M2 -> -> 1 `i `b ]
+"67
+[; ;./pwm2.h: 67:     T2CKPS0 = 1;
+[e = _T2CKPS0 -> -> 1 `i `b ]
+"68
+[; ;./pwm2.h: 68:     T2CKPS1 = 1;
+[e = _T2CKPS1 -> -> 1 `i `b ]
+"70
+[; ;./pwm2.h: 70:     TMR2ON = 1;
+[e = _TMR2ON -> -> 1 `i `b ]
+"71
+[; ;./pwm2.h: 71:     TRISC1 = 0;
+[e = _TRISC1 -> -> 0 `i `b ]
+"72
+[; ;./pwm2.h: 72: }
+[e :UE 102 ]
+}
+"21 ./lcd.h
+[; ;./lcd.h: 21: void lcdPort(char a) {
+[v _lcdPort `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _lcdPort ]
+[v _a `uc ~T0 @X0 1 r1 ]
+[f ]
+"22
+[; ;./lcd.h: 22:     if (a & 1)
+[e $ ! != & -> _a `i -> 1 `i -> 0 `i 105  ]
+"23
+[; ;./lcd.h: 23:         RD4 = 1;
+[e = _RD4 -> -> 1 `i `b ]
+[e $U 106  ]
+"24
+[; ;./lcd.h: 24:     else
+[e :U 105 ]
+"25
+[; ;./lcd.h: 25:         RD4 = 0;
+[e = _RD4 -> -> 0 `i `b ]
+[e :U 106 ]
+"27
+[; ;./lcd.h: 27:     if (a & 2)
+[e $ ! != & -> _a `i -> 2 `i -> 0 `i 107  ]
+"28
+[; ;./lcd.h: 28:         RD5 = 1;
+[e = _RD5 -> -> 1 `i `b ]
+[e $U 108  ]
+"29
+[; ;./lcd.h: 29:     else
+[e :U 107 ]
+"30
+[; ;./lcd.h: 30:         RD5 = 0;
+[e = _RD5 -> -> 0 `i `b ]
+[e :U 108 ]
+"32
+[; ;./lcd.h: 32:     if (a & 4)
+[e $ ! != & -> _a `i -> 4 `i -> 0 `i 109  ]
+"33
+[; ;./lcd.h: 33:         RD6 = 1;
+[e = _RD6 -> -> 1 `i `b ]
+[e $U 110  ]
+"34
+[; ;./lcd.h: 34:     else
+[e :U 109 ]
+"35
+[; ;./lcd.h: 35:         RD6 = 0;
+[e = _RD6 -> -> 0 `i `b ]
+[e :U 110 ]
+"37
+[; ;./lcd.h: 37:     if (a & 8)
+[e $ ! != & -> _a `i -> 8 `i -> 0 `i 111  ]
+"38
+[; ;./lcd.h: 38:         RD7 = 1;
+[e = _RD7 -> -> 1 `i `b ]
+[e $U 112  ]
+"39
+[; ;./lcd.h: 39:     else
+[e :U 111 ]
+"40
+[; ;./lcd.h: 40:         RD7 = 0;
+[e = _RD7 -> -> 0 `i `b ]
+[e :U 112 ]
+"41
+[; ;./lcd.h: 41: }
+[e :UE 104 ]
+}
+"43
+[; ;./lcd.h: 43: void lcdCmd(char a) {
+[v _lcdCmd `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _lcdCmd ]
+[v _a `uc ~T0 @X0 1 r1 ]
+[f ]
+"44
+[; ;./lcd.h: 44:     RD2 = 0;
+[e = _RD2 -> -> 0 `i `b ]
+"45
+[; ;./lcd.h: 45:     lcdPort(a);
+[e ( _lcdPort (1 _a ]
+"46
+[; ;./lcd.h: 46:     RD3 = 1;
+[e = _RD3 -> -> 1 `i `b ]
+"47
+[; ;./lcd.h: 47:     _delay((unsigned long)((4)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 4 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"48
+[; ;./lcd.h: 48:     RD3 = 0;
+[e = _RD3 -> -> 0 `i `b ]
+"49
+[; ;./lcd.h: 49: }
+[e :UE 113 ]
+}
+"51
+[; ;./lcd.h: 51: void lcdClear(void) {
+[v _lcdClear `(v ~T0 @X0 1 ef ]
+{
+[e :U _lcdClear ]
+[f ]
+"52
+[; ;./lcd.h: 52:     lcdCmd(0);
+[e ( _lcdCmd (1 -> -> 0 `i `uc ]
+"53
+[; ;./lcd.h: 53:     lcdCmd(1);
+[e ( _lcdCmd (1 -> -> 1 `i `uc ]
+"54
+[; ;./lcd.h: 54: }
+[e :UE 114 ]
+}
+"56
+[; ;./lcd.h: 56: void lcdSetCursor(char a, char b) {
+[v _lcdSetCursor `(v ~T0 @X0 1 ef2`uc`uc ]
+{
+[e :U _lcdSetCursor ]
+[v _a `uc ~T0 @X0 1 r1 ]
+[v _b `uc ~T0 @X0 1 r2 ]
+[f ]
+"57
+[; ;./lcd.h: 57:     char temp, z, y;
+[v _temp `uc ~T0 @X0 1 a ]
+[v _z `uc ~T0 @X0 1 a ]
+[v _y `uc ~T0 @X0 1 a ]
+"58
+[; ;./lcd.h: 58:     if (a == 1) {
+[e $ ! == -> _a `i -> 1 `i 116  ]
+{
+"59
+[; ;./lcd.h: 59:         temp = 0x80 + b - 1;
+[e = _temp -> - + -> 128 `i -> _b `i -> 1 `i `uc ]
+"60
+[; ;./lcd.h: 60:         z = temp >> 4;
+[e = _z -> >> -> _temp `i -> 4 `i `uc ]
+"61
+[; ;./lcd.h: 61:         y = temp & 0x0F;
+[e = _y -> & -> _temp `i -> 15 `i `uc ]
+"62
+[; ;./lcd.h: 62:         lcdCmd(z);
+[e ( _lcdCmd (1 _z ]
+"63
+[; ;./lcd.h: 63:         lcdCmd(y);
+[e ( _lcdCmd (1 _y ]
 "64
-[; ;./pwm.h: 64:     PR2 = (4000000 / (freq * 4 * 16)) - 1;
-[e = _PR2 -> - / -> 4000000 `l -> * * _freq -> -> 4 `i `ui -> -> 16 `i `ui `l -> -> 1 `i `l `uc ]
+[; ;./lcd.h: 64:     } else if (a == 2) {
+}
+[e $U 117  ]
+[e :U 116 ]
+[e $ ! == -> _a `i -> 2 `i 118  ]
+{
 "65
-[; ;./pwm.h: 65: }
-[e :UE 110 ]
+[; ;./lcd.h: 65:         temp = 0xC0 + b - 1;
+[e = _temp -> - + -> 192 `i -> _b `i -> 1 `i `uc ]
+"66
+[; ;./lcd.h: 66:         z = temp >> 4;
+[e = _z -> >> -> _temp `i -> 4 `i `uc ]
+"67
+[; ;./lcd.h: 67:         y = temp & 0x0F;
+[e = _y -> & -> _temp `i -> 15 `i `uc ]
+"68
+[; ;./lcd.h: 68:         lcdCmd(z);
+[e ( _lcdCmd (1 _z ]
+"69
+[; ;./lcd.h: 69:         lcdCmd(y);
+[e ( _lcdCmd (1 _y ]
+"70
+[; ;./lcd.h: 70:     }
+}
+[e :U 118 ]
+[e :U 117 ]
+"71
+[; ;./lcd.h: 71: }
+[e :UE 115 ]
+}
+"73
+[; ;./lcd.h: 73: void lcdInit(void) {
+[v _lcdInit `(v ~T0 @X0 1 ef ]
+{
+[e :U _lcdInit ]
+[f ]
+"74
+[; ;./lcd.h: 74:     TRISD = 0;
+[e = _TRISD -> -> 0 `i `uc ]
+"75
+[; ;./lcd.h: 75:     PORTD = 0;
+[e = _PORTD -> -> 0 `i `uc ]
+"76
+[; ;./lcd.h: 76:     lcdPort(0x00);
+[e ( _lcdPort (1 -> -> 0 `i `uc ]
+"77
+[; ;./lcd.h: 77:     _delay((unsigned long)((20)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"78
+[; ;./lcd.h: 78:     lcdCmd(0x03);
+[e ( _lcdCmd (1 -> -> 3 `i `uc ]
+"79
+[; ;./lcd.h: 79:     _delay((unsigned long)((5)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"80
+[; ;./lcd.h: 80:     lcdCmd(0x03);
+[e ( _lcdCmd (1 -> -> 3 `i `uc ]
+"81
+[; ;./lcd.h: 81:     _delay((unsigned long)((11)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 11 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"82
+[; ;./lcd.h: 82:     lcdCmd(0x03);
+[e ( _lcdCmd (1 -> -> 3 `i `uc ]
+"84
+[; ;./lcd.h: 84:     lcdCmd(0x02);
+[e ( _lcdCmd (1 -> -> 2 `i `uc ]
+"85
+[; ;./lcd.h: 85:     lcdCmd(0x02);
+[e ( _lcdCmd (1 -> -> 2 `i `uc ]
+"86
+[; ;./lcd.h: 86:     lcdCmd(0x08);
+[e ( _lcdCmd (1 -> -> 8 `i `uc ]
+"87
+[; ;./lcd.h: 87:     lcdCmd(0x00);
+[e ( _lcdCmd (1 -> -> 0 `i `uc ]
+"88
+[; ;./lcd.h: 88:     lcdCmd(0x0C);
+[e ( _lcdCmd (1 -> -> 12 `i `uc ]
+"89
+[; ;./lcd.h: 89:     lcdCmd(0x00);
+[e ( _lcdCmd (1 -> -> 0 `i `uc ]
+"90
+[; ;./lcd.h: 90:     lcdCmd(0x06);
+[e ( _lcdCmd (1 -> -> 6 `i `uc ]
+"91
+[; ;./lcd.h: 91: }
+[e :UE 119 ]
+}
+"93
+[; ;./lcd.h: 93: void lcdWriteChar(char a) {
+[v _lcdWriteChar `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _lcdWriteChar ]
+[v _a `uc ~T0 @X0 1 r1 ]
+[f ]
+"94
+[; ;./lcd.h: 94:     char temp, y;
+[v _temp `uc ~T0 @X0 1 a ]
+[v _y `uc ~T0 @X0 1 a ]
+"95
+[; ;./lcd.h: 95:     temp = a & 0x0F;
+[e = _temp -> & -> _a `i -> 15 `i `uc ]
+"96
+[; ;./lcd.h: 96:     y = a & 0xF0;
+[e = _y -> & -> _a `i -> 240 `i `uc ]
+"97
+[; ;./lcd.h: 97:     RD2 = 1;
+[e = _RD2 -> -> 1 `i `b ]
+"98
+[; ;./lcd.h: 98:     lcdPort(y >> 4);
+[e ( _lcdPort (1 -> >> -> _y `i -> 4 `i `uc ]
+"99
+[; ;./lcd.h: 99:     RD3 = 1;
+[e = _RD3 -> -> 1 `i `b ]
+"100
+[; ;./lcd.h: 100:     _delay((unsigned long)((40)*(20000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 20000000 `l `d .4000000.0 `ul ]
+"101
+[; ;./lcd.h: 101:     RD3 = 0;
+[e = _RD3 -> -> 0 `i `b ]
+"102
+[; ;./lcd.h: 102:     lcdPort(temp);
+[e ( _lcdPort (1 _temp ]
+"103
+[; ;./lcd.h: 103:     RD3 = 1;
+[e = _RD3 -> -> 1 `i `b ]
+"104
+[; ;./lcd.h: 104:     _delay((unsigned long)((40)*(20000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 20000000 `l `d .4000000.0 `ul ]
+"105
+[; ;./lcd.h: 105:     RD3 = 0;
+[e = _RD3 -> -> 0 `i `b ]
+"106
+[; ;./lcd.h: 106: }
+[e :UE 120 ]
+}
+"108
+[; ;./lcd.h: 108: void lcdPrint(unsigned char *a) {
+[v _lcdPrint `(v ~T0 @X0 1 ef1`*uc ]
+{
+[e :U _lcdPrint ]
+[v _a `*uc ~T0 @X0 1 r1 ]
+[f ]
+"109
+[; ;./lcd.h: 109:     int i;
+[v _i `i ~T0 @X0 1 a ]
+"110
+[; ;./lcd.h: 110:     for (i = 0; a[i] != '\0'; i++)
+{
+[e = _i -> 0 `i ]
+[e $U 125  ]
+[e :U 122 ]
+"111
+[; ;./lcd.h: 111:         lcdWriteChar(a[i]);
+[e ( _lcdWriteChar (1 -> *U + _a * -> _i `x -> -> # *U _a `i `x `uc ]
+[e ++ _i -> 1 `i ]
+[e :U 125 ]
+[e $ != -> *U + _a * -> _i `x -> -> # *U _a `i `x `ui -> 0 `ui 122  ]
+[e :U 123 ]
+}
+"112
+[; ;./lcd.h: 112: }
+[e :UE 121 ]
 }
 "1 ./adc.h
 [; ;./adc.h: 1: void adcInit() {
@@ -552,7 +785,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _ADCON1bits 0 0 -> -> 0 `i `uc ]
 "27
 [; ;./adc.h: 27: }
-[e :UE 111 ]
+[e :UE 126 ]
 }
 "35
 [; ;./adc.h: 35: int adcRead(int const adcChannel) {
@@ -568,147 +801,122 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./adc.h: 37:     ADCON0bits.CHS = adcChannel;
 [e = . . _ADCON0bits 0 3 -> _adcChannel `uc ]
 "38
-[; ;./adc.h: 38:     _delay((unsigned long)((10)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;./adc.h: 38:     _delay((unsigned long)((10)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
 "39
 [; ;./adc.h: 39:     ADCON0bits.GO = 1;
 [e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
 "40
 [; ;./adc.h: 40:     while (ADCON0bits.GO_DONE);
-[e $U 113  ]
-[e :U 114 ]
-[e :U 113 ]
-[e $ != -> . . _ADCON0bits 3 1 `i -> 0 `i 114  ]
-[e :U 115 ]
+[e $U 128  ]
+[e :U 129 ]
+[e :U 128 ]
+[e $ != -> . . _ADCON0bits 3 1 `i -> 0 `i 129  ]
+[e :U 130 ]
 "42
 [; ;./adc.h: 42:     return (ADRESH << 8) + (ADRESL);
 [e ) + << -> _ADRESH `i -> 8 `i -> _ADRESL `i ]
-[e $UE 112  ]
+[e $UE 127  ]
 "43
 [; ;./adc.h: 43: }
-[e :UE 112 ]
+[e :UE 127 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"7 main.c
-[; ;main.c: 7: void main(void) {
+"9 main.c
+[; ;main.c: 9: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"8
-[; ;main.c: 8:     TRISB = 255;
-[e = _TRISB -> -> 255 `i `uc ]
-"9
-[; ;main.c: 9:     PORTB = 0;
-[e = _PORTB -> -> 0 `i `uc ]
 "10
-[; ;main.c: 10:     TRISD = 0;
-[e = _TRISD -> -> 0 `i `uc ]
+[; ;main.c: 10:     TRISB = 255;
+[e = _TRISB -> -> 255 `i `uc ]
 "11
-[; ;main.c: 11:     PORTD = 0;
-[e = _PORTD -> -> 0 `i `uc ]
+[; ;main.c: 11:     PORTB = 0;
+[e = _PORTB -> -> 0 `i `uc ]
 "13
 [; ;main.c: 13:     adcInit();
 [e ( _adcInit ..  ]
+"14
+[; ;main.c: 14:     lcdInit();
+[e ( _lcdInit ..  ]
 "15
-[; ;main.c: 15:     pwmInit1(2000);
-[e ( _pwmInit1 (1 -> -> 2000 `i `ui ]
+[; ;main.c: 15:     lcdClear();
+[e ( _lcdClear ..  ]
 "16
-[; ;main.c: 16:     pwmInit2(2000);
-[e ( _pwmInit2 (1 -> -> 2000 `i `ui ]
+[; ;main.c: 16:     lcdSetCursor(1,1);
+[e ( _lcdSetCursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
 "17
-[; ;main.c: 17:     pwmSetDutyCycle1(0);
-[e ( _pwmSetDutyCycle1 (1 -> -> 0 `i `ui ]
+[; ;main.c: 17:     lcdPrint("Iniciando PWM");
+[e ( _lcdPrint (1 :s 1C ]
 "18
-[; ;main.c: 18:     pwmSetDutyCycle2(0);
-[e ( _pwmSetDutyCycle2 (1 -> -> 0 `i `ui ]
+[; ;main.c: 18:     _delay((unsigned long)((10)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
 "19
-[; ;main.c: 19:     unsigned int duty1 = 500;
-[v _duty1 `ui ~T0 @X0 1 a ]
-[e = _duty1 -> -> 500 `i `ui ]
+[; ;main.c: 19:     pwmInit1();
+[e ( _pwmInit1 ..  ]
 "20
-[; ;main.c: 20:     unsigned char const delta = 25;
-[v F873 `Cuc ~T0 @X0 1 s delta ]
-[i F873
--> -> 25 `i `uc
-]
+[; ;main.c: 20:     pwmInit2();
+[e ( _pwmInit2 ..  ]
 "21
-[; ;main.c: 21:     pwmSetDutyCycle1(duty1);
-[e ( _pwmSetDutyCycle1 (1 _duty1 ]
+[; ;main.c: 21:     pwmDuty1(0);
+[e ( _pwmDuty1 (1 -> -> 0 `i `us ]
+"22
+[; ;main.c: 22:     lcdClear();
+[e ( _lcdClear ..  ]
 "23
-[; ;main.c: 23:     for (;;) {
-{
-[e :U 117 ]
-{
-"25
-[; ;main.c: 25:         if (PORTBbits.RB0 == 1) {
-[e $ ! == -> . . _PORTBbits 0 0 `i -> 1 `i 120  ]
-{
+[; ;main.c: 23:     lcdSetCursor(1,1);
+[e ( _lcdSetCursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+"24
+[; ;main.c: 24:     lcdPrint("Modulo iniciado");
+[e ( _lcdPrint (1 :s 2C ]
 "26
-[; ;main.c: 26:             if (duty1 < 1023) {
-[e $ ! < _duty1 -> -> 1023 `i `ui 121  ]
-{
+[; ;main.c: 26:     _delay((unsigned long)((100)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
 "27
-[; ;main.c: 27:                 pwmSetDutyCycle1(duty1 += delta);
-[e ( _pwmSetDutyCycle1 (1 =+ _duty1 -> F873 `ui ]
+[; ;main.c: 27:     lcdClear();
+[e ( _lcdClear ..  ]
 "28
-[; ;main.c: 28:                 PORTDbits.RD0 = 1;
-[e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
+[; ;main.c: 28:     for (;;) {
+{
+[e :U 132 ]
+{
 "29
-[; ;main.c: 29:                 _delay((unsigned long)((100)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 29:         unsigned int v = adcRead(0);
+[v _v `ui ~T0 @X0 1 a ]
+[e = _v -> ( _adcRead (1 -> 0 `i `ui ]
 "30
-[; ;main.c: 30:                 PORTDbits.RD0 = 0;
-[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 30:         pwmDuty1(v);
+[e ( _pwmDuty1 (1 -> _v `us ]
 "31
-[; ;main.c: 31:             }
-}
-[e :U 121 ]
+[; ;main.c: 31:         char entero[16];
+[v _entero `uc ~T0 @X0 -> 16 `i a ]
+"32
+[; ;main.c: 32:         sprintf(entero, "PWM = %d", v);
+[e ( _sprintf (1 , (. , &U _entero :s 3C _v ]
 "33
-[; ;main.c: 33:         } else if (PORTBbits.RB1 == 1) {
-}
-[e $U 122  ]
-[e :U 120 ]
-[e $ ! == -> . . _PORTBbits 0 1 `i -> 1 `i 123  ]
-{
+[; ;main.c: 33:         lcdClear();
+[e ( _lcdClear ..  ]
 "34
-[; ;main.c: 34:             if (duty1 > 0) {
-[e $ ! > _duty1 -> -> 0 `i `ui 124  ]
-{
+[; ;main.c: 34:         lcdSetCursor(1, 1);
+[e ( _lcdSetCursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
 "35
-[; ;main.c: 35:                 pwmSetDutyCycle1(duty1 -= delta);
-[e ( _pwmSetDutyCycle1 (1 =- _duty1 -> F873 `ui ]
-"36
-[; ;main.c: 36:                 PORTDbits.RD1 = 1;
-[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
+[; ;main.c: 35:         lcdPrint(entero);
+[e ( _lcdPrint (1 -> &U _entero `*uc ]
 "37
-[; ;main.c: 37:                 _delay((unsigned long)((100)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 37:         _delay((unsigned long)((50)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
 "38
-[; ;main.c: 38:                 PORTDbits.RD1 = 0;
-[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
+[; ;main.c: 38:     }
+}
+[e $U 132  ]
+[e :U 133 ]
+}
 "39
-[; ;main.c: 39:             }
+[; ;main.c: 39: }
+[e :UE 131 ]
 }
-[e :U 124 ]
-"40
-[; ;main.c: 40:         }
-}
-[e :U 123 ]
-[e :U 122 ]
-"42
-[; ;main.c: 42:         pwmSetDutyCycle2(adcRead(0));
-[e ( _pwmSetDutyCycle2 (1 -> ( _adcRead (1 -> 0 `i `ui ]
-"43
-[; ;main.c: 43:         _delay((unsigned long)((10)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"45
-[; ;main.c: 45:     }
-}
-[e $U 117  ]
-[e :U 118 ]
-}
-"46
-[; ;main.c: 46: }
-[e :UE 116 ]
-}
+[p f _sprintf 8388736 ]
+[a 2C 77 111 100 117 108 111 32 105 110 105 99 105 97 100 111 0 ]
+[a 3C 80 87 77 32 61 32 37 100 0 ]
+[a 1C 73 110 105 99 105 97 110 100 111 32 80 87 77 0 ]

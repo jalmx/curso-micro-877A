@@ -12,24 +12,24 @@ void main(void) {
     PORTB = 0;
     PORTC = 0;
 
-    for (char a = 0; a < 20; a++) {
-        for (char i = 0; i <= 7; i++) {
+    for (unsigned char a = 0; a < 20; a++) {
+        for (unsigned char i = 0; i <= 7; i++) {
             PORTC = ~col[i];
             PORTB = f[i];
             __delay_ms(5);
 
         }
     }
-    for (char a = 0; a < 20; a++) {
-        for (char i = 0; i <= 7; i++) {
+    for (unsigned char a = 0; a < 20; a++) {
+        for (unsigned char i = 0; i <= 7; i++) {
             PORTC = ~col[i];
             PORTB = smile[i];
             __delay_ms(5);
 
         }
     }
-    for (char a = 0; a < 80; a++) {
-        for (char i = 0; i <= 7; i++) {
+    for (unsigned char a = 0; a < 80; a++) {
+        for (unsigned char i = 0; i <= 7; i++) {
             PORTC = ~col[i];
             PORTB = heart[i];
             __delay_ms(5);
