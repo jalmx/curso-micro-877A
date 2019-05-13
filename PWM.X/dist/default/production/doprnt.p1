@@ -110,8 +110,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "821
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c: 821:   default:
 [e :U 18 ]
-"832
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c: 832:    continue;
+"828
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c: 828:    ((*sp++ = (c)));
+[e = *U ++ _sp * -> -> 1 `i `x -> -> # *U _sp `i `x _c ]
+"829
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c: 829:    continue;
 [e $U 8  ]
 "841
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c: 841:   }

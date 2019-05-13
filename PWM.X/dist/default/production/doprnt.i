@@ -364,7 +364,13 @@ sprintf(char * sp, const char * f, ...)
    break;
 # 821 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\sources\\c90\\common\\doprnt.c"
   default:
-# 832 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\sources\\c90\\common\\doprnt.c"
+
+
+
+
+
+
+   ((*sp++ = (c)));
    continue;
 # 841 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\sources\\c90\\common\\doprnt.c"
   }

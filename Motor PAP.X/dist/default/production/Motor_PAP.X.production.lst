@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.05 build -831301201 
-                                                                                               Thu May 09 17:07:26 2019
+                                                                                               Mon May 13 16:14:37 2019
 
 Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1 
      1                           	processor	16F877A
@@ -225,7 +225,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
    211  0020  3400               	retlw	0
    212  0021                     __end_ofmain@backward:	
    213  0021                     main@TIME:	
-   214  0021  34FA               	retlw	250
+   214  0021  3464               	retlw	100
    215  0022  3400               	retlw	0
    216  0023                     __end_ofmain@TIME:	
    217  0007                     _PORTCbits	set	7
@@ -246,7 +246,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
    232                           
    233  07FC                     __end_of__initialization:	
    234  07FC  0183               	clrf	3
-   235  07FD  120A  118A  2F30   	ljmp	_main	;jump to C main() function
+   235  07FD  120A  118A  2F43   	ljmp	_main	;jump to C main() function
    236                           
    237                           	psect	cstackCOMMON
    238  0070                     __pcstackCOMMON:	
@@ -256,331 +256,280 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
    242                           
    243                           
    244                           ; 1 bytes @ 0x0
-   245  0070                     	ds	3
-   246  0073                     main@i:	
+   245  0070                     	ds	2
+   246  0072                     main@i:	
    247                           
-   248                           ; 2 bytes @ 0x3
-   249  0073                     	ds	2
-   250  0075                     main@i_74:	
-   251                           
-   252                           ; 2 bytes @ 0x5
-   253  0075                     	ds	2
-   254  0077                     main@i_75:	
-   255                           
-   256                           ; 2 bytes @ 0x7
-   257  0077                     	ds	2
-   258  0079                     main@i_76:	
-   259                           
-   260                           ; 2 bytes @ 0x9
-   261  0079                     	ds	2
-   262                           
-   263                           	psect	maintext
-   264  0730                     __pmaintext:	
-   265 ;;
-   266 ;;Main: autosize = 0, tempsize = 3, incstack = 0, save=0
-   267 ;;
-   268 ;; *************** function _main *****************
-   269 ;; Defined at:
-   270 ;;		line 4 in file "main.c"
-   271 ;; Parameters:    Size  Location     Type
-   272 ;;		None
-   273 ;; Auto vars:     Size  Location     Type
-   274 ;;  i               2    9[COMMON] int 
-   275 ;;  i               2    7[COMMON] int 
-   276 ;;  i               2    5[COMMON] int 
-   277 ;;  i               2    3[COMMON] int 
-   278 ;; Return value:  Size  Location     Type
-   279 ;;                  1    wreg      void 
-   280 ;; Registers used:
-   281 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath
-   282 ;; Tracked objects:
-   283 ;;		On entry : B00/0
-   284 ;;		On exit  : 0/0
-   285 ;;		Unchanged: 0/0
-   286 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-   287 ;;      Params:         0       0       0       0       0
-   288 ;;      Locals:         8       0       0       0       0
-   289 ;;      Temps:          3       0       0       0       0
-   290 ;;      Totals:        11       0       0       0       0
-   291 ;;Total ram usage:       11 bytes
-   292 ;; Hardware stack levels used:    1
-   293 ;; This function calls:
-   294 ;;		Nothing
-   295 ;; This function is called by:
-   296 ;;		Startup code after reset
-   297 ;; This function uses a non-reentrant model
-   298 ;;
-   299                           
-   300                           
-   301                           ;psect for function _main
-   302  0730                     _main:	
-   303                           
-   304                           ;main.c: 5:     char const backward[] = {0x01, 0x02, 0x04, 0x08, '\0'};;main.c: 6:     c
+   248                           ; 2 bytes @ 0x2
+   249  0072                     	ds	2
+   250                           
+   251                           	psect	maintext
+   252  0743                     __pmaintext:	
+   253 ;;
+   254 ;;Main: autosize = 0, tempsize = 2, incstack = 0, save=0
+   255 ;;
+   256 ;; *************** function _main *****************
+   257 ;; Defined at:
+   258 ;;		line 4 in file "main.c"
+   259 ;; Parameters:    Size  Location     Type
+   260 ;;		None
+   261 ;; Auto vars:     Size  Location     Type
+   262 ;;  i               2    2[COMMON] int 
+   263 ;; Return value:  Size  Location     Type
+   264 ;;                  1    wreg      void 
+   265 ;; Registers used:
+   266 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath
+   267 ;; Tracked objects:
+   268 ;;		On entry : B00/0
+   269 ;;		On exit  : 0/0
+   270 ;;		Unchanged: 0/0
+   271 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   272 ;;      Params:         0       0       0       0       0
+   273 ;;      Locals:         2       0       0       0       0
+   274 ;;      Temps:          2       0       0       0       0
+   275 ;;      Totals:         4       0       0       0       0
+   276 ;;Total ram usage:        4 bytes
+   277 ;; Hardware stack levels used:    1
+   278 ;; This function calls:
+   279 ;;		Nothing
+   280 ;; This function is called by:
+   281 ;;		Startup code after reset
+   282 ;; This function uses a non-reentrant model
+   283 ;;
+   284                           
+   285                           
+   286                           ;psect for function _main
+   287  0743                     _main:	
+   288                           
+   289                           ;main.c: 5:     char const backward[] = {0x01, 0x02, 0x04, 0x08, '\0'};;main.c: 6:     c
       +                          har const forward[] = {0x08, 0x04, 0x02, 0x01, '\0'};;main.c: 7:     char const full[] =
       +                           {0x03, 0x06, 0x0C, 0x09, '\0'};;main.c: 8:     char const half[] = {0x01, 0x03, 0x02, 0
-      +                          x06, 0x04, 0x0C, 0x08, 0x09, '\0'};;main.c: 9:     int const TIME = 250;;main.c: 10:    
+      +                          x06, 0x04, 0x0C, 0x08, 0x09, '\0'};;main.c: 9:     int const TIME = 100;;main.c: 10:    
       +                           TRISB = 0;
-   305                           
-   306                           ;incstack = 0
-   307                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+pclath]
-   308  0730  1683               	bsf	3,5	;RP0=1, select bank1
-   309  0731  1303               	bcf	3,6	;RP1=0, select bank1
-   310  0732  0186               	clrf	6	;volatile
+   290                           
+   291                           ;incstack = 0
+   292                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+pclath]
+   293  0743  1683               	bsf	3,5	;RP0=1, select bank1
+   294  0744  1303               	bcf	3,6	;RP1=0, select bank1
+   295  0745  0186               	clrf	6	;volatile
+   296                           
+   297                           ;main.c: 11:     TRISC = 255;
+   298  0746  30FF               	movlw	255
+   299  0747  0087               	movwf	7	;volatile
+   300                           
+   301                           ;main.c: 12:     TRISD = 0;
+   302  0748  0188               	clrf	8	;volatile
+   303                           
+   304                           ;main.c: 13:     PORTB = 0;
+   305  0749  1283               	bcf	3,5	;RP0=0, select bank0
+   306  074A  1303               	bcf	3,6	;RP1=0, select bank0
+   307  074B  0186               	clrf	6	;volatile
+   308                           
+   309                           ;main.c: 14:     PORTC = 0;
+   310  074C  0187               	clrf	7	;volatile
    311                           
-   312                           ;main.c: 11:     TRISC = 255;
-   313  0733  30FF               	movlw	255
-   314  0734  0087               	movwf	7	;volatile
-   315                           
-   316                           ;main.c: 12:     TRISD = 0;
-   317  0735  0188               	clrf	8	;volatile
-   318                           
-   319                           ;main.c: 13:     PORTB = 0;
-   320  0736  1283               	bcf	3,5	;RP0=0, select bank0
-   321  0737  1303               	bcf	3,6	;RP1=0, select bank0
-   322  0738  0186               	clrf	6	;volatile
-   323                           
-   324                           ;main.c: 14:     PORTC = 0;
-   325  0739  0187               	clrf	7	;volatile
-   326                           
-   327                           ;main.c: 15:     PORTD = 0;
-   328  073A  0188               	clrf	8	;volatile
-   329  073B  2FF0               	goto	l713
-   330  073C                     l715:	
-   331                           
-   332                           ;main.c: 20:             int i = 0;
-   333  073C  01F3               	clrf	main@i
-   334  073D  01F4               	clrf	main@i+1
-   335  073E                     l33:	
-   336                           ;main.c: 25:             }
-   337                           
-   338                           ;main.c: 21:             while (forward[i] != '\0') {
-   339                           
-   340                           
-   341                           ;main.c: 21:             while (forward[i] != '\0') {
-   342  073E  0873               	movf	main@i,w
-   343  073F  3E0F               	addlw	low ((main@forward-__stringbase)| (0+32768))
-   344  0740  0084               	movwf	4
-   345  0741  120A  118A  2003  120A  118A  	fcall	stringdir
-   346  0746  3A00               	xorlw	0
-   347  0747  1903               	btfsc	3,2
-   348  0748  2FF0               	goto	l713
-   349                           
-   350                           ;main.c: 22:                 PORTD = PORTB = forward[i++];
-   351  0749  0873               	movf	main@i,w
-   352  074A  3E0F               	addlw	low ((main@forward-__stringbase)| (0+32768))
-   353  074B  0084               	movwf	4
-   354  074C  120A  118A  2003  120A  118A  	fcall	stringdir
-   355  0751  1283               	bcf	3,5	;RP0=0, select bank0
-   356  0752  1303               	bcf	3,6	;RP1=0, select bank0
-   357  0753  0086               	movwf	6	;volatile
-   358  0754  0088               	movwf	8	;volatile
-   359  0755  3001               	movlw	1
-   360  0756  07F3               	addwf	main@i,f
-   361  0757  1803               	skipnc
-   362  0758  0AF4               	incf	main@i+1,f
-   363  0759  3000               	movlw	0
-   364  075A  07F4               	addwf	main@i+1,f
-   365                           
-   366                           ;main.c: 24:                 _delay((unsigned long)((TIME)*(4000000/4000.0)));
-   367  075B  3002               	movlw	2
-   368  075C  00F2               	movwf	??_main+2
-   369  075D  3045               	movlw	69
-   370  075E  00F1               	movwf	??_main+1
-   371  075F  30A9               	movlw	169
-   372  0760  00F0               	movwf	??_main
-   373  0761                     u177:	
-   374  0761  0BF0               	decfsz	??_main,f
-   375  0762  2F61               	goto	u177
-   376  0763  0BF1               	decfsz	??_main+1,f
-   377  0764  2F61               	goto	u177
-   378  0765  0BF2               	decfsz	??_main+2,f
-   379  0766  2F61               	goto	u177
-   380  0767  2F68               	nop2
-   381  0768  2F3E               	goto	l33
-   382  0769                     l725:	
-   383                           ;main.c: 27:         } else if (PORTCbits.RC1 == 1) {
-   384                           
-   385                           
-   386                           ;main.c: 28:             int i = 0;
-   387  0769  01F5               	clrf	main@i_74
-   388  076A  01F6               	clrf	main@i_74+1
-   389  076B                     l38:	
-   390                           ;main.c: 33:             }
-   391                           
-   392                           ;main.c: 29:             while (backward[i] != '\0') {
-   393                           
-   394                           
-   395                           ;main.c: 29:             while (backward[i] != '\0') {
-   396  076B  0875               	movf	main@i_74,w
-   397  076C  3E14               	addlw	low ((main@backward-__stringbase)| (0+32768))
-   398  076D  0084               	movwf	4
-   399  076E  120A  118A  2003  120A  118A  	fcall	stringdir
-   400  0773  3A00               	xorlw	0
-   401  0774  1903               	btfsc	3,2
-   402  0775  2FF0               	goto	l713
+   312                           ;main.c: 15:     PORTD = 0;
+   313  074D  0188               	clrf	8	;volatile
+   314  074E  2F75               	goto	l715
+   315  074F                     l721:	
+   316                           
+   317                           ;main.c: 22:                 PORTD = PORTB = forward[i++];
+   318  074F  0872               	movf	main@i,w
+   319  0750  3E0F               	addlw	low ((main@forward-__stringbase)| (0+32768))
+   320  0751  0084               	movwf	4
+   321  0752  120A  118A  2003  120A  118A  	fcall	stringdir
+   322  0757  1283               	bcf	3,5	;RP0=0, select bank0
+   323  0758  1303               	bcf	3,6	;RP1=0, select bank0
+   324  0759  0086               	movwf	6	;volatile
+   325  075A  0088               	movwf	8	;volatile
+   326  075B  3001               	movlw	1
+   327  075C  07F2               	addwf	main@i,f
+   328  075D  1803               	skipnc
+   329  075E  0AF3               	incf	main@i+1,f
+   330  075F  3000               	movlw	0
+   331  0760  07F3               	addwf	main@i+1,f
+   332                           
+   333                           ;main.c: 23:                 _delay((unsigned long)((TIME)*(4000000/4000.0)));
+   334  0761  3082               	movlw	130
+   335  0762  00F1               	movwf	??_main+1
+   336  0763  30DD               	movlw	221
+   337  0764  00F0               	movwf	??_main
+   338  0765                     u177:	
+   339  0765  0BF0               	decfsz	??_main,f
+   340  0766  2F65               	goto	u177
+   341  0767  0BF1               	decfsz	??_main+1,f
+   342  0768  2F65               	goto	u177
+   343  0769  2F6A               	nop2
+   344  076A                     l33:	
+   345                           ;main.c: 24:             }
+   346                           
+   347                           
+   348                           ;main.c: 21:             while (forward[i] != '\0') {
+   349  076A  0872               	movf	main@i,w
+   350  076B  3E0F               	addlw	low ((main@forward-__stringbase)| (0+32768))
+   351  076C  0084               	movwf	4
+   352  076D  120A  118A  2003  120A  118A  	fcall	stringdir
+   353  0772  3A00               	xorlw	0
+   354  0773  1D03               	skipz
+   355  0774  2F4F               	goto	l721
+   356  0775                     l715:	
+   357                           ;main.c: 26:         } else if (PORTCbits.RC1 == 1) {
+   358                           
+   359                           
+   360                           ;main.c: 18:         int i = 0;
+   361  0775  01F2               	clrf	main@i
+   362  0776  01F3               	clrf	main@i+1
+   363                           
+   364                           ;main.c: 20:         if (PORTCbits.RC0 == 1) {
+   365  0777  1283               	bcf	3,5	;RP0=0, select bank0
+   366  0778  1303               	bcf	3,6	;RP1=0, select bank0
+   367  0779  1807               	btfsc	7,0	;volatile
+   368  077A  2F6A               	goto	l33
+   369  077B  1887               	btfsc	7,1	;volatile
+   370  077C  2F99               	goto	l38
+   371  077D  2FA5               	goto	l37
+   372  077E                     l731:	
+   373                           
+   374                           ;main.c: 28:                 PORTD = PORTB = backward[i++];
+   375  077E  0872               	movf	main@i,w
+   376  077F  3E14               	addlw	low ((main@backward-__stringbase)| (0+32768))
+   377  0780  0084               	movwf	4
+   378  0781  120A  118A  2003  120A  118A  	fcall	stringdir
+   379  0786  1283               	bcf	3,5	;RP0=0, select bank0
+   380  0787  1303               	bcf	3,6	;RP1=0, select bank0
+   381  0788  0086               	movwf	6	;volatile
+   382  0789  0088               	movwf	8	;volatile
+   383  078A  3001               	movlw	1
+   384  078B  07F2               	addwf	main@i,f
+   385  078C  1803               	skipnc
+   386  078D  0AF3               	incf	main@i+1,f
+   387  078E  3000               	movlw	0
+   388  078F  07F3               	addwf	main@i+1,f
+   389                           
+   390                           ;main.c: 29:                 _delay((unsigned long)((TIME)*(4000000/4000.0)));
+   391  0790  3082               	movlw	130
+   392  0791  00F1               	movwf	??_main+1
+   393  0792  30DD               	movlw	221
+   394  0793  00F0               	movwf	??_main
+   395  0794                     u187:	
+   396  0794  0BF0               	decfsz	??_main,f
+   397  0795  2F94               	goto	u187
+   398  0796  0BF1               	decfsz	??_main+1,f
+   399  0797  2F94               	goto	u187
+   400  0798  2F99               	nop2
+   401  0799                     l38:	
+   402                           ;main.c: 30:             }
    403                           
-   404                           ;main.c: 30:                 PORTD = PORTB = backward[i++];
-   405  0776  0875               	movf	main@i_74,w
-   406  0777  3E14               	addlw	low ((main@backward-__stringbase)| (0+32768))
-   407  0778  0084               	movwf	4
-   408  0779  120A  118A  2003  120A  118A  	fcall	stringdir
-   409  077E  1283               	bcf	3,5	;RP0=0, select bank0
-   410  077F  1303               	bcf	3,6	;RP1=0, select bank0
-   411  0780  0086               	movwf	6	;volatile
-   412  0781  0088               	movwf	8	;volatile
-   413  0782  3001               	movlw	1
-   414  0783  07F5               	addwf	main@i_74,f
-   415  0784  1803               	skipnc
-   416  0785  0AF6               	incf	main@i_74+1,f
-   417  0786  3000               	movlw	0
-   418  0787  07F6               	addwf	main@i_74+1,f
+   404                           
+   405                           ;main.c: 27:             while (backward[i] != '\0') {
+   406  0799  0872               	movf	main@i,w
+   407  079A  3E14               	addlw	low ((main@backward-__stringbase)| (0+32768))
+   408  079B  0084               	movwf	4
+   409  079C  120A  118A  2003  120A  118A  	fcall	stringdir
+   410  07A1  3A00               	xorlw	0
+   411  07A2  1903               	btfsc	3,2
+   412  07A3  2F75               	goto	l715
+   413  07A4  2F7E               	goto	l731
+   414  07A5                     l37:	
+   415  07A5  1907               	btfsc	7,2	;volatile
+   416  07A6  2FC3               	goto	l43
+   417  07A7  2FCF               	goto	l42
+   418  07A8                     l741:	
    419                           
-   420                           ;main.c: 32:                 _delay((unsigned long)((TIME)*(4000000/4000.0)));
-   421  0788  3002               	movlw	2
-   422  0789  00F2               	movwf	??_main+2
-   423  078A  3045               	movlw	69
-   424  078B  00F1               	movwf	??_main+1
-   425  078C  30A9               	movlw	169
-   426  078D  00F0               	movwf	??_main
-   427  078E                     u187:	
-   428  078E  0BF0               	decfsz	??_main,f
-   429  078F  2F8E               	goto	u187
-   430  0790  0BF1               	decfsz	??_main+1,f
-   431  0791  2F8E               	goto	u187
-   432  0792  0BF2               	decfsz	??_main+2,f
-   433  0793  2F8E               	goto	u187
-   434  0794  2F95               	nop2
-   435  0795  2F6B               	goto	l38
-   436  0796                     l735:	
-   437                           ;main.c: 35:         } else if (PORTCbits.RC2 == 1) {
-   438                           
-   439                           
-   440                           ;main.c: 36:             int i = 0;
-   441  0796  01F7               	clrf	main@i_75
-   442  0797  01F8               	clrf	main@i_75+1
-   443  0798                     l43:	
-   444                           ;main.c: 41:             }
-   445                           
-   446                           ;main.c: 37:             while (full[i] != '\0') {
-   447                           
-   448                           
-   449                           ;main.c: 37:             while (full[i] != '\0') {
-   450  0798  0877               	movf	main@i_75,w
-   451  0799  3E0A               	addlw	low ((main@full-__stringbase)| (0+32768))
-   452  079A  0084               	movwf	4
-   453  079B  120A  118A  2003  120A  118A  	fcall	stringdir
-   454  07A0  3A00               	xorlw	0
-   455  07A1  1903               	btfsc	3,2
-   456  07A2  2FF0               	goto	l713
-   457                           
-   458                           ;main.c: 38:                 PORTD = PORTB = full[i++];
-   459  07A3  0877               	movf	main@i_75,w
-   460  07A4  3E0A               	addlw	low ((main@full-__stringbase)| (0+32768))
-   461  07A5  0084               	movwf	4
-   462  07A6  120A  118A  2003  120A  118A  	fcall	stringdir
-   463  07AB  1283               	bcf	3,5	;RP0=0, select bank0
-   464  07AC  1303               	bcf	3,6	;RP1=0, select bank0
-   465  07AD  0086               	movwf	6	;volatile
-   466  07AE  0088               	movwf	8	;volatile
-   467  07AF  3001               	movlw	1
-   468  07B0  07F7               	addwf	main@i_75,f
-   469  07B1  1803               	skipnc
-   470  07B2  0AF8               	incf	main@i_75+1,f
-   471  07B3  3000               	movlw	0
-   472  07B4  07F8               	addwf	main@i_75+1,f
-   473                           
-   474                           ;main.c: 40:                 _delay((unsigned long)((TIME)*(4000000/4000.0)));
-   475  07B5  3002               	movlw	2
-   476  07B6  00F2               	movwf	??_main+2
-   477  07B7  3045               	movlw	69
-   478  07B8  00F1               	movwf	??_main+1
-   479  07B9  30A9               	movlw	169
-   480  07BA  00F0               	movwf	??_main
-   481  07BB                     u197:	
-   482  07BB  0BF0               	decfsz	??_main,f
-   483  07BC  2FBB               	goto	u197
-   484  07BD  0BF1               	decfsz	??_main+1,f
-   485  07BE  2FBB               	goto	u197
-   486  07BF  0BF2               	decfsz	??_main+2,f
-   487  07C0  2FBB               	goto	u197
-   488  07C1  2FC2               	nop2
-   489  07C2  2F98               	goto	l43
-   490  07C3                     l745:	
-   491                           ;main.c: 43:         } else if (PORTCbits.RC3 == 1) {
-   492                           
-   493                           
-   494                           ;main.c: 44:             int i = 0;
-   495  07C3  01F9               	clrf	main@i_76
-   496  07C4  01FA               	clrf	main@i_76+1
-   497  07C5                     l48:	
-   498                           ;main.c: 49:             }
-   499                           
-   500                           ;main.c: 45:             while (half[i] != '\0') {
-   501                           
-   502                           
-   503                           ;main.c: 45:             while (half[i] != '\0') {
-   504  07C5  0879               	movf	main@i_76,w
-   505  07C6  3E01               	addlw	low ((main@half-__stringbase)| (0+32768))
-   506  07C7  0084               	movwf	4
-   507  07C8  120A  118A  2003  120A  118A  	fcall	stringdir
-   508  07CD  3A00               	xorlw	0
-   509  07CE  1903               	btfsc	3,2
-   510  07CF  2FF0               	goto	l713
-   511                           
-   512                           ;main.c: 46:                 PORTB = PORTD = half[i++];
-   513  07D0  0879               	movf	main@i_76,w
-   514  07D1  3E01               	addlw	low ((main@half-__stringbase)| (0+32768))
-   515  07D2  0084               	movwf	4
-   516  07D3  120A  118A  2003  120A  118A  	fcall	stringdir
-   517  07D8  1283               	bcf	3,5	;RP0=0, select bank0
-   518  07D9  1303               	bcf	3,6	;RP1=0, select bank0
-   519  07DA  0088               	movwf	8	;volatile
-   520  07DB  0086               	movwf	6	;volatile
-   521  07DC  3001               	movlw	1
-   522  07DD  07F9               	addwf	main@i_76,f
-   523  07DE  1803               	skipnc
-   524  07DF  0AFA               	incf	main@i_76+1,f
-   525  07E0  3000               	movlw	0
-   526  07E1  07FA               	addwf	main@i_76+1,f
-   527                           
-   528                           ;main.c: 48:                 _delay((unsigned long)((TIME)*(4000000/4000.0)));
-   529  07E2  3002               	movlw	2
-   530  07E3  00F2               	movwf	??_main+2
-   531  07E4  3045               	movlw	69
-   532  07E5  00F1               	movwf	??_main+1
-   533  07E6  30A9               	movlw	169
-   534  07E7  00F0               	movwf	??_main
-   535  07E8                     u207:	
-   536  07E8  0BF0               	decfsz	??_main,f
-   537  07E9  2FE8               	goto	u207
-   538  07EA  0BF1               	decfsz	??_main+1,f
-   539  07EB  2FE8               	goto	u207
-   540  07EC  0BF2               	decfsz	??_main+2,f
-   541  07ED  2FE8               	goto	u207
-   542  07EE  2FEF               	nop2
-   543  07EF  2FC5               	goto	l48
-   544  07F0                     l713:	
-   545                           ;main.c: 51:         } else {
-   546                           
-   547                           
-   548                           ;main.c: 19:         if (PORTCbits.RC0 == 1) {
-   549  07F0  1283               	bcf	3,5	;RP0=0, select bank0
-   550  07F1  1303               	bcf	3,6	;RP1=0, select bank0
-   551  07F2  1807               	btfsc	7,0	;volatile
-   552  07F3  2F3C               	goto	l715
-   553  07F4  1887               	btfsc	7,1	;volatile
-   554  07F5  2F69               	goto	l725
-   555  07F6  1907               	btfsc	7,2	;volatile
-   556  07F7  2F96               	goto	l735
-   557  07F8  1987               	btfsc	7,3	;volatile
-   558  07F9  2FC3               	goto	l745
-   559                           
-   560                           ;main.c: 52:             PORTB = 0;
-   561  07FA  0186               	clrf	6	;volatile
-   562  07FB  2FF0               	goto	l713
-   563  07FC                     __end_of_main:	
-   564  007E                     btemp	set	126	;btemp
-   565  007E                     wtemp0	set	126
+   420                           ;main.c: 34:                 PORTD = PORTB = full[i++];
+   421  07A8  0872               	movf	main@i,w
+   422  07A9  3E0A               	addlw	low ((main@full-__stringbase)| (0+32768))
+   423  07AA  0084               	movwf	4
+   424  07AB  120A  118A  2003  120A  118A  	fcall	stringdir
+   425  07B0  1283               	bcf	3,5	;RP0=0, select bank0
+   426  07B1  1303               	bcf	3,6	;RP1=0, select bank0
+   427  07B2  0086               	movwf	6	;volatile
+   428  07B3  0088               	movwf	8	;volatile
+   429  07B4  3001               	movlw	1
+   430  07B5  07F2               	addwf	main@i,f
+   431  07B6  1803               	skipnc
+   432  07B7  0AF3               	incf	main@i+1,f
+   433  07B8  3000               	movlw	0
+   434  07B9  07F3               	addwf	main@i+1,f
+   435                           
+   436                           ;main.c: 35:                 _delay((unsigned long)((TIME)*(4000000/4000.0)));
+   437  07BA  3082               	movlw	130
+   438  07BB  00F1               	movwf	??_main+1
+   439  07BC  30DD               	movlw	221
+   440  07BD  00F0               	movwf	??_main
+   441  07BE                     u197:	
+   442  07BE  0BF0               	decfsz	??_main,f
+   443  07BF  2FBE               	goto	u197
+   444  07C0  0BF1               	decfsz	??_main+1,f
+   445  07C1  2FBE               	goto	u197
+   446  07C2  2FC3               	nop2
+   447  07C3                     l43:	
+   448                           ;main.c: 36:             }
+   449                           
+   450                           
+   451                           ;main.c: 33:             while (full[i] != '\0') {
+   452  07C3  0872               	movf	main@i,w
+   453  07C4  3E0A               	addlw	low ((main@full-__stringbase)| (0+32768))
+   454  07C5  0084               	movwf	4
+   455  07C6  120A  118A  2003  120A  118A  	fcall	stringdir
+   456  07CB  3A00               	xorlw	0
+   457  07CC  1903               	btfsc	3,2
+   458  07CD  2F75               	goto	l715
+   459  07CE  2FA8               	goto	l741
+   460  07CF                     l42:	
+   461  07CF  1987               	btfsc	7,3	;volatile
+   462  07D0  2FED               	goto	l48
+   463  07D1  2FF9               	goto	l759
+   464  07D2                     l751:	
+   465                           
+   466                           ;main.c: 40:                 PORTB = PORTD = half[i++];
+   467  07D2  0872               	movf	main@i,w
+   468  07D3  3E01               	addlw	low ((main@half-__stringbase)| (0+32768))
+   469  07D4  0084               	movwf	4
+   470  07D5  120A  118A  2003  120A  118A  	fcall	stringdir
+   471  07DA  1283               	bcf	3,5	;RP0=0, select bank0
+   472  07DB  1303               	bcf	3,6	;RP1=0, select bank0
+   473  07DC  0088               	movwf	8	;volatile
+   474  07DD  0086               	movwf	6	;volatile
+   475  07DE  3001               	movlw	1
+   476  07DF  07F2               	addwf	main@i,f
+   477  07E0  1803               	skipnc
+   478  07E1  0AF3               	incf	main@i+1,f
+   479  07E2  3000               	movlw	0
+   480  07E3  07F3               	addwf	main@i+1,f
+   481                           
+   482                           ;main.c: 41:                 _delay((unsigned long)((TIME)*(4000000/4000.0)));
+   483  07E4  3082               	movlw	130
+   484  07E5  00F1               	movwf	??_main+1
+   485  07E6  30DD               	movlw	221
+   486  07E7  00F0               	movwf	??_main
+   487  07E8                     u207:	
+   488  07E8  0BF0               	decfsz	??_main,f
+   489  07E9  2FE8               	goto	u207
+   490  07EA  0BF1               	decfsz	??_main+1,f
+   491  07EB  2FE8               	goto	u207
+   492  07EC  2FED               	nop2
+   493  07ED                     l48:	
+   494                           ;main.c: 42:             }
+   495                           
+   496                           
+   497                           ;main.c: 39:             while (half[i] != '\0') {
+   498  07ED  0872               	movf	main@i,w
+   499  07EE  3E01               	addlw	low ((main@half-__stringbase)| (0+32768))
+   500  07EF  0084               	movwf	4
+   501  07F0  120A  118A  2003  120A  118A  	fcall	stringdir
+   502  07F5  3A00               	xorlw	0
+   503  07F6  1903               	btfsc	3,2
+   504  07F7  2F75               	goto	l715
+   505  07F8  2FD2               	goto	l751
+   506  07F9                     l759:	
+   507                           
+   508                           ;main.c: 45:             PORTB = PORTD = 0;
+   509  07F9  0188               	clrf	8	;volatile
+   510  07FA  0186               	clrf	6	;volatile
+   511  07FB  2F75               	goto	l715
+   512  07FC                     __end_of_main:	
+   513  007E                     btemp	set	126	;btemp
+   514  007E                     wtemp0	set	126
 
 
 Data Sizes:
@@ -593,7 +542,7 @@ Data Sizes:
 
 Auto Spaces:
     Space          Size  Autos    Used
-    COMMON           14     11      11
+    COMMON           14      4       4
     BANK0            80      0       0
     BANK1            80      0       0
     BANK3            96      0       0
@@ -628,8 +577,8 @@ Call Graph Tables:
  ---------------------------------------------------------------------------------
  (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
  ---------------------------------------------------------------------------------
- (1) _main                                                11    11      0     188
-                                              0 COMMON    11    11      0
+ (1) _main                                                 4     4      0     185
+                                              0 COMMON     4     4      0
  ---------------------------------------------------------------------------------
  Estimated maximum stack depth 1
  ---------------------------------------------------------------------------------
@@ -644,7 +593,7 @@ BITCOMMON            E      0       0       0        0.0%
 EEDATA             100      0       0       0        0.0%
 NULL                 0      0       0       0        0.0%
 CODE                 0      0       0       0        0.0%
-COMMON               E      B       B       1       78.6%
+COMMON               E      4       4       1       28.6%
 BITSFR0              0      0       0       1        0.0%
 SFR0                 0      0       0       1        0.0%
 BITSFR1              0      0       0       2        0.0%
@@ -667,26 +616,26 @@ DATA                 0      0       0      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.05 build -831301201 
-Symbol Table                                                                                   Thu May 09 17:07:26 2019
+Symbol Table                                                                                   Mon May 13 16:14:37 2019
 
-                      pc 0002                       l33 073E                       l43 0798  
-                     l38 076B                       l48 07C5                       fsr 0004  
-                    l713 07F0                      l715 073C                      l725 0769  
-                    l735 0796                      l745 07C3                      u207 07E8  
-                    u177 0761                      u187 078E                      u197 07BB  
-                    fsr0 0004              main@forward 0017                     _main 0730  
+                      pc 0002                       l33 076A                       l42 07CF  
+                     l43 07C3                       l37 07A5                       l38 0799  
+                     l48 07ED                       fsr 0004                      l721 074F  
+                    l731 077E                      l715 0775                      l741 07A8  
+                    l751 07D2                      l759 07F9                      u207 07E8  
+                    u177 0765                      u187 0794                      u197 07BE  
+                    fsr0 0004              main@forward 0017                     _main 0743  
                    btemp 007E                     start 0000             main@backward 001C  
                   ?_main 0070                    _PORTB 0006                    _PORTC 0007  
                   _PORTD 0008                    _TRISB 0086                    _TRISC 0087  
-                  _TRISD 0088                    main@i 0073                    pclath 000A  
+                  _TRISD 0088                    main@i 0072                    pclath 000A  
                   status 0003                    wtemp0 007E          __initialization 07FC  
            __end_of_main 07FC                   ??_main 0070         __end_ofmain@TIME 0023  
        __end_ofmain@half 0012         __end_ofmain@full 0017  __end_of__initialization 07FC  
-         __pcstackCOMMON 0070               __pmaintext 0730               __stringtab 0003  
+         __pcstackCOMMON 0070               __pmaintext 0743               __stringtab 0003  
    end_of_initialization 07FC                _PORTCbits 0007      start_initialization 07FC  
               ___latbits 0002                __pstrings 0003              __stringbase 0008  
-     __end_of__stringtab 0009     __end_ofmain@backward 0021            __size_of_main 00CC  
-               main@TIME 0021                 main@i_74 0075                 main@i_75 0077  
-               main@i_76 0079                 main@half 0009                 main@full 0012  
+     __end_of__stringtab 0009     __end_ofmain@backward 0021            __size_of_main 00B9  
+               main@TIME 0021                 main@half 0009                 main@full 0012  
               stringcode 0003      __end_ofmain@forward 001C                 stringdir 0003  
                stringtab 0003  

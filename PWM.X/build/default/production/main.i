@@ -1725,69 +1725,65 @@ extern __bank0 __bit __timeout;
 
 
 
-# 1 "./pwm2.h" 1
-
-
-
-
-
-
-long pmwMaxDuty() {
-    return (float) 20000000 / (5000 * 16);
-}
+# 1 "./pwm.h" 1
+# 11 "./pwm.h"
+void setTMR2(unsigned char const pwm);
+void setPR2();
 
 void setPR2() {
-    PR2 = (20000000 / (5000 * 4 * 16)) - 1;
-}
-
-
-
-
-
-
-void pwmDuty1(unsigned short int duty) {
-    if (duty < 1024) {
-        duty = ((float) duty / 1023) * pmwMaxDuty();
-        CCP1X = duty & 2;
-        CCP1Y = duty & 1;
-        CCPR1L = duty >> 2;
-    }
-}
-
-void pwmDuty2(unsigned short int duty) {
-    if (duty < 1024) {
-        duty = ((float) duty / 1023) * pmwMaxDuty();
-        CCP2X = duty & 2;
-        CCP2Y = duty & 1;
-        CCPR2L = duty >> 2;
-    }
+    PR2 = (4000000 / (245 * 4 * 16)) - 1;
 }
 
 void pwmInit1() {
     setPR2();
-    CCP1M3 = 1;
-    CCP1M2 = 1;
-# 52 "./pwm2.h"
-    TMR2ON = 1;
-    TRISC2 = 0;
+    setTMR2(1);
 }
 
 void pwmInit2() {
     setPR2();
-    CCP2M3 = 1;
-    CCP2M2 = 1;
+    setTMR2(2);
+}
 
+void pwmSetDuty1(unsigned int duty) {
+    if (duty > 1023) return;
+    duty = ((float) duty / 1023)*(4000000 / (245 * 16));
+    CCP1X = duty & 0x01;
+    CCP1Y = duty & 0x02;
+    CCPR1L = duty >> 2;
+}
 
+void pwmSetDuty2(unsigned int duty) {
+    if (duty > 1023) return;
 
+    duty = ((float) duty / 1023)*(4000000 / (245 * 16));
+    CCP2X = duty & 0x01;
+    CCP2Y = duty & 0x02;
+    CCPR2L = duty >> 2;
+}
 
-
-
-
-    T2CKPS0 = 1;
-    T2CKPS1 = 1;
-
+void setTMR2(unsigned char const pwm) {
+    if (pwm == 2) {
+        CCP2M3 = 1;
+        CCP2M2 = 1;
+    } else {
+        CCP1M3 = 1;
+        CCP1M2 = 1;
+    }
+    if (16 == 1) {
+        T2CKPS0 = 0;
+        T2CKPS1 = 0;
+    } else if (16 == 4) {
+        T2CKPS0 = 1;
+        T2CKPS1 = 0;
+    } else {
+        T2CKPS0 = 1;
+        T2CKPS1 = 1;
+    }
     TMR2ON = 1;
-    TRISC1 = 0;
+    if (pwm == 2)
+        TRISC2 = 0;
+    else
+        TRISC1 = 0;
 }
 # 5 "main.c" 2
 
@@ -1921,7 +1917,7 @@ void lcdCmd(char a) {
     RD2 = 0;
     lcdPort(a);
     RD3 = 1;
-    _delay((unsigned long)((4)*(20000000/4000.0)));
+    _delay((unsigned long)((4)*(4000000/4000.0)));
     RD3 = 0;
 }
 
@@ -1951,11 +1947,11 @@ void lcdInit(void) {
     TRISD = 0;
     PORTD = 0;
     lcdPort(0x00);
-    _delay((unsigned long)((20)*(20000000/4000.0)));
+    _delay((unsigned long)((20)*(4000000/4000.0)));
     lcdCmd(0x03);
-    _delay((unsigned long)((5)*(20000000/4000.0)));
+    _delay((unsigned long)((5)*(4000000/4000.0)));
     lcdCmd(0x03);
-    _delay((unsigned long)((11)*(20000000/4000.0)));
+    _delay((unsigned long)((11)*(4000000/4000.0)));
     lcdCmd(0x03);
 
     lcdCmd(0x02);
@@ -1974,11 +1970,11 @@ void lcdWriteChar(char a) {
     RD2 = 1;
     lcdPort(y >> 4);
     RD3 = 1;
-    _delay((unsigned long)((40)*(20000000/4000000.0)));
+    _delay((unsigned long)((40)*(4000000/4000000.0)));
     RD3 = 0;
     lcdPort(temp);
     RD3 = 1;
-    _delay((unsigned long)((40)*(20000000/4000000.0)));
+    _delay((unsigned long)((40)*(4000000/4000000.0)));
     RD3 = 0;
 }
 
@@ -2010,7 +2006,7 @@ void adcInit() {
 int adcRead(int const adcChannel) {
     ADCON0bits.ADON = 1;
     ADCON0bits.CHS = adcChannel;
-    _delay((unsigned long)((10)*(20000000/4000.0)));
+    _delay((unsigned long)((10)*(4000000/4000.0)));
     ADCON0bits.GO = 1;
     while (ADCON0bits.GO_DONE);
 
@@ -2022,31 +2018,46 @@ int adcRead(int const adcChannel) {
 void main(void) {
     TRISB = 255;
     PORTB = 0;
-
     adcInit();
     lcdInit();
     lcdClear();
-    lcdSetCursor(1,1);
+    lcdSetCursor(1, 1);
     lcdPrint("Iniciando PWM");
-    _delay((unsigned long)((10)*(20000000/4000.0)));
+    _delay((unsigned long)((10)*(4000000/4000.0)));
+
     pwmInit1();
     pwmInit2();
-    pwmDuty1(0);
-    lcdClear();
-    lcdSetCursor(1,1);
-    lcdPrint("Modulo iniciado");
+    pwmSetDuty1(0);
+    pwmSetDuty2(0);
 
-    _delay((unsigned long)((100)*(20000000/4000.0)));
     lcdClear();
+    lcdSetCursor(1, 1);
+    lcdPrint("Modulo iniciado");
+    _delay((unsigned long)((100)*(4000000/4000.0)));
+    lcdClear();
+    unsigned int pwm2 = 0;
     for (;;) {
         unsigned int v = adcRead(0);
-        pwmDuty1(v);
+        unsigned int m = ((float) v * 100) / 1023;
+        pwmSetDuty1(v);
         char entero[16];
-        sprintf(entero, "PWM = %d", v);
         lcdClear();
+        sprintf(entero, "PWM:%d%%", m);
         lcdSetCursor(1, 1);
         lcdPrint(entero);
 
-        _delay((unsigned long)((50)*(20000000/4000.0)));
+        if (RB0 == 1) {
+            if (pwm2 < 1024)
+                pwmSetDuty2(++pwm2);
+        } else if (RB1 == 1) {
+            if (pwm2 > 0)
+                pwmSetDuty2(--pwm2);
+        }
+        m = ((float) pwm2 * 100) / 1023;
+        sprintf(entero, "PWM:%d%%", m);
+        lcdSetCursor(2, 1);
+        lcdPrint(entero);
+        _delay((unsigned long)((50)*(4000000/4000.0)));
+
     }
 }

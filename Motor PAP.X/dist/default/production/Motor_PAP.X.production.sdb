@@ -40,14 +40,8 @@
 "4 C:\Users\Xizuth\Documents\curso-micro-877A\Motor PAP.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"44
-[v main@i_76 i `i  1 a 2 9 ]
-"36
-[v main@i_75 i `i  1 a 2 7 ]
-"28
-[v main@i_74 i `i  1 a 2 5 ]
-"20
-[v main@i i `i  1 a 2 3 ]
+"18
+[v main@i i `i  1 a 2 2 ]
 "5
 [v main@backward backward `DC[5]uc  1 s 5 backward ]
 "6
@@ -56,5 +50,5 @@
 [v main@full full `DC[5]uc  1 s 5 full ]
 "8
 [v main@half half `DC[9]uc  1 s 9 half ]
-"55
+"48
 } 0

@@ -1,11 +1,11 @@
 #define TMR2PRESCALE 16
 
-#ifndef FREQ_PWM
+#ifndef FREQ_PWM //Hz
 #define FREQ 5000
 #endif
 
 long pmwMaxDuty() {
-    return (float) _XTAL_FREQ / (FREQ_PWM * TMR2PRESCALE);
+    return ((float) _XTAL_FREQ / (FREQ_PWM * TMR2PRESCALE));
 }
 
 void setPR2() {

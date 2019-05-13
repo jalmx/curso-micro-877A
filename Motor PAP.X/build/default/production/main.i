@@ -1729,7 +1729,7 @@ void main(void) {
     char const forward[] = {0x08, 0x04, 0x02, 0x01, '\0'};
     char const full[] = {0x03, 0x06, 0x0C, 0x09, '\0'};
     char const half[] = {0x01, 0x03, 0x02, 0x06, 0x04, 0x0C, 0x08, 0x09, '\0'};
-    int const TIME = 250;
+    int const TIME = 100;
     TRISB = 0;
     TRISC = 255;
     TRISD = 0;
@@ -1738,41 +1738,34 @@ void main(void) {
     PORTD = 0;
 
     for (;;) {
+        int i = 0;
 
         if (PORTCbits.RC0 == 1) {
-            int i = 0;
             while (forward[i] != '\0') {
                 PORTD = PORTB = forward[i++];
-
                 _delay((unsigned long)((TIME)*(4000000/4000.0)));
             }
             i = 0;
         } else if (PORTCbits.RC1 == 1) {
-            int i = 0;
             while (backward[i] != '\0') {
                 PORTD = PORTB = backward[i++];
-
                 _delay((unsigned long)((TIME)*(4000000/4000.0)));
             }
             i = 0;
         } else if (PORTCbits.RC2 == 1) {
-            int i = 0;
             while (full[i] != '\0') {
                 PORTD = PORTB = full[i++];
-
                 _delay((unsigned long)((TIME)*(4000000/4000.0)));
             }
             i = 0;
         } else if (PORTCbits.RC3 == 1) {
-            int i = 0;
             while (half[i] != '\0') {
                 PORTB = PORTD = half[i++];
-
                 _delay((unsigned long)((TIME)*(4000000/4000.0)));
             }
             i = 0;
         } else {
-            PORTB = 0;
+            PORTB = PORTD = 0;
         }
     }
 }

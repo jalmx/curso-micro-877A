@@ -273,10 +273,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "9
-[; ;main.c: 9:     int const TIME = 250;
+[; ;main.c: 9:     int const TIME = 100;
 [v F855 `Ci ~T0 @X0 1 s TIME ]
 [i F855
--> 250 `i
+-> 100 `i
 ]
 "10
 [; ;main.c: 10:     TRISB = 0;
@@ -301,14 +301,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U 96 ]
 {
-"19
-[; ;main.c: 19:         if (PORTCbits.RC0 == 1) {
-[e $ ! == -> . . _PORTCbits 0 0 `i -> 1 `i 99  ]
-{
-"20
-[; ;main.c: 20:             int i = 0;
+"18
+[; ;main.c: 18:         int i = 0;
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
+"20
+[; ;main.c: 20:         if (PORTCbits.RC0 == 1) {
+[e $ ! == -> . . _PORTCbits 0 0 `i -> 1 `i 99  ]
+{
 "21
 [; ;main.c: 21:             while (forward[i] != '\0') {
 [e $U 100  ]
@@ -317,142 +317,130 @@ Version 4.0 HI-TECH Software Intermediate Code
 "22
 [; ;main.c: 22:                 PORTD = PORTB = forward[i++];
 [e = _PORTD = _PORTB -> *U + &U F852 * -> -> ++ _i -> 1 `i `ui `ux -> -> # *U &U F852 `ui `ux `uc ]
-"24
-[; ;main.c: 24:                 _delay((unsigned long)((TIME)*(4000000/4000.0)));
+"23
+[; ;main.c: 23:                 _delay((unsigned long)((TIME)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> F855 `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"25
-[; ;main.c: 25:             }
+"24
+[; ;main.c: 24:             }
 }
 [e :U 100 ]
 "21
 [; ;main.c: 21:             while (forward[i] != '\0') {
 [e $ != -> *U + &U F852 * -> -> _i `ui `ux -> -> # *U &U F852 `ui `ux `ui -> 0 `ui 101  ]
 [e :U 102 ]
-"26
-[; ;main.c: 26:             i = 0;
+"25
+[; ;main.c: 25:             i = 0;
 [e = _i -> 0 `i ]
-"27
-[; ;main.c: 27:         } else if (PORTCbits.RC1 == 1) {
+"26
+[; ;main.c: 26:         } else if (PORTCbits.RC1 == 1) {
 }
 [e $U 103  ]
 [e :U 99 ]
 [e $ ! == -> . . _PORTCbits 0 1 `i -> 1 `i 104  ]
 {
-"28
-[; ;main.c: 28:             int i = 0;
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 0 `i ]
-"29
-[; ;main.c: 29:             while (backward[i] != '\0') {
+"27
+[; ;main.c: 27:             while (backward[i] != '\0') {
 [e $U 105  ]
 [e :U 106 ]
 {
-"30
-[; ;main.c: 30:                 PORTD = PORTB = backward[i++];
+"28
+[; ;main.c: 28:                 PORTD = PORTB = backward[i++];
 [e = _PORTD = _PORTB -> *U + &U F851 * -> -> ++ _i -> 1 `i `ui `ux -> -> # *U &U F851 `ui `ux `uc ]
-"32
-[; ;main.c: 32:                 _delay((unsigned long)((TIME)*(4000000/4000.0)));
+"29
+[; ;main.c: 29:                 _delay((unsigned long)((TIME)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> F855 `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"33
-[; ;main.c: 33:             }
+"30
+[; ;main.c: 30:             }
 }
 [e :U 105 ]
-"29
-[; ;main.c: 29:             while (backward[i] != '\0') {
+"27
+[; ;main.c: 27:             while (backward[i] != '\0') {
 [e $ != -> *U + &U F851 * -> -> _i `ui `ux -> -> # *U &U F851 `ui `ux `ui -> 0 `ui 106  ]
 [e :U 107 ]
-"34
-[; ;main.c: 34:             i = 0;
+"31
+[; ;main.c: 31:             i = 0;
 [e = _i -> 0 `i ]
-"35
-[; ;main.c: 35:         } else if (PORTCbits.RC2 == 1) {
+"32
+[; ;main.c: 32:         } else if (PORTCbits.RC2 == 1) {
 }
 [e $U 108  ]
 [e :U 104 ]
 [e $ ! == -> . . _PORTCbits 0 2 `i -> 1 `i 109  ]
 {
-"36
-[; ;main.c: 36:             int i = 0;
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 0 `i ]
-"37
-[; ;main.c: 37:             while (full[i] != '\0') {
+"33
+[; ;main.c: 33:             while (full[i] != '\0') {
 [e $U 110  ]
 [e :U 111 ]
 {
-"38
-[; ;main.c: 38:                 PORTD = PORTB = full[i++];
+"34
+[; ;main.c: 34:                 PORTD = PORTB = full[i++];
 [e = _PORTD = _PORTB -> *U + &U F853 * -> -> ++ _i -> 1 `i `ui `ux -> -> # *U &U F853 `ui `ux `uc ]
-"40
-[; ;main.c: 40:                 _delay((unsigned long)((TIME)*(4000000/4000.0)));
+"35
+[; ;main.c: 35:                 _delay((unsigned long)((TIME)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> F855 `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"41
-[; ;main.c: 41:             }
+"36
+[; ;main.c: 36:             }
 }
 [e :U 110 ]
-"37
-[; ;main.c: 37:             while (full[i] != '\0') {
+"33
+[; ;main.c: 33:             while (full[i] != '\0') {
 [e $ != -> *U + &U F853 * -> -> _i `ui `ux -> -> # *U &U F853 `ui `ux `ui -> 0 `ui 111  ]
 [e :U 112 ]
-"42
-[; ;main.c: 42:             i = 0;
+"37
+[; ;main.c: 37:             i = 0;
 [e = _i -> 0 `i ]
-"43
-[; ;main.c: 43:         } else if (PORTCbits.RC3 == 1) {
+"38
+[; ;main.c: 38:         } else if (PORTCbits.RC3 == 1) {
 }
 [e $U 113  ]
 [e :U 109 ]
 [e $ ! == -> . . _PORTCbits 0 3 `i -> 1 `i 114  ]
 {
-"44
-[; ;main.c: 44:             int i = 0;
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 0 `i ]
-"45
-[; ;main.c: 45:             while (half[i] != '\0') {
+"39
+[; ;main.c: 39:             while (half[i] != '\0') {
 [e $U 115  ]
 [e :U 116 ]
 {
-"46
-[; ;main.c: 46:                 PORTB = PORTD = half[i++];
+"40
+[; ;main.c: 40:                 PORTB = PORTD = half[i++];
 [e = _PORTB = _PORTD -> *U + &U F854 * -> -> ++ _i -> 1 `i `ui `ux -> -> # *U &U F854 `ui `ux `uc ]
-"48
-[; ;main.c: 48:                 _delay((unsigned long)((TIME)*(4000000/4000.0)));
+"41
+[; ;main.c: 41:                 _delay((unsigned long)((TIME)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> F855 `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"49
-[; ;main.c: 49:             }
+"42
+[; ;main.c: 42:             }
 }
 [e :U 115 ]
-"45
-[; ;main.c: 45:             while (half[i] != '\0') {
+"39
+[; ;main.c: 39:             while (half[i] != '\0') {
 [e $ != -> *U + &U F854 * -> -> _i `ui `ux -> -> # *U &U F854 `ui `ux `ui -> 0 `ui 116  ]
 [e :U 117 ]
-"50
-[; ;main.c: 50:             i = 0;
+"43
+[; ;main.c: 43:             i = 0;
 [e = _i -> 0 `i ]
-"51
-[; ;main.c: 51:         } else {
+"44
+[; ;main.c: 44:         } else {
 }
 [e $U 118  ]
 [e :U 114 ]
 {
-"52
-[; ;main.c: 52:             PORTB = 0;
-[e = _PORTB -> -> 0 `i `uc ]
-"53
-[; ;main.c: 53:         }
+"45
+[; ;main.c: 45:             PORTB = PORTD = 0;
+[e = _PORTB = _PORTD -> -> 0 `i `uc ]
+"46
+[; ;main.c: 46:         }
 }
 [e :U 118 ]
 [e :U 113 ]
 [e :U 108 ]
 [e :U 103 ]
-"54
-[; ;main.c: 54:     }
+"47
+[; ;main.c: 47:     }
 }
 [e $U 96  ]
 [e :U 97 ]
 }
-"55
-[; ;main.c: 55: }
+"48
+[; ;main.c: 48: }
 [e :UE 95 ]
 }

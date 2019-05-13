@@ -6,17 +6,17 @@ void main(void) {
     char const forward[] = {0x08, 0x04, 0x02, 0x01, '\0'}; //secuencia para reversa
     char const full[] = {0x03, 0x06, 0x0C, 0x09, '\0'}; //secuencia para full, de 45 en 45°
     char const half[] = {0x01, 0x03, 0x02, 0x06, 0x04, 0x0C, 0x08, 0x09, '\0'}; //secuencia de medio paso
-    int const TIME = 250; //velocidad del motor
-    TRISB = 0;
-    TRISC = 255;
-    TRISD = 0;
-    PORTB = 0;
-    PORTC = 0;
-    PORTD = 0;
+    int const TIME = 50; //velocidad del motor
+    TRISB = 0; //motor 1
+    TRISC = 255; //botones
+    TRISD = 0;//motor 2
+    PORTB = 0; //limpio PORTB
+    PORTC = 0; //limpio PORTC
+    PORTD = 0; //limpio PORTD
 
     for (;;) {
         int i = 0;
-//char const backward[] = {0x01, 0x02, 0x04, 0x08, '\0'}; //secuencia para ir adelante
+//    char const forward[] = {0x08, 0x04, 0x02, 0x01, '\0'}; //secuencia para reversa
         if (PORTCbits.RC0 == 1) {
             while (forward[i] != '\0') {
                 PORTD = PORTB = forward[i++];
@@ -42,7 +42,7 @@ void main(void) {
             }
             i = 0;
         } else {
-            PORTB = 0;
+            PORTB = PORTD = 0;
         }
     }
 }

@@ -1,0 +1,379 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 6 ]
+"1 C:\Users\Xizuth\Documents\curso-micro-877A\ServoPWM.X/adc.h
+[v _adcInit adcInit `(v  1 e 1 0 ]
+"35
+[v _adcRead adcRead `(i  1 e 2 0 ]
+"21 C:\Users\Xizuth\Documents\curso-micro-877A\ServoPWM.X/lcd.h
+[v _lcdPort lcdPort `(v  1 e 1 0 ]
+"43
+[v _lcdCmd lcdCmd `(v  1 e 1 0 ]
+"51
+[v _lcdClear lcdClear `(v  1 e 1 0 ]
+"56
+[v _lcdSetCursor lcdSetCursor `(v  1 e 1 0 ]
+"73
+[v _lcdInit lcdInit `(v  1 e 1 0 ]
+"93
+[v _lcdWriteChar lcdWriteChar `(v  1 e 1 0 ]
+"108
+[v _lcdPrint lcdPrint `(v  1 e 1 0 ]
+"21 C:\Users\Xizuth\Documents\curso-micro-877A\ServoPWM.X/servo_pwm.h
+[v _setPR2 setPR2 `(v  1 e 1 0 ]
+"25
+[v _initServos initServos `(v  1 e 1 0 ]
+"31
+[v _pwmSetDuty1 pwmSetDuty1 `(v  1 e 1 0 ]
+"48
+[v _setTMR2 setTMR2 `(v  1 e 1 0 ]
+"500 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+"43 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"8 C:\Users\Xizuth\Documents\curso-micro-877A\ServoPWM.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"340 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+"892
+[v _CCPR1L CCPR1L `VEuc  1 e 1 @21 ]
+"1080
+[v _CCPR2L CCPR2L `VEuc  1 e 1 @27 ]
+"1152
+[v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
+[s S36 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 GO_nDONE 1 0 :1:2 
+`uc 1 CHS 1 0 :3:3 
+`uc 1 ADCS 1 0 :2:6 
+]
+"1190
+[s S42 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 GO 1 0 :1:2 
+`uc 1 CHS0 1 0 :1:3 
+`uc 1 CHS1 1 0 :1:4 
+`uc 1 CHS2 1 0 :1:5 
+`uc 1 ADCS0 1 0 :1:6 
+`uc 1 ADCS1 1 0 :1:7 
+]
+[s S50 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nDONE 1 0 :1:2 
+]
+[s S53 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 GO_DONE 1 0 :1:2 
+]
+[u S56 . 1 `S36 1 . 1 0 `S42 1 . 1 0 `S50 1 . 1 0 `S53 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES56  1 e 1 @31 ]
+"1499
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"1816
+[v _PR2 PR2 `VEuc  1 e 1 @146 ]
+"2222
+[v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
+[s S82 . 1 `uc 1 PCFG 1 0 :4:0 
+`uc 1 . 1 0 :2:4 
+`uc 1 ADCS2 1 0 :1:6 
+`uc 1 ADFM 1 0 :1:7 
+]
+"2248
+[s S87 . 1 `uc 1 PCFG0 1 0 :1:0 
+`uc 1 PCFG1 1 0 :1:1 
+`uc 1 PCFG2 1 0 :1:2 
+`uc 1 PCFG3 1 0 :1:3 
+]
+[u S92 . 1 `S82 1 . 1 0 `S87 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES92  1 e 1 @159 ]
+"2446
+[v _CCP1M2 CCP1M2 `VEb  1 e 0 @186 ]
+"2449
+[v _CCP1M3 CCP1M3 `VEb  1 e 0 @187 ]
+"2452
+[v _CCP1X CCP1X `VEb  1 e 0 @189 ]
+"2455
+[v _CCP1Y CCP1Y `VEb  1 e 0 @188 ]
+"2470
+[v _CCP2M2 CCP2M2 `VEb  1 e 0 @234 ]
+"2473
+[v _CCP2M3 CCP2M3 `VEb  1 e 0 @235 ]
+"2476
+[v _CCP2X CCP2X `VEb  1 e 0 @237 ]
+"2479
+[v _CCP2Y CCP2Y `VEb  1 e 0 @236 ]
+"2755
+[v _RD2 RD2 `VEb  1 e 0 @66 ]
+"2758
+[v _RD3 RD3 `VEb  1 e 0 @67 ]
+"2761
+[v _RD4 RD4 `VEb  1 e 0 @68 ]
+"2764
+[v _RD5 RD5 `VEb  1 e 0 @69 ]
+"2767
+[v _RD6 RD6 `VEb  1 e 0 @70 ]
+"2770
+[v _RD7 RD7 `VEb  1 e 0 @71 ]
+"2872
+[v _T2CKPS0 T2CKPS0 `VEb  1 e 0 @144 ]
+"2875
+[v _T2CKPS1 T2CKPS1 `VEb  1 e 0 @145 ]
+"2902
+[v _TMR2ON TMR2ON `VEb  1 e 0 @146 ]
+"2962
+[v _TRISC1 TRISC1 `VEb  1 e 0 @1081 ]
+"2965
+[v _TRISC2 TRISC2 `VEb  1 e 0 @1082 ]
+"358 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+[v _dpowers dpowers `DC[5]ui  1 s 10 dpowers ]
+"6 C:\Users\Xizuth\Documents\curso-micro-877A\ServoPWM.X\main.c
+[v _mensaje mensaje `[16]uc  1 e 16 0 ]
+"8
+[v _main main `(v  1 e 1 0 ]
+{
+"23
+[v main@servo1 servo1 `ui  1 a 2 70 ]
+"32
+} 0
+"500 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+{
+[v sprintf@sp sp `*.4uc  1 a 1 wreg ]
+"540
+[v sprintf@val val `ui  1 a 2 9 ]
+"507
+[v sprintf@c c `uc  1 a 1 12 ]
+"516
+[v sprintf@prec prec `c  1 a 1 8 ]
+"520
+[v sprintf@flag flag `uc  1 a 1 7 ]
+"502
+[v sprintf@ap ap `[1]*.4v  1 a 1 6 ]
+"500
+[v sprintf@sp sp `*.4uc  1 a 1 wreg ]
+[v sprintf@f f `*.24DCuc  1 p 1 0 ]
+"545
+[v sprintf@sp sp `*.4uc  1 a 1 11 ]
+"1560
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwmod@counter counter `uc  1 a 1 13 ]
+"5
+[v ___lwmod@divisor divisor `ui  1 p 2 8 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 10 ]
+"25
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 7 ]
+"5
+[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
+"30
+} 0
+"31 C:\Users\Xizuth\Documents\curso-micro-877A\ServoPWM.X/servo_pwm.h
+[v _pwmSetDuty1 pwmSetDuty1 `(v  1 e 1 0 ]
+{
+[v pwmSetDuty1@duty duty `ui  1 p 2 63 ]
+"37
+} 0
+"10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 10 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 9 ]
+"10
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 0 ]
+"15
+[v ___xxtofl@sign sign `uc  1 a 1 8 ]
+"44
+} 0
+"43 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 62 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 61 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 52 ]
+"70
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+{
+[s S525 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+"13
+[s S530 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S533 . 4 `l 1 i 4 0 `d 1 f 4 0 `S525 1 fAsBytes 4 0 `S530 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S533  1 a 4 46 ]
+"12
+[v ___flmul@grs grs `ul  1 a 4 40 ]
+[s S602 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+"14
+[u S605 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S602 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S605  1 a 2 50 ]
+"10
+[v ___flmul@bexp bexp `uc  1 a 1 45 ]
+"11
+[v ___flmul@aexp aexp `uc  1 a 1 44 ]
+"9
+[v ___flmul@sign sign `uc  1 a 1 39 ]
+"8
+[v ___flmul@b b `d  1 p 4 26 ]
+[v ___flmul@a a `d  1 p 4 30 ]
+"205
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+{
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v __Umul8_16@word_mpld word_mpld `ui  1 a 2 6 ]
+"5
+[v __Umul8_16@product product `ui  1 a 2 4 ]
+"4
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
+[v __Umul8_16@multiplicand multiplicand `uc  1 p 1 0 ]
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 8 ]
+"60
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+{
+"21
+[v ___fldiv@grs grs `ul  1 a 4 20 ]
+"22
+[v ___fldiv@rem rem `ul  1 a 4 13 ]
+"20
+[v ___fldiv@new_exp new_exp `i  1 a 2 18 ]
+"19
+[v ___fldiv@aexp aexp `uc  1 a 1 25 ]
+"18
+[v ___fldiv@bexp bexp `uc  1 a 1 24 ]
+"16
+[v ___fldiv@sign sign `uc  1 a 1 17 ]
+"8
+[v ___fldiv@a a `d  1 p 4 0 ]
+[v ___fldiv@b b `d  1 p 4 4 ]
+"185
+} 0
+"56 C:\Users\Xizuth\Documents\curso-micro-877A\ServoPWM.X/lcd.h
+[v _lcdSetCursor lcdSetCursor `(v  1 e 1 0 ]
+{
+[v lcdSetCursor@a a `uc  1 a 1 wreg ]
+"57
+[v lcdSetCursor@temp temp `uc  1 a 1 10 ]
+[v lcdSetCursor@y y `uc  1 a 1 9 ]
+[v lcdSetCursor@z z `uc  1 a 1 8 ]
+"56
+[v lcdSetCursor@a a `uc  1 a 1 wreg ]
+[v lcdSetCursor@b b `uc  1 p 1 4 ]
+"58
+[v lcdSetCursor@a a `uc  1 a 1 7 ]
+"71
+} 0
+"108
+[v _lcdPrint lcdPrint `(v  1 e 1 0 ]
+{
+"109
+[v lcdPrint@i i `i  1 a 2 10 ]
+"108
+[v lcdPrint@a a `*.26uc  1 p 2 5 ]
+"112
+} 0
+"93
+[v _lcdWriteChar lcdWriteChar `(v  1 e 1 0 ]
+{
+[v lcdWriteChar@a a `uc  1 a 1 wreg ]
+"94
+[v lcdWriteChar@y y `uc  1 a 1 3 ]
+[v lcdWriteChar@temp temp `uc  1 a 1 2 ]
+"93
+[v lcdWriteChar@a a `uc  1 a 1 wreg ]
+"95
+[v lcdWriteChar@a a `uc  1 a 1 4 ]
+"106
+} 0
+"73
+[v _lcdInit lcdInit `(v  1 e 1 0 ]
+{
+"91
+} 0
+"51
+[v _lcdClear lcdClear `(v  1 e 1 0 ]
+{
+"54
+} 0
+"43
+[v _lcdCmd lcdCmd `(v  1 e 1 0 ]
+{
+[v lcdCmd@a a `uc  1 a 1 wreg ]
+[v lcdCmd@a a `uc  1 a 1 wreg ]
+[v lcdCmd@a a `uc  1 a 1 3 ]
+"49
+} 0
+"21
+[v _lcdPort lcdPort `(v  1 e 1 0 ]
+{
+[v lcdPort@a a `uc  1 a 1 wreg ]
+[v lcdPort@a a `uc  1 a 1 wreg ]
+[v lcdPort@a a `uc  1 a 1 0 ]
+"41
+} 0
+"25 C:\Users\Xizuth\Documents\curso-micro-877A\ServoPWM.X/servo_pwm.h
+[v _initServos initServos `(v  1 e 1 0 ]
+{
+"29
+} 0
+"48
+[v _setTMR2 setTMR2 `(v  1 e 1 0 ]
+{
+[v setTMR2@pwm pwm `DCuc  1 a 1 wreg ]
+[v setTMR2@pwm pwm `DCuc  1 a 1 wreg ]
+[v setTMR2@pwm pwm `DCuc  1 a 1 0 ]
+"71
+} 0
+"21
+[v _setPR2 setPR2 `(v  1 e 1 0 ]
+{
+"23
+} 0
+"35 C:\Users\Xizuth\Documents\curso-micro-877A\ServoPWM.X/adc.h
+[v _adcRead adcRead `(i  1 e 2 0 ]
+{
+[v adcRead@adcChannel adcChannel `DCi  1 p 2 0 ]
+"43
+} 0
+"1
+[v _adcInit adcInit `(v  1 e 1 0 ]
+{
+"27
+} 0
