@@ -672,277 +672,272 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./adc.h: 43: }
 [e :UE 119 ]
 }
-"7 ./servo.h
-[; ;./servo.h: 7: int position1(unsigned char const angule) {
-[v _position1 `(i ~T0 @X0 1 ef1`Cuc ]
+"14 ./servo.h
+[; ;./servo.h: 14: float convertion(unsigned char angule) {
+[v _convertion `(f ~T0 @X0 1 ef1`uc ]
 {
-[e :U _position1 ]
-[v _angule `Cuc ~T0 @X0 1 r1 ]
+[e :U _convertion ]
+[v _angule `uc ~T0 @X0 1 r1 ]
 [f ]
-"9
-[; ;./servo.h: 9:     int time = angule <= 0 ? 42 : angule >= 86 ? 86 : ((angule * 0.233333333333333) + 42);
-[v _time `i ~T0 @X0 1 a ]
-[e = _time -> ? <= -> _angule `i -> 0 `i : -> -> 42 `i `d ? >= -> _angule `i -> 86 `i : -> -> 86 `i `d + * -> -> _angule `i `d .0.233333333333333 -> -> 42 `i `d `i ]
-"11
-[; ;./servo.h: 11:     for (char i = 0; i < 50; i++) {
-{
-[v _i `uc ~T0 @X0 1 a ]
-[e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 50 `i 124  ]
-[e $U 125  ]
-[e :U 124 ]
-{
-"12
-[; ;./servo.h: 12:         PORTBbits.RB0 = 1;
-[e = . . _PORTBbits 0 0 -> -> 1 `i `uc ]
-"13
-[; ;./servo.h: 13:         for (int j = 0; j < time; j++)
-{
-[v _j `i ~T0 @X0 1 a ]
-[e = _j -> 0 `i ]
-[e $U 130  ]
-[e :U 127 ]
-"14
-[; ;./servo.h: 14:             _delay((unsigned long)((1)*(4000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
-[e ++ _j -> 1 `i ]
-[e :U 130 ]
-[e $ < _j _time 127  ]
-[e :U 128 ]
-}
-"16
-[; ;./servo.h: 16:         PORTBbits.RB0 = 0;
-[e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
-"17
-[; ;./servo.h: 17:         for (int j = 0; j < (2000 - time); j++)
-{
-[v _j `i ~T0 @X0 1 a ]
-[e = _j -> 0 `i ]
-[e $U 134  ]
-[e :U 131 ]
-"18
-[; ;./servo.h: 18:             _delay((unsigned long)((1)*(4000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
-[e ++ _j -> 1 `i ]
-[e :U 134 ]
-[e $ < _j - -> 2000 `i _time 131  ]
-[e :U 132 ]
-}
-"19
-[; ;./servo.h: 19:     }
-}
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 50 `i 124  ]
-[e :U 125 ]
-}
-"21
-[; ;./servo.h: 21:     return time;
-[e ) _time ]
+"15
+[; ;./servo.h: 15:     return angule <= 0 ? 70 : angule >= 180 ? 142 : ((float) angule * 0.4) + 70;
+[e ) -> ? <= -> _angule `i -> 0 `i : -> -> 70 `i `d ? >= -> _angule `i -> 180 `i : -> -> 142 `i `d + * -> -> _angule `f `d .0.4 -> -> 70 `i `d `f ]
 [e $UE 123  ]
-"22
-[; ;./servo.h: 22: }
+"16
+[; ;./servo.h: 16: }
 [e :UE 123 ]
 }
+"18
+[; ;./servo.h: 18: float position1(unsigned char angule) {
+[v _position1 `(f ~T0 @X0 1 ef1`uc ]
+{
+[e :U _position1 ]
+[v _angule `uc ~T0 @X0 1 r1 ]
+[f ]
+"19
+[; ;./servo.h: 19:     unsigned char time = 0;
+[v _time `uc ~T0 @X0 1 a ]
+[e = _time -> -> 0 `i `uc ]
+"20
+[; ;./servo.h: 20:     angule = convertion(angule);
+[e = _angule -> ( _convertion (1 _angule `uc ]
+"22
+[; ;./servo.h: 22:     PORTBbits.RB0 = 1;
+[e = . . _PORTBbits 0 0 -> -> 1 `i `uc ]
+"23
+[; ;./servo.h: 23:     while (time++ < angule)
+[e $U 125  ]
+[e :U 126 ]
+"24
+[; ;./servo.h: 24:         _delay((unsigned long)((1)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+[e :U 125 ]
+"23
+[; ;./servo.h: 23:     while (time++ < angule)
+[e $ < -> ++ _time -> -> 1 `i `uc `i -> _angule `i 126  ]
+[e :U 127 ]
+"26
+[; ;./servo.h: 26:     PORTBbits.RB0 = 0;
+[e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
 "27
-[; ;./servo.h: 27: int position2(unsigned char const angule) {
-[v _position2 `(i ~T0 @X0 1 ef1`Cuc ]
+[; ;./servo.h: 27:     _delay((unsigned long)((10)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"28
+[; ;./servo.h: 28: }
+[e :UE 124 ]
+}
+"34
+[; ;./servo.h: 34: void position2(unsigned char angule) {
+[v _position2 `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _position2 ]
-[v _angule `Cuc ~T0 @X0 1 r1 ]
+[v _angule `uc ~T0 @X0 1 r1 ]
 [f ]
-"29
-[; ;./servo.h: 29:     int time = angule <= 0 ? 42 : angule >= 86 ? 86 : ((angule * 0.233333333333333) + 42);
-[v _time `i ~T0 @X0 1 a ]
-[e = _time -> ? <= -> _angule `i -> 0 `i : -> -> 42 `i `d ? >= -> _angule `i -> 86 `i : -> -> 86 `i `d + * -> -> _angule `i `d .0.233333333333333 -> -> 42 `i `d `i ]
-"31
-[; ;./servo.h: 31:     for (char i = 0; i < 50; i++) {
-{
-[v _i `uc ~T0 @X0 1 a ]
-[e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 50 `i 136  ]
-[e $U 137  ]
-[e :U 136 ]
-{
-"32
-[; ;./servo.h: 32:         PORTBbits.RB1 = 1;
-[e = . . _PORTBbits 0 1 -> -> 1 `i `uc ]
-"33
-[; ;./servo.h: 33:         for (int j = 0; j < time; j++)
-{
-[v _j `i ~T0 @X0 1 a ]
-[e = _j -> 0 `i ]
-[e $U 142  ]
-[e :U 139 ]
-"34
-[; ;./servo.h: 34:             _delay((unsigned long)((1)*(4000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
-[e ++ _j -> 1 `i ]
-[e :U 142 ]
-[e $ < _j _time 139  ]
-[e :U 140 ]
-}
+"35
+[; ;./servo.h: 35:     unsigned char time = 0;
+[v _time `uc ~T0 @X0 1 a ]
+[e = _time -> -> 0 `i `uc ]
 "36
-[; ;./servo.h: 36:         PORTBbits.RB1 = 0;
-[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
-"37
-[; ;./servo.h: 37:         for (int j = 0; j < (2000 - time); j++)
-{
-[v _j `i ~T0 @X0 1 a ]
-[e = _j -> 0 `i ]
-[e $U 146  ]
-[e :U 143 ]
+[; ;./servo.h: 36:     angule = convertion(angule);
+[e = _angule -> ( _convertion (1 _angule `uc ]
 "38
-[; ;./servo.h: 38:             _delay((unsigned long)((1)*(4000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
-[e ++ _j -> 1 `i ]
-[e :U 146 ]
-[e $ < _j - -> 2000 `i _time 143  ]
-[e :U 144 ]
-}
+[; ;./servo.h: 38:     PORTBbits.RB1 = 1;
+[e = . . _PORTBbits 0 1 -> -> 1 `i `uc ]
 "39
-[; ;./servo.h: 39:     }
-}
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 50 `i 136  ]
-[e :U 137 ]
-}
-"41
-[; ;./servo.h: 41:     return time;
-[e ) _time ]
-[e $UE 135  ]
+[; ;./servo.h: 39:     while (time++ < angule)
+[e $U 129  ]
+[e :U 130 ]
+"40
+[; ;./servo.h: 40:         _delay((unsigned long)((1)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+[e :U 129 ]
+"39
+[; ;./servo.h: 39:     while (time++ < angule)
+[e $ < -> ++ _time -> -> 1 `i `uc `i -> _angule `i 130  ]
+[e :U 131 ]
 "42
-[; ;./servo.h: 42: }
-[e :UE 135 ]
+[; ;./servo.h: 42:     PORTBbits.RB1 = 0;
+[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
+"43
+[; ;./servo.h: 43:     _delay((unsigned long)((10)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"44
+[; ;./servo.h: 44: }
+[e :UE 128 ]
 }
 "9 main.c
 [; ;main.c: 9: char mensaje[16];
 [v _mensaje `uc ~T0 @X0 -> 16 `i e ]
 "11
-[; ;main.c: 11: void print(int const valor, char const y) {
-[v _print `(v ~T0 @X0 1 ef2`Ci`Cuc ]
+[; ;main.c: 11: void print(unsigned int const valor1, unsigned int const valor2) {
+[v _print `(v ~T0 @X0 1 ef2`Cui`Cui ]
 {
 [e :U _print ]
-[v _valor `Ci ~T0 @X0 1 r1 ]
-[v _y `Cuc ~T0 @X0 1 r2 ]
+[v _valor1 `Cui ~T0 @X0 1 r1 ]
+[v _valor2 `Cui ~T0 @X0 1 r2 ]
 [f ]
 "12
-[; ;main.c: 12:     lcdSetCursor(y, 1);
-[e ( _lcdSetCursor (2 , _y -> -> 1 `i `uc ]
+[; ;main.c: 12:     lcdClear();
+[e ( _lcdClear ..  ]
 "13
-[; ;main.c: 13:     sprintf(mensaje, "Valor: %d", valor);
-[e ( _sprintf (1 , (. , &U _mensaje :s 1C _valor ]
+[; ;main.c: 13:     lcdSetCursor(1, 1);
+[e ( _lcdSetCursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
 "14
-[; ;main.c: 14:     lcdPrint(mensaje);
-[e ( _lcdPrint (1 -> &U _mensaje `*uc ]
+[; ;main.c: 14:     sprintf(mensaje, "Angule 1: %d", valor1);
+[e ( _sprintf (1 , (. , &U _mensaje :s 1C _valor1 ]
 "15
-[; ;main.c: 15:     _delay((unsigned long)((10)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 15:     lcdPrint(mensaje);
+[e ( _lcdPrint (1 -> &U _mensaje `*uc ]
 "16
-[; ;main.c: 16: }
-[e :UE 147 ]
+[; ;main.c: 16:     lcdSetCursor(2, 1);
+[e ( _lcdSetCursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
+"17
+[; ;main.c: 17:     sprintf(mensaje, "Angule 2: %d", valor2);
+[e ( _sprintf (1 , (. , &U _mensaje :s 2C _valor2 ]
+"18
+[; ;main.c: 18:     lcdPrint(mensaje);
+[e ( _lcdPrint (1 -> &U _mensaje `*uc ]
+"19
+[; ;main.c: 19:     _delay((unsigned long)((10)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"20
+[; ;main.c: 20: }
+[e :UE 132 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"18
-[; ;main.c: 18: void main(void) {
+"22
+[; ;main.c: 22: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"19
-[; ;main.c: 19:     TRISC = 255;
+"23
+[; ;main.c: 23:     TRISC = 255;
 [e = _TRISC -> -> 255 `i `uc ]
-"20
-[; ;main.c: 20:     PORTC = 0;
-[e = _PORTC -> -> 0 `i `uc ]
-"21
-[; ;main.c: 21:     TRISB = 0;
-[e = _TRISB -> -> 0 `i `uc ]
-"22
-[; ;main.c: 22:     PORTB = 0;
-[e = _PORTB -> -> 0 `i `uc ]
 "24
-[; ;main.c: 24:     adcInit();
-[e ( _adcInit ..  ]
+[; ;main.c: 24:     PORTC = 0;
+[e = _PORTC -> -> 0 `i `uc ]
 "25
-[; ;main.c: 25:     lcdInit();
-[e ( _lcdInit ..  ]
-"27
-[; ;main.c: 27:     int angulo = 0;
-[v _angulo `i ~T0 @X0 1 a ]
-[e = _angulo -> 0 `i ]
+[; ;main.c: 25:     TRISB = 0;
+[e = _TRISB -> -> 0 `i `uc ]
+"26
+[; ;main.c: 26:     PORTB = 0;
+[e = _PORTB -> -> 0 `i `uc ]
 "28
-[; ;main.c: 28:     print(42, 1);
-[e ( _print (2 , -> 42 `i -> -> 1 `i `uc ]
+[; ;main.c: 28:     adcInit();
+[e ( _adcInit ..  ]
 "29
-[; ;main.c: 29:     print(angulo, 2);
-[e ( _print (2 , _angulo -> -> 2 `i `uc ]
+[; ;main.c: 29:     lcdInit();
+[e ( _lcdInit ..  ]
+"31
+[; ;main.c: 31:     unsigned int angulo1 = 0, angulo1Old = 0, adc = 0, adcOld = 0;
+[v _angulo1 `ui ~T0 @X0 1 a ]
+[e = _angulo1 -> -> 0 `i `ui ]
+[v _angulo1Old `ui ~T0 @X0 1 a ]
+[e = _angulo1Old -> -> 0 `i `ui ]
+[v _adc `ui ~T0 @X0 1 a ]
+[e = _adc -> -> 0 `i `ui ]
+[v _adcOld `ui ~T0 @X0 1 a ]
+[e = _adcOld -> -> 0 `i `ui ]
 "32
-[; ;main.c: 32:     for (;;) {
-{
-[e :U 149 ]
-{
+[; ;main.c: 32:     unsigned char angule2 = 0;
+[v _angule2 `uc ~T0 @X0 1 a ]
+[e = _angule2 -> -> 0 `i `uc ]
+"33
+[; ;main.c: 33:     print(angulo1, 0);
+[e ( _print (2 , _angulo1 -> -> 0 `i `ui ]
 "34
-[; ;main.c: 34:         if (PORTCbits.RC0) {
-[e $ ! != -> . . _PORTCbits 0 0 `i -> 0 `i 152  ]
-{
-"35
-[; ;main.c: 35:             angulo++;
-[e ++ _angulo -> 1 `i ]
+[; ;main.c: 34:     _delay((unsigned long)((10)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "36
-[; ;main.c: 36:             int time = position1(angulo);
-[v _time `i ~T0 @X0 1 a ]
-[e = _time ( _position1 (1 -> _angulo `uc ]
-"37
-[; ;main.c: 37:             print(time, 1);
-[e ( _print (2 , _time -> -> 1 `i `uc ]
-"38
-[; ;main.c: 38:             print(angulo, 2);
-[e ( _print (2 , _angulo -> -> 2 `i `uc ]
-"39
-[; ;main.c: 39:         } else if (PORTCbits.RC1) {
-}
-[e $U 153  ]
-[e :U 152 ]
-[e $ ! != -> . . _PORTCbits 0 1 `i -> 0 `i 154  ]
+[; ;main.c: 36:     for (;;) {
 {
+[e :U 134 ]
+{
+"38
+[; ;main.c: 38:         if (PORTCbits.RC0 && angulo1 < 180) {
+[e $ ! && != -> . . _PORTCbits 0 0 `i -> 0 `i < _angulo1 -> -> 180 `i `ui 137  ]
+{
+"39
+[; ;main.c: 39:             angulo1++;
+[e ++ _angulo1 -> -> 1 `i `ui ]
 "40
-[; ;main.c: 40:             angulo--;
-[e -- _angulo -> 1 `i ]
+[; ;main.c: 40:             _delay((unsigned long)((150)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 150 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "41
-[; ;main.c: 41:             int time = position1(angulo);
-[v _time `i ~T0 @X0 1 a ]
-[e = _time ( _position1 (1 -> _angulo `uc ]
+[; ;main.c: 41:         } else if (PORTCbits.RC1 && angulo1 > 0) {
+}
+[e $U 138  ]
+[e :U 137 ]
+[e $ ! && != -> . . _PORTCbits 0 1 `i -> 0 `i > _angulo1 -> -> 0 `i `ui 139  ]
+{
 "42
-[; ;main.c: 42:             print(time, 1);
-[e ( _print (2 , _time -> -> 1 `i `uc ]
+[; ;main.c: 42:             angulo1--;
+[e -- _angulo1 -> -> 1 `i `ui ]
 "43
-[; ;main.c: 43:             print(angulo, 2);
-[e ( _print (2 , _angulo -> -> 2 `i `uc ]
+[; ;main.c: 43:             _delay((unsigned long)((150)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 150 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "44
 [; ;main.c: 44:         }
 }
-[e :U 154 ]
-[e :U 153 ]
+[e :U 139 ]
+[e :U 138 ]
 "46
-[; ;main.c: 46:         unsigned int adc = adcRead(0);
-[v _adc `ui ~T0 @X0 1 a ]
-[e = _adc -> ( _adcRead (1 -> -> 0 `i `uc `ui ]
+[; ;main.c: 46:         if (angulo1 != angulo1Old) {
+[e $ ! != _angulo1 _angulo1Old 140  ]
+{
 "47
-[; ;main.c: 47:         unsigned char ang = adc * 0.1759530791788856;
-[v _ang `uc ~T0 @X0 1 a ]
-[e = _ang -> * -> _adc `d .0.1759530791788856 `uc ]
+[; ;main.c: 47:             print(angulo1, angule2);
+[e ( _print (2 , _angulo1 -> _angule2 `ui ]
 "48
-[; ;main.c: 48:         position2(ang);
-[e ( _position2 (1 _ang ]
+[; ;main.c: 48:             position1(angulo1);
+[e ( _position1 (1 -> _angulo1 `uc ]
+"49
+[; ;main.c: 49:             print(angulo1, 99);
+[e ( _print (2 , _angulo1 -> -> 99 `i `ui ]
 "50
-[; ;main.c: 50:     }
-}
-[e $U 149  ]
-[e :U 150 ]
-}
+[; ;main.c: 50:             angulo1Old = angulo1;
+[e = _angulo1Old _angulo1 ]
 "51
-[; ;main.c: 51: }
-[e :UE 148 ]
+[; ;main.c: 51:         }
+}
+[e :U 140 ]
+"53
+[; ;main.c: 53:         adc = adcRead(0);
+[e = _adc -> ( _adcRead (1 -> -> 0 `i `uc `ui ]
+"54
+[; ;main.c: 54:         if (adc != adcOld) {
+[e $ ! != _adc _adcOld 141  ]
+{
+"55
+[; ;main.c: 55:             angule2 = adc * 0.175953079;
+[e = _angule2 -> * -> _adc `d .0.175953079 `uc ]
+"56
+[; ;main.c: 56:             print(angulo1, angule2);
+[e ( _print (2 , _angulo1 -> _angule2 `ui ]
+"57
+[; ;main.c: 57:             position2(angule2);
+[e ( _position2 (1 _angule2 ]
+"58
+[; ;main.c: 58:             adcOld = angule2;
+[e = _adcOld -> _angule2 `ui ]
+"59
+[; ;main.c: 59:         }
+}
+[e :U 141 ]
+"61
+[; ;main.c: 61:         _delay((unsigned long)((50)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"62
+[; ;main.c: 62:     }
+}
+[e $U 134  ]
+[e :U 135 ]
+}
+"63
+[; ;main.c: 63: }
+[e :UE 133 ]
 }
 [p f _sprintf 8388736 ]
-[a 1C 86 97 108 111 114 58 32 37 100 0 ]
+[a 2C 65 110 103 117 108 101 32 50 58 32 37 100 0 ]
+[a 1C 65 110 103 117 108 101 32 49 58 32 37 100 0 ]

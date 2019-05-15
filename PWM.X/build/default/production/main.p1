@@ -331,186 +331,167 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 95 ]
 }
 "18
-[; ;./pwm.h: 18: void pwmInit1() {
+[; ;./pwm.h: 18: unsigned int setDuty(unsigned int duty) {
+[v _setDuty `(ui ~T0 @X0 1 ef1`ui ]
+{
+[e :U _setDuty ]
+[v _duty `ui ~T0 @X0 1 r1 ]
+[f ]
+"19
+[; ;./pwm.h: 19:     return ((float) duty / 1023)*(4000000 / (245 * 16));
+[e ) -> * / -> _duty `f -> -> 1023 `i `f -> / -> 4000000 `l -> * -> 245 `i -> 16 `i `l `f `ui ]
+[e $UE 96  ]
+"20
+[; ;./pwm.h: 20: }
+[e :UE 96 ]
+}
+"22
+[; ;./pwm.h: 22: void pwmInit1() {
 [v _pwmInit1 `(v ~T0 @X0 1 ef ]
 {
 [e :U _pwmInit1 ]
 [f ]
-"19
-[; ;./pwm.h: 19:     setPR2();
-[e ( _setPR2 ..  ]
-"20
-[; ;./pwm.h: 20:     setTMR2(1);
-[e ( _setTMR2 (1 -> -> 1 `i `uc ]
-"21
-[; ;./pwm.h: 21: }
-[e :UE 96 ]
-}
 "23
-[; ;./pwm.h: 23: void pwmInit2() {
+[; ;./pwm.h: 23:     setPR2();
+[e ( _setPR2 ..  ]
+"24
+[; ;./pwm.h: 24:     setTMR2(1);
+[e ( _setTMR2 (1 -> -> 1 `i `uc ]
+"25
+[; ;./pwm.h: 25: }
+[e :UE 97 ]
+}
+"27
+[; ;./pwm.h: 27: void pwmInit2() {
 [v _pwmInit2 `(v ~T0 @X0 1 ef ]
 {
 [e :U _pwmInit2 ]
 [f ]
-"24
-[; ;./pwm.h: 24:     setPR2();
-[e ( _setPR2 ..  ]
-"25
-[; ;./pwm.h: 25:     setTMR2(2);
-[e ( _setTMR2 (1 -> -> 2 `i `uc ]
-"26
-[; ;./pwm.h: 26: }
-[e :UE 97 ]
-}
 "28
-[; ;./pwm.h: 28: void pwmSetDuty1(unsigned int duty) {
+[; ;./pwm.h: 28:     setPR2();
+[e ( _setPR2 ..  ]
+"29
+[; ;./pwm.h: 29:     setTMR2(2);
+[e ( _setTMR2 (1 -> -> 2 `i `uc ]
+"30
+[; ;./pwm.h: 30: }
+[e :UE 98 ]
+}
+"32
+[; ;./pwm.h: 32: void pwmSetDuty1(unsigned int duty) {
 [v _pwmSetDuty1 `(v ~T0 @X0 1 ef1`ui ]
 {
 [e :U _pwmSetDuty1 ]
 [v _duty `ui ~T0 @X0 1 r1 ]
 [f ]
-"29
-[; ;./pwm.h: 29:     if (duty > 1023) return;
-[e $ ! > _duty -> -> 1023 `i `ui 99  ]
-[e $UE 98  ]
-[e :U 99 ]
-"30
-[; ;./pwm.h: 30:     duty = ((float) duty / 1023)*(4000000 / (245 * 16));
-[e = _duty -> * / -> _duty `f -> -> 1023 `i `f -> / -> 4000000 `l -> * -> 245 `i -> 16 `i `l `f `ui ]
-"31
-[; ;./pwm.h: 31:     CCP1X = duty & 0x01;
-[e = _CCP1X -> & _duty -> -> 1 `i `ui `b ]
-"32
-[; ;./pwm.h: 32:     CCP1Y = duty & 0x02;
-[e = _CCP1Y -> & _duty -> -> 2 `i `ui `b ]
 "33
-[; ;./pwm.h: 33:     CCPR1L = duty >> 2;
-[e = _CCPR1L -> >> _duty -> 2 `i `uc ]
+[; ;./pwm.h: 33:     if (duty > 1023) return;
+[e $ ! > _duty -> -> 1023 `i `ui 100  ]
+[e $UE 99  ]
+[e :U 100 ]
 "34
-[; ;./pwm.h: 34: }
-[e :UE 98 ]
-}
+[; ;./pwm.h: 34:     duty = setDuty(duty);
+[e = _duty ( _setDuty (1 _duty ]
 "36
-[; ;./pwm.h: 36: void pwmSetDuty2(unsigned int duty) {
+[; ;./pwm.h: 36:     CCP1X = duty & 0x01;
+[e = _CCP1X -> & _duty -> -> 1 `i `ui `b ]
+"37
+[; ;./pwm.h: 37:     CCP1Y = duty & 0x02;
+[e = _CCP1Y -> & _duty -> -> 2 `i `ui `b ]
+"38
+[; ;./pwm.h: 38:     CCPR1L = duty >> 2;
+[e = _CCPR1L -> >> _duty -> 2 `i `uc ]
+"39
+[; ;./pwm.h: 39: }
+[e :UE 99 ]
+}
+"41
+[; ;./pwm.h: 41: void pwmSetDuty2(unsigned int duty) {
 [v _pwmSetDuty2 `(v ~T0 @X0 1 ef1`ui ]
 {
 [e :U _pwmSetDuty2 ]
 [v _duty `ui ~T0 @X0 1 r1 ]
 [f ]
-"37
-[; ;./pwm.h: 37:     if (duty > 1023) return;
-[e $ ! > _duty -> -> 1023 `i `ui 101  ]
-[e $UE 100  ]
-[e :U 101 ]
-"39
-[; ;./pwm.h: 39:     duty = ((float) duty / 1023)*(4000000 / (245 * 16));
-[e = _duty -> * / -> _duty `f -> -> 1023 `i `f -> / -> 4000000 `l -> * -> 245 `i -> 16 `i `l `f `ui ]
-"40
-[; ;./pwm.h: 40:     CCP2X = duty & 0x01;
-[e = _CCP2X -> & _duty -> -> 1 `i `ui `b ]
-"41
-[; ;./pwm.h: 41:     CCP2Y = duty & 0x02;
-[e = _CCP2Y -> & _duty -> -> 2 `i `ui `b ]
 "42
-[; ;./pwm.h: 42:     CCPR2L = duty >> 2;
-[e = _CCPR2L -> >> _duty -> 2 `i `uc ]
+[; ;./pwm.h: 42:     if (duty > 1023) return;
+[e $ ! > _duty -> -> 1023 `i `ui 102  ]
+[e $UE 101  ]
+[e :U 102 ]
 "43
-[; ;./pwm.h: 43: }
-[e :UE 100 ]
-}
+[; ;./pwm.h: 43:     duty = setDuty(duty);
+[e = _duty ( _setDuty (1 _duty ]
 "45
-[; ;./pwm.h: 45: void setTMR2(unsigned char const pwm) {
+[; ;./pwm.h: 45:     CCP2X = duty & 0x01;
+[e = _CCP2X -> & _duty -> -> 1 `i `ui `b ]
+"46
+[; ;./pwm.h: 46:     CCP2Y = duty & 0x02;
+[e = _CCP2Y -> & _duty -> -> 2 `i `ui `b ]
+"47
+[; ;./pwm.h: 47:     CCPR2L = duty >> 2;
+[e = _CCPR2L -> >> _duty -> 2 `i `uc ]
+"48
+[; ;./pwm.h: 48: }
+[e :UE 101 ]
+}
+"50
+[; ;./pwm.h: 50: void setTMR2(unsigned char const pwm) {
 [v _setTMR2 `(v ~T0 @X0 1 ef1`Cuc ]
 {
 [e :U _setTMR2 ]
 [v _pwm `Cuc ~T0 @X0 1 r1 ]
 [f ]
-"46
-[; ;./pwm.h: 46:     if (pwm == 2) {
-[e $ ! == -> _pwm `i -> 2 `i 103  ]
-{
-"47
-[; ;./pwm.h: 47:         CCP2M3 = 1;
-[e = _CCP2M3 -> -> 1 `i `b ]
-"48
-[; ;./pwm.h: 48:         CCP2M2 = 1;
-[e = _CCP2M2 -> -> 1 `i `b ]
-"49
-[; ;./pwm.h: 49:     } else {
-}
-[e $U 104  ]
-[e :U 103 ]
-{
-"50
-[; ;./pwm.h: 50:         CCP1M3 = 1;
-[e = _CCP1M3 -> -> 1 `i `b ]
 "51
-[; ;./pwm.h: 51:         CCP1M2 = 1;
-[e = _CCP1M2 -> -> 1 `i `b ]
+[; ;./pwm.h: 51:     if (pwm == 2) {
+[e $ ! == -> _pwm `i -> 2 `i 104  ]
+{
 "52
-[; ;./pwm.h: 52:     }
-}
-[e :U 104 ]
+[; ;./pwm.h: 52:         CCP2M3 = 1;
+[e = _CCP2M3 -> -> 1 `i `b ]
 "53
-[; ;./pwm.h: 53:     if (16 == 1) {
-[e $ ! == -> 16 `i -> 1 `i 105  ]
-{
+[; ;./pwm.h: 53:         CCP2M2 = 1;
+[e = _CCP2M2 -> -> 1 `i `b ]
 "54
-[; ;./pwm.h: 54:         T2CKPS0 = 0;
-[e = _T2CKPS0 -> -> 0 `i `b ]
+[; ;./pwm.h: 54:     } else {
+}
+[e $U 105  ]
+[e :U 104 ]
+{
 "55
-[; ;./pwm.h: 55:         T2CKPS1 = 0;
-[e = _T2CKPS1 -> -> 0 `i `b ]
+[; ;./pwm.h: 55:         CCP1M3 = 1;
+[e = _CCP1M3 -> -> 1 `i `b ]
 "56
-[; ;./pwm.h: 56:     } else if (16 == 4) {
-}
-[e $U 106  ]
-[e :U 105 ]
-[e $ ! == -> 16 `i -> 4 `i 107  ]
-{
+[; ;./pwm.h: 56:         CCP1M2 = 1;
+[e = _CCP1M2 -> -> 1 `i `b ]
 "57
-[; ;./pwm.h: 57:         T2CKPS0 = 1;
-[e = _T2CKPS0 -> -> 1 `i `b ]
-"58
-[; ;./pwm.h: 58:         T2CKPS1 = 0;
-[e = _T2CKPS1 -> -> 0 `i `b ]
-"59
-[; ;./pwm.h: 59:     } else {
+[; ;./pwm.h: 57:     }
 }
-[e $U 108  ]
-[e :U 107 ]
-{
-"60
-[; ;./pwm.h: 60:         T2CKPS0 = 1;
-[e = _T2CKPS0 -> -> 1 `i `b ]
-"61
-[; ;./pwm.h: 61:         T2CKPS1 = 1;
-[e = _T2CKPS1 -> -> 1 `i `b ]
-"62
-[; ;./pwm.h: 62:     }
-}
-[e :U 108 ]
-[e :U 106 ]
-"63
-[; ;./pwm.h: 63:     TMR2ON = 1;
-[e = _TMR2ON -> -> 1 `i `b ]
-"64
-[; ;./pwm.h: 64:     if (pwm == 2)
-[e $ ! == -> _pwm `i -> 2 `i 109  ]
-"65
-[; ;./pwm.h: 65:         TRISC2 = 0;
-[e = _TRISC2 -> -> 0 `i `b ]
-[e $U 110  ]
+[e :U 105 ]
 "66
-[; ;./pwm.h: 66:     else
-[e :U 109 ]
+[; ;./pwm.h: 66:         T2CKPS0 = 1;
+[e = _T2CKPS0 -> -> 1 `i `b ]
 "67
-[; ;./pwm.h: 67:         TRISC1 = 0;
+[; ;./pwm.h: 67:         T2CKPS1 = 1;
+[e = _T2CKPS1 -> -> 1 `i `b ]
+"70
+[; ;./pwm.h: 70:     TMR2ON = 1;
+[e = _TMR2ON -> -> 1 `i `b ]
+"71
+[; ;./pwm.h: 71:     if (pwm == 2)
+[e $ ! == -> _pwm `i -> 2 `i 106  ]
+"72
+[; ;./pwm.h: 72:         TRISC2 = 0;
+[e = _TRISC2 -> -> 0 `i `b ]
+[e $U 107  ]
+"73
+[; ;./pwm.h: 73:     else
+[e :U 106 ]
+"74
+[; ;./pwm.h: 74:         TRISC1 = 0;
 [e = _TRISC1 -> -> 0 `i `b ]
-[e :U 110 ]
-"68
-[; ;./pwm.h: 68: }
-[e :UE 102 ]
+[e :U 107 ]
+"75
+[; ;./pwm.h: 75: }
+[e :UE 103 ]
 }
 "21 ./lcd.h
 [; ;./lcd.h: 21: void lcdPort(char a) {
@@ -521,63 +502,63 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "22
 [; ;./lcd.h: 22:     if (a & 1)
-[e $ ! != & -> _a `i -> 1 `i -> 0 `i 113  ]
+[e $ ! != & -> _a `i -> 1 `i -> 0 `i 110  ]
 "23
 [; ;./lcd.h: 23:         RD4 = 1;
 [e = _RD4 -> -> 1 `i `b ]
-[e $U 114  ]
+[e $U 111  ]
 "24
 [; ;./lcd.h: 24:     else
-[e :U 113 ]
+[e :U 110 ]
 "25
 [; ;./lcd.h: 25:         RD4 = 0;
 [e = _RD4 -> -> 0 `i `b ]
-[e :U 114 ]
+[e :U 111 ]
 "27
 [; ;./lcd.h: 27:     if (a & 2)
-[e $ ! != & -> _a `i -> 2 `i -> 0 `i 115  ]
+[e $ ! != & -> _a `i -> 2 `i -> 0 `i 112  ]
 "28
 [; ;./lcd.h: 28:         RD5 = 1;
 [e = _RD5 -> -> 1 `i `b ]
-[e $U 116  ]
+[e $U 113  ]
 "29
 [; ;./lcd.h: 29:     else
-[e :U 115 ]
+[e :U 112 ]
 "30
 [; ;./lcd.h: 30:         RD5 = 0;
 [e = _RD5 -> -> 0 `i `b ]
-[e :U 116 ]
+[e :U 113 ]
 "32
 [; ;./lcd.h: 32:     if (a & 4)
-[e $ ! != & -> _a `i -> 4 `i -> 0 `i 117  ]
+[e $ ! != & -> _a `i -> 4 `i -> 0 `i 114  ]
 "33
 [; ;./lcd.h: 33:         RD6 = 1;
 [e = _RD6 -> -> 1 `i `b ]
-[e $U 118  ]
+[e $U 115  ]
 "34
 [; ;./lcd.h: 34:     else
-[e :U 117 ]
+[e :U 114 ]
 "35
 [; ;./lcd.h: 35:         RD6 = 0;
 [e = _RD6 -> -> 0 `i `b ]
-[e :U 118 ]
+[e :U 115 ]
 "37
 [; ;./lcd.h: 37:     if (a & 8)
-[e $ ! != & -> _a `i -> 8 `i -> 0 `i 119  ]
+[e $ ! != & -> _a `i -> 8 `i -> 0 `i 116  ]
 "38
 [; ;./lcd.h: 38:         RD7 = 1;
 [e = _RD7 -> -> 1 `i `b ]
-[e $U 120  ]
+[e $U 117  ]
 "39
 [; ;./lcd.h: 39:     else
-[e :U 119 ]
+[e :U 116 ]
 "40
 [; ;./lcd.h: 40:         RD7 = 0;
 [e = _RD7 -> -> 0 `i `b ]
-[e :U 120 ]
+[e :U 117 ]
 "41
 [; ;./lcd.h: 41: }
-[e :UE 112 ]
+[e :UE 109 ]
 }
 "43
 [; ;./lcd.h: 43: void lcdCmd(char a) {
@@ -603,7 +584,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _RD3 -> -> 0 `i `b ]
 "49
 [; ;./lcd.h: 49: }
-[e :UE 121 ]
+[e :UE 118 ]
 }
 "51
 [; ;./lcd.h: 51: void lcdClear(void) {
@@ -619,7 +600,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _lcdCmd (1 -> -> 1 `i `uc ]
 "54
 [; ;./lcd.h: 54: }
-[e :UE 122 ]
+[e :UE 119 ]
 }
 "56
 [; ;./lcd.h: 56: void lcdSetCursor(char a, char b) {
@@ -636,7 +617,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _y `uc ~T0 @X0 1 a ]
 "58
 [; ;./lcd.h: 58:     if (a == 1) {
-[e $ ! == -> _a `i -> 1 `i 124  ]
+[e $ ! == -> _a `i -> 1 `i 121  ]
 {
 "59
 [; ;./lcd.h: 59:         temp = 0x80 + b - 1;
@@ -656,9 +637,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "64
 [; ;./lcd.h: 64:     } else if (a == 2) {
 }
-[e $U 125  ]
-[e :U 124 ]
-[e $ ! == -> _a `i -> 2 `i 126  ]
+[e $U 122  ]
+[e :U 121 ]
+[e $ ! == -> _a `i -> 2 `i 123  ]
 {
 "65
 [; ;./lcd.h: 65:         temp = 0xC0 + b - 1;
@@ -678,11 +659,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "70
 [; ;./lcd.h: 70:     }
 }
-[e :U 126 ]
-[e :U 125 ]
+[e :U 123 ]
+[e :U 122 ]
 "71
 [; ;./lcd.h: 71: }
-[e :UE 123 ]
+[e :UE 120 ]
 }
 "73
 [; ;./lcd.h: 73: void lcdInit(void) {
@@ -740,7 +721,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _lcdCmd (1 -> -> 6 `i `uc ]
 "91
 [; ;./lcd.h: 91: }
-[e :UE 127 ]
+[e :UE 124 ]
 }
 "93
 [; ;./lcd.h: 93: void lcdWriteChar(char a) {
@@ -788,7 +769,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _RD3 -> -> 0 `i `b ]
 "106
 [; ;./lcd.h: 106: }
-[e :UE 128 ]
+[e :UE 125 ]
 }
 "108
 [; ;./lcd.h: 108: void lcdPrint(unsigned char *a) {
@@ -804,19 +785,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./lcd.h: 110:     for (i = 0; a[i] != '\0'; i++)
 {
 [e = _i -> 0 `i ]
-[e $U 133  ]
-[e :U 130 ]
+[e $U 130  ]
+[e :U 127 ]
 "111
 [; ;./lcd.h: 111:         lcdWriteChar(a[i]);
 [e ( _lcdWriteChar (1 -> *U + _a * -> _i `x -> -> # *U _a `i `x `uc ]
 [e ++ _i -> 1 `i ]
-[e :U 133 ]
-[e $ != -> *U + _a * -> _i `x -> -> # *U _a `i `x `ui -> 0 `ui 130  ]
-[e :U 131 ]
+[e :U 130 ]
+[e $ != -> *U + _a * -> _i `x -> -> # *U _a `i `x `ui -> 0 `ui 127  ]
+[e :U 128 ]
 }
 "112
 [; ;./lcd.h: 112: }
-[e :UE 129 ]
+[e :UE 126 ]
 }
 "1 ./adc.h
 [; ;./adc.h: 1: void adcInit() {
@@ -844,7 +825,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _ADCON1bits 0 0 -> -> 0 `i `uc ]
 "27
 [; ;./adc.h: 27: }
-[e :UE 134 ]
+[e :UE 131 ]
 }
 "35
 [; ;./adc.h: 35: int adcRead(int const adcChannel) {
@@ -867,169 +848,169 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
 "40
 [; ;./adc.h: 40:     while (ADCON0bits.GO_DONE);
-[e $U 136  ]
-[e :U 137 ]
-[e :U 136 ]
-[e $ != -> . . _ADCON0bits 3 1 `i -> 0 `i 137  ]
-[e :U 138 ]
+[e $U 133  ]
+[e :U 134 ]
+[e :U 133 ]
+[e $ != -> . . _ADCON0bits 3 1 `i -> 0 `i 134  ]
+[e :U 135 ]
 "42
 [; ;./adc.h: 42:     return (ADRESH << 8) + (ADRESL);
 [e ) + << -> _ADRESH `i -> 8 `i -> _ADRESL `i ]
-[e $UE 135  ]
+[e $UE 132  ]
 "43
 [; ;./adc.h: 43: }
-[e :UE 135 ]
+[e :UE 132 ]
 }
-[v $root$_main `(v ~T0 @X0 0 e ]
 "9 main.c
-[; ;main.c: 9: void main(void) {
+[; ;main.c: 9: char entero[16];
+[v _entero `uc ~T0 @X0 -> 16 `i e ]
+[v $root$_main `(v ~T0 @X0 0 e ]
+"11
+[; ;main.c: 11: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"10
-[; ;main.c: 10:     TRISB = 255;
-[e = _TRISB -> -> 255 `i `uc ]
-"11
-[; ;main.c: 11:     PORTB = 0;
-[e = _PORTB -> -> 0 `i `uc ]
 "12
-[; ;main.c: 12:     adcInit();
-[e ( _adcInit ..  ]
+[; ;main.c: 12:     TRISB = 255;
+[e = _TRISB -> -> 255 `i `uc ]
 "13
-[; ;main.c: 13:     lcdInit();
-[e ( _lcdInit ..  ]
+[; ;main.c: 13:     PORTB = 0;
+[e = _PORTB -> -> 0 `i `uc ]
 "14
-[; ;main.c: 14:     lcdClear();
-[e ( _lcdClear ..  ]
+[; ;main.c: 14:     adcInit();
+[e ( _adcInit ..  ]
 "15
-[; ;main.c: 15:     lcdSetCursor(1, 1);
-[e ( _lcdSetCursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+[; ;main.c: 15:     lcdInit();
+[e ( _lcdInit ..  ]
 "16
-[; ;main.c: 16:     lcdPrint("Iniciando PWM");
-[e ( _lcdPrint (1 :s 1C ]
+[; ;main.c: 16:     lcdClear();
+[e ( _lcdClear ..  ]
 "17
-[; ;main.c: 17:     _delay((unsigned long)((10)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"19
-[; ;main.c: 19:     pwmInit1();
-[e ( _pwmInit1 ..  ]
-"20
-[; ;main.c: 20:     pwmInit2();
-[e ( _pwmInit2 ..  ]
-"21
-[; ;main.c: 21:     pwmSetDuty1(0);
-[e ( _pwmSetDuty1 (1 -> -> 0 `i `ui ]
-"22
-[; ;main.c: 22:     pwmSetDuty2(0);
-[e ( _pwmSetDuty2 (1 -> -> 0 `i `ui ]
-"24
-[; ;main.c: 24:     lcdClear();
-[e ( _lcdClear ..  ]
-"25
-[; ;main.c: 25:     lcdSetCursor(1, 1);
+[; ;main.c: 17:     lcdSetCursor(1, 1);
 [e ( _lcdSetCursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+"18
+[; ;main.c: 18:     lcdPrint("Iniciando PWM");
+[e ( _lcdPrint (1 :s 1C ]
+"19
+[; ;main.c: 19:     _delay((unsigned long)((10)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"21
+[; ;main.c: 21:     pwmInit1();
+[e ( _pwmInit1 ..  ]
+"22
+[; ;main.c: 22:     pwmInit2();
+[e ( _pwmInit2 ..  ]
+"23
+[; ;main.c: 23:     pwmSetDuty1(0);
+[e ( _pwmSetDuty1 (1 -> -> 0 `i `ui ]
+"24
+[; ;main.c: 24:     pwmSetDuty2(0);
+[e ( _pwmSetDuty2 (1 -> -> 0 `i `ui ]
 "26
-[; ;main.c: 26:     lcdPrint("Modulo iniciado");
-[e ( _lcdPrint (1 :s 2C ]
-"27
-[; ;main.c: 27:     _delay((unsigned long)((100)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"28
-[; ;main.c: 28:     lcdClear();
+[; ;main.c: 26:     lcdClear();
 [e ( _lcdClear ..  ]
+"27
+[; ;main.c: 27:     lcdSetCursor(1, 1);
+[e ( _lcdSetCursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+"28
+[; ;main.c: 28:     lcdPrint("Modulo iniciado");
+[e ( _lcdPrint (1 :s 2C ]
 "29
-[; ;main.c: 29:     unsigned int pwm2 = 0;
+[; ;main.c: 29:     _delay((unsigned long)((100)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"30
+[; ;main.c: 30:     lcdClear();
+[e ( _lcdClear ..  ]
+"31
+[; ;main.c: 31:     unsigned int pwm2 = 0;
 [v _pwm2 `ui ~T0 @X0 1 a ]
 [e = _pwm2 -> -> 0 `i `ui ]
-"30
-[; ;main.c: 30:     for (;;) {
+"32
+[; ;main.c: 32:     for (;;) {
 {
-[e :U 140 ]
+[e :U 137 ]
 {
-"31
-[; ;main.c: 31:         unsigned int v = adcRead(0);
+"33
+[; ;main.c: 33:         unsigned int v = adcRead(0);
 [v _v `ui ~T0 @X0 1 a ]
 [e = _v -> ( _adcRead (1 -> 0 `i `ui ]
-"32
-[; ;main.c: 32:         unsigned int m = ((float) v * 100) / 1023;
+"34
+[; ;main.c: 34:         unsigned int m = ((float) v * 100) / 1023;
 [v _m `ui ~T0 @X0 1 a ]
 [e = _m -> / * -> _v `f -> -> 100 `i `f -> -> 1023 `i `f `ui ]
-"33
-[; ;main.c: 33:         pwmSetDuty1(v);
-[e ( _pwmSetDuty1 (1 _v ]
-"34
-[; ;main.c: 34:         char entero[16];
-[v _entero `uc ~T0 @X0 -> 16 `i a ]
 "35
-[; ;main.c: 35:         lcdClear();
-[e ( _lcdClear ..  ]
+[; ;main.c: 35:         pwmSetDuty1(v);
+[e ( _pwmSetDuty1 (1 _v ]
 "36
-[; ;main.c: 36:         sprintf(entero, "PWM:%d%%", m);
-[e ( _sprintf (1 , (. , &U _entero :s 3C _m ]
+[; ;main.c: 36:         lcdClear();
+[e ( _lcdClear ..  ]
 "37
-[; ;main.c: 37:         lcdSetCursor(1, 1);
-[e ( _lcdSetCursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+[; ;main.c: 37:         sprintf(entero, "PWM1:%d%%", m);
+[e ( _sprintf (1 , (. , &U _entero :s 3C _m ]
 "38
-[; ;main.c: 38:         lcdPrint(entero);
+[; ;main.c: 38:         lcdSetCursor(1, 1);
+[e ( _lcdSetCursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+"39
+[; ;main.c: 39:         lcdPrint(entero);
 [e ( _lcdPrint (1 -> &U _entero `*uc ]
-"40
-[; ;main.c: 40:         if (RB0 == 1) {
-[e $ ! == -> _RB0 `i -> 1 `i 143  ]
-{
 "41
-[; ;main.c: 41:             if (pwm2 < 1024)
-[e $ ! < _pwm2 -> -> 1024 `i `ui 144  ]
-"42
-[; ;main.c: 42:                 pwmSetDuty2(++pwm2);
-[e ( _pwmSetDuty2 (1 =+ _pwm2 -> -> 1 `i `ui ]
-[e :U 144 ]
-"43
-[; ;main.c: 43:         } else if (RB1 == 1) {
-}
-[e $U 145  ]
-[e :U 143 ]
-[e $ ! == -> _RB1 `i -> 1 `i 146  ]
+[; ;main.c: 41:         if (RB0 == 1) {
+[e $ ! == -> _RB0 `i -> 1 `i 140  ]
 {
-"44
-[; ;main.c: 44:             if (pwm2 > 0)
-[e $ ! > _pwm2 -> -> 0 `i `ui 147  ]
-"45
-[; ;main.c: 45:                 pwmSetDuty2(--pwm2);
-[e ( _pwmSetDuty2 (1 =- _pwm2 -> -> 1 `i `ui ]
-[e :U 147 ]
-"46
-[; ;main.c: 46:         }
-}
-[e :U 146 ]
-[e :U 145 ]
-"47
-[; ;main.c: 47:         m = ((float) pwm2 * 100) / 1023;
-[e = _m -> / * -> _pwm2 `f -> -> 100 `i `f -> -> 1023 `i `f `ui ]
-"48
-[; ;main.c: 48:         sprintf(entero, "PWM:%d%%", m);
-[e ( _sprintf (1 , (. , &U _entero :s 4C _m ]
-"49
-[; ;main.c: 49:         lcdSetCursor(2, 1);
-[e ( _lcdSetCursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
-"50
-[; ;main.c: 50:         lcdPrint(entero);
-[e ( _lcdPrint (1 -> &U _entero `*uc ]
-"51
-[; ;main.c: 51:         _delay((unsigned long)((50)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"53
-[; ;main.c: 53:     }
-}
-[e $U 140  ]
+"42
+[; ;main.c: 42:             if (pwm2 < 1024)
+[e $ ! < _pwm2 -> -> 1024 `i `ui 141  ]
+"43
+[; ;main.c: 43:                 pwmSetDuty2(++pwm2);
+[e ( _pwmSetDuty2 (1 =+ _pwm2 -> -> 1 `i `ui ]
 [e :U 141 ]
+"44
+[; ;main.c: 44:         } else if (RB1 == 1) {
 }
+[e $U 142  ]
+[e :U 140 ]
+[e $ ! == -> _RB1 `i -> 1 `i 143  ]
+{
+"45
+[; ;main.c: 45:             if (pwm2 > 0)
+[e $ ! > _pwm2 -> -> 0 `i `ui 144  ]
+"46
+[; ;main.c: 46:                 pwmSetDuty2(--pwm2);
+[e ( _pwmSetDuty2 (1 =- _pwm2 -> -> 1 `i `ui ]
+[e :U 144 ]
+"47
+[; ;main.c: 47:         }
+}
+[e :U 143 ]
+[e :U 142 ]
+"49
+[; ;main.c: 49:         m = ((float) pwm2 * 100) / 1023;
+[e = _m -> / * -> _pwm2 `f -> -> 100 `i `f -> -> 1023 `i `f `ui ]
+"50
+[; ;main.c: 50:         sprintf(entero, "PWM2:%d%%", m);
+[e ( _sprintf (1 , (. , &U _entero :s 4C _m ]
+"51
+[; ;main.c: 51:         lcdSetCursor(2, 1);
+[e ( _lcdSetCursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
+"52
+[; ;main.c: 52:         lcdPrint(entero);
+[e ( _lcdPrint (1 -> &U _entero `*uc ]
+"53
+[; ;main.c: 53:         _delay((unsigned long)((50)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "54
-[; ;main.c: 54: }
-[e :UE 139 ]
+[; ;main.c: 54:     }
+}
+[e $U 137  ]
+[e :U 138 ]
+}
+"55
+[; ;main.c: 55: }
+[e :UE 136 ]
 }
 [p f _sprintf 9437312 ]
 [a 2C 77 111 100 117 108 111 32 105 110 105 99 105 97 100 111 0 ]
 [a 1C 73 110 105 99 105 97 110 100 111 32 80 87 77 0 ]
-[a 3C 80 87 77 58 37 100 37 37 0 ]
-[a 4C 80 87 77 58 37 100 37 37 0 ]
+[a 4C 80 87 77 50 58 37 100 37 37 0 ]
+[a 3C 80 87 77 49 58 37 100 37 37 0 ]

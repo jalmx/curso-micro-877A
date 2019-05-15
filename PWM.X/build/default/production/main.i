@@ -1734,6 +1734,10 @@ void setPR2() {
     PR2 = (4000000 / (245 * 4 * 16)) - 1;
 }
 
+unsigned int setDuty(unsigned int duty) {
+    return ((float) duty / 1023)*(4000000 / (245 * 16));
+}
+
 void pwmInit1() {
     setPR2();
     setTMR2(1);
@@ -1746,7 +1750,8 @@ void pwmInit2() {
 
 void pwmSetDuty1(unsigned int duty) {
     if (duty > 1023) return;
-    duty = ((float) duty / 1023)*(4000000 / (245 * 16));
+    duty = setDuty(duty);
+
     CCP1X = duty & 0x01;
     CCP1Y = duty & 0x02;
     CCPR1L = duty >> 2;
@@ -1754,8 +1759,8 @@ void pwmSetDuty1(unsigned int duty) {
 
 void pwmSetDuty2(unsigned int duty) {
     if (duty > 1023) return;
+    duty = setDuty(duty);
 
-    duty = ((float) duty / 1023)*(4000000 / (245 * 16));
     CCP2X = duty & 0x01;
     CCP2Y = duty & 0x02;
     CCPR2L = duty >> 2;
@@ -1769,16 +1774,11 @@ void setTMR2(unsigned char const pwm) {
         CCP1M3 = 1;
         CCP1M2 = 1;
     }
-    if (16 == 1) {
-        T2CKPS0 = 0;
-        T2CKPS1 = 0;
-    } else if (16 == 4) {
-        T2CKPS0 = 1;
-        T2CKPS1 = 0;
-    } else {
+# 66 "./pwm.h"
         T2CKPS0 = 1;
         T2CKPS1 = 1;
-    }
+
+
     TMR2ON = 1;
     if (pwm == 2)
         TRISC2 = 0;
@@ -2015,6 +2015,8 @@ int adcRead(int const adcChannel) {
 # 7 "main.c" 2
 
 
+char entero[16];
+
 void main(void) {
     TRISB = 255;
     PORTB = 0;
@@ -2040,9 +2042,8 @@ void main(void) {
         unsigned int v = adcRead(0);
         unsigned int m = ((float) v * 100) / 1023;
         pwmSetDuty1(v);
-        char entero[16];
         lcdClear();
-        sprintf(entero, "PWM:%d%%", m);
+        sprintf(entero, "PWM1:%d%%", m);
         lcdSetCursor(1, 1);
         lcdPrint(entero);
 
@@ -2053,11 +2054,11 @@ void main(void) {
             if (pwm2 > 0)
                 pwmSetDuty2(--pwm2);
         }
+
         m = ((float) pwm2 * 100) / 1023;
-        sprintf(entero, "PWM:%d%%", m);
+        sprintf(entero, "PWM2:%d%%", m);
         lcdSetCursor(2, 1);
         lcdPrint(entero);
         _delay((unsigned long)((50)*(4000000/4000.0)));
-
     }
 }

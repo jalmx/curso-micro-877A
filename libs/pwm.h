@@ -1,41 +1,73 @@
-#define TMR2PRESCALE 4
+#define TMR2PRESCALE 16
 
-int FREQ1;
-int FREQ2;
+#ifndef _XTAL_FREQ
+#define _XTAL_FREQ 4000000
+#endif
 
-void pwmInit1(unsigned int const freq) {
-    FREQ1 = freq;
-    PR2 = (_XTAL_FREQ / (FREQ1 * 4 * TMR2PRESCALE)) - 1; //Setting the PR2 formulae using Datasheet // Makes the PWM work in 5KHZ
-    CCP1M3 = 1;
-    CCP1M2 = 1; //Configure the CCP1 module 
-    T2CKPS0 = 1;
-    T2CKPS1 = 0;
-    TMR2ON = 1; //Configure the Timer module
-    TRISC2 = 0; // make port pin on C as output
-}
-void pwmInit2(unsigned int const freq) {
-    FREQ2 = freq;
-    PR2 = (_XTAL_FREQ / (FREQ2 * 4 * TMR2PRESCALE)) - 1; //Setting the PR2 formulae using Datasheet // Makes the PWM work in 5KHZ
-    CCP2M3 = 1;
-    CCP2M2 = 1; //Configure the CCP2 module 
-    T2CKPS0 = 1;
-    T2CKPS1 = 0;
-    TMR2ON = 1; //Configure the Timer module
-    TRISC1 = 0; // make port pin on C as output
+#ifndef FREQ_PWM //Hz
+#define FREQ_PWM 245
+#endif
+
+void setTMR2(unsigned char const pwm);
+void setPR2();
+
+void setPR2() {
+    PR2 = (_XTAL_FREQ / (FREQ_PWM * 4 * TMR2PRESCALE)) - 1;
 }
 
-void pwmSetDutyCycle1(unsigned int duty) {
+unsigned int setDuty(unsigned int duty) {
+    return ((float) duty / 1023)*(_XTAL_FREQ / (FREQ_PWM * TMR2PRESCALE));
+}
 
-    duty = ((float) duty / 1023)*(_XTAL_FREQ / (FREQ1 * TMR2PRESCALE)); // On reducing //duty = (((float)duty/1023)*(1/PWM_freq)) / ((1/_XTAL_FREQ) * TMR2PRESCALE);
+void pwmInit1() {
+    setPR2();
+    setTMR2(1);
+}
+
+void pwmInit2() {
+    setPR2();
+    setTMR2(2);
+}
+
+void pwmSetDuty1(unsigned int duty) {
+    if (duty > 1023) return;
+    duty = setDuty(duty);
     CCP1X = duty & 0x01; //Store the 1st bit
     CCP1Y = duty & 0x02; //Store the 0th bit
     CCPR1L = duty >> 2; // Store the remining 8 bit
 }
 
-void pwmSetDutyCycle2(unsigned int duty) {
-
-    duty = ((float) duty / 1023)*(_XTAL_FREQ / (FREQ2 * TMR2PRESCALE)); // On reducing //duty = (((float)duty/1023)*(1/PWM_freq)) / ((1/_XTAL_FREQ) * TMR2PRESCALE);
+void pwmSetDuty2(unsigned int duty) {
+    if (duty > 1023) return;
+    duty = setDuty(duty);
     CCP2X = duty & 0x01; //Store the 1st bit
     CCP2Y = duty & 0x02; //Store the 0th bit
     CCPR2L = duty >> 2; // Store the remining 8 bit
+}
+
+void setTMR2(unsigned char const pwm) {
+    if (pwm == 2) {
+        CCP2M3 = 1;
+        CCP2M2 = 1; //Configure the CCP2 module 
+    } else {
+        CCP1M3 = 1;
+        CCP1M2 = 1; //Configure the CCP1 module 
+    }
+
+#if TMR2PRESCALE ==1
+    T2CKPS0 = 0;
+    T2CKPS1 = 0;
+#elif TMR2PRESCALE == 4        
+    T2CKPS0 = 1;
+    T2CKPS1 = 0;
+#else
+    T2CKPS0 = 1;
+    T2CKPS1 = 1;
+#endif
+
+    TMR2ON = 1; //Configure the Timer module
+    if (pwm == 2)
+        TRISC2 = 0;
+    else
+        TRISC1 = 0; // make port pin on C as output
 }

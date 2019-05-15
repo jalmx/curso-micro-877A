@@ -24,14 +24,16 @@
 "14 C:\Users\Xizuth\Documents\curso-micro-877A\PWM.X/pwm.h
 [v _setPR2 setPR2 `(v  1 e 1 0 ]
 "18
+[v _setDuty setDuty `(ui  1 e 2 0 ]
+"22
 [v _pwmInit1 pwmInit1 `(v  1 e 1 0 ]
-"23
+"27
 [v _pwmInit2 pwmInit2 `(v  1 e 1 0 ]
-"28
+"32
 [v _pwmSetDuty1 pwmSetDuty1 `(v  1 e 1 0 ]
-"36
+"41
 [v _pwmSetDuty2 pwmSetDuty2 `(v  1 e 1 0 ]
-"45
+"50
 [v _setTMR2 setTMR2 `(v  1 e 1 0 ]
 "500 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
@@ -55,7 +57,7 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"9 C:\Users\Xizuth\Documents\curso-micro-877A\PWM.X\main.c
+"11 C:\Users\Xizuth\Documents\curso-micro-877A\PWM.X\main.c
 [v _main main `(v  1 e 1 0 ]
 "216 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
@@ -156,17 +158,17 @@
 "358 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
 [v _dpowers dpowers `DC[5]ui  1 s 10 dpowers ]
 "9 C:\Users\Xizuth\Documents\curso-micro-877A\PWM.X\main.c
+[v _entero entero `[16]uc  1 e 16 0 ]
+"11
 [v _main main `(v  1 e 1 0 ]
 {
 "34
-[v main@entero entero `[16]uc  1 a 16 0 ]
-"32
-[v main@m m `ui  1 a 2 18 ]
+[v main@m m `ui  1 a 2 73 ]
+"33
+[v main@v v `ui  1 a 2 71 ]
 "31
-[v main@v v `ui  1 a 2 16 ]
-"29
-[v main@pwm2 pwm2 `ui  1 a 2 20 ]
-"54
+[v main@pwm2 pwm2 `ui  1 a 2 75 ]
+"55
 } 0
 "500 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
@@ -211,17 +213,23 @@
 [v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
 "30
 } 0
-"36 C:\Users\Xizuth\Documents\curso-micro-877A\PWM.X/pwm.h
+"41 C:\Users\Xizuth\Documents\curso-micro-877A\PWM.X/pwm.h
 [v _pwmSetDuty2 pwmSetDuty2 `(v  1 e 1 0 ]
 {
-[v pwmSetDuty2@duty duty `ui  1 p 2 63 ]
-"43
+[v pwmSetDuty2@duty duty `ui  1 p 2 65 ]
+"48
 } 0
-"28
+"32
 [v _pwmSetDuty1 pwmSetDuty1 `(v  1 e 1 0 ]
 {
-[v pwmSetDuty1@duty duty `ui  1 p 2 63 ]
-"34
+[v pwmSetDuty1@duty duty `ui  1 p 2 65 ]
+"39
+} 0
+"18
+[v _setDuty setDuty `(ui  1 e 2 0 ]
+{
+[v setDuty@duty duty `ui  1 p 2 63 ]
+"20
 } 0
 "10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
@@ -251,17 +259,17 @@
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S535 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S538 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S540 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S543 . 4 `l 1 i 4 0 `d 1 f 4 0 `S535 1 fAsBytes 4 0 `S540 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S543  1 a 4 20 ]
+[s S543 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S546 . 4 `l 1 i 4 0 `d 1 f 4 0 `S538 1 fAsBytes 4 0 `S543 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S546  1 a 4 20 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 14 ]
-[s S612 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S615 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S615 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S612 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S615  1 a 2 24 ]
+[u S618 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S615 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S618  1 a 2 24 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 19 ]
 "11
@@ -307,23 +315,23 @@
 [v ___fldiv@b b `d  1 p 4 30 ]
 "185
 } 0
-"23 C:\Users\Xizuth\Documents\curso-micro-877A\PWM.X/pwm.h
+"27 C:\Users\Xizuth\Documents\curso-micro-877A\PWM.X/pwm.h
 [v _pwmInit2 pwmInit2 `(v  1 e 1 0 ]
 {
-"26
+"30
 } 0
-"18
+"22
 [v _pwmInit1 pwmInit1 `(v  1 e 1 0 ]
 {
-"21
+"25
 } 0
-"45
+"50
 [v _setTMR2 setTMR2 `(v  1 e 1 0 ]
 {
 [v setTMR2@pwm pwm `DCuc  1 a 1 wreg ]
 [v setTMR2@pwm pwm `DCuc  1 a 1 wreg ]
 [v setTMR2@pwm pwm `DCuc  1 a 1 0 ]
-"68
+"75
 } 0
 "14
 [v _setPR2 setPR2 `(v  1 e 1 0 ]

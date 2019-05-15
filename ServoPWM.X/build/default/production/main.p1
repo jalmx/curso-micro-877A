@@ -125,6 +125,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
 "194 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdio.h
 [v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
+"2674 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2674: extern volatile __bit RB0 __attribute__((address(0x30)));
+[v _RB0 `Vb ~T0 @X0 0 e@48 ]
+"2677
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2677: extern volatile __bit RB1 __attribute__((address(0x31)));
+[v _RB1 `Vb ~T0 @X0 0 e@49 ]
 "2 ./config.h
 [p x FOSC = XT ]
 "3
@@ -722,153 +728,161 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 124 ]
 }
 "31
-[; ;./servo_pwm.h: 31: void pwmSetDuty1(unsigned int duty) {
-[v _pwmSetDuty1 `(v ~T0 @X0 1 ef1`ui ]
+[; ;./servo_pwm.h: 31: void setAngule1(unsigned char angule) {
+[v _setAngule1 `(v ~T0 @X0 1 ef1`uc ]
 {
-[e :U _pwmSetDuty1 ]
-[v _duty `ui ~T0 @X0 1 r1 ]
+[e :U _setAngule1 ]
+[v _angule `uc ~T0 @X0 1 r1 ]
 [f ]
 "32
-[; ;./servo_pwm.h: 32:     if (duty > 1023) return;
+[; ;./servo_pwm.h: 32:     unsigned int duty = (angule*1.3944444)+251;
+[v _duty `ui ~T0 @X0 1 a ]
+[e = _duty -> + * -> -> _angule `i `d .1.3944444 -> -> 251 `i `d `ui ]
+"33
+[; ;./servo_pwm.h: 33:     if (duty > 1023) return;
 [e $ ! > _duty -> -> 1023 `i `ui 126  ]
 [e $UE 125  ]
 [e :U 126 ]
-"33
-[; ;./servo_pwm.h: 33:     duty = ((float) duty / 1023)*(4000000 / (245 * 16));
-[e = _duty -> * / -> _duty `f -> -> 1023 `i `f -> / -> 4000000 `l -> * -> 245 `i -> 16 `i `l `f `ui ]
 "34
-[; ;./servo_pwm.h: 34:     CCP1X = duty & 0x01;
-[e = _CCP1X -> & _duty -> -> 1 `i `ui `b ]
+[; ;./servo_pwm.h: 34:     duty = ((float) duty / 1023)*(4000000 / (245 * 16));
+[e = _duty -> * / -> _duty `f -> -> 1023 `i `f -> / -> 4000000 `l -> * -> 245 `i -> 16 `i `l `f `ui ]
 "35
-[; ;./servo_pwm.h: 35:     CCP1Y = duty & 0x02;
-[e = _CCP1Y -> & _duty -> -> 2 `i `ui `b ]
+[; ;./servo_pwm.h: 35:     CCP1X = duty & 0x01;
+[e = _CCP1X -> & _duty -> -> 1 `i `ui `b ]
 "36
-[; ;./servo_pwm.h: 36:     CCPR1L = duty >> 2;
-[e = _CCPR1L -> >> _duty -> 2 `i `uc ]
+[; ;./servo_pwm.h: 36:     CCP1Y = duty & 0x02;
+[e = _CCP1Y -> & _duty -> -> 2 `i `ui `b ]
 "37
-[; ;./servo_pwm.h: 37: }
+[; ;./servo_pwm.h: 37:     CCPR1L = duty >> 2;
+[e = _CCPR1L -> >> _duty -> 2 `i `uc ]
+"38
+[; ;./servo_pwm.h: 38: }
 [e :UE 125 ]
 }
-"39
-[; ;./servo_pwm.h: 39: void pwmSetDuty2(unsigned int duty) {
-[v _pwmSetDuty2 `(v ~T0 @X0 1 ef1`ui ]
-{
-[e :U _pwmSetDuty2 ]
-[v _duty `ui ~T0 @X0 1 r1 ]
-[f ]
 "40
-[; ;./servo_pwm.h: 40:     if (duty > 1023) return;
+[; ;./servo_pwm.h: 40: void setAngule2(unsigned char angule) {
+[v _setAngule2 `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _setAngule2 ]
+[v _angule `uc ~T0 @X0 1 r1 ]
+[f ]
+"41
+[; ;./servo_pwm.h: 41:     unsigned int duty = (angule*1.3944444)+251;
+[v _duty `ui ~T0 @X0 1 a ]
+[e = _duty -> + * -> -> _angule `i `d .1.3944444 -> -> 251 `i `d `ui ]
+"42
+[; ;./servo_pwm.h: 42:     if (duty > 1023) return;
 [e $ ! > _duty -> -> 1023 `i `ui 128  ]
 [e $UE 127  ]
 [e :U 128 ]
-"42
-[; ;./servo_pwm.h: 42:     duty = ((float) duty / 1023)*(4000000 / (245 * 16));
-[e = _duty -> * / -> _duty `f -> -> 1023 `i `f -> / -> 4000000 `l -> * -> 245 `i -> 16 `i `l `f `ui ]
-"43
-[; ;./servo_pwm.h: 43:     CCP2X = duty & 0x01;
-[e = _CCP2X -> & _duty -> -> 1 `i `ui `b ]
 "44
-[; ;./servo_pwm.h: 44:     CCP2Y = duty & 0x02;
-[e = _CCP2Y -> & _duty -> -> 2 `i `ui `b ]
+[; ;./servo_pwm.h: 44:     duty = ((float) duty / 1023)*(4000000 / (245 * 16));
+[e = _duty -> * / -> _duty `f -> -> 1023 `i `f -> / -> 4000000 `l -> * -> 245 `i -> 16 `i `l `f `ui ]
 "45
-[; ;./servo_pwm.h: 45:     CCPR2L = duty >> 2;
-[e = _CCPR2L -> >> _duty -> 2 `i `uc ]
+[; ;./servo_pwm.h: 45:     CCP2X = duty & 0x01;
+[e = _CCP2X -> & _duty -> -> 1 `i `ui `b ]
 "46
-[; ;./servo_pwm.h: 46: }
+[; ;./servo_pwm.h: 46:     CCP2Y = duty & 0x02;
+[e = _CCP2Y -> & _duty -> -> 2 `i `ui `b ]
+"47
+[; ;./servo_pwm.h: 47:     CCPR2L = duty >> 2;
+[e = _CCPR2L -> >> _duty -> 2 `i `uc ]
+"48
+[; ;./servo_pwm.h: 48: }
 [e :UE 127 ]
 }
-"48
-[; ;./servo_pwm.h: 48: void setTMR2(unsigned char const pwm) {
+"50
+[; ;./servo_pwm.h: 50: void setTMR2(unsigned char const pwm) {
 [v _setTMR2 `(v ~T0 @X0 1 ef1`Cuc ]
 {
 [e :U _setTMR2 ]
 [v _pwm `Cuc ~T0 @X0 1 r1 ]
 [f ]
-"49
-[; ;./servo_pwm.h: 49:     if (pwm == 2) {
+"51
+[; ;./servo_pwm.h: 51:     if (pwm == 2) {
 [e $ ! == -> _pwm `i -> 2 `i 130  ]
 {
-"50
-[; ;./servo_pwm.h: 50:         CCP2M3 = 1;
-[e = _CCP2M3 -> -> 1 `i `b ]
-"51
-[; ;./servo_pwm.h: 51:         CCP2M2 = 1;
-[e = _CCP2M2 -> -> 1 `i `b ]
 "52
-[; ;./servo_pwm.h: 52:     } else {
+[; ;./servo_pwm.h: 52:         CCP2M3 = 1;
+[e = _CCP2M3 -> -> 1 `i `b ]
+"53
+[; ;./servo_pwm.h: 53:         CCP2M2 = 1;
+[e = _CCP2M2 -> -> 1 `i `b ]
+"54
+[; ;./servo_pwm.h: 54:     } else {
 }
 [e $U 131  ]
 [e :U 130 ]
 {
-"53
-[; ;./servo_pwm.h: 53:         CCP1M3 = 1;
-[e = _CCP1M3 -> -> 1 `i `b ]
-"54
-[; ;./servo_pwm.h: 54:         CCP1M2 = 1;
-[e = _CCP1M2 -> -> 1 `i `b ]
 "55
-[; ;./servo_pwm.h: 55:     }
+[; ;./servo_pwm.h: 55:         CCP1M3 = 1;
+[e = _CCP1M3 -> -> 1 `i `b ]
+"56
+[; ;./servo_pwm.h: 56:         CCP1M2 = 1;
+[e = _CCP1M2 -> -> 1 `i `b ]
+"57
+[; ;./servo_pwm.h: 57:     }
 }
 [e :U 131 ]
-"56
-[; ;./servo_pwm.h: 56:     if (16 == 1) {
+"58
+[; ;./servo_pwm.h: 58:     if (16 == 1) {
 [e $ ! == -> 16 `i -> 1 `i 132  ]
 {
-"57
-[; ;./servo_pwm.h: 57:         T2CKPS0 = 0;
-[e = _T2CKPS0 -> -> 0 `i `b ]
-"58
-[; ;./servo_pwm.h: 58:         T2CKPS1 = 0;
-[e = _T2CKPS1 -> -> 0 `i `b ]
 "59
-[; ;./servo_pwm.h: 59:     } else if (16 == 4) {
+[; ;./servo_pwm.h: 59:         T2CKPS0 = 0;
+[e = _T2CKPS0 -> -> 0 `i `b ]
+"60
+[; ;./servo_pwm.h: 60:         T2CKPS1 = 0;
+[e = _T2CKPS1 -> -> 0 `i `b ]
+"61
+[; ;./servo_pwm.h: 61:     } else if (16 == 4) {
 }
 [e $U 133  ]
 [e :U 132 ]
 [e $ ! == -> 16 `i -> 4 `i 134  ]
 {
-"60
-[; ;./servo_pwm.h: 60:         T2CKPS0 = 1;
-[e = _T2CKPS0 -> -> 1 `i `b ]
-"61
-[; ;./servo_pwm.h: 61:         T2CKPS1 = 0;
-[e = _T2CKPS1 -> -> 0 `i `b ]
 "62
-[; ;./servo_pwm.h: 62:     } else {
+[; ;./servo_pwm.h: 62:         T2CKPS0 = 1;
+[e = _T2CKPS0 -> -> 1 `i `b ]
+"63
+[; ;./servo_pwm.h: 63:         T2CKPS1 = 0;
+[e = _T2CKPS1 -> -> 0 `i `b ]
+"64
+[; ;./servo_pwm.h: 64:     } else {
 }
 [e $U 135  ]
 [e :U 134 ]
 {
-"63
-[; ;./servo_pwm.h: 63:         T2CKPS0 = 1;
-[e = _T2CKPS0 -> -> 1 `i `b ]
-"64
-[; ;./servo_pwm.h: 64:         T2CKPS1 = 1;
-[e = _T2CKPS1 -> -> 1 `i `b ]
 "65
-[; ;./servo_pwm.h: 65:     }
+[; ;./servo_pwm.h: 65:         T2CKPS0 = 1;
+[e = _T2CKPS0 -> -> 1 `i `b ]
+"66
+[; ;./servo_pwm.h: 66:         T2CKPS1 = 1;
+[e = _T2CKPS1 -> -> 1 `i `b ]
+"67
+[; ;./servo_pwm.h: 67:     }
 }
 [e :U 135 ]
 [e :U 133 ]
-"66
-[; ;./servo_pwm.h: 66:     TMR2ON = 1;
-[e = _TMR2ON -> -> 1 `i `b ]
-"67
-[; ;./servo_pwm.h: 67:     if (pwm == 2)
-[e $ ! == -> _pwm `i -> 2 `i 136  ]
 "68
-[; ;./servo_pwm.h: 68:         TRISC2 = 0;
+[; ;./servo_pwm.h: 68:     TMR2ON = 1;
+[e = _TMR2ON -> -> 1 `i `b ]
+"69
+[; ;./servo_pwm.h: 69:     if (pwm == 2)
+[e $ ! == -> _pwm `i -> 2 `i 136  ]
+"70
+[; ;./servo_pwm.h: 70:         TRISC2 = 0;
 [e = _TRISC2 -> -> 0 `i `b ]
 [e $U 137  ]
-"69
-[; ;./servo_pwm.h: 69:     else
+"71
+[; ;./servo_pwm.h: 71:     else
 [e :U 136 ]
-"70
-[; ;./servo_pwm.h: 70:         TRISC1 = 0;
+"72
+[; ;./servo_pwm.h: 72:         TRISC1 = 0;
 [e = _TRISC1 -> -> 0 `i `b ]
 [e :U 137 ]
-"71
-[; ;./servo_pwm.h: 71: }
+"73
+[; ;./servo_pwm.h: 73: }
 [e :UE 129 ]
 }
 "6 main.c
@@ -909,45 +923,100 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 18:     initServos();
 [e ( _initServos ..  ]
 "19
-[; ;main.c: 19:     pwmSetDuty1(0);
-[e ( _pwmSetDuty1 (1 -> -> 0 `i `ui ]
+[; ;main.c: 19:     setAngule1(0);
+[e ( _setAngule1 (1 -> -> 0 `i `uc ]
 "21
-[; ;main.c: 21:     while (1) {
+[; ;main.c: 21:     unsigned int servo1, servo2 = 0;
+[v _servo1 `ui ~T0 @X0 1 a ]
+[v _servo2 `ui ~T0 @X0 1 a ]
+[e = _servo2 -> -> 0 `i `ui ]
+"22
+[; ;main.c: 22:     while (1) {
 [e :U 140 ]
 {
-"22
-[; ;main.c: 22:         lcdClear();
-[e ( _lcdClear ..  ]
 "23
-[; ;main.c: 23:         unsigned int servo1 = adcRead(0);
-[v _servo1 `ui ~T0 @X0 1 a ]
-[e = _servo1 -> ( _adcRead (1 -> 0 `i `ui ]
+[; ;main.c: 23:         lcdClear();
+[e ( _lcdClear ..  ]
 "24
-[; ;main.c: 24:         pwmSetDuty1(servo1);
-[e ( _pwmSetDuty1 (1 _servo1 ]
+[; ;main.c: 24:         servo1 = adcRead(0);
+[e = _servo1 -> ( _adcRead (1 -> 0 `i `ui ]
+"25
+[; ;main.c: 25:         unsigned char angule1 = servo1 * 0.175953079;
+[v _angule1 `uc ~T0 @X0 1 a ]
+[e = _angule1 -> * -> _servo1 `d .0.175953079 `uc ]
 "26
-[; ;main.c: 26:         sprintf(mensaje, "PWM1:%d", servo1);
-[e ( _sprintf (1 , (. , &U _mensaje :s 3C _servo1 ]
-"27
-[; ;main.c: 27:         lcdSetCursor(1, 1);
-[e ( _lcdSetCursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+[; ;main.c: 26:         setAngule1(angule1);
+[e ( _setAngule1 (1 _angule1 ]
 "28
-[; ;main.c: 28:         lcdPrint(mensaje);
-[e ( _lcdPrint (1 -> &U _mensaje `*uc ]
+[; ;main.c: 28:         sprintf(mensaje, "Angule S1:%d", angule1);
+[e ( _sprintf (1 , (. , &U _mensaje :s 3C -> _angule1 `i ]
 "29
-[; ;main.c: 29:         _delay((unsigned long)((50)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 29:         lcdSetCursor(1, 1);
+[e ( _lcdSetCursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
 "30
-[; ;main.c: 30:     }
+[; ;main.c: 30:         lcdPrint(mensaje);
+[e ( _lcdPrint (1 -> &U _mensaje `*uc ]
+"32
+[; ;main.c: 32:         if (RB0 == 1) {
+[e $ ! == -> _RB0 `i -> 1 `i 142  ]
+{
+"33
+[; ;main.c: 33:             if (servo2 < 1024)
+[e $ ! < _servo2 -> -> 1024 `i `ui 143  ]
+"34
+[; ;main.c: 34:                 setAngule2(++servo2);
+[e ( _setAngule2 (1 -> =+ _servo2 -> -> 1 `i `ui `uc ]
+[e :U 143 ]
+"35
+[; ;main.c: 35:         } else if (RB1 == 1) {
+}
+[e $U 144  ]
+[e :U 142 ]
+[e $ ! == -> _RB1 `i -> 1 `i 145  ]
+{
+"36
+[; ;main.c: 36:             if (servo2 > 0)
+[e $ ! > _servo2 -> -> 0 `i `ui 146  ]
+"37
+[; ;main.c: 37:                 setAngule2(--servo2);
+[e ( _setAngule2 (1 -> =- _servo2 -> -> 1 `i `ui `uc ]
+[e :U 146 ]
+"38
+[; ;main.c: 38:         }
+}
+[e :U 145 ]
+[e :U 144 ]
+"39
+[; ;main.c: 39:         unsigned char angule2 = servo2 * 0.175953079;
+[v _angule2 `uc ~T0 @X0 1 a ]
+[e = _angule2 -> * -> _servo2 `d .0.175953079 `uc ]
+"40
+[; ;main.c: 40:         setAngule2(angule2);
+[e ( _setAngule2 (1 _angule2 ]
+"41
+[; ;main.c: 41:         sprintf(mensaje, "Angule S2:%d", angule2);
+[e ( _sprintf (1 , (. , &U _mensaje :s 4C -> _angule2 `i ]
+"42
+[; ;main.c: 42:         lcdSetCursor(2, 1);
+[e ( _lcdSetCursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
+"43
+[; ;main.c: 43:         lcdPrint(mensaje);
+[e ( _lcdPrint (1 -> &U _mensaje `*uc ]
+"45
+[; ;main.c: 45:         _delay((unsigned long)((50)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"46
+[; ;main.c: 46:     }
 }
 [e :U 139 ]
 [e $U 140  ]
 [e :U 141 ]
-"32
-[; ;main.c: 32: }
+"48
+[; ;main.c: 48: }
 [e :UE 138 ]
 }
 [p f _sprintf 8388736 ]
 [a 2C 83 101 114 118 111 115 0 ]
 [a 1C 67 111 110 102 105 103 117 114 97 110 100 111 0 ]
-[a 3C 80 87 77 49 58 37 100 0 ]
+[a 4C 65 110 103 117 108 101 32 83 50 58 37 100 0 ]
+[a 3C 65 110 103 117 108 101 32 83 49 58 37 100 0 ]

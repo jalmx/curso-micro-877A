@@ -15,6 +15,10 @@ void setPR2() {
     PR2 = (_XTAL_FREQ / (FREQ_PWM * 4 * TMR2PRESCALE)) - 1;
 }
 
+unsigned int setDuty(unsigned int duty) {
+    return ((float) duty / 1023)*(_XTAL_FREQ / (FREQ_PWM * TMR2PRESCALE));
+}
+
 void pwmInit1() {
     setPR2();
     setTMR2(1);
@@ -27,7 +31,7 @@ void pwmInit2() {
 
 void pwmSetDuty1(unsigned int duty) {
     if (duty > 1023) return;
-    duty = ((float) duty / 1023)*(_XTAL_FREQ / (FREQ_PWM * TMR2PRESCALE));
+    duty = setDuty(duty);
     CCP1X = duty & 0x01; //Store the 1st bit
     CCP1Y = duty & 0x02; //Store the 0th bit
     CCPR1L = duty >> 2; // Store the remining 8 bit
@@ -35,8 +39,7 @@ void pwmSetDuty1(unsigned int duty) {
 
 void pwmSetDuty2(unsigned int duty) {
     if (duty > 1023) return;
-
-    duty = ((float) duty / 1023)*(_XTAL_FREQ / (FREQ_PWM * TMR2PRESCALE));
+    duty = setDuty(duty);
     CCP2X = duty & 0x01; //Store the 1st bit
     CCP2Y = duty & 0x02; //Store the 0th bit
     CCPR2L = duty >> 2; // Store the remining 8 bit
@@ -50,16 +53,18 @@ void setTMR2(unsigned char const pwm) {
         CCP1M3 = 1;
         CCP1M2 = 1; //Configure the CCP1 module 
     }
-    if (TMR2PRESCALE == 1) {
-        T2CKPS0 = 0;
-        T2CKPS1 = 0;
-    } else if (TMR2PRESCALE == 4) {
-        T2CKPS0 = 1;
-        T2CKPS1 = 0;
-    } else {
-        T2CKPS0 = 1;
-        T2CKPS1 = 1;
-    }
+
+#if TMR2PRESCALE ==1
+    T2CKPS0 = 0;
+    T2CKPS1 = 0;
+#elif TMR2PRESCALE == 4        
+    T2CKPS0 = 1;
+    T2CKPS1 = 0;
+#else
+    T2CKPS0 = 1;
+    T2CKPS1 = 1;
+#endif
+
     TMR2ON = 1; //Configure the Timer module
     if (pwm == 2)
         TRISC2 = 0;

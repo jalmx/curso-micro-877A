@@ -1978,7 +1978,8 @@ void initServos() {
     setTMR2(2);
 }
 
-void pwmSetDuty1(unsigned int duty) {
+void setAngule1(unsigned char angule) {
+    unsigned int duty = (angule*1.3944444)+251;
     if (duty > 1023) return;
     duty = ((float) duty / 1023)*(4000000 / (245 * 16));
     CCP1X = duty & 0x01;
@@ -1986,7 +1987,8 @@ void pwmSetDuty1(unsigned int duty) {
     CCPR1L = duty >> 2;
 }
 
-void pwmSetDuty2(unsigned int duty) {
+void setAngule2(unsigned char angule) {
+    unsigned int duty = (angule*1.3944444)+251;
     if (duty > 1023) return;
 
     duty = ((float) duty / 1023)*(4000000 / (245 * 16));
@@ -2035,16 +2037,32 @@ void main(void) {
     _delay((unsigned long)((500)*(4000000/4000.0)));
 
     initServos();
-    pwmSetDuty1(0);
+    setAngule1(0);
 
+    unsigned int servo1, servo2 = 0;
     while (1) {
         lcdClear();
-        unsigned int servo1 = adcRead(0);
-        pwmSetDuty1(servo1);
+        servo1 = adcRead(0);
+        unsigned char angule1 = servo1 * 0.175953079;
+        setAngule1(angule1);
 
-        sprintf(mensaje, "PWM1:%d", servo1);
+        sprintf(mensaje, "Angule S1:%d", angule1);
         lcdSetCursor(1, 1);
         lcdPrint(mensaje);
+
+        if (RB0 == 1) {
+            if (servo2 < 1024)
+                setAngule2(++servo2);
+        } else if (RB1 == 1) {
+            if (servo2 > 0)
+                setAngule2(--servo2);
+        }
+        unsigned char angule2 = servo2 * 0.175953079;
+        setAngule2(angule2);
+        sprintf(mensaje, "Angule S2:%d", angule2);
+        lcdSetCursor(2, 1);
+        lcdPrint(mensaje);
+
         _delay((unsigned long)((50)*(4000000/4000.0)));
     }
 

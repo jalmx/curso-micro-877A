@@ -8,9 +8,13 @@
 
 char mensaje[16];
 
-void print(int const valor, char const y) {
-    lcdSetCursor(y, 1);
-    sprintf(mensaje, "Valor: %d", valor);
+void print(unsigned int const valor1, unsigned int const valor2) {
+    lcdClear();
+    lcdSetCursor(1, 1);
+    sprintf(mensaje, "Angule 1: %d", valor1);
+    lcdPrint(mensaje);
+    lcdSetCursor(2, 1);
+    sprintf(mensaje, "Angule 2: %d", valor2);
     lcdPrint(mensaje);
     __delay_ms(10);
 }
@@ -24,28 +28,36 @@ void main(void) {
     adcInit();
     lcdInit();
 
-    int angulo = 0;
-    print(MINIMO, 1);
-    print(angulo, 2);
-
+    unsigned int angulo1 = 0, angulo1Old = 0, adc = 0, adcOld = 0;
+    unsigned char angule2 = 0;
+    print(angulo1, 0);
+    __delay_ms(10);
 
     for (;;) {
 
-        if (PORTCbits.RC0) {
-            angulo++;
-            int time = position1(angulo);
-            print(time, 1);
-            print(angulo, 2);
-        } else if (PORTCbits.RC1) {
-            angulo--;
-            int time = position1(angulo);
-            print(time, 1);
-            print(angulo, 2);
+        if (PORTCbits.RC0 && angulo1 < 180) {
+            angulo1++;
+            __delay_ms(150);
+        } else if (PORTCbits.RC1 && angulo1 > 0) {
+            angulo1--;
+            __delay_ms(150);
         }
 
-        unsigned int adc = adcRead(0);
-        unsigned char ang = adc * 0.1759530791788856;// adc * (180/1023)
-        position2(ang);
+        if (angulo1 != angulo1Old) {
+            print(angulo1, angule2);
+            position1(angulo1);
+            print(angulo1, 99);
+            angulo1Old = angulo1;
+        }
 
+        adc = adcRead(0);
+        if (adc != adcOld) {
+            angule2 = adc * 0.175953079; // adc * (180/1023)
+            print(angulo1, angule2);
+            position2(angule2);
+            adcOld = angule2;
+        }
+
+        __delay_ms(50);
     }
 }
