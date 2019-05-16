@@ -15,7 +15,7 @@ float convertion(unsigned char angule) {
     return angule <= 0 ? MINIMO : angule >= 180 ? MAXIMO : ((float) angule * CONVERT) + MINIMO;
 }
 
-float position1(unsigned char angule) {
+void position1(unsigned char angule) {
     unsigned char time = 0;
     angule = convertion(angule);
 
@@ -29,7 +29,7 @@ float position1(unsigned char angule) {
 
 //por cada SERVO que se quiera agregar, se debe agregar un 
 // #define SERVO#
-//copiar la función y colocar el nuevo servo
+//copiar la función y colocar el nuevo servo -> positionX() 
 
 void position2(unsigned char angule) {
     unsigned char time = 0;

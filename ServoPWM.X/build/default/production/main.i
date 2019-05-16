@@ -1963,13 +1963,17 @@ int adcRead(int const adcChannel) {
 # 3 "main.c" 2
 
 # 1 "./servo_pwm.h" 1
-# 17 "./servo_pwm.h"
+# 14 "./servo_pwm.h"
 void setTMR2(unsigned char const pwm);
 void setPR2();
 void initServos();
 
 void setPR2() {
     PR2 = (4000000 / (245 * 4 * 16)) - 1;
+}
+
+unsigned int setDuty(unsigned int duty) {
+    return ((float) duty / 1023)*(4000000 / (245 * 16));
 }
 
 void initServos() {
@@ -1979,19 +1983,19 @@ void initServos() {
 }
 
 void setAngule1(unsigned char angule) {
-    unsigned int duty = (angule*1.3944444)+251;
+    unsigned int duty = (angule * 1.3944444) + 251;
     if (duty > 1023) return;
-    duty = ((float) duty / 1023)*(4000000 / (245 * 16));
+    duty = setDuty(duty);
     CCP1X = duty & 0x01;
     CCP1Y = duty & 0x02;
     CCPR1L = duty >> 2;
 }
 
 void setAngule2(unsigned char angule) {
-    unsigned int duty = (angule*1.3944444)+251;
+    unsigned int duty = (angule * 1.3944444) + 251;
     if (duty > 1023) return;
 
-    duty = ((float) duty / 1023)*(4000000 / (245 * 16));
+    duty = setDuty(duty);
     CCP2X = duty & 0x01;
     CCP2Y = duty & 0x02;
     CCPR2L = duty >> 2;
@@ -2005,16 +2009,16 @@ void setTMR2(unsigned char const pwm) {
         CCP1M3 = 1;
         CCP1M2 = 1;
     }
-    if (16 == 1) {
-        T2CKPS0 = 0;
-        T2CKPS1 = 0;
-    } else if (16 == 4) {
-        T2CKPS0 = 1;
-        T2CKPS1 = 0;
-    } else {
-        T2CKPS0 = 1;
-        T2CKPS1 = 1;
-    }
+
+
+
+
+
+
+
+    T2CKPS0 = 1;
+    T2CKPS1 = 1;
+
     TMR2ON = 1;
     if (pwm == 2)
         TRISC2 = 0;

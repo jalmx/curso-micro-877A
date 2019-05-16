@@ -13,21 +13,21 @@
 %PSECTS
 $dist/default/production\Caja_fuerte.X.production.o
 cinit CODE 0 7F8 7F8 8 2
-text1 CODE 0 4E8 4E8 4A 2
-text2 CODE 0 48F 48F 22 2
-text3 CODE 0 4B1 4B1 37 2
-text4 CODE 0 532 532 61 2
-text5 CODE 0 440 440 B 2
-text6 CODE 0 475 475 1A 2
-text7 CODE 0 45B 45B 1A 2
-text8 CODE 0 44B 44B 10 2
-text9 CODE 0 593 593 7F 2
-maintext CODE 0 612 612 1E6 2
+text1 CODE 0 4EB 4EB 4A 2
+text2 CODE 0 492 492 22 2
+text3 CODE 0 4B4 4B4 37 2
+text4 CODE 0 535 535 61 2
+text5 CODE 0 443 443 B 2
+text6 CODE 0 478 478 1A 2
+text7 CODE 0 45E 45E 1A 2
+text8 CODE 0 44E 44E 10 2
+text9 CODE 0 596 596 7F 2
+maintext CODE 0 615 615 1E3 2
 cstackCOMMON COMMON 1 70 70 E 1
 cstackBANK0 BANK0 1 20 20 9 1
 bssBANK0 BANK0 1 29 29 2 1
 strings STRING 0 3 3 8B 2
-$C:\Users\Xizuth\AppData\Local\Temp\s5m4.o
+$C:\Users\Xizuth\AppData\Local\Temp\s3g0.o
 end_init CODE 0 0 0 3 2
 config CONFIG 0 2007 2007 1 2
 # %UNUSED Section
@@ -44,22 +44,22 @@ BANK0 2B-6F 1
 BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
-CONST 8E-43F 2
+CONST 8E-442 2
 CONST 800-1FFF 2
-ENTRY 8E-43F 2
+ENTRY 8E-442 2
 ENTRY 800-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
-CODE 8E-43F 2
+CODE 8E-442 2
 CODE 800-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
 SFR3 180-18F 1
 EEDATA 2100-21FF 2
-STRCODE 8E-43F 2
+STRCODE 8E-442 2
 STRCODE 800-1FFF 2
-STRING 8E-43F 2
+STRING 8E-442 2
 STRING 800-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -75,200 +75,200 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Caja_fuerte.X.production.o
-7F8 cinit CODE >601:C:\Users\Xizuth\AppData\Local\Temp\s5m4.
-7F8 cinit CODE >604:C:\Users\Xizuth\AppData\Local\Temp\s5m4.
-7F8 cinit CODE >618:C:\Users\Xizuth\AppData\Local\Temp\s5m4.
-7F9 cinit CODE >619:C:\Users\Xizuth\AppData\Local\Temp\s5m4.
-7FA cinit CODE >620:C:\Users\Xizuth\AppData\Local\Temp\s5m4.
-7FB cinit CODE >621:C:\Users\Xizuth\AppData\Local\Temp\s5m4.
-7FC cinit CODE >627:C:\Users\Xizuth\AppData\Local\Temp\s5m4.
-7FC cinit CODE >629:C:\Users\Xizuth\AppData\Local\Temp\s5m4.
-7FD cinit CODE >630:C:\Users\Xizuth\AppData\Local\Temp\s5m4.
-593 text9 CODE >34:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
-593 text9 CODE >36:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
-594 text9 CODE >38:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
-596 text9 CODE >40:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
-59F text9 CODE >41:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
-5B0 text9 CODE >42:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
-5C1 text9 CODE >43:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
-5D2 text9 CODE >44:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
-5D9 text9 CODE >47:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
-5DD text9 CODE >48:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
-5E1 text9 CODE >49:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
-5E3 text9 CODE >50:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
-5E7 text9 CODE >51:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
-5E9 text9 CODE >52:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
-5ED text9 CODE >53:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
-5EF text9 CODE >54:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
-5F3 text9 CODE >55:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
-5F9 text9 CODE >56:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
-5FA text9 CODE >57:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
-5FB text9 CODE >58:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
-5FC text9 CODE >59:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
-5FD text9 CODE >60:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
-601 text9 CODE >61:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
-605 text9 CODE >62:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
-60C text9 CODE >64:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
-611 text9 CODE >65:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
-44B text8 CODE >28:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
-44B text8 CODE >29:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
-44F text8 CODE >30:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
-452 text8 CODE >31:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
-45A text8 CODE >32:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
-45B text7 CODE >21:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-45C text7 CODE >22:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-45E text7 CODE >23:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-462 text7 CODE >24:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-462 text7 CODE >25:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-465 text7 CODE >27:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-467 text7 CODE >28:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-469 text7 CODE >29:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-469 text7 CODE >30:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-46A text7 CODE >32:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-46C text7 CODE >33:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-46E text7 CODE >34:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-46E text7 CODE >35:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-46F text7 CODE >37:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-471 text7 CODE >38:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-473 text7 CODE >39:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-473 text7 CODE >40:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-474 text7 CODE >41:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-475 text6 CODE >43:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-476 text6 CODE >44:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-479 text6 CODE >45:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-47F text6 CODE >46:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-482 text6 CODE >47:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-48B text6 CODE >48:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-48E text6 CODE >49:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-440 text5 CODE >51:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-440 text5 CODE >52:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-446 text5 CODE >53:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-44A text5 CODE >54:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-532 text4 CODE >73:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-532 text4 CODE >74:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-535 text4 CODE >75:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-538 text4 CODE >76:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-53E text4 CODE >77:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-547 text4 CODE >78:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-54D text4 CODE >79:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-555 text4 CODE >80:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-55B text4 CODE >81:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-564 text4 CODE >82:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-56A text4 CODE >84:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-570 text4 CODE >85:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-576 text4 CODE >86:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-57C text4 CODE >87:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-582 text4 CODE >88:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-588 text4 CODE >89:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-58E text4 CODE >90:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-592 text4 CODE >91:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-4B1 text3 CODE >93:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-4B2 text3 CODE >95:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-4B7 text3 CODE >96:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-4BC text3 CODE >97:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-4BF text3 CODE >98:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-4CD text3 CODE >99:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-4D0 text3 CODE >100:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-4D4 text3 CODE >101:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-4D7 text3 CODE >102:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-4DD text3 CODE >103:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-4E0 text3 CODE >104:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-4E4 text3 CODE >105:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-4E7 text3 CODE >106:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-48F text2 CODE >108:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-490 text2 CODE >110:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-492 text2 CODE >111:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-4E8 text1 CODE >56:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-4E9 text1 CODE >58:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-4EC text1 CODE >59:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-4F1 text1 CODE >60:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-4FD text1 CODE >61:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-502 text1 CODE >62:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-508 text1 CODE >63:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-50C text1 CODE >64:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-511 text1 CODE >65:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-516 text1 CODE >66:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-522 text1 CODE >67:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-527 text1 CODE >68:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-52D text1 CODE >69:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-531 text1 CODE >71:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
-612 maintext CODE >29:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-612 maintext CODE >30:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-615 maintext CODE >31:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-618 maintext CODE >32:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-61D maintext CODE >33:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-622 maintext CODE >34:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-627 maintext CODE >37:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-62C maintext CODE >38:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-634 maintext CODE >39:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-63A maintext CODE >40:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-642 maintext CODE >41:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-648 maintext CODE >42:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-64C maintext CODE >44:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-651 maintext CODE >45:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-65B maintext CODE >47:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-65F maintext CODE >48:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-664 maintext CODE >49:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-66C maintext CODE >50:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-672 maintext CODE >52:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-675 maintext CODE >53:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-67B maintext CODE >54:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-685 maintext CODE >55:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-68C maintext CODE >56:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-698 maintext CODE >57:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-6A3 maintext CODE >58:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-6A9 maintext CODE >53:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-6AA maintext CODE >61:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+7F8 cinit CODE >601:C:\Users\Xizuth\AppData\Local\Temp\s3g0.
+7F8 cinit CODE >604:C:\Users\Xizuth\AppData\Local\Temp\s3g0.
+7F8 cinit CODE >618:C:\Users\Xizuth\AppData\Local\Temp\s3g0.
+7F9 cinit CODE >619:C:\Users\Xizuth\AppData\Local\Temp\s3g0.
+7FA cinit CODE >620:C:\Users\Xizuth\AppData\Local\Temp\s3g0.
+7FB cinit CODE >621:C:\Users\Xizuth\AppData\Local\Temp\s3g0.
+7FC cinit CODE >627:C:\Users\Xizuth\AppData\Local\Temp\s3g0.
+7FC cinit CODE >629:C:\Users\Xizuth\AppData\Local\Temp\s3g0.
+7FD cinit CODE >630:C:\Users\Xizuth\AppData\Local\Temp\s3g0.
+596 text9 CODE >34:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
+596 text9 CODE >36:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
+597 text9 CODE >38:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
+599 text9 CODE >40:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
+5A2 text9 CODE >41:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
+5B3 text9 CODE >42:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
+5C4 text9 CODE >43:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
+5D5 text9 CODE >44:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
+5DC text9 CODE >47:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
+5E0 text9 CODE >48:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
+5E4 text9 CODE >49:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
+5E6 text9 CODE >50:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
+5EA text9 CODE >51:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
+5EC text9 CODE >52:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
+5F0 text9 CODE >53:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
+5F2 text9 CODE >54:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
+5F6 text9 CODE >55:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
+5FC text9 CODE >56:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
+5FD text9 CODE >57:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
+5FE text9 CODE >58:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
+5FF text9 CODE >59:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
+600 text9 CODE >60:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
+604 text9 CODE >61:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
+608 text9 CODE >62:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
+60F text9 CODE >64:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
+614 text9 CODE >65:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
+44E text8 CODE >28:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
+44E text8 CODE >29:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
+452 text8 CODE >30:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
+455 text8 CODE >31:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
+45D text8 CODE >32:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/keypad.h
+45E text7 CODE >21:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+45F text7 CODE >22:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+461 text7 CODE >23:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+465 text7 CODE >24:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+465 text7 CODE >25:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+468 text7 CODE >27:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+46A text7 CODE >28:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+46C text7 CODE >29:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+46C text7 CODE >30:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+46D text7 CODE >32:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+46F text7 CODE >33:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+471 text7 CODE >34:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+471 text7 CODE >35:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+472 text7 CODE >37:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+474 text7 CODE >38:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+476 text7 CODE >39:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+476 text7 CODE >40:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+477 text7 CODE >41:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+478 text6 CODE >43:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+479 text6 CODE >44:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+47C text6 CODE >45:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+482 text6 CODE >46:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+485 text6 CODE >47:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+48E text6 CODE >48:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+491 text6 CODE >49:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+443 text5 CODE >51:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+443 text5 CODE >52:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+449 text5 CODE >53:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+44D text5 CODE >54:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+535 text4 CODE >73:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+535 text4 CODE >74:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+538 text4 CODE >75:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+53B text4 CODE >76:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+541 text4 CODE >77:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+54A text4 CODE >78:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+550 text4 CODE >79:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+558 text4 CODE >80:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+55E text4 CODE >81:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+567 text4 CODE >82:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+56D text4 CODE >84:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+573 text4 CODE >85:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+579 text4 CODE >86:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+57F text4 CODE >87:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+585 text4 CODE >88:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+58B text4 CODE >89:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+591 text4 CODE >90:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+595 text4 CODE >91:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+4B4 text3 CODE >93:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+4B5 text3 CODE >95:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+4BA text3 CODE >96:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+4BF text3 CODE >97:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+4C2 text3 CODE >98:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+4D0 text3 CODE >99:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+4D3 text3 CODE >100:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+4D7 text3 CODE >101:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+4DA text3 CODE >102:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+4E0 text3 CODE >103:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+4E3 text3 CODE >104:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+4E7 text3 CODE >105:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+4EA text3 CODE >106:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+492 text2 CODE >108:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+493 text2 CODE >110:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+495 text2 CODE >111:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+4EB text1 CODE >56:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+4EC text1 CODE >58:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+4EF text1 CODE >59:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+4F4 text1 CODE >60:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+500 text1 CODE >61:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+505 text1 CODE >62:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+50B text1 CODE >63:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+50F text1 CODE >64:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+514 text1 CODE >65:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+519 text1 CODE >66:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+525 text1 CODE >67:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+52A text1 CODE >68:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+530 text1 CODE >69:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+534 text1 CODE >71:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X/lcd.h
+615 maintext CODE >29:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+615 maintext CODE >30:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+618 maintext CODE >31:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+61B maintext CODE >32:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+620 maintext CODE >33:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+625 maintext CODE >36:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+62A maintext CODE >37:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+632 maintext CODE >38:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+638 maintext CODE >39:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+640 maintext CODE >40:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+646 maintext CODE >41:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+64A maintext CODE >43:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+64F maintext CODE >44:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+659 maintext CODE >46:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+65D maintext CODE >47:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+662 maintext CODE >48:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+66A maintext CODE >49:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+670 maintext CODE >51:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+673 maintext CODE >52:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+679 maintext CODE >53:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+683 maintext CODE >54:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+68A maintext CODE >55:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+696 maintext CODE >56:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+6A1 maintext CODE >57:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+6A7 maintext CODE >52:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+6A8 maintext CODE >60:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+6A9 maintext CODE >61:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
 6AB maintext CODE >62:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-6AD maintext CODE >63:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+6BC maintext CODE >63:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
 6BD maintext CODE >64:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-6BE maintext CODE >65:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-6C6 maintext CODE >66:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-6C7 maintext CODE >67:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-6CA maintext CODE >68:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-6CF maintext CODE >69:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-6D7 maintext CODE >70:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-6DD maintext CODE >71:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-6E1 maintext CODE >72:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-6E2 maintext CODE >73:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-6EF maintext CODE >74:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-6F2 maintext CODE >75:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-6FF maintext CODE >76:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-702 maintext CODE >77:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-70F maintext CODE >78:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-712 maintext CODE >79:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-71F maintext CODE >80:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-722 maintext CODE >81:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-72F maintext CODE >82:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-732 maintext CODE >83:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-737 maintext CODE >84:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-73F maintext CODE >85:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-745 maintext CODE >86:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-74D maintext CODE >87:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-753 maintext CODE >88:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-760 maintext CODE >89:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-765 maintext CODE >90:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-76D maintext CODE >91:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-773 maintext CODE >92:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-777 maintext CODE >93:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-778 maintext CODE >94:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-785 maintext CODE >95:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-788 maintext CODE >96:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-795 maintext CODE >97:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-798 maintext CODE >98:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-7A5 maintext CODE >99:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-7A8 maintext CODE >100:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-7B5 maintext CODE >101:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-7B8 maintext CODE >102:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-7C5 maintext CODE >103:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-7C8 maintext CODE >104:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-7C9 maintext CODE >105:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-7CE maintext CODE >106:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-7D6 maintext CODE >107:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-7DC maintext CODE >108:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-7E4 maintext CODE >109:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-7EA maintext CODE >110:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
-7F7 maintext CODE >44:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+6BE maintext CODE >66:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+6C6 maintext CODE >67:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+6C7 maintext CODE >68:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+6CA maintext CODE >69:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+6CF maintext CODE >70:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+6D7 maintext CODE >71:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+6DD maintext CODE >72:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+6E1 maintext CODE >73:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+6E2 maintext CODE >74:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+6EF maintext CODE >75:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+6F2 maintext CODE >76:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+6FF maintext CODE >77:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+702 maintext CODE >78:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+70F maintext CODE >79:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+712 maintext CODE >80:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+71F maintext CODE >81:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+722 maintext CODE >82:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+72F maintext CODE >83:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+732 maintext CODE >84:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+737 maintext CODE >85:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+73F maintext CODE >86:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+745 maintext CODE >87:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+74D maintext CODE >88:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+753 maintext CODE >89:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+760 maintext CODE >90:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+765 maintext CODE >91:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+76D maintext CODE >92:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+773 maintext CODE >93:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+777 maintext CODE >94:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+778 maintext CODE >95:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+785 maintext CODE >96:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+788 maintext CODE >97:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+795 maintext CODE >98:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+798 maintext CODE >99:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+7A5 maintext CODE >100:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+7A8 maintext CODE >101:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+7B5 maintext CODE >102:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+7B8 maintext CODE >103:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+7C5 maintext CODE >104:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+7C8 maintext CODE >105:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+7C9 maintext CODE >106:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+7CE maintext CODE >107:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+7D6 maintext CODE >108:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+7DC maintext CODE >109:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+7E4 maintext CODE >110:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+7EA maintext CODE >111:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
+7F7 maintext CODE >43:C:\Users\Xizuth\Documents\curso-micro-877A\Caja fuerte.X\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -291,47 +291,47 @@ __size_of_lcdPort 0 0 ABS 0 - dist/default/production\Caja_fuerte.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 main@i 28 0 BANK0 1 cstackBANK0 dist/default/production\Caja_fuerte.X.production.o
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\Xizuth\AppData\Local\Temp\s5m4.o
-_main C24 0 CODE 0 maintext dist/default/production\Caja_fuerte.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\Xizuth\AppData\Local\Temp\s3g0.o
+_main C2A 0 CODE 0 maintext dist/default/production\Caja_fuerte.X.production.o
 _pass 34 0 STRING 0 strings dist/default/production\Caja_fuerte.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Caja_fuerte.X.production.o
-start 0 0 CODE 0 init C:\Users\Xizuth\AppData\Local\Temp\s5m4.o
+start 0 0 CODE 0 init C:\Users\Xizuth\AppData\Local\Temp\s3g0.o
 __CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production\Caja_fuerte.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Caja_fuerte.X.production.o
 kbdGetKey@key 71 0 COMMON 1 cstackCOMMON dist/default/production\Caja_fuerte.X.production.o
 kbdGetKey@row 72 0 COMMON 1 cstackCOMMON dist/default/production\Caja_fuerte.X.production.o
 main@contador 27 0 BANK0 1 cstackBANK0 dist/default/production\Caja_fuerte.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s5m4.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s5m4.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s5m4.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s5m4.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s5m4.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s5m4.o
-_lcdWriteChar 962 0 CODE 0 text3 dist/default/production\Caja_fuerte.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s3g0.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s3g0.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s3g0.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s3g0.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s3g0.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s3g0.o
+_lcdWriteChar 968 0 CODE 0 text3 dist/default/production\Caja_fuerte.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Caja_fuerte.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
-_lcdSetCursor 9D0 0 CODE 0 text1 dist/default/production\Caja_fuerte.X.production.o
+_lcdSetCursor 9D6 0 CODE 0 text1 dist/default/production\Caja_fuerte.X.production.o
 lcdWriteChar@temp 72 0 COMMON 1 cstackCOMMON dist/default/production\Caja_fuerte.X.production.o
-__end_of_lcdInit B26 0 CODE 0 text4 dist/default/production\Caja_fuerte.X.production.o
-__end_of_lcdPort 8EA 0 CODE 0 text7 dist/default/production\Caja_fuerte.X.production.o
+__end_of_lcdInit B2C 0 CODE 0 text4 dist/default/production\Caja_fuerte.X.production.o
+__end_of_lcdPort 8F0 0 CODE 0 text7 dist/default/production\Caja_fuerte.X.production.o
 main@key 26 0 BANK0 1 cstackBANK0 dist/default/production\Caja_fuerte.X.production.o
 __size_of_lcdWriteChar 0 0 ABS 0 - dist/default/production\Caja_fuerte.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-_kbdInit 896 0 CODE 0 text8 dist/default/production\Caja_fuerte.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\Xizuth\AppData\Local\Temp\s5m4.o
-___stacklo 0 0 ABS 0 - C:\Users\Xizuth\AppData\Local\Temp\s5m4.o
+_kbdInit 89C 0 CODE 0 text8 dist/default/production\Caja_fuerte.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\Xizuth\AppData\Local\Temp\s3g0.o
+___stacklo 0 0 ABS 0 - C:\Users\Xizuth\AppData\Local\Temp\s3g0.o
 __size_of_lcdSetCursor 0 0 ABS 0 - dist/default/production\Caja_fuerte.X.production.o
 lcdPort@a 70 0 COMMON 1 cstackCOMMON dist/default/production\Caja_fuerte.X.production.o
-__end_of_lcdWriteChar 9D0 0 CODE 0 text3 dist/default/production\Caja_fuerte.X.production.o
+__end_of_lcdWriteChar 9D6 0 CODE 0 text3 dist/default/production\Caja_fuerte.X.production.o
 start_initialization FF0 0 CODE 0 cinit dist/default/production\Caja_fuerte.X.production.o
-__end_of_lcdCmd 91E 0 CODE 0 text6 dist/default/production\Caja_fuerte.X.production.o
-__end_of_lcdSetCursor A64 0 CODE 0 text1 dist/default/production\Caja_fuerte.X.production.o
+__end_of_lcdCmd 924 0 CODE 0 text6 dist/default/production\Caja_fuerte.X.production.o
+__end_of_lcdSetCursor A6A 0 CODE 0 text1 dist/default/production\Caja_fuerte.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\Caja_fuerte.X.production.o
 lcdPrint@a 77 0 COMMON 1 cstackCOMMON dist/default/production\Caja_fuerte.X.production.o
 lcdPrint@i 75 0 COMMON 1 cstackCOMMON dist/default/production\Caja_fuerte.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Xizuth\AppData\Local\Temp\s5m4.o
+___int_sp 0 0 STACK 2 stack C:\Users\Xizuth\AppData\Local\Temp\s3g0.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -389,27 +389,27 @@ __S0 2008 0 ABS 0 - -
 __S1 7E 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-__end_of_kbdGetKey C24 0 CODE 0 text9 dist/default/production\Caja_fuerte.X.production.o
+__end_of_kbdGetKey C2A 0 CODE 0 text9 dist/default/production\Caja_fuerte.X.production.o
 __size_of_kbdGetKey 0 0 ABS 0 - dist/default/production\Caja_fuerte.X.production.o
-_lcdClear 880 0 CODE 0 text5 dist/default/production\Caja_fuerte.X.production.o
+_lcdClear 886 0 CODE 0 text5 dist/default/production\Caja_fuerte.X.production.o
 _old_key 29 0 BANK0 1 bssBANK0 dist/default/production\Caja_fuerte.X.production.o
-_lcdPrint 91E 0 CODE 0 text2 dist/default/production\Caja_fuerte.X.production.o
+_lcdPrint 924 0 CODE 0 text2 dist/default/production\Caja_fuerte.X.production.o
 __Lintentry 0 0 CODE 0 intentry -
 __stringtab 6 0 STRING 0 strings dist/default/production\Caja_fuerte.X.production.o
 lcdSetCursor@a 77 0 COMMON 1 cstackCOMMON dist/default/production\Caja_fuerte.X.production.o
 lcdSetCursor@b 74 0 COMMON 1 cstackCOMMON dist/default/production\Caja_fuerte.X.production.o
 lcdSetCursor@y 79 0 COMMON 1 cstackCOMMON dist/default/production\Caja_fuerte.X.production.o
 lcdSetCursor@z 78 0 COMMON 1 cstackCOMMON dist/default/production\Caja_fuerte.X.production.o
-_lcdInit A64 0 CODE 0 text4 dist/default/production\Caja_fuerte.X.production.o
-_lcdPort 8B6 0 CODE 0 text7 dist/default/production\Caja_fuerte.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Xizuth\AppData\Local\Temp\s5m4.o
-__end_of_lcdClear 896 0 CODE 0 text5 dist/default/production\Caja_fuerte.X.production.o
-__end_of_lcdPrint 962 0 CODE 0 text2 dist/default/production\Caja_fuerte.X.production.o
+_lcdInit A6A 0 CODE 0 text4 dist/default/production\Caja_fuerte.X.production.o
+_lcdPort 8BC 0 CODE 0 text7 dist/default/production\Caja_fuerte.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Xizuth\AppData\Local\Temp\s3g0.o
+__end_of_lcdClear 89C 0 CODE 0 text5 dist/default/production\Caja_fuerte.X.production.o
+__end_of_lcdPrint 968 0 CODE 0 text2 dist/default/production\Caja_fuerte.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
-_kbdGetKey B26 0 CODE 0 text9 dist/default/production\Caja_fuerte.X.production.o
+_kbdGetKey B2C 0 CODE 0 text9 dist/default/production\Caja_fuerte.X.production.o
 _keyPadMatrix 12 0 STRING 0 strings dist/default/production\Caja_fuerte.X.production.o
-_lcdCmd 8EA 0 CODE 0 text6 dist/default/production\Caja_fuerte.X.production.o
-__pmaintext C24 0 CODE 0 maintext dist/default/production\Caja_fuerte.X.production.o
+_lcdCmd 8F0 0 CODE 0 text6 dist/default/production\Caja_fuerte.X.production.o
+__pmaintext C2A 0 CODE 0 maintext dist/default/production\Caja_fuerte.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 400E 0 CONFIG 0 config -
 __CFG_CP$OFF 0 0 ABS 0 - dist/default/production\Caja_fuerte.X.production.o
@@ -432,15 +432,15 @@ __Lstrings 0 0 ABS 0 strings -
 __end_of_keyPadMatrix 34 0 STRING 0 strings dist/default/production\Caja_fuerte.X.production.o
 __Hreset_vec 0 0 CODE 0 reset_vec -
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
-__ptext1 9D0 0 CODE 0 text1 dist/default/production\Caja_fuerte.X.production.o
-__ptext2 91E 0 CODE 0 text2 dist/default/production\Caja_fuerte.X.production.o
-__ptext3 962 0 CODE 0 text3 dist/default/production\Caja_fuerte.X.production.o
-__ptext4 A64 0 CODE 0 text4 dist/default/production\Caja_fuerte.X.production.o
-__ptext5 880 0 CODE 0 text5 dist/default/production\Caja_fuerte.X.production.o
-__ptext6 8EA 0 CODE 0 text6 dist/default/production\Caja_fuerte.X.production.o
-__ptext7 8B6 0 CODE 0 text7 dist/default/production\Caja_fuerte.X.production.o
-__ptext8 896 0 CODE 0 text8 dist/default/production\Caja_fuerte.X.production.o
-__ptext9 B26 0 CODE 0 text9 dist/default/production\Caja_fuerte.X.production.o
+__ptext1 9D6 0 CODE 0 text1 dist/default/production\Caja_fuerte.X.production.o
+__ptext2 924 0 CODE 0 text2 dist/default/production\Caja_fuerte.X.production.o
+__ptext3 968 0 CODE 0 text3 dist/default/production\Caja_fuerte.X.production.o
+__ptext4 A6A 0 CODE 0 text4 dist/default/production\Caja_fuerte.X.production.o
+__ptext5 886 0 CODE 0 text5 dist/default/production\Caja_fuerte.X.production.o
+__ptext6 8F0 0 CODE 0 text6 dist/default/production\Caja_fuerte.X.production.o
+__ptext7 8BC 0 CODE 0 text7 dist/default/production\Caja_fuerte.X.production.o
+__ptext8 89C 0 CODE 0 text8 dist/default/production\Caja_fuerte.X.production.o
+__ptext9 B2C 0 CODE 0 text9 dist/default/production\Caja_fuerte.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 lcdSetCursor@temp 7A 0 COMMON 1 cstackCOMMON dist/default/production\Caja_fuerte.X.production.o
@@ -454,7 +454,7 @@ __Lfunctab 0 0 ENTRY 0 functab -
 lcdCmd@a 73 0 COMMON 1 cstackCOMMON dist/default/production\Caja_fuerte.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\Caja_fuerte.X.production.o
-__end_of_kbdInit 8B6 0 CODE 0 text8 dist/default/production\Caja_fuerte.X.production.o
+__end_of_kbdInit 8BC 0 CODE 0 text8 dist/default/production\Caja_fuerte.X.production.o
 __Hend_init 6 0 CODE 0 end_init -
 __end_of_main FF0 0 CODE 0 maintext dist/default/production\Caja_fuerte.X.production.o
 __end_of_pass 3C 0 STRING 0 strings dist/default/production\Caja_fuerte.X.production.o
@@ -499,16 +499,16 @@ __pstrings 6 0 STRING 0 strings dist/default/production\Caja_fuerte.X.production
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cinit 0 7F8 FF0 8 2
-text1 0 4E8 9D0 4A 2
-text2 0 48F 91E 22 2
-text3 0 4B1 962 37 2
-text4 0 532 A64 61 2
-text5 0 440 880 B 2
-text6 0 475 8EA 1A 2
-text7 0 45B 8B6 1A 2
-text8 0 44B 896 10 2
-text9 0 593 B26 7F 2
-maintext 0 612 C24 1E6 2
+text1 0 4EB 9D6 4A 2
+text2 0 492 924 22 2
+text3 0 4B4 968 37 2
+text4 0 535 A6A 61 2
+text5 0 443 886 B 2
+text6 0 478 8F0 1A 2
+text7 0 45E 8BC 1A 2
+text8 0 44E 89C 10 2
+text9 0 596 B2C 7F 2
+maintext 0 615 C2A 1E3 2
 cstackCOMMON 1 70 70 E 1
 cstackBANK0 1 20 20 B 1
 reset_vec 0 0 0 3 2

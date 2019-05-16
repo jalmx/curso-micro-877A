@@ -1901,7 +1901,6 @@ void main(void) {
     PORTD = 0;
     lcdInit();
     kbdInit();
-    lcdClear();
 
     do {
         lcdClear();
@@ -1911,7 +1910,7 @@ void main(void) {
         lcdPrint("Presionar 0");
         char flag = 1;
         char passOk = 0;
-        while (flag == 1) {
+        while (flag) {
             char key = kbdGetKey();
 
             if (key == '0') {
@@ -1930,11 +1929,13 @@ void main(void) {
                 }
                 for (char i = 0; i < 4; i++) {
                     passOk = 1;
-                    if (pass[i] != password[i])
+                    if (pass[i] != password[i]){
                         passOk = 0;
+                        break;
+                    }
                 }
                 flag = 0;
-                if (passOk == 1) {
+                if (passOk) {
                     lcdClear();
                     lcdSetCursor(1, 1);
                     lcdPrint("Abriendo...");
@@ -1979,7 +1980,6 @@ void main(void) {
                     lcdPrint("Margarito");
                     _delay((unsigned long)((2000)*(4000000/4000.0)));
                 }
-
             }
         }
 

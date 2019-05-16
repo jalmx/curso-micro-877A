@@ -11,6 +11,9 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
+$C:\Users\Xizuth\AppData\Local\Temp\sj8.o
+end_init CODE 0 0 0 3 2
+config CONFIG 0 2007 2007 1 2
 $dist/default/production\Servo.X.production.o
 cinit CODE 0 7F5 7F5 B 2
 text1 CODE 0 E43 E43 4C 2
@@ -41,9 +44,6 @@ cstackBANK1 BANK1 1 B0 B0 9 1
 bssBANK1 BANK1 1 A0 A0 10 1
 strings STRING 0 800 800 2A 2
 clrtext CODE 0 C41 C41 8 2
-$C:\Users\Xizuth\AppData\Local\Temp\s390.o
-end_init CODE 0 0 0 3 2
-config CONFIG 0 2007 2007 1 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -92,16 +92,16 @@ STRING 1000-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Servo.X.production.o
-7F5 cinit CODE >490:C:\Users\Xizuth\AppData\Local\Temp\s390.
-7F5 cinit CODE >493:C:\Users\Xizuth\AppData\Local\Temp\s390.
-7F5 cinit CODE >519:C:\Users\Xizuth\AppData\Local\Temp\s390.
-7F6 cinit CODE >520:C:\Users\Xizuth\AppData\Local\Temp\s390.
-7F7 cinit CODE >521:C:\Users\Xizuth\AppData\Local\Temp\s390.
-7F8 cinit CODE >522:C:\Users\Xizuth\AppData\Local\Temp\s390.
-7F9 cinit CODE >523:C:\Users\Xizuth\AppData\Local\Temp\s390.
-7FC cinit CODE >529:C:\Users\Xizuth\AppData\Local\Temp\s390.
-7FC cinit CODE >531:C:\Users\Xizuth\AppData\Local\Temp\s390.
-7FD cinit CODE >532:C:\Users\Xizuth\AppData\Local\Temp\s390.
+7F5 cinit CODE >490:C:\Users\Xizuth\AppData\Local\Temp\sj8.
+7F5 cinit CODE >493:C:\Users\Xizuth\AppData\Local\Temp\sj8.
+7F5 cinit CODE >519:C:\Users\Xizuth\AppData\Local\Temp\sj8.
+7F6 cinit CODE >520:C:\Users\Xizuth\AppData\Local\Temp\sj8.
+7F7 cinit CODE >521:C:\Users\Xizuth\AppData\Local\Temp\sj8.
+7F8 cinit CODE >522:C:\Users\Xizuth\AppData\Local\Temp\sj8.
+7F9 cinit CODE >523:C:\Users\Xizuth\AppData\Local\Temp\sj8.
+7FC cinit CODE >529:C:\Users\Xizuth\AppData\Local\Temp\sj8.
+7FC cinit CODE >531:C:\Users\Xizuth\AppData\Local\Temp\sj8.
+7FD cinit CODE >532:C:\Users\Xizuth\AppData\Local\Temp\sj8.
 C54 text21 CODE >1:C:\Users\Xizuth\Documents\curso-micro-877A\Servo.X/adc.h
 C54 text21 CODE >11:C:\Users\Xizuth\Documents\curso-micro-877A\Servo.X/adc.h
 C5A text21 CODE >12:C:\Users\Xizuth\Documents\curso-micro-877A\Servo.X/adc.h
@@ -573,16 +573,16 @@ E8E text1 CODE >20:C:\Users\Xizuth\Documents\curso-micro-877A\Servo.X\main.c
 294 maintext CODE >58:C:\Users\Xizuth\Documents\curso-micro-877A\Servo.X\main.c
 2A5 maintext CODE >61:C:\Users\Xizuth\Documents\curso-micro-877A\Servo.X\main.c
 2B0 maintext CODE >62:C:\Users\Xizuth\Documents\curso-micro-877A\Servo.X\main.c
-C41 clrtext CODE >506:C:\Users\Xizuth\AppData\Local\Temp\s390.
-C41 clrtext CODE >507:C:\Users\Xizuth\AppData\Local\Temp\s390.
-C42 clrtext CODE >508:C:\Users\Xizuth\AppData\Local\Temp\s390.
-C42 clrtext CODE >509:C:\Users\Xizuth\AppData\Local\Temp\s390.
-C43 clrtext CODE >510:C:\Users\Xizuth\AppData\Local\Temp\s390.
-C44 clrtext CODE >511:C:\Users\Xizuth\AppData\Local\Temp\s390.
-C45 clrtext CODE >512:C:\Users\Xizuth\AppData\Local\Temp\s390.
-C46 clrtext CODE >513:C:\Users\Xizuth\AppData\Local\Temp\s390.
-C47 clrtext CODE >514:C:\Users\Xizuth\AppData\Local\Temp\s390.
-C48 clrtext CODE >515:C:\Users\Xizuth\AppData\Local\Temp\s390.
+C41 clrtext CODE >506:C:\Users\Xizuth\AppData\Local\Temp\sj8.
+C41 clrtext CODE >507:C:\Users\Xizuth\AppData\Local\Temp\sj8.
+C42 clrtext CODE >508:C:\Users\Xizuth\AppData\Local\Temp\sj8.
+C42 clrtext CODE >509:C:\Users\Xizuth\AppData\Local\Temp\sj8.
+C43 clrtext CODE >510:C:\Users\Xizuth\AppData\Local\Temp\sj8.
+C44 clrtext CODE >511:C:\Users\Xizuth\AppData\Local\Temp\sj8.
+C45 clrtext CODE >512:C:\Users\Xizuth\AppData\Local\Temp\sj8.
+C46 clrtext CODE >513:C:\Users\Xizuth\AppData\Local\Temp\sj8.
+C47 clrtext CODE >514:C:\Users\Xizuth\AppData\Local\Temp\sj8.
+C48 clrtext CODE >515:C:\Users\Xizuth\AppData\Local\Temp\sj8.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -606,10 +606,10 @@ __size_of_lcdPort 0 0 ABS 0 - dist/default/production\Servo.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 position2@angule 6D 0 BANK0 1 cstackBANK0 dist/default/production\Servo.X.production.o
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\Xizuth\AppData\Local\Temp\s390.o
+___sp 0 0 STACK 2 stack C:\Users\Xizuth\AppData\Local\Temp\sj8.o
 _main 2DA 0 CODE 0 maintext dist/default/production\Servo.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Servo.X.production.o
-start 0 0 CODE 0 init C:\Users\Xizuth\AppData\Local\Temp\s390.o
+start 0 0 CODE 0 init C:\Users\Xizuth\AppData\Local\Temp\sj8.o
 ___flmul@aexp 32 0 BANK0 1 cstackBANK0 dist/default/production\Servo.X.production.o
 ___flmul@bexp 33 0 BANK0 1 cstackBANK0 dist/default/production\Servo.X.production.o
 ___flmul@prod 34 0 BANK0 1 cstackBANK0 dist/default/production\Servo.X.production.o
@@ -624,12 +624,12 @@ __size_of___lwdiv 0 0 ABS 0 - dist/default/production\Servo.X.production.o
 __size_of___lwmod 0 0 ABS 0 - dist/default/production\Servo.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
 position1@angule 6D 0 BANK0 1 cstackBANK0 dist/default/production\Servo.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s390.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s390.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s390.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s390.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s390.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s390.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\sj8.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\sj8.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\sj8.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\sj8.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\sj8.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\sj8.o
 _lcdWriteChar 1A28 0 CODE 0 text7 dist/default/production\Servo.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Servo.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
@@ -660,8 +660,8 @@ print@valor2 2F 0 BANK0 1 cstackBANK0 dist/default/production\Servo.X.production
 _adcInit 18A8 0 CODE 0 text21 dist/default/production\Servo.X.production.o
 _adcRead 1938 0 CODE 0 text20 dist/default/production\Servo.X.production.o
 __Umul8_16@multiplicand 70 0 COMMON 1 cstackCOMMON dist/default/production\Servo.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\Xizuth\AppData\Local\Temp\s390.o
-___stacklo 0 0 ABS 0 - C:\Users\Xizuth\AppData\Local\Temp\s390.o
+___stackhi 0 0 ABS 0 - C:\Users\Xizuth\AppData\Local\Temp\sj8.o
+___stacklo 0 0 ABS 0 - C:\Users\Xizuth\AppData\Local\Temp\sj8.o
 _dpowers 100C 0 STRING 0 strings dist/default/production\Servo.X.production.o
 __size_of_lcdSetCursor 0 0 ABS 0 - dist/default/production\Servo.X.production.o
 lcdPort@a 70 0 COMMON 1 cstackCOMMON dist/default/production\Servo.X.production.o
@@ -684,7 +684,7 @@ lcdPrint@a 78 0 COMMON 1 cstackCOMMON dist/default/production\Servo.X.production
 lcdPrint@i 76 0 COMMON 1 cstackCOMMON dist/default/production\Servo.X.production.o
 ?_adcRead 70 0 COMMON 1 cstackCOMMON dist/default/production\Servo.X.production.o
 adcRead@adcChannel 74 0 COMMON 1 cstackCOMMON dist/default/production\Servo.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Xizuth\AppData\Local\Temp\s390.o
+___int_sp 0 0 STACK 2 stack C:\Users\Xizuth\AppData\Local\Temp\sj8.o
 convertion@angule 5E 0 BANK0 1 cstackBANK0 dist/default/production\Servo.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
@@ -757,7 +757,7 @@ lcdSetCursor@y 79 0 COMMON 1 cstackCOMMON dist/default/production\Servo.X.produc
 lcdSetCursor@z 78 0 COMMON 1 cstackCOMMON dist/default/production\Servo.X.production.o
 _lcdInit 1D1E 0 CODE 0 text17 dist/default/production\Servo.X.production.o
 _lcdPort 18C8 0 CODE 0 text19 dist/default/production\Servo.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Xizuth\AppData\Local\Temp\s390.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Xizuth\AppData\Local\Temp\sj8.o
 __end_of_convertion 12A 0 CODE 0 text11 dist/default/production\Servo.X.production.o
 __end_of___xxtofl 2000 0 CODE 0 text12 dist/default/production\Servo.X.production.o
 __end_of_lcdClear 18A8 0 CODE 0 text8 dist/default/production\Servo.X.production.o

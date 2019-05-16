@@ -770,100 +770,97 @@ Version 4.0 HI-TECH Software Intermediate Code
 "33
 [; ;main.c: 33:     kbdInit();
 [e ( _kbdInit ..  ]
-"34
-[; ;main.c: 34:     lcdClear();
-[e ( _lcdClear ..  ]
-"36
-[; ;main.c: 36:     do {
+"35
+[; ;main.c: 35:     do {
 [e :U 131 ]
 {
-"37
-[; ;main.c: 37:         lcdClear();
+"36
+[; ;main.c: 36:         lcdClear();
 [e ( _lcdClear ..  ]
-"38
-[; ;main.c: 38:         lcdSetCursor(1, 1);
+"37
+[; ;main.c: 37:         lcdSetCursor(1, 1);
 [e ( _lcdSetCursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
-"39
-[; ;main.c: 39:         lcdPrint("Bienvenido");
+"38
+[; ;main.c: 38:         lcdPrint("Bienvenido");
 [e ( _lcdPrint (1 :s 1C ]
-"40
-[; ;main.c: 40:         lcdSetCursor(2, 1);
+"39
+[; ;main.c: 39:         lcdSetCursor(2, 1);
 [e ( _lcdSetCursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
-"41
-[; ;main.c: 41:         lcdPrint("Presionar 0");
+"40
+[; ;main.c: 40:         lcdPrint("Presionar 0");
 [e ( _lcdPrint (1 :s 2C ]
-"42
-[; ;main.c: 42:         char flag = 1;
+"41
+[; ;main.c: 41:         char flag = 1;
 [v _flag `uc ~T0 @X0 1 a ]
 [e = _flag -> -> 1 `i `uc ]
-"43
-[; ;main.c: 43:         char passOk = 0;
+"42
+[; ;main.c: 42:         char passOk = 0;
 [v _passOk `uc ~T0 @X0 1 a ]
 [e = _passOk -> -> 0 `i `uc ]
-"44
-[; ;main.c: 44:         while (flag == 1) {
+"43
+[; ;main.c: 43:         while (flag) {
 [e $U 132  ]
 [e :U 133 ]
 {
-"45
-[; ;main.c: 45:             char key = kbdGetKey();
+"44
+[; ;main.c: 44:             char key = kbdGetKey();
 [v _key `uc ~T0 @X0 1 a ]
 [e = _key ( _kbdGetKey ..  ]
-"47
-[; ;main.c: 47:             if (key == '0') {
+"46
+[; ;main.c: 46:             if (key == '0') {
 [e $ ! == -> _key `ui -> 48 `ui 135  ]
 {
-"48
-[; ;main.c: 48:                 lcdClear();
+"47
+[; ;main.c: 47:                 lcdClear();
 [e ( _lcdClear ..  ]
-"49
-[; ;main.c: 49:                 lcdSetCursor(1, 1);
+"48
+[; ;main.c: 48:                 lcdSetCursor(1, 1);
 [e ( _lcdSetCursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
-"50
-[; ;main.c: 50:                 lcdPrint("Dar Password");
+"49
+[; ;main.c: 49:                 lcdPrint("Dar Password");
 [e ( _lcdPrint (1 :s 3C ]
-"51
-[; ;main.c: 51:                 char password[4];
+"50
+[; ;main.c: 50:                 char password[4];
 [v _password `uc ~T0 @X0 -> 4 `i a ]
-"52
-[; ;main.c: 52:                 char contador = 0;
+"51
+[; ;main.c: 51:                 char contador = 0;
 [v _contador `uc ~T0 @X0 1 a ]
 [e = _contador -> -> 0 `i `uc ]
-"53
-[; ;main.c: 53:                 while (contador < 4) {
+"52
+[; ;main.c: 52:                 while (contador < 4) {
 [e $U 136  ]
 [e :U 137 ]
 {
-"54
-[; ;main.c: 54:                     key = kbdGetKey();
+"53
+[; ;main.c: 53:                     key = kbdGetKey();
 [e = _key ( _kbdGetKey ..  ]
-"55
-[; ;main.c: 55:                     if (key != 255 && contador < 4) {
+"54
+[; ;main.c: 54:                     if (key != 255 && contador < 4) {
 [e $ ! && != -> _key `i -> 255 `i < -> _contador `i -> 4 `i 139  ]
 {
-"56
-[; ;main.c: 56:                         password[contador++] = key;
+"55
+[; ;main.c: 55:                         password[contador++] = key;
 [e = *U + &U _password * -> ++ _contador -> -> 1 `i `uc `ux -> -> # *U &U _password `ui `ux _key ]
-"57
-[; ;main.c: 57:                         lcdSetCursor(2, 5 + contador);
+"56
+[; ;main.c: 56:                         lcdSetCursor(2, 5 + contador);
 [e ( _lcdSetCursor (2 , -> -> 2 `i `uc -> + -> 5 `i -> _contador `i `uc ]
-"58
-[; ;main.c: 58:                         lcdWriteChar('*');
+"57
+[; ;main.c: 57:                         lcdWriteChar('*');
 [e ( _lcdWriteChar (1 -> -> 42 `ui `uc ]
-"59
-[; ;main.c: 59:                     }
+"58
+[; ;main.c: 58:                     }
 }
 [e :U 139 ]
-"60
-[; ;main.c: 60:                 }
+"59
+[; ;main.c: 59:                 }
 }
 [e :U 136 ]
-"53
-[; ;main.c: 53:                 while (contador < 4) {
+"52
+[; ;main.c: 52:                 while (contador < 4) {
 [e $ < -> _contador `i -> 4 `i 137  ]
 [e :U 138 ]
-"61
-[; ;main.c: 61:                 for (char i = 0; i < 4; i++) {
+"60
+[; ;main.c: 60:                 for (char i = 0; i < 4; i++) {
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
@@ -871,164 +868,171 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 141  ]
 [e :U 140 ]
 {
-"62
-[; ;main.c: 62:                     passOk = 1;
+"61
+[; ;main.c: 61:                     passOk = 1;
 [e = _passOk -> -> 1 `i `uc ]
-"63
-[; ;main.c: 63:                     if (pass[i] != password[i])
+"62
+[; ;main.c: 62:                     if (pass[i] != password[i]){
 [e $ ! != -> *U + &U _pass * -> _i `ux -> -> # *U &U _pass `ui `ux `i -> *U + &U _password * -> _i `ux -> -> # *U &U _password `ui `ux `i 143  ]
-"64
-[; ;main.c: 64:                         passOk = 0;
+{
+"63
+[; ;main.c: 63:                         passOk = 0;
 [e = _passOk -> -> 0 `i `uc ]
-[e :U 143 ]
+"64
+[; ;main.c: 64:                         break;
+[e $U 141  ]
 "65
-[; ;main.c: 65:                 }
+[; ;main.c: 65:                     }
+}
+[e :U 143 ]
+"66
+[; ;main.c: 66:                 }
 }
 [e ++ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> 4 `i 140  ]
 [e :U 141 ]
 }
-"66
-[; ;main.c: 66:                 flag = 0;
-[e = _flag -> -> 0 `i `uc ]
 "67
-[; ;main.c: 67:                 if (passOk == 1) {
-[e $ ! == -> _passOk `i -> 1 `i 144  ]
-{
+[; ;main.c: 67:                 flag = 0;
+[e = _flag -> -> 0 `i `uc ]
 "68
-[; ;main.c: 68:                     lcdClear();
-[e ( _lcdClear ..  ]
+[; ;main.c: 68:                 if (passOk) {
+[e $ ! != -> _passOk `i -> 0 `i 144  ]
+{
 "69
-[; ;main.c: 69:                     lcdSetCursor(1, 1);
-[e ( _lcdSetCursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+[; ;main.c: 69:                     lcdClear();
+[e ( _lcdClear ..  ]
 "70
-[; ;main.c: 70:                     lcdPrint("Abriendo...");
-[e ( _lcdPrint (1 :s 4C ]
+[; ;main.c: 70:                     lcdSetCursor(1, 1);
+[e ( _lcdSetCursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
 "71
-[; ;main.c: 71:                     PORTD = 255;
-[e = _PORTD -> -> 255 `i `uc ]
+[; ;main.c: 71:                     lcdPrint("Abriendo...");
+[e ( _lcdPrint (1 :s 4C ]
 "72
-[; ;main.c: 72:                     PORTDbits.RD1 = 0;
-[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
-"73
-[; ;main.c: 73:                     _delay((unsigned long)((200)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"74
-[; ;main.c: 74:                     PORTDbits.RD2 = 0;
-[e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
-"75
-[; ;main.c: 75:                     _delay((unsigned long)((200)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"76
-[; ;main.c: 76:                     PORTDbits.RD2 = 1;
-[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
-"77
-[; ;main.c: 77:                     _delay((unsigned long)((200)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"78
-[; ;main.c: 78:                     PORTDbits.RD2 = 0;
-[e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
-"79
-[; ;main.c: 79:                     _delay((unsigned long)((200)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"80
-[; ;main.c: 80:                     PORTDbits.RD2 = 1;
-[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
-"81
-[; ;main.c: 81:                     _delay((unsigned long)((200)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"82
-[; ;main.c: 82:                     PORTD = 0;
-[e = _PORTD -> -> 0 `i `uc ]
-"83
-[; ;main.c: 83:                     lcdClear();
-[e ( _lcdClear ..  ]
-"84
-[; ;main.c: 84:                     lcdSetCursor(1, 1);
-[e ( _lcdSetCursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
-"85
-[; ;main.c: 85:                     lcdPrint("Sea bienvenido");
-[e ( _lcdPrint (1 :s 5C ]
-"86
-[; ;main.c: 86:                     lcdSetCursor(2,1);
-[e ( _lcdSetCursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
-"87
-[; ;main.c: 87:                     lcdPrint("Cerrara en 3s");
-[e ( _lcdPrint (1 :s 6C ]
-"88
-[; ;main.c: 88:                     _delay((unsigned long)((3000)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"89
-[; ;main.c: 89:                     lcdClear();
-[e ( _lcdClear ..  ]
-"90
-[; ;main.c: 90:                     lcdSetCursor(1, 1);
-[e ( _lcdSetCursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
-"91
-[; ;main.c: 91:                     lcdPrint("Cerrando tapa...");
-[e ( _lcdPrint (1 :s 7C ]
-"92
-[; ;main.c: 92:                     PORTD = 255;
+[; ;main.c: 72:                     PORTD = 255;
 [e = _PORTD -> -> 255 `i `uc ]
-"93
-[; ;main.c: 93:                     PORTDbits.RD0 = 0;
-[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
-"94
-[; ;main.c: 94:                     _delay((unsigned long)((200)*(4000000/4000.0)));
+"73
+[; ;main.c: 73:                     PORTDbits.RD1 = 0;
+[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
+"74
+[; ;main.c: 74:                     _delay((unsigned long)((200)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"95
-[; ;main.c: 95:                     PORTDbits.RD2 = 0;
+"75
+[; ;main.c: 75:                     PORTDbits.RD2 = 0;
 [e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
-"96
-[; ;main.c: 96:                     _delay((unsigned long)((200)*(4000000/4000.0)));
+"76
+[; ;main.c: 76:                     _delay((unsigned long)((200)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"97
-[; ;main.c: 97:                     PORTDbits.RD2 = 1;
+"77
+[; ;main.c: 77:                     PORTDbits.RD2 = 1;
 [e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
-"98
-[; ;main.c: 98:                     _delay((unsigned long)((200)*(4000000/4000.0)));
+"78
+[; ;main.c: 78:                     _delay((unsigned long)((200)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"99
-[; ;main.c: 99:                     PORTDbits.RD2 = 0;
+"79
+[; ;main.c: 79:                     PORTDbits.RD2 = 0;
 [e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
-"100
-[; ;main.c: 100:                     _delay((unsigned long)((200)*(4000000/4000.0)));
+"80
+[; ;main.c: 80:                     _delay((unsigned long)((200)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"101
-[; ;main.c: 101:                     PORTDbits.RD2 = 1;
+"81
+[; ;main.c: 81:                     PORTDbits.RD2 = 1;
 [e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
-"102
-[; ;main.c: 102:                     _delay((unsigned long)((200)*(4000000/4000.0)));
+"82
+[; ;main.c: 82:                     _delay((unsigned long)((200)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"103
-[; ;main.c: 103:                     PORTD = 0;
+"83
+[; ;main.c: 83:                     PORTD = 0;
 [e = _PORTD -> -> 0 `i `uc ]
+"84
+[; ;main.c: 84:                     lcdClear();
+[e ( _lcdClear ..  ]
+"85
+[; ;main.c: 85:                     lcdSetCursor(1, 1);
+[e ( _lcdSetCursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+"86
+[; ;main.c: 86:                     lcdPrint("Sea bienvenido");
+[e ( _lcdPrint (1 :s 5C ]
+"87
+[; ;main.c: 87:                     lcdSetCursor(2,1);
+[e ( _lcdSetCursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
+"88
+[; ;main.c: 88:                     lcdPrint("Cerrara en 3s");
+[e ( _lcdPrint (1 :s 6C ]
+"89
+[; ;main.c: 89:                     _delay((unsigned long)((3000)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"90
+[; ;main.c: 90:                     lcdClear();
+[e ( _lcdClear ..  ]
+"91
+[; ;main.c: 91:                     lcdSetCursor(1, 1);
+[e ( _lcdSetCursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+"92
+[; ;main.c: 92:                     lcdPrint("Cerrando tapa...");
+[e ( _lcdPrint (1 :s 7C ]
+"93
+[; ;main.c: 93:                     PORTD = 255;
+[e = _PORTD -> -> 255 `i `uc ]
+"94
+[; ;main.c: 94:                     PORTDbits.RD0 = 0;
+[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
+"95
+[; ;main.c: 95:                     _delay((unsigned long)((200)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"96
+[; ;main.c: 96:                     PORTDbits.RD2 = 0;
+[e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
+"97
+[; ;main.c: 97:                     _delay((unsigned long)((200)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"98
+[; ;main.c: 98:                     PORTDbits.RD2 = 1;
+[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
+"99
+[; ;main.c: 99:                     _delay((unsigned long)((200)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"100
+[; ;main.c: 100:                     PORTDbits.RD2 = 0;
+[e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
+"101
+[; ;main.c: 101:                     _delay((unsigned long)((200)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"102
+[; ;main.c: 102:                     PORTDbits.RD2 = 1;
+[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
+"103
+[; ;main.c: 103:                     _delay((unsigned long)((200)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "104
-[; ;main.c: 104:                 } else {
+[; ;main.c: 104:                     PORTD = 0;
+[e = _PORTD -> -> 0 `i `uc ]
+"105
+[; ;main.c: 105:                 } else {
 }
 [e $U 145  ]
 [e :U 144 ]
 {
-"105
-[; ;main.c: 105:                     lcdClear();
-[e ( _lcdClear ..  ]
 "106
-[; ;main.c: 106:                     lcdSetCursor(1, 1);
-[e ( _lcdSetCursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+[; ;main.c: 106:                     lcdClear();
+[e ( _lcdClear ..  ]
 "107
-[; ;main.c: 107:                     lcdPrint("Lastima");
-[e ( _lcdPrint (1 :s 8C ]
+[; ;main.c: 107:                     lcdSetCursor(1, 1);
+[e ( _lcdSetCursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
 "108
-[; ;main.c: 108:                     lcdSetCursor(2, 1);
-[e ( _lcdSetCursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
+[; ;main.c: 108:                     lcdPrint("Lastima");
+[e ( _lcdPrint (1 :s 8C ]
 "109
-[; ;main.c: 109:                     lcdPrint("Margarito");
-[e ( _lcdPrint (1 :s 9C ]
+[; ;main.c: 109:                     lcdSetCursor(2, 1);
+[e ( _lcdSetCursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
 "110
-[; ;main.c: 110:                     _delay((unsigned long)((2000)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 110:                     lcdPrint("Margarito");
+[e ( _lcdPrint (1 :s 9C ]
 "111
-[; ;main.c: 111:                 }
+[; ;main.c: 111:                     _delay((unsigned long)((2000)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"112
+[; ;main.c: 112:                 }
 }
 [e :U 145 ]
 "113
@@ -1039,9 +1043,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 114:         }
 }
 [e :U 132 ]
-"44
-[; ;main.c: 44:         while (flag == 1) {
-[e $ == -> _flag `i -> 1 `i 133  ]
+"43
+[; ;main.c: 43:         while (flag) {
+[e $ != -> _flag `i -> 0 `i 133  ]
 [e :U 134 ]
 "116
 [; ;main.c: 116:     } while (1);

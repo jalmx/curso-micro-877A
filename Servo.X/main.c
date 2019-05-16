@@ -45,8 +45,7 @@ void main(void) {
 
         if (angulo1 != angulo1Old) {
             print(angulo1, angule2);
-            position1(angulo1);
-            print(angulo1, 99);
+            position1(angulo1); //
             angulo1Old = angulo1;
         }
 
@@ -54,7 +53,7 @@ void main(void) {
         if (adc != adcOld) {
             angule2 = adc * 0.175953079; // adc * (180/1023)
             print(angulo1, angule2);
-            position2(angule2);
+            position2(angule2);//asigno el angulo al Servo 2
             adcOld = angule2;
         }
 

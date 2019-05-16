@@ -27,11 +27,10 @@
 char const pass[] = {'1', '2', '3', '4'};
 
 void main(void) {
-    TRISD = 0;
-    PORTD = 0;
+    TRISD = 0; //
+    PORTD = 0; //control de motor y led
     lcdInit();
     kbdInit();
-    lcdClear();
 
     do {
         lcdClear();
@@ -39,17 +38,17 @@ void main(void) {
         lcdPrint("Bienvenido");
         lcdSetCursor(2, 1);
         lcdPrint("Presionar 0");
-        char flag = 1;
-        char passOk = 0;
-        while (flag == 1) {
+        char flag = 1; //
+        char passOk = 0; // para saber si la contraseña es correcta
+        while (flag) {
             char key = kbdGetKey();
 
             if (key == '0') {
                 lcdClear();
                 lcdSetCursor(1, 1);
                 lcdPrint("Dar Password");
-                char password[4];
-                char contador = 0;
+                char password[4];//delcaraon un array donde voy a guardar la contraseña que de el usuario
+                char contador = 0;//para saber cuantos digitos me han dado para la contraseña
                 while (contador < 4) {
                     key = kbdGetKey();
                     if (key != 255 && contador < 4) {
@@ -60,11 +59,13 @@ void main(void) {
                 }
                 for (char i = 0; i < 4; i++) {
                     passOk = 1;
-                    if (pass[i] != password[i])
+                    if (pass[i] != password[i]){
                         passOk = 0;
+                        break;//rompe el for
+                    }
                 }
                 flag = 0;
-                if (passOk == 1) {
+                if (passOk) {
                     lcdClear();
                     lcdSetCursor(1, 1);
                     lcdPrint("Abriendo...");

@@ -15,7 +15,7 @@ void main(void) {
     lcdPrint("Servos");
     __delay_ms(500);
 
-    initServos();
+    initServos(); //se inician los servos
     setAngule1(0);
 
     unsigned int servo1, servo2 = 0;

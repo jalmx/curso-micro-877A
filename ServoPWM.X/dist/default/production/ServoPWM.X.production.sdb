@@ -21,15 +21,17 @@
 [v _lcdWriteChar lcdWriteChar `(v  1 e 1 0 ]
 "108
 [v _lcdPrint lcdPrint `(v  1 e 1 0 ]
-"21 C:\Users\Xizuth\Documents\curso-micro-877A\ServoPWM.X/servo_pwm.h
+"18 C:\Users\Xizuth\Documents\curso-micro-877A\ServoPWM.X/servo_pwm.h
 [v _setPR2 setPR2 `(v  1 e 1 0 ]
-"25
+"22
+[v _setDuty setDuty `(ui  1 e 2 0 ]
+"26
 [v _initServos initServos `(v  1 e 1 0 ]
-"31
+"32
 [v _setAngule1 setAngule1 `(v  1 e 1 0 ]
-"40
+"41
 [v _setAngule2 setAngule2 `(v  1 e 1 0 ]
-"50
+"51
 [v _setTMR2 setTMR2 `(v  1 e 1 0 ]
 "500 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
@@ -206,27 +208,33 @@
 [v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
 "30
 } 0
-"40 C:\Users\Xizuth\Documents\curso-micro-877A\ServoPWM.X/servo_pwm.h
+"41 C:\Users\Xizuth\Documents\curso-micro-877A\ServoPWM.X/servo_pwm.h
 [v _setAngule2 setAngule2 `(v  1 e 1 0 ]
 {
 [v setAngule2@angule angule `uc  1 a 1 wreg ]
-"41
+"42
 [v setAngule2@duty duty `ui  1 a 2 10 ]
-"40
+"41
 [v setAngule2@angule angule `uc  1 a 1 wreg ]
 [v setAngule2@angule angule `uc  1 a 1 9 ]
-"48
+"49
 } 0
-"31
+"32
 [v _setAngule1 setAngule1 `(v  1 e 1 0 ]
 {
 [v setAngule1@angule angule `uc  1 a 1 wreg ]
-"32
+"33
 [v setAngule1@duty duty `ui  1 a 2 10 ]
-"31
+"32
 [v setAngule1@angule angule `uc  1 a 1 wreg ]
 [v setAngule1@angule angule `uc  1 a 1 9 ]
-"38
+"39
+} 0
+"22
+[v _setDuty setDuty `(ui  1 e 2 0 ]
+{
+[v setDuty@duty duty `ui  1 p 2 78 ]
+"24
 } 0
 "10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
@@ -256,17 +264,17 @@
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S534 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S537 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S539 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S542 . 4 `l 1 i 4 0 `d 1 f 4 0 `S534 1 fAsBytes 4 0 `S539 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S542  1 a 4 46 ]
+[s S542 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S545 . 4 `l 1 i 4 0 `d 1 f 4 0 `S537 1 fAsBytes 4 0 `S542 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S545  1 a 4 46 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 40 ]
-[s S611 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S614 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S614 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S611 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S614  1 a 2 50 ]
+[u S617 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S614 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S617  1 a 2 50 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 45 ]
 "11
@@ -391,23 +399,23 @@
 [v lcdPort@a a `uc  1 a 1 0 ]
 "41
 } 0
-"25 C:\Users\Xizuth\Documents\curso-micro-877A\ServoPWM.X/servo_pwm.h
+"26 C:\Users\Xizuth\Documents\curso-micro-877A\ServoPWM.X/servo_pwm.h
 [v _initServos initServos `(v  1 e 1 0 ]
 {
-"29
+"30
 } 0
-"50
+"51
 [v _setTMR2 setTMR2 `(v  1 e 1 0 ]
 {
 [v setTMR2@pwm pwm `DCuc  1 a 1 wreg ]
 [v setTMR2@pwm pwm `DCuc  1 a 1 wreg ]
 [v setTMR2@pwm pwm `DCuc  1 a 1 0 ]
-"73
+"74
 } 0
-"21
+"18
 [v _setPR2 setPR2 `(v  1 e 1 0 ]
 {
-"23
+"20
 } 0
 "35 C:\Users\Xizuth\Documents\curso-micro-877A\ServoPWM.X/adc.h
 [v _adcRead adcRead `(i  1 e 2 0 ]
