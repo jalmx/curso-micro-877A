@@ -24,7 +24,7 @@
 #define D7 RC7
 #include "lcd.h"/////se incluye la lib de la LCD
 
-char const pass[] = {'1', '2', '3', '4'};
+char const pass[] = {'1', '2', '3', '4'};//contraseña
 
 void main(void) {
     TRISD = 0; //
@@ -32,13 +32,13 @@ void main(void) {
     lcdInit();
     kbdInit();
 
-    do {
+    while(1) {
         lcdClear();
         lcdSetCursor(1, 1);
         lcdPrint("Bienvenido");
         lcdSetCursor(2, 1);
         lcdPrint("Presionar 0");
-        char flag = 1; //
+        char flag = 1; //me dice cuando regresar al menú inicial
         char passOk = 0; // para saber si la contraseña es correcta
         while (flag) {
             char key = kbdGetKey();
@@ -113,5 +113,5 @@ void main(void) {
             }
         }
 
-    } while (1);
+    }
 }

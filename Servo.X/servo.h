@@ -42,3 +42,15 @@ void position2(unsigned char angule) {
     SERVO2 = 0;
     __delay_ms(10);
 }
+
+void position3(unsigned char angule) {
+    unsigned char time = 0;
+    angule = convertion(angule);
+
+    SERVO3 = 1;
+    while (time++ < angule)
+        __delay_us(1);
+
+    SERVO3 = 0;
+    __delay_ms(10);
+}

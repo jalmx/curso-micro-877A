@@ -4,6 +4,7 @@
 
 #define SERVO1 PORTBbits.RB0
 #define SERVO2 PORTBbits.RB1
+#define SERVO3 PORTBbits.RB2
 #include "servo.h"
 
 char mensaje[16];

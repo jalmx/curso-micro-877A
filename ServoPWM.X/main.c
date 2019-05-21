@@ -17,6 +17,7 @@ void main(void) {
 
     initServos(); //se inician los servos
     setAngule1(0);
+    setAngule2(0);
 
     unsigned int servo1, servo2 = 0;
     while (1) {
