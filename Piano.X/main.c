@@ -34,5 +34,4 @@ void main(void) {
         }
     }
 
-    return;
 }
