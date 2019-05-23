@@ -326,14 +326,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 30:             PORTCbits.RC0 = 1;
 [e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
 "31
-[; ;main.c: 31:             _delay((unsigned long)((159)*(4000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 159 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+[; ;main.c: 31:             _delay((unsigned long)((1)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "32
 [; ;main.c: 32:             PORTCbits.RC0 = 0;
 [e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
 "33
-[; ;main.c: 33:             _delay((unsigned long)((159)*(4000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 159 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+[; ;main.c: 33:             _delay((unsigned long)((1)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "34
 [; ;main.c: 34:         }
 }

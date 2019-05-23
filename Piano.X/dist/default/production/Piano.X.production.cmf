@@ -13,9 +13,9 @@
 %PSECTS
 $dist/default/production\Piano.X.production.o
 cinit CODE 0 7FC 7FC 4 2
-maintext CODE 0 7AC 7AC 50 2
+maintext CODE 0 7A8 7A8 54 2
 cstackCOMMON COMMON 1 70 70 1 1
-$C:\Users\Xizuth\AppData\Local\Temp\s3s4.o
+$C:\Users\Xizuth\AppData\Local\Temp\s41c.o
 end_init CODE 0 0 0 3 2
 config CONFIG 0 2007 2007 1 2
 # %UNUSED Section
@@ -32,13 +32,13 @@ BANK0 20-6F 1
 BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
-CONST 3-7AB 2
+CONST 3-7A7 2
 CONST 800-1FFF 2
-ENTRY 3-7AB 2
+ENTRY 3-7A7 2
 ENTRY 800-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
-CODE 3-7AB 2
+CODE 3-7A7 2
 CODE 800-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
@@ -46,9 +46,9 @@ SFR2 100-10F 1
 SFR3 180-18F 1
 COMMON 71-7D 1
 EEDATA 2100-21FF 2
-STRCODE 3-7AB 2
+STRCODE 3-7A7 2
 STRCODE 800-1FFF 2
-STRING 3-7AB 2
+STRING 3-7A7 2
 STRING 800-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -64,36 +64,36 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Piano.X.production.o
-7FC cinit CODE >368:C:\Users\Xizuth\AppData\Local\Temp\s3s4.
-7FC cinit CODE >371:C:\Users\Xizuth\AppData\Local\Temp\s3s4.
-7FC cinit CODE >377:C:\Users\Xizuth\AppData\Local\Temp\s3s4.
-7FC cinit CODE >379:C:\Users\Xizuth\AppData\Local\Temp\s3s4.
-7FD cinit CODE >380:C:\Users\Xizuth\AppData\Local\Temp\s3s4.
-7AC maintext CODE >3:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
-7AC maintext CODE >4:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
-7B0 maintext CODE >5:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
-7B1 maintext CODE >6:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
-7B4 maintext CODE >7:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
-7B5 maintext CODE >11:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
-7B9 maintext CODE >12:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
-7BA maintext CODE >13:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
-7BF maintext CODE >14:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
-7C2 maintext CODE >15:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
-7C7 maintext CODE >17:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
-7CB maintext CODE >18:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
-7CC maintext CODE >19:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
-7D1 maintext CODE >20:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
-7D4 maintext CODE >21:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
-7D9 maintext CODE >23:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
-7DD maintext CODE >24:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
-7DE maintext CODE >25:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
-7E2 maintext CODE >26:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
-7E5 maintext CODE >27:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
-7E9 maintext CODE >29:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
-7ED maintext CODE >30:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
-7EE maintext CODE >31:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
-7F3 maintext CODE >32:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
-7F6 maintext CODE >33:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
+7FC cinit CODE >368:C:\Users\Xizuth\AppData\Local\Temp\s41c.
+7FC cinit CODE >371:C:\Users\Xizuth\AppData\Local\Temp\s41c.
+7FC cinit CODE >377:C:\Users\Xizuth\AppData\Local\Temp\s41c.
+7FC cinit CODE >379:C:\Users\Xizuth\AppData\Local\Temp\s41c.
+7FD cinit CODE >380:C:\Users\Xizuth\AppData\Local\Temp\s41c.
+7A8 maintext CODE >3:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
+7A8 maintext CODE >4:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
+7AC maintext CODE >5:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
+7AD maintext CODE >6:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
+7B0 maintext CODE >7:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
+7B1 maintext CODE >11:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
+7B5 maintext CODE >12:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
+7B6 maintext CODE >13:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
+7BB maintext CODE >14:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
+7BE maintext CODE >15:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
+7C3 maintext CODE >17:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
+7C7 maintext CODE >18:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
+7C8 maintext CODE >19:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
+7CD maintext CODE >20:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
+7D0 maintext CODE >21:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
+7D5 maintext CODE >23:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
+7D9 maintext CODE >24:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
+7DA maintext CODE >25:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
+7DE maintext CODE >26:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
+7E1 maintext CODE >27:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
+7E5 maintext CODE >29:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
+7E9 maintext CODE >30:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
+7EA maintext CODE >31:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
+7F1 maintext CODE >32:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
+7F4 maintext CODE >33:C:\Users\Xizuth\Documents\curso-micro-877A\Piano.X\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -113,27 +113,27 @@ __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\Xizuth\AppData\Local\Temp\s3s4.o
-_main F58 0 CODE 0 maintext dist/default/production\Piano.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\Xizuth\AppData\Local\Temp\s41c.o
+_main F50 0 CODE 0 maintext dist/default/production\Piano.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Piano.X.production.o
-start 0 0 CODE 0 init C:\Users\Xizuth\AppData\Local\Temp\s3s4.o
+start 0 0 CODE 0 init C:\Users\Xizuth\AppData\Local\Temp\s41c.o
 __CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production\Piano.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Piano.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s3s4.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s3s4.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s3s4.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s3s4.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s3s4.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s3s4.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s41c.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s41c.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s41c.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s41c.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s41c.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Xizuth\AppData\Local\Temp\s41c.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Piano.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\Xizuth\AppData\Local\Temp\s3s4.o
-___stacklo 0 0 ABS 0 - C:\Users\Xizuth\AppData\Local\Temp\s3s4.o
+___stackhi 0 0 ABS 0 - C:\Users\Xizuth\AppData\Local\Temp\s41c.o
+___stacklo 0 0 ABS 0 - C:\Users\Xizuth\AppData\Local\Temp\s41c.o
 start_initialization FF8 0 CODE 0 cinit dist/default/production\Piano.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Xizuth\AppData\Local\Temp\s3s4.o
+___int_sp 0 0 STACK 2 stack C:\Users\Xizuth\AppData\Local\Temp\s41c.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -178,8 +178,8 @@ __S1 71 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 __Lintentry 0 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Xizuth\AppData\Local\Temp\s3s4.o
-__pmaintext F58 0 CODE 0 maintext dist/default/production\Piano.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Xizuth\AppData\Local\Temp\s41c.o
+__pmaintext F50 0 CODE 0 maintext dist/default/production\Piano.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 400E 0 CONFIG 0 config -
 __CFG_CP$OFF 0 0 ABS 0 - dist/default/production\Piano.X.production.o
@@ -241,7 +241,7 @@ __CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\Piano.X.production.o
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cinit 0 7FC FF8 4 2
-maintext 0 7AC F58 50 2
+maintext 0 7A8 F50 54 2
 cstackCOMMON 1 70 70 1 1
 reset_vec 0 0 0 3 2
 config 0 2007 400E 1 2

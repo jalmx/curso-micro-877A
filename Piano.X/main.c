@@ -28,9 +28,9 @@ void main(void) {
         }
         if (RB3 == 1) {
             PORTCbits.RC0 = 1;
-            __delay_us(159);
+            __delay_ms(1);
             PORTCbits.RC0 = 0;
-            __delay_us(159);
+            __delay_ms(1);
         }
     }
 

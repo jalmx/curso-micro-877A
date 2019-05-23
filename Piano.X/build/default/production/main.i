@@ -1764,9 +1764,9 @@ void main(void) {
         }
         if (RB3 == 1) {
             PORTCbits.RC0 = 1;
-            _delay((unsigned long)((159)*(4000000/4000000.0)));
+            _delay((unsigned long)((1)*(4000000/4000.0)));
             PORTCbits.RC0 = 0;
-            _delay((unsigned long)((159)*(4000000/4000000.0)));
+            _delay((unsigned long)((1)*(4000000/4000.0)));
         }
     }
 
